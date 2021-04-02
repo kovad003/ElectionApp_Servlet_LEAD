@@ -18,9 +18,16 @@ public class HelloAppEngine extends HttpServlet {
     response.setContentType("text/plain");
     response.setCharacterEncoding("UTF-8");
 
+
+    response.getWriter().print("Puppies!\r\n");
+    
+    response.getWriter().print("Vagela!\r\n");
+
+
     response.getWriter().print("Eminem\r\n");
     //Daniel was here!!
     //jawefjkawkhfgkgfbashfbohaugvbanovbuhgwcoawjhnwaufhanawfnwaun
+
 
     // Ash wrote this line
     
