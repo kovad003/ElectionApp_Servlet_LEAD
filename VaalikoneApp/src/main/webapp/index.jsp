@@ -73,13 +73,45 @@
             border-radius: 10px;         
             background-color: #E9C46A;
             box-shadow: 0 2px 16px 2px #264653;         
-            margin: 60px auto 60px auto;                
+            margin: 30px auto 60px auto;                
         }
 
         /* AD - Customises the selection button section (answers) */
         .container2 {
-            text-align: center;
-            margin: 30px auto 10px auto;
+            text-align: left;
+            margin: 10px auto 10px auto;            
+        }
+
+        /* AD - Customises the registration and login links */
+        .container3 {
+            text-align: center;                              
+        }
+
+        /* AD - Customises the disclaimer colourings */
+        .container4 {
+            background-color:#264653;
+            border-radius: 10px; 
+            padding: 0.5px 0px 0.5px 0px; 
+            padding-left: 10px;
+            color: rgba(255, 255, 255, 0.658);                    
+        }
+
+        /* AD - Customises the introduction colourings */
+        .container5 {
+            background-color:#2A9D8F;
+            border-radius: 10px; 
+            padding: 0.1px 0px 0.1px 0px; 
+            padding-left: 10px;
+            color: rgba(255, 255, 255, 0.658);                 
+        }
+
+        /* AD - Customises the Welcome message colourings */
+        .container6 {
+            background-color:#F4A261;
+            border-radius: 10px; 
+            padding: 0.1px 0px 0.1px 0px; 
+            padding-left: 10px;
+            margin: 10px auto;                         
         }
 
         /* AD - Customises the main button (to progress to the next question) */
@@ -95,7 +127,7 @@
             -webkit-transition-duration: 0.4s; /* Safari */
             transition-duration: 0.4s;
             border-radius: 10px;
-            margin-top: 20px;           
+            margin: 20px 20px 0px 20px;           
         }
 
         /* AD - Customises the button hover effects */
@@ -124,7 +156,7 @@
 
         /* AD - heading customisation */
         h2 {
-            color: #E76F51;
+            color: rgba(255, 255, 255, 0.658);  
         }
               
     </style>
@@ -137,12 +169,19 @@
     <!-- AD - Beginning of the main election machine questionnaire (yellow container)-->
     <div class="container">
         <i class="material-icons resize1">account_balance</i>
+        
+        <!-- AD - customises the welcome message-->
+        <div class="container6"> 
         <h2>Welcome visitor!</h2>
+        </div>
        
+        <!-- AD - This container adds colourings and style to the intro message -->
+        <div class="container5">
         <!-- AD - Election machine questions -->
         <h5>This election machine website is run by the Global News Newspaper,
             in association with the HÄMK'S Finest server programming team!
         </h5>
+        </div>
 
         <h3>To use our innovative election machine, please register 
             an account below, before logging in.</h3>
@@ -151,20 +190,28 @@
 
         <!-- AD - Beginning of the selection button section (answers)-->
         <div class="container2">           
-         
-            <!-- AD - Questionnaire guidance for the user -->
+            <!-- AD - A small container to amend the disclaimer background section-->
+            <div class="container4">  
+            
+                <!-- AD - Questionnaire guidance for the user -->
 		    <h5>DISCLAIMER: Neither the Global News Newspaper or HÄMK'S Finest
                 are to be held liable for any views expressed by candidates or users
                 of this site. Your data is confidential and will not be shared or
-                sold in any capacity. All rights reserved.
-            </h5>
-		
-		    <hr>      
+                sold in any capacity. All rights reserved.</h5>
+            
+            </div>
+		    
+            <hr>      
     
-            <!-- AD - The main button to progress to the next question-->
-     		<button class="button-main button1"><b>NEXT</b></button>
-             
-             <button class="button-main button1"><b>NEXT</b></button>
+            <!-- AD - A container for the login and registration buttons-->
+            <div class="container3">
+
+                <!-- AD - Buttons for login and registration-->
+                <button class="button-main button1"><b>NEXT</b></button>
+                
+                <button class="button-main button1"><b>NEXT</b></button>
+
+            </div>
         
         <!-- AD - End of the selection button section (answers)-->
         </div>
