@@ -13,7 +13,7 @@
     <!-- allows for the use of special 'materialize' icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Election Machine</title>
+    <title>Welcome</title>
     <style>
 
 		/* AD - Media query in respect of smaller screens.
@@ -94,7 +94,7 @@
             cursor: pointer;
             -webkit-transition-duration: 0.4s; /* Safari */
             transition-duration: 0.4s;
-            border-radius: 10px; 
+            border-radius: 10px;
             margin-top: 20px;           
         }
 
@@ -137,50 +137,34 @@
     <!-- AD - Beginning of the main election machine questionnaire (yellow container)-->
     <div class="container">
         <i class="material-icons resize1">account_balance</i>
-        <h2>Election Machine</h2>
+        <h2>Welcome visitor!</h2>
        
         <!-- AD - Election machine questions -->
-        <h5>NOTE: This election machine contains 19 questions.
-         Answer them all to find out which candidate suits you best!</h5>
+        <h5>This election machine website is run by the Global News Newspaper,
+            in association with the HÄMK'S Finest server programming team!
+        </h5>
 
-        <h3>Q1) Statement: I believe that the government 
-            should do more for the environment.</h3>
+        <h3>To use our innovative election machine, please register 
+            an account below, before logging in.</h3>
     
         <hr>   
 
         <!-- AD - Beginning of the selection button section (answers)-->
-        <div class="container2">
-            
-            <!-- AD - Beginning of the section with 5 selection buttons-->
-            <div class="input-radio">
-
-            <label><b style = "color:#E76F51;">Select:</b>
-            <label><b>(1)</b>
-            <input type = "radio" name = "select">
-            </label>
-            <label><b>(2)</b>
-            <input type = "radio" name = "select">
-            </label>
-            <label><b>(3)</b>
-            <input type = "radio" name = "select">
-            </label>
-            <label><b>(4)</b>
-            <input type = "radio" name = "select">
-            </label>
-            <label><b>(5)</b>
-            <input type = "radio" name = "select">
-            </label>
-
-            <!-- AD - Beginning of the section with 5 selection buttons-->
-        	</div>
+        <div class="container2">           
          
             <!-- AD - Questionnaire guidance for the user -->
-		    <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
+		    <h5>DISCLAIMER: Neither the Global News Newspaper or HÄMK'S Finest
+                are to be held liable for any views expressed by candidates or users
+                of this site. Your data is confidential and will not be shared or
+                sold in any capacity. All rights reserved.
+            </h5>
 		
 		    <hr>      
     
             <!-- AD - The main button to progress to the next question-->
      		<button class="button-main button1"><b>NEXT</b></button>
+             
+             <button class="button-main button1"><b>NEXT</b></button>
         
         <!-- AD - End of the selection button section (answers)-->
         </div>
