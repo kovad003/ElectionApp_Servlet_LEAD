@@ -11,6 +11,7 @@
     <title>Election Machine</title>
     <style>
 
+		/* AD - media query in respect of smaller screens*/
         @media only screen and (max-width: 900px) {
             .container {
             max-width: 80% !important;
@@ -22,39 +23,13 @@
             display: inline-block;
             width: 20% !important;
             text-align: right;
-        }
-    }
+	        }
+	    }
+       
 
-
-        /*
-        Notes about how to use the 'materialize icons' and their sizes.
-
-        <!--
-        Sizes:
-        tiny: 1rem
-        small: 2rem
-        medium: 4rem
-        large: 6rem
-
-        NOTE: To control the size of the icon, change the 
-        font-size: 30px property of your icon. 
-        Optionally you can use preset classes as shown below.
-
-        Here are some good one:
-        account_balance
-        beenhere
-
-        equalizer
-        local_post_office
-        -->
-
-        <i class="large material-icons">insert_chart</i>
-
-        */
-
-    html {
-        font-family: sans-serif;
-      }
+	    html {
+	        font-family: sans-serif;
+	      }
 
         body{
             background-color: #2A9D8F;
@@ -70,14 +45,7 @@
             box-shadow: 0 2px 16px 2px #264653; /*Adds a dark shadow */            
            
             margin: 90px auto;
-
-            /*
-            box-shadow: 0 2px 16px 2px rgba(0, 0, 0, .05);
-
-            max-width: 600px;
-             align-content: center;
-            margin-top: 100px;
-            */
+            
         }
 
         .container2 {
@@ -102,11 +70,6 @@
             border-radius: 10px; 
             margin-top: 30px;
 
-            /*
-            padding: 15px 32px;
-            font-size: 16px;
-            margin: 4px 2px;
-            */
         }
 
         .button1:hover {
@@ -121,7 +84,6 @@
 
             color: #E76F51;
         }
-
     
         .input-radio {
             display: inline-block;           
@@ -143,8 +105,7 @@
         h2 {
             color: #E76F51;
         }
-      
-        
+              
     </style>
 </head>
 <body>
@@ -167,6 +128,7 @@
             <div class="labels-radio">
                 <b>Select:</b>
             </div>
+            
             <div class="input-radio">
 
             <label> <b>(1)</b>
@@ -185,21 +147,13 @@
             <input type = "radio" name = "select">
             </label>
 
-
-        </div>
-
- 
-    <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
-
-
-    <hr>
-    <!-- this will be a button -->
+        	</div>
+         
+		    <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
+		
+		    <hr>      
     
-      
-    
-     <button class="button-main button1"><b>NEXT</b></button>
-
-      
+     		<button class="button-main button1"><b>NEXT</b></button>      
 
     </div>
 
