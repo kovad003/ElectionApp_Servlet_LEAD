@@ -129,7 +129,8 @@
             background-color:#2a9d909f;
             border-radius: 10px; 
             padding: 0.1px 10px 0.1px 10px;             
-            color: rgba(255, 255, 255, 0.856);                 
+            color: rgba(255, 255, 255, 0.856);
+            margin: 10px auto;                
         }
 
         /* AD - Customises the navbar */
@@ -227,7 +228,7 @@
             transition-duration: 0.4s;
             border-radius: 10px;
             margin: 20px 10px 0px 10px; 
-            width: 90px;           
+            width: 90px;          
         }
 
         /* AD - Customises the button hover effects */
@@ -485,9 +486,9 @@
             <div class="container3">
 
                 <!-- AD - Buttons for login and registration-->
-                <button class="button-main button1"><b>REGISTER</b></button>
+                <button class="button-main button1"><b>PREVIOUS</b></button>
                 
-                <button class="button-main button1"><b>LOGIN</b></button>
+                <button class="button-main button1"><b>NEXT</b></button>
 
             </div>
         
