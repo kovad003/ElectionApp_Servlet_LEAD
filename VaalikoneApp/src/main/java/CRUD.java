@@ -1,40 +1,42 @@
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 class CRUD {
 	
-	/* CRUD class is designed to be run through instances for tables.
-	 * 
+	/* 
 	 * -= METHODS =-
-	 *  all methods are wrapped in try-catch so they can be
-	 *  run individually..
-	 * 	  - COMMAND: takes sql command -> e.g.: sql="create table test;"
-	 *    - insert into table
-	 *    - select from table
-	 *    - alter table
-	 *    - update table
-	 *    - delete table
+	 *  all methods are fully parameterized to work with specific DBs, users,
+	 *  and tables to perform single purpose functions.
+	 * 	  - getQ(): 
+	 * 			PARAMS  -> none
+	 * 			RETURNS -> array of question strings
+	 * 			THROWS  -> connection error
+	 *    - storeA():
+	 *    		PARAMS	-> (String) user id, question id, answer (1-5), nullable comment
+	 * 			RETURNS -> array of question strings
+	 * 			THROWS  -> connection error
+	 *    - getA():
+	 *    			not finished
 	 * 
 	 * -= CONSTRUCTORS =-
 	 * 	  1) default:
-	 * 			-> takes no params
+	 * 			-> takes no args
 	 * 			-> default user/pwd
-	 * 			-> default db: vaalikone
-	 * 			-> default table: kysymykset
+	 * 			-> default db: electionmachine
 	 * 	  2) param.ized:
 	 * 			-> all 3 attrib take params in order:
-	 * 			     dbURL, username, password, table	
+	 * 			   dbURL, username, password (Strings)	
 	 */
 	
 	protected String dbURL;
 	protected String username;
-	protected String password;
-	protected String table_name;
-			
+	protected String password;		
 		
+	
 	public CRUD() {		
 		this.dbURL = "jdbc:mysql://localhost:3306/electionmachine";
 		this.username = "pena";
@@ -81,16 +83,10 @@ class CRUD {
 	 ********************   METHODS   ******************
 	 ***************************************************/
 	
-	/*
-	*2) answers table: user answers -> String answers into this
-	*3) candidate table: answers -> returns answers Strings
-	*4) answers table: user answers -> returns answers String
-	*
-	*/
-	
 	public String[] getQ() {
 		/*
-		 * Returns -> array of question strings
+		 * RETURNS: array of question strings
+		 * THROWS: connection error
 		 */
 		String arrQ[] = null;
 		try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
@@ -120,236 +116,82 @@ class CRUD {
 	}
 	
 	
-	public String[] get_candA() {
-		/*
-		 * Returns -> array of question strings
-		 * 
+	public void storeA(String uid, String qid, String ans, String com) {
+		/* 
+		 * PARAMS: 
+		 * 		  uid -> user id as string (not null)
+		 * 		  qid -> id of question as string (not null)
+		 * 		  ans -> answer (1-5) input by user as string (not null)
+		 * 		  com -> comments as string (nullable)
+		 * RETURNS: no return value 
+		 * THROWS: connection error
+		 * 		  
 		 */
-		String arrCA[][] = null;
 		try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
 			if (conn != null) {
-				System.out.println("select--connected");
+				System.out.println("insert--connected");
 				
-				String script = "SELECT * FROM electionmachine.answers;";
-				java.sql.Statement statement = conn.createStatement();
-				ResultSet result = statement.executeQuery(script);
+				String sql = "INSERT INTO electionmachine.user_answers (USER_ID, QUESTION_ID, ANSWER, COMMENTS) VALUES (?, ?, ?, ?)";
+
+				PreparedStatement statement = conn.prepareStatement(sql);
 				
+				statement.setString(1, uid); 
+				statement.setString(2, qid);
+				statement.setString(3, ans);
+				statement.setString(4, com);
 				
-				/*
-				 * hashmap https://stackoverflow.com/questions/1540673/java-equivalent-to-python-dictionaries
-				 * hashmap -> [1, [1-19]]
-				 * next step: put hash map in for loop for length of politicians
-				 */
-				int count = 0; 
-				arrCA = new String[19][19];
-				while (result.next()) {
-				    String cid = result.getString("CANDIDATE_ID");
-				    String qid = result.getString("QUESTION_ID");
-				    String answer = result.getString("ANSWER");
-				    arrCA[count] = [cid, qid, answer];
-//				    System.out.println(arrQ[count]);
-				    
-				}
+				int rowsInserted = statement.executeUpdate();
+				if (rowsInserted > 0) {
+					System.out.println("A new user was inserted into electionmachine.user_answers successfully!");
+				}		
 			}
-		}
-		catch (SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("select--connection error!\n" + dbURL + "\nTable:" + 
+			System.out.println("insert--connection error!\n" + dbURL + "\nTable:" + 
 					"\nUser/Pwd:" + username + "/" + password);
 		}
-		return arrCA;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-//		public void command(String sql) {
-//			/*  
-//			 * Input: SQL string to run
-//			 * Applies desired command to DB
-//			 * Throws: connection error, run error
-//			 */
-//			try {
-//				Connection conn = DriverManager.getConnection(dbURL, username, password);
-//				if (conn != null) {
-//					System.out.println("command--connected");
-//					
-//		            Statement statement = (Statement) conn.createStatement();
-//		            try {
-//		            	((java.sql.Statement) statement).executeUpdate(sql);
-//		            }catch (SQLException e) {
-//		            	e.printStackTrace();
-//		            	System.out.println("run error--command");
-//		            }     
-//				}
-//			} catch (SQLException e) {
-//				e.printStackTrace();
-//				System.out.println("insert--connection error!\n" + dbURL + 
-//						"\nUser/Pwd:" + username + "/" + password);
-//			}
-//		}
-	
-//	public void insert_data(String cid, String kid, String vst, String kmt) {
-//		/* 
-//		 * Input: all String -> 4 values to input into table
-//		 * Change: table/user/pwd/db with setter
-//		 * Throws: connection error, command error
-//		 * Confirms: connection, insert 
-//		 */
-//		try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
-//			if (conn != null) {
-//				System.out.println("insert--connected");
-//				
-//				String sql = "INSERT INTO vaalikone." + table_name + " (citizen_ID, kysymys_id, vastaus, kommentti) VALUES (?, ?, ?, ?)";
-//				try {
-//					PreparedStatement statement = conn.prepareStatement(sql);
-//					statement.setString(1, cid); 
-//					statement.setString(2, kid);
-//					statement.setString(3, vst);
-//					statement.setString(4, kmt);
-//
-//					int rowsInserted = statement.executeUpdate();
-//					if (rowsInserted > 0) {
-//						System.out.println("A new user was inserted into " + table_name.toUpperCase() + " successfully!");
-//					}
-//
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//				
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//			System.out.println("insert--connection error!\n" + dbURL + "\nTable:" + table_name.toUpperCase() + 
-//					"\nUser/Pwd:" + username + "/" + password);
-//		}	
-//	}
-	
-	
-//	public void select_data(String sql) {
+//	public String[] get_A() {
 //		/*
-//		 * Input: param -> sql string from table name to additional options
-//		 * 		  existing sql string to append: "SELECT * FROM "..
-//		 * Throws: Connection error
+//		 * Returns -> array of question strings
 //		 * 
 //		 */
+//		String arrCA[][] = null;
 //		try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
 //			if (conn != null) {
 //				System.out.println("select--connected");
 //				
-//				String script = "SELECT * FROM " + sql;
+//				String script = "SELECT * FROM electionmachine.answers;";
 //				java.sql.Statement statement = conn.createStatement();
 //				ResultSet result = statement.executeQuery(script);
-//
-//				int count = 0; 
-//				while (result.next()) {
-//				    String name = result.getString(2);
-//				    String pass = result.getString(3);
-//				    String fullname = result.getString("fullname");
-//				    String email = result.getString("email");
-//				 
-//				    String output = "User #%d: %s - %s - %s - %s";
-//				    System.out.println(String.format(output, ++count, name, pass, fullname, email));
-//				}
 //				
+//				
+//				/*
+//				 * hashmap https://stackoverflow.com/questions/1540673/java-equivalent-to-python-dictionaries
+//				 * hashmap -> [1, [1-19]]
+//				 * next step: put hash map in for loop for length of politicians
+//				 */
+//				int count = 0; 
+//				arrCA = new String[19][19];
+//				while (result.next()) {
+//				    String cid = result.getString("CANDIDATE_ID");
+//				    String qid = result.getString("QUESTION_ID");
+//				    String answer = result.getString("ANSWER");
+//				    arrCA[count] = [cid, qid, answer];
+////				    System.out.println(arrQ[count]);
+//				    
+//				}
 //			}
-//		} catch (SQLException e) {
+//		}
+//		catch (SQLException e) {
 //			e.printStackTrace();
 //			System.out.println("select--connection error!\n" + dbURL + "\nTable:" + 
 //					"\nUser/Pwd:" + username + "/" + password);
 //		}
+//		return arrCA;
 //	}
 	
 	
-//		public static void update_data() {
-//			/*
-//			 * 
-//			 */
-//			try {
-//				Connection conn = DriverManager.getConnection(dbURL, username, password);
-//				if (conn != null) {
-//					System.out.println("Connected");
-//					
-//					String sql = "UPDATE Users SET password=?, fullname=?, email=? WHERE username=?";
-//					try {
-//						PreparedStatement statement = conn.prepareStatement(sql);
-//
-//						statement.setString(1, password);
-//						statement.setString(2, fullname);
-//						statement.setString(3, email);
-//						statement.setString(4, username);
-//
-//						int rowsUpdated = statement.executeUpdate();
-//						if (rowsUpdated > 0) {
-//							System.out.println("An existing user was updated successfully!");
-//						}
-//
-//					} catch (Exception e) {
-//						// TODO: handle exception
-//					}
-//					
-//				}
-//			} catch (SQLException e) {
-//				e.printStackTrace();
-//				System.out.println("Connection error!");
-//			}
-//		}
- 
 	
-//		public static void delete_data() {
-//			/*
-//			 * 
-//			 */
-//			try {
-//				Connection conn = DriverManager.getConnection(dbURL, username, password);
-//				if (conn != null) {
-//					System.out.println("Connected");
-//					
-//					String sql = "DELETE FROM Users WHERE username=?";
-//
-//					try {
-//						PreparedStatement statement = conn.prepareStatement(sql);
-//						
-//						statement.setString(1, username);
-//						 
-//						int rowsDeleted = statement.executeUpdate();
-//						if (rowsDeleted > 0) {
-//						    System.out.println("A user was deleted successfully!");
-//						}
-//						
-//						
-//					} catch (Exception e) {
-//						// TODO: handle exception
-//					}
-//					
-//				}
-//			} catch (SQLException e) {
-//				e.printStackTrace();
-//				System.out.println("Connection error!");
-//			}
-//		}
-	
-}//end CRUD class
-
-
-
+}
