@@ -366,7 +366,7 @@
 
         <!-- AD - This container customises the heading to the candidate overviews-->
         <div class="container7">
-        <h3>Here, let's let the team introduce themselves:</h3>
+        <h3>Here, let's let the project participants introduce themselves:</h3>
         </div>
     
         <hr>   
@@ -376,15 +376,18 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>The Global Herald Newspaper:
                 <br><br>
-                Greetings! Our motto: - Global News for a Global Era! ...
+                Greetings! Our motto: "Global News for a Global Era!"
                 <br><br>
-                Overview: During this project, we are the (imaginary) Global Herald Newspaper team! 
-                We don't actually exist, but during this scenario, we are the Newspaper that is supposedly
-                running this Election machine.
+                Overview: During this project, we are the (imaginary) 'Global Herald Newspaper' team! 
+                We don't actually exist, yet with this scenario, we are the Newspaper that is supposedly
+                running this Election Machine. Our aim is to help election voters get matched with the
+                right candidate for them!
                 <br><br>
-                In order to do this, we 'hired' the HÄMK's Finest server programming team to create this
-                Election machine using Java server-side programming. 
-                .
+                In order to create this Election Machine, we 'hired' the HÄMK's Finest server programming team.
+                This team is comprised of student server programmers from HÄMK polytechnic university, and
+                they created this Election Machine using Java server-side programming.         
+                <br><br>
+                Read on to meet the server programming team!
             </h5>
         </div>
 
@@ -393,9 +396,10 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>(HÄMK's Finest) Team member 1:
                 <br><br>
-                Hi! My name is Daniel Kovacs (Project Manager)
+                Daniel Kovacs (Project Manager)
                 <br><br>
-                Overview: This project was a great project but certainly quite challenging.
+                Overview: This project was a very enjoyable project, 
+                yet but it was certainly quite challenging.
                 During this project, I was mainly responsible for...
                 <br><br>
                 sed do eiusmod tempor incididunt ut labore 
@@ -413,9 +417,10 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>(HÄMK's Finest) Team member 2:
                 <br><br>
-                Hi! My name is Daniel Kovacs (Project Manager)
+                Les Heidrich (Server Programmer)
                 <br><br>
-                Overview: This project was a great project but certainly quite challenging.
+                Overview: This project was a very enjoyable project, 
+                yet but it was certainly quite challenging.
                 During this project, I was mainly responsible for...
                 <br><br>
                 sed do eiusmod tempor incididunt ut labore 
@@ -433,9 +438,10 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>(HÄMK's Finest) Team member 3:
                 <br><br>
-                Hi! My name is Daniel Kovacs (Project Manager)
+                Ashley Davis (Server Programmer)
                 <br><br>
-                Overview: This project was a great project but certainly quite challenging.
+                Overview: This project was a very enjoyable project, 
+                yet but it was certainly quite challenging.
                 During this project, I was mainly responsible for...
                 <br><br>
                 sed do eiusmod tempor incididunt ut labore 
@@ -453,9 +459,10 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>(HÄMK's Finest) Team member 4:
                 <br><br>
-                Hi! My name is Daniel Kovacs (Project Manager)
+                Evangelos Kaikas (Server Programmer)
                 <br><br>
-                Overview: This project was a great project but certainly quite challenging.
+                Overview: This project was a very enjoyable project, 
+                yet but it was certainly quite challenging.
                 During this project, I was mainly responsible for...
                 <br><br>
                 sed do eiusmod tempor incididunt ut labore 
@@ -467,18 +474,6 @@
                 officia deserunt mollit anim id est laborum.
             </h5>
         </div>
-
-        <!-- AD - Additional candidate intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate X: More candidate info will go here... 20 in total...
-                <br><br>
-                Overview: All of the rest of the candidates will be continued on this page, 
-                all 20 candidates in total.
-            </h5>
-        </div>
-
-
 
         <!-- End ot the candidate intro / overview section-->
         <hr>
