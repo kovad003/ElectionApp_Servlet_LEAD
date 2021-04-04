@@ -36,7 +36,7 @@
         @media (max-width: 544px) {            
             h2{font-size: 1.25rem;}
             h3{font-size: 1rem;}
-            h5{font-size: 0.75rem;}        
+            h5{font-size: 0.6rem;}        
         }
         
         /* Medium devices (tablets, 768px and up) */
@@ -111,38 +111,42 @@
             border-radius: 10px; 
             padding: 0.1px 0px 0.1px 0px; 
             padding-left: 10px;
-            margin: 10px auto;                         
+            margin: 10px auto; 
+                                  
         }
 
         /* AD - Customises the navbar */
         .container-nav1 {
             background-color:#F4A261;
             border-radius: 10px; 
-            padding: 1px;             
-            margin: 1px;
+            padding: 1px;         
+            margin: 1px;  
 
             display: flex;
             justify-content: center;
+
+            height: 50px;
                        
         }
 
-        /* AD - Customises the navbar */
+        /* AD - Customises the navbar
         .container-nav2 {
             background-color: #E9C46A;
             border-radius: 10px; 
-            padding: 5px;           
-            margin: 5px; 
+            padding: 1px;         
+            margin: 1px;  
 
-            width: 45%;                       
+            width: 30%;                       
         }
+        */
 
         /* AD - Customises the navbar */
         .container-nav3 {
             background-color: #E9C46A;
             border-radius: 10px; 
-            padding: 5px;         
-            margin: 5px;              
-            width: 55%;  
+            padding: 1px;         
+            margin: 1px;           
+            width: 100%;  
 
             display: flex;
             justify-content: center;                    
@@ -152,9 +156,9 @@
         .container-nav4 {
             background-color: #E76F51;
             border-radius: 10px; 
-            padding: 5px;         
-            margin: 5px;              
-            width: 95%; 
+            padding: 1px;         
+            margin: 1px;            
+            width: 100%; 
 
             display: flex;
             justify-content: center;                               
@@ -163,27 +167,30 @@
         .container-nav-links {
             background-color: red;
             border-radius: 10px; 
-            padding: 2px 2px 2px 2px;         
-            margin: 2px 2px 2px 2px;              
-            width: 80%; 
-
-            display: flex;
+            padding: 1px;         
+            margin: 1px;              
+            width: 80%;             
             overflow: auto;
             overflow-x: hidden;
-            justify-content: center;                               
+            overflow-y: hidden;
+            justify-content: center;
+            display: flex;
+            align-items: center;                                     
         }
 
         .container-nav-links-icon {
             background-color: red;
             border-radius: 10px; 
-            padding: 2px 2px 2px 2px;         
-            margin: 2px 2px 2px 2px;              
+            padding: 1px;         
+            margin: 1px;             
             width: 80%; 
 
             display: flex;
             overflow: auto;
             overflow-x: hidden;
-            justify-content: center;                                
+            overflow-y: hidden;
+            justify-content: center;  
+            align-items: center;                              
         }
 
         /* AD - Customises the main button (to progress to the next question) */
@@ -230,6 +237,31 @@
         h2 {
             color: rgba(255, 255, 255, 0.658);  
         }
+
+        /* AD - customisation the navbar links */
+         /* unvisited link */
+        a:link {
+        color: rgba(255, 255, 255, 0.658);
+        text-decoration: none;
+        }
+
+        /* visited link */
+        a:visited {
+        color: #264653;
+        text-decoration: none;
+        }
+
+        /* mouse over link */
+        a:hover {
+        color: #264653;
+        text-decoration: none;
+        }
+
+        /* selected link */
+        a:active {
+        color: white;
+        text-decoration: none;
+        } 
               
     </style>
 </head>
@@ -237,10 +269,13 @@
 
 <!-- AD - customises the navbar-->
 <div class="container-nav1">
+<!--
     <div class="container-nav2">
-        <!-- AD - icon customisation -->
+       
         <i class="material-icons resize2">account_balance</i>
     </div>
+-->
+
     <div class="container-nav3">
         <div class="container-nav4">
           
@@ -249,16 +284,16 @@
                 <i class="material-icons resize1">account_balance</i>              
                 </div>
                 <div class = "container-nav-links">
-                  <a href="#"><i><h5>Register</h5></i></a>
+                  <a href="#"><h5>Register</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                  <a href="#"><i><h5>Register</h5></i></a>
+                  <a href="#"><h5>Login</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                  <a href="#"><i><h5>Register</h5></i></a>
+                  <a href="#"><h5>Candidates</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                  <a href="#"><i><h5>Register</h5></i></a>
+                  <a href="#"><h5>About</h5></a>
                 </div>           
             
         </div>
