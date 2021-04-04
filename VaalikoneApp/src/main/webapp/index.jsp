@@ -341,8 +341,9 @@
         <!-- AD - This container adds colourings and style to the intro message -->
         <div class="container5">
         <!-- AD - Election machine questions -->
-        <h5>This election machine website is run by the Global News Newspaper,
-            in association with the HÄMK'S Finest server programming team!
+        <h5>This election machine website is run by the 'Global Herald Newspaper',
+            in association with the 'HÄMK's Finest' server programming team. Sign up
+            to find out which candidate is right for you!
         </h5>
         </div>
 
@@ -357,9 +358,9 @@
             <div class="container4">  
             
                 <!-- AD - Questionnaire guidance for the user -->
-		    <h5>DISCLAIMER: Neither the Global News Newspaper or HÄMK'S Finest
-                are to be held liable for any views expressed by candidates or users
-                of this site. Your data is confidential and will not be shared or
+		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
+                are to be held liable for any views or comments expressed by the candidates 
+                or users of this site. Your data is confidential and will not be shared or
                 sold in any capacity. All rights reserved.</h5>
             
             </div>
