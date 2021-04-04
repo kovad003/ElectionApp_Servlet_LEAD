@@ -1,6 +1,8 @@
 
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,11 +27,14 @@ public class SurveyServlet extends HttpServlet {
 		{
 			answer = "0";
 		}
-		//response.getWriter().println("You have selected: " + answer);
 		
 		
-		request.setAttribute("user_answer", answer);
-		request.getRequestDispatcher("/survey.jsp").forward(request, response);
+		request.setAttribute("user_answer", answer); // "Collecting" user selection from survey.jsp
+		RequestDispatcher view = getServletContext().getRequestDispatcher("/survey.jsp");
+		    view.forward(request, response); // "Forwarding Data back to survey.jsp **
+		
+	    // TODO Servlet url is displayed after forward
+		// TODO Get the questions from the DB **
 		
 	}
 
