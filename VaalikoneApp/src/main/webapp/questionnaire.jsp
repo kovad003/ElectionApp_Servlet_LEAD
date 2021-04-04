@@ -234,7 +234,7 @@
         
         /* visited link */
         .button1:visited {
-        color: #2A9D8F;
+        color: #264653;
         text-decoration: none;
         }
 
@@ -291,7 +291,7 @@
 
         /* visited link */
         a:visited {
-        color: #2A9D8F;
+        color: #264653;
         text-decoration: none;
         }
 
