@@ -227,7 +227,7 @@
             transition-duration: 0.4s;
             border-radius: 10px;
             margin: 20px 10px 0px 10px; 
-            width: 80px;          
+            width: 90px;         
         }
 
         /* AD - Customises the button hover effects */

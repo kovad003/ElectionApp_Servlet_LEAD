@@ -218,7 +218,7 @@
             background-color: #E76F51;
             border: none;
             color: rgba(255, 255, 255, 0.829); 
-            padding: 10px 15px;
+            padding: 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;                      
@@ -226,14 +226,15 @@
             -webkit-transition-duration: 0.4s; /* Safari */
             transition-duration: 0.4s;
             border-radius: 10px;
-            margin: 20px 10px 0px 10px;           
+            margin: 20px 10px 0px 10px; 
+            width: 90px;           
         }
 
         /* AD - Customises the button hover effects */
         
         /* visited link */
         .button1:visited {
-        color: #2A9D8F;
+        color: #264653;
         text-decoration: none;
         }
 
@@ -288,7 +289,7 @@
 
         /* visited link */
         a:visited {
-        color: #2A9D8F;
+        color: #264653;
         text-decoration: none;
         }
 
