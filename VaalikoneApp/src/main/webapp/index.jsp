@@ -78,7 +78,7 @@
             border-radius: 10px;         
             background-color: #E9C46A;
             box-shadow: 0 2px 16px 2px #264653;         
-            margin: 30px auto 60px auto;                
+            margin: 25px auto 60px auto;                
         }
 
         /* AD - Customises the selection button section (answers) */
@@ -122,7 +122,7 @@
 
         /* AD - Customises the navbar */
         .container-nav1 {
-            background-color:#264653;
+            background-color:#2A9D8F;
             border-radius: 10px; 
             padding: 1px;         
             margin: 1px auto;  
@@ -146,7 +146,7 @@
 
         /* AD - Customises the navbar */
         .container-nav3 {
-            background-color:#264653;
+            background-color:#2A9D8F;
             border-radius: 10px; 
             padding: 1px;         
             margin: 1px;           
@@ -158,7 +158,7 @@
 
         /* AD - Customises the container inside the navbar */
         .container-nav4 {
-            background-color:#264653;
+            background-color:#2A9D8F;
             border-radius: 10px; 
             padding: 1px;         
             margin: 1px;            
@@ -172,21 +172,23 @@
             background-color: #E9C46A;
             border-radius: 10px; 
             padding: 1px;         
-            margin: 3px;              
+            margin: 4px;              
             width: 80%;             
             overflow: auto;
             overflow-x: hidden;
             overflow-y: hidden;
             justify-content: center;
             display: flex;
-            align-items: center;                                     
+            align-items: center; 
+
+            box-shadow: 0 2px 16px 2px #264653;                                      
         }
 
         .container-nav-links-icon {
-            background-color: #E9C46A;
+            
             border-radius: 10px; 
             padding: 1px;         
-            margin: 3px;             
+            margin: 4px;             
             width: 80%; 
 
             display: flex;
@@ -194,14 +196,16 @@
             overflow-x: hidden;
             overflow-y: hidden;
             justify-content: center;  
-            align-items: center;                              
+            align-items: center;   
+
+            box-shadow: 0 2px 16px 2px #264653;                             
         }
 
         /* AD - Customises the main button (to progress to the next question) */
         .button-main {
             background-color: #E76F51;
             border: none;
-            color: white;
+            color: rgba(255, 255, 255, 0.829); 
             padding: 10px 15px;
             text-align: center;
             text-decoration: none;
@@ -210,13 +214,29 @@
             -webkit-transition-duration: 0.4s; /* Safari */
             transition-duration: 0.4s;
             border-radius: 10px;
-            margin: 20px 20px 0px 20px;           
+            margin: 20px 10px 0px 10px;           
         }
 
         /* AD - Customises the button hover effects */
+        
+        /* visited link */
+        .button1:visited {
+        color: #2A9D8F;
+        text-decoration: none;
+        }
+
+        /* mouse over link */
         .button1:hover {
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        }         
+        color: #264653;
+        text-decoration: none;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        /* selected link */
+        .button1:active {
+        color: #2A9D8F;
+        text-decoration: none;
+        }      
            
         /* AD - Customises the questionnaire selection buttons (answers) */
         .input-radio {
@@ -256,19 +276,19 @@
 
         /* visited link */
         a:visited {
-        color: rgba(255, 255, 255, 0.658);
+        color: #2A9D8F;
         text-decoration: none;
         }
 
         /* mouse over link */
         a:hover {
-        color: #264653;
+        color: white;
         text-decoration: none;
         }
 
         /* selected link */
         a:active {
-        color: white;
+        color: #2A9D8F;
         text-decoration: none;
         } 
               
