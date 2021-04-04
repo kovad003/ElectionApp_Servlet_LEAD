@@ -133,7 +133,7 @@
             padding: 5px;           
             margin: 5px; 
 
-            width: 55%;                       
+            width: 45%;                       
         }
 
         /* AD - Customises the navbar */
@@ -142,7 +142,7 @@
             border-radius: 10px; 
             padding: 5px;         
             margin: 5px;              
-            width: 45%;  
+            width: 55%;  
 
             display: flex;
             justify-content: center;                    
@@ -154,7 +154,36 @@
             border-radius: 10px; 
             padding: 5px;         
             margin: 5px;              
-            width: 95%;                                
+            width: 95%; 
+
+            display: flex;
+            justify-content: center;                               
+        }
+
+        .container-nav-links {
+            background-color: red;
+            border-radius: 10px; 
+            padding: 2px 2px 2px 2px;         
+            margin: 2px 2px 2px 2px;              
+            width: 80%; 
+
+            display: flex;
+            overflow: auto;
+            overflow-x: hidden;
+            justify-content: center;                               
+        }
+
+        .container-nav-links-icon {
+            background-color: red;
+            border-radius: 10px; 
+            padding: 2px 2px 2px 2px;         
+            margin: 2px 2px 2px 2px;              
+            width: 80%; 
+
+            display: flex;
+            overflow: auto;
+            overflow-x: hidden;
+            justify-content: center;                                
         }
 
         /* AD - Customises the main button (to progress to the next question) */
@@ -214,8 +243,24 @@
     </div>
     <div class="container-nav3">
         <div class="container-nav4">
-            <!-- AD - icon customisation -->
-            <i class="material-icons resize2">account_balance</i>
+          
+                  <!-- AD - icon customisation -->
+                <div class = "container-nav-links-icon">
+                <i class="material-icons resize1">account_balance</i>              
+                </div>
+                <div class = "container-nav-links">
+                  <a href="#"><i><h5>Register</h5></i></a>
+                </div>
+                <div class = "container-nav-links">
+                  <a href="#"><i><h5>Register</h5></i></a>
+                </div>
+                <div class = "container-nav-links">
+                  <a href="#"><i><h5>Register</h5></i></a>
+                </div>
+                <div class = "container-nav-links">
+                  <a href="#"><i><h5>Register</h5></i></a>
+                </div>           
+            
         </div>
     </div>
 </div>
