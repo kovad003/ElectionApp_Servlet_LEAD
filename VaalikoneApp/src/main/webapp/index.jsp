@@ -96,8 +96,7 @@
         .container4 {
             background-color:#264653;
             border-radius: 10px; 
-            padding: 0.5px 0px 0.5px 0px; 
-            padding-left: 10px;
+            padding: 0.1px 10px 0.1px 10px;  
             color: rgba(255, 255, 255, 0.658);                    
         }
 
@@ -105,8 +104,7 @@
         .container5 {
             background-color:#2A9D8F;
             border-radius: 10px; 
-            padding: 0.1px 0px 0.1px 0px; 
-            padding-left: 10px;
+            padding: 0.1px 10px 0.1px 10px;             
             color: rgba(255, 255, 255, 0.658);                 
         }
 
@@ -114,10 +112,14 @@
         .container6 {
             background-color:#F4A261;
             border-radius: 10px; 
-            padding: 0.1px 0px 0.1px 0px; 
-            padding-left: 10px;
-            margin: 10px auto; 
-                                  
+            padding: 0.1px 10px 0.1px 10px;  
+            margin: 10px auto;                                   
+        }
+
+        /* AD - Customises the 'please register an account' message */
+        .container7 {          
+            padding: 0.1px 10px 0.1px 10px;              
+            color:#264653;                 
         }
 
         /* AD - Customises the navbar */
@@ -347,8 +349,11 @@
         </h5>
         </div>
 
+        <!-- AD - This container customises the 'please register' message-->
+        <div class="container7">
         <h3>To use our innovative election machine, please register 
             an account below, before logging in.</h3>
+        </div>
     
         <hr>   
 
