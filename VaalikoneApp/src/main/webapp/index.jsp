@@ -27,7 +27,12 @@
             .input-radio {
             font-size: small;
             width: 110% !important;
-            }            
+            }  
+
+            /* AD - Customises the navbar for smaller screens */
+            .container-nav1 {                           
+                width: 97% !important;                                    
+            }          
 	    }  
 
         /*Adjustments for a responsive website*/
@@ -117,16 +122,15 @@
 
         /* AD - Customises the navbar */
         .container-nav1 {
-            background-color:#F4A261;
+            background-color:#264653;
             border-radius: 10px; 
             padding: 1px;         
-            margin: 1px;  
+            margin: 1px auto;  
 
             display: flex;
-            justify-content: center;
-
-            height: 50px;
-                       
+            justify-content: center;             
+            width: 90%;
+            height: 40px;                       
         }
 
         /* AD - Customises the navbar
@@ -142,7 +146,7 @@
 
         /* AD - Customises the navbar */
         .container-nav3 {
-            background-color: #E9C46A;
+            background-color:#264653;
             border-radius: 10px; 
             padding: 1px;         
             margin: 1px;           
@@ -154,7 +158,7 @@
 
         /* AD - Customises the container inside the navbar */
         .container-nav4 {
-            background-color: #E76F51;
+            background-color:#264653;
             border-radius: 10px; 
             padding: 1px;         
             margin: 1px;            
@@ -165,10 +169,10 @@
         }
 
         .container-nav-links {
-            background-color: red;
+            background-color: #E9C46A;
             border-radius: 10px; 
             padding: 1px;         
-            margin: 1px;              
+            margin: 3px;              
             width: 80%;             
             overflow: auto;
             overflow-x: hidden;
@@ -179,10 +183,10 @@
         }
 
         .container-nav-links-icon {
-            background-color: red;
+            background-color: #E9C46A;
             border-radius: 10px; 
             padding: 1px;         
-            margin: 1px;             
+            margin: 3px;             
             width: 80%; 
 
             display: flex;
@@ -233,21 +237,26 @@
             font-size: 50px;
         }
 
+        /* AD - font customisation */
+        .resize3 {
+            font-size: 25px;          
+        }
+
         /* AD - heading customisation */
         h2 {
-            color: rgba(255, 255, 255, 0.658);  
+            color: rgba(255, 255, 255, 0.829);  
         }
 
         /* AD - customisation the navbar links */
          /* unvisited link */
         a:link {
-        color: rgba(255, 255, 255, 0.658);
+        color: #264653;
         text-decoration: none;
         }
 
         /* visited link */
         a:visited {
-        color: #264653;
+        color: rgba(255, 255, 255, 0.658);
         text-decoration: none;
         }
 
@@ -281,7 +290,7 @@
           
                   <!-- AD - icon customisation -->
                 <div class = "container-nav-links-icon">
-                <i class="material-icons resize1">account_balance</i>              
+                <i class="material-icons resize3">account_balance</i>              
                 </div>
                 <div class = "container-nav-links">
                   <a href="#"><h5>Register</h5></a>
