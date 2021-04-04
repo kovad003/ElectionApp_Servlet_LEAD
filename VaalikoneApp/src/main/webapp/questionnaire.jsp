@@ -13,12 +13,12 @@
     <!-- allows for the use of special 'materialize' icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Questionnaire</title>
+    <title>Welcome</title>
     <style>
 
 		/* AD - Media query in respect of smaller screens.
                 Ensures that the election machine looks good
-                on all devices (eg from laptops all the down to iphone5/SE ) */
+                on smaller devices. */
         @media only screen and (max-width: 900px) {
             .container {
             max-width: 80% !important;
@@ -27,12 +27,13 @@
             .input-radio {
             font-size: small;
             width: 110% !important;
-            }  
+            padding: 0.1px 10px 0.1px 10px !important;                  
+            }                
 
             /* AD - Customises the navbar for smaller screens */
             .container-nav1 {                           
                 width: 97% !important;                                    
-            }          
+            }  
 	    }  
 
         /*Adjustments for a responsive website*/
@@ -41,7 +42,14 @@
         @media (max-width: 544px) {            
             h2{font-size: 1.25rem;}
             h3{font-size: 1rem;}
-            h5{font-size: 0.6rem;}        
+            h5{font-size: 0.6rem;}   
+
+            /* AD - ensures that the answer selection buttons look good on small devices */
+            .input-radio {
+            text-align: left !important;
+            margin-right: 0px !important; 
+            padding-left: 0px !important;            
+            }       
         }
         
         /* Medium devices (tablets, 768px and up) */
@@ -210,7 +218,7 @@
             background-color: #E76F51;
             border: none;
             color: rgba(255, 255, 255, 0.829); 
-            padding: 10px 15px;
+            padding: 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;                      
@@ -218,7 +226,8 @@
             -webkit-transition-duration: 0.4s; /* Safari */
             transition-duration: 0.4s;
             border-radius: 10px;
-            margin: 20px 10px 0px 10px;           
+            margin: 20px 10px 0px 10px; 
+            width: 80px;          
         }
 
         /* AD - Customises the button hover effects */
@@ -233,6 +242,7 @@
         .button1:hover {
         color: #264653;
         text-decoration: none;
+        
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
         }
 
@@ -247,8 +257,9 @@
             display: inline-block;           
             text-align: center;
             width: 100%;
-            color: #2A9D8F;
+            color: rgba(255, 255, 255, 0.829);  
             margin: 10px auto;
+            padding: 0.1px 20px 0.1px 10px; 
         }
  
         /* AD - font customisation */
@@ -285,9 +296,9 @@
         }
 
         /* mouse over link */
-        a:hover {
-        color: white;
-        text-decoration: none;
+        a:hover {       
+        color: rgba(255, 255, 255, 0.829);  
+        text-decoration: none;        
         }
 
         /* selected link */
@@ -354,9 +365,7 @@
         <h3>Q1) Statement: I believe that the government 
             should do more for the environment.</h3>
 
-        </div>
-
-        
+        </div>        
     
         <hr>   
 
@@ -368,7 +377,11 @@
                 <!-- AD - Beginning of the section with 5 selection buttons-->
                 <div class="input-radio">
 
-                    <label><b style = "color:#E76F51;">Select:</b>
+                    <!-- AD - The 5 selection buttons, for choosing the answers-->
+                    <label>
+                        <b style = "color:#E9C46A">
+                        SELECT :</b>
+                    </label>
                     <label><b>(1)</b>
                     <input type = "radio" name = "select">
                     </label>
@@ -398,12 +411,8 @@
     
             <!-- AD - A container for the login and registration buttons-->
             <div class="container3">
-
-                <!-- AD - Buttons for login and registration-->
-                <button class="button-main button1"><b>REGISTER</b></button>
-                
-                <button class="button-main button1"><b>LOGIN</b></button>
-
+                <!-- AD - Buttons for the next question-->
+                <button class="button-main button1"><b>NEXT</b></button> 
             </div>
         
         <!-- AD - End of the selection button section (answers)-->
