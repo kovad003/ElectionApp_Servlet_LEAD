@@ -114,6 +114,49 @@
             margin: 10px auto;                         
         }
 
+        /* AD - Customises the navbar */
+        .container-nav1 {
+            background-color:#F4A261;
+            border-radius: 10px; 
+            padding: 1px;             
+            margin: 1px;
+
+            display: flex;
+            justify-content: center;
+                       
+        }
+
+        /* AD - Customises the navbar */
+        .container-nav2 {
+            background-color: #E9C46A;
+            border-radius: 10px; 
+            padding: 5px;           
+            margin: 5px; 
+
+            width: 55%;                       
+        }
+
+        /* AD - Customises the navbar */
+        .container-nav3 {
+            background-color: #E9C46A;
+            border-radius: 10px; 
+            padding: 5px;         
+            margin: 5px;              
+            width: 45%;  
+
+            display: flex;
+            justify-content: center;                    
+        }
+
+        /* AD - Customises the container inside the navbar */
+        .container-nav4 {
+            background-color: #E76F51;
+            border-radius: 10px; 
+            padding: 5px;         
+            margin: 5px;              
+            width: 95%;                                
+        }
+
         /* AD - Customises the main button (to progress to the next question) */
         .button-main {
             background-color: #E76F51;
@@ -163,8 +206,19 @@
 </head>
 <body>
 
-<!-- AD - icon customisation -->
-<i class="material-icons resize2">account_balance</i>
+<!-- AD - customises the navbar-->
+<div class="container-nav1">
+    <div class="container-nav2">
+        <!-- AD - icon customisation -->
+        <i class="material-icons resize2">account_balance</i>
+    </div>
+    <div class="container-nav3">
+        <div class="container-nav4">
+            <!-- AD - icon customisation -->
+            <i class="material-icons resize2">account_balance</i>
+        </div>
+    </div>
+</div>
 
     <!-- AD - Beginning of the main election machine questionnaire (yellow container)-->
     <div class="container">
@@ -207,9 +261,9 @@
             <div class="container3">
 
                 <!-- AD - Buttons for login and registration-->
-                <button class="button-main button1"><b>NEXT</b></button>
+                <button class="button-main button1"><b>REGISTER</b></button>
                 
-                <button class="button-main button1"><b>NEXT</b></button>
+                <button class="button-main button1"><b>LOGIN</b></button>
 
             </div>
         
