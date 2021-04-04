@@ -125,6 +125,7 @@
 </head>
 <body>
 <i class="material-icons resize2">account_balance</i>
+	<!-- ========================================================================================================================================== -->
     <div class="container">
 	    <i class="material-icons resize1">account_balance</i>
 	        <h2>Election Machine</h2>
@@ -133,37 +134,42 @@
 	         Answer them all to find out which candidate suits you best!</h5>
 	        <h3>Q1) Statement: I believe that the government 
 	            should do more for the environment.</h3>
+	            <%=(String)request.getAttribute("user_answer")%>
 	    
-	        <hr>   
-	        <div class="container2">
-	            <div class="labels-radio">
-	                <b>Select:</b>
-	            </div>
-	            <div class="input-radio">
-	            <label> <b>(1)</b>
-	            <input type = "radio" name = "select">
-	            </label>
-	            <label> <b>(2)</b>
-	            <input type = "radio" name = "select">
-	            </label>
-	            <label> <b>(3)</b>
-	            <input type = "radio" name = "select">
-	            </label>
-	            <label> <b>(4)</b>
-	            <input type = "radio" name = "select">
-	            </label>
-	            <label> <b>(5)</b>
-	            <input type = "radio" name = "select">
-	            </label>
-        		</div>
- 			</div>
-    	<h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
-    	<hr>
-    <!-- this will be a button -->
-
-     	<button class="button-main button1"><b>NEXT</b></button>
-
+	        <hr>
+		        <form id="form" action="/SurveyServlet" method="POST">
+			        <div class="container2">
+			        	<!-- ******************************************************************************************************** -->
+			            <div class="labels-radio">
+			                <b>Select:</b>
+			            </div>
+			            <!-- ******************************************************************************************************** -->
+			            <div class="input-radio">
+			            <label> <b>(1)</b>
+			            <input type = "radio" name = "select"  value="1">
+			            </label>
+			            <label> <b>(2)</b>
+			            <input type = "radio" name = "select" value = "2">
+			            </label>
+			            <label> <b>(3)</b>
+			            <input type = "radio" name = "select" value = "3">
+			            </label>
+			            <label> <b>(4)</b>
+			            <input type = "radio" name = "select" value = "4">
+			            </label>
+			            <label> <b>(5)</b>
+			            <input type = "radio" name = "select" value = "5">
+			            </label>
+			            </div>
+			             <!-- ******************************************************************************************************** -->
+			            <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
+			             <!-- ******************************************************************************************************** -->
+	        		</div>
+		        		<button class="button-main button1" type="submit"><b>NEXT</b></button>
+	        	</form>	
+    		<hr>
     </div>
+    <!-- ========================================================================================================================================== -->
     
 </body>
 </html>
