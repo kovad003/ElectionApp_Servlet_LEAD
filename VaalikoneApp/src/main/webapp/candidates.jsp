@@ -100,7 +100,8 @@
             color: rgba(255, 255, 255, 0.658);                    
         }
 
-        /* AD - Customises the introduction colourings */
+        /* AD - Customises the introduction colourings on the welcome page
+                and in addition, the candidate page introductory message */
         .container5 {
             background-color:#2A9D8F;
             border-radius: 10px; 
@@ -120,6 +121,15 @@
         .container7 {          
             padding: 0.1px 10px 0.1px 10px;              
             color:#264653;                 
+        }
+
+        /* AD - Customises the candidate overviews */
+                .container8 {
+            /* AD - This is a lighter shade of green and a darker shade of text */
+            background-color:#2a9d909f;
+            border-radius: 10px; 
+            padding: 0.1px 10px 0.1px 10px;             
+            color: rgba(255, 255, 255, 0.856);                 
         }
 
         /* AD - Customises the navbar */
@@ -337,13 +347,13 @@
         
         <!-- AD - customises the welcome message-->
         <div class="container6"> 
-        <h2>Candidates</h2>
+        <h2>The Candidates</h2>
         </div>
        
         <!-- AD - This container adds colourings and style to the intro message -->
         <div class="container5">
-        <!-- AD - Election machine questions -->
-        <h5>This section covers the cadidates who are putting themselves forward 
+        <!-- AD - Introductory statement about the candidates page -->
+        <h5>This section covers the candidates who are putting themselves forward 
             for election to the Finnish Parliament, during the Finnish Parliamentary
             Elections 2021.
             <br><br>
@@ -353,13 +363,107 @@
         </h5>
         </div>
 
-        <!-- AD - This container customises the 'please register' message-->
+        <!-- AD - This container customises the heading to the candidate overviews-->
         <div class="container7">
-        <h3>To use our innovative election machine, please register 
-            an account below, before logging in.</h3>
+        <h3>Here, let's let the candidates introduces themselves:</h3>
         </div>
     
         <hr>   
+
+        <!-- AD - Candidate 1 intro colourings and text -->
+        <div class="container8">
+            <!-- AD - Intro / overview statement about the candidate -->
+            <h5>Candidate 1: Hi! My name is ...
+                <br><br>
+                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                officia deserunt mollit anim id est laborum.
+            </h5>
+        </div>
+
+        <!-- AD - Candidate 2 intro colourings and text -->
+        <div class="container8">
+            <!-- AD - Intro / overview statement about the candidate -->
+            <h5>Candidate 2: Hi! My name is ...
+                <br><br>
+                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                officia deserunt mollit anim id est laborum.
+            </h5>
+        </div>
+
+        <!-- AD - Candidate 3 intro colourings and text -->
+        <div class="container8">
+            <!-- AD - Intro / overview statement about the candidate -->
+            <h5>Candidate 3: Hi! My name is ...
+                <br><br>
+                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                officia deserunt mollit anim id est laborum.
+            </h5>
+        </div>
+
+        <!-- AD - Candidate 4 intro colourings and text -->
+        <div class="container8">
+            <!-- AD - Intro / overview statement about the candidate -->
+            <h5>Candidate 4: Hi! My name is ...
+                <br><br>
+                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                officia deserunt mollit anim id est laborum.
+            </h5>
+        </div>
+
+        <!-- AD - Candidate 5 intro colourings and text -->
+        <div class="container8">
+            <!-- AD - Intro / overview statement about the candidate -->
+            <h5>Candidate 5: Hi! My name is ...
+                <br><br>
+                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                officia deserunt mollit anim id est laborum.
+            </h5>
+        </div>
+
+        <!-- AD - Additional candidate intro colourings and text -->
+        <div class="container8">
+            <!-- AD - Intro / overview statement about the candidate -->
+            <h5>Candidate X: More candidate info will go here... 20 in total...
+                <br><br>
+                Overview: All of the rest of the candidates will be continued on this page, 
+                all 20 candidates in total.
+            </h5>
+        </div>
+
+
+
+        <!-- End ot the candidate intro / overview section-->
+        <hr>
 
         <!-- AD - Beginning of the selection button section (answers)-->
         <div class="container2">           
