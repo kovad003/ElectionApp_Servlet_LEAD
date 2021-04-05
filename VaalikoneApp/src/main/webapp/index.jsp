@@ -108,7 +108,7 @@
         <!-- AD - End of the selection button section (answers)-->
         </div>
 
-	<!-- AD - End the central (yellow container)-->
+	<!-- AD - End of the central (yellow container)-->
     </div>
     
     <!-- Reorganise it later #########################################################################################-->
