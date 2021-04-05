@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- AD - links to the election machine external css file-->
-    <link rel="stylesheet" href="../election-machine-gui/style.css"> 
+    <link href="../css/style.css" rel="stylesheet">  
     
     <title>Questionnaire Results</title>
    
