@@ -182,6 +182,12 @@
 	</c:forEach>
 	</ol>
 	
+	<ol>
+    <c:forEach var="answer" items="${requestScope.answerlist}" >
+	<li>${answer.id}: ${answer.answer} <a href='/delete?id=${answer.id}'>delete</a> <a href='/readtoupdate?id=${answer.id}'>update</a>
+	</c:forEach>
+	</ol>
+	
 	<% 
 	/*
 	ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");

@@ -99,8 +99,8 @@ public class Dao_question {
 			ResultSet RS=pstmt.executeQuery();
 			while (RS.next()){
 				f=new Question();
-				f.setId(RS.getInt("id"));
-				f.setQuestion(RS.getString("question"));
+				f.setId(RS.getInt("QUESTION_ID"));
+				f.setQuestion(RS.getString("QUESTION"));
 			}
 			return f;
 		}

@@ -24,13 +24,14 @@ public class ShowQuestions extends HttpServlet {
 	@Override
 	public void init() {
 		dao=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
+		System.out.println("");
 	}
 	
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ShowQuestions() {
+    public ShowQuestions() { // CONSTRUCTOR, leave it here
         super();
         // TODO Auto-generated constructor stub
     }
