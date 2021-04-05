@@ -182,13 +182,14 @@
 	</c:forEach>
 	</ol>
 	
-	<%
+	<% 
+	/*
 	ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
 	
 	for (int i=0;questionList!=null && i<questionList.size();i++){
 		Question q=questionList.get(i);
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
-	}
+	}*/
 	%>
     
 </body>

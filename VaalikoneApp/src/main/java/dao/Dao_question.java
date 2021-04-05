@@ -12,13 +12,13 @@ import data.Question;
 import java.sql.Connection;
 
 
-public class Dao {
+public class Dao_question {
 	private String url;
 	private String user;
 	private String pass;
 	private Connection conn;
 	
-	public Dao(String url, String user, String pass) {
+	public Dao_question(String url, String user, String pass) {
 		System.out.println("Dao(String url, String user, String pass) CONSTRUCTOR ******");
 		this.url=url;
 		this.user=user;
