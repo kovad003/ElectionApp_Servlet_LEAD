@@ -54,7 +54,7 @@
     </div>
 </div>
 
-    <!-- AD - Beginning of the main election machine questionnaire (yellow container)-->
+    <!-- AD - Beginning the central (yellow container)-->
     <div class="container">
         <i class="material-icons resize1">account_balance</i>
         
@@ -132,7 +132,8 @@
         <!-- AD - End of the selection button section (answers)-->
         </div>
 
-    </div><!-- AD - End of the main election machine questionnaire (yellow container)-->
+	<!-- AD - End the central (yellow container)-->
+    </div>
 
 
 </body><!-- AD - End of body-->
