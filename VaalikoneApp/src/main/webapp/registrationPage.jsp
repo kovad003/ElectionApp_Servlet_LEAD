@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- AD - links to the election machine external css file-->
-    <link href="../css/style.css" rel="stylesheet"> 
+    <link href="../css/style.css" rel="stylesheet">  
     
     <title>Registration Page</title>
    
@@ -64,34 +64,38 @@
         </div>
     </div>
 
-
-
-    <i class="material-icons resize1">account_balance</i>
-        
-    
-
+    <!-- AD - customises the welcome message
+    <div class="container1a">
+        <h3>WELCOME</h3>
+        <i class="material-icons resize1">account_balance</i> 
+        <h3>ELECTION MACHINE</h3>
+    </div>
+    -->      
 
     <div class = "container1">
-        
-        <!-- AD - customises the welcome message-->
-        <div class="container1a"> 
-        <h3>Welcome visitor!</h3>
+
+        <div class = "container1c">          
+            <h5>WELCOME</h5>     
+            <i class="material-icons resize3">account_balance</i>  
+            <h5>ELECTION MACHINE</h5>            
         </div>
 
-        <hr> 
+        <div class = "container1b">
+            <form action="RegistrationServlet" method="post">                                      
+                    <legend><b>Site Registration </b></legend>
+                    <hr> 
+                    <table>                    
+                    <tr><td><b>Username: </b></td><td><input type="text" name="uname"></td></tr>
+                    <tr><td><b>Password: </b></td><td><input type="password" name="password"></td></tr>
+                    <tr><td><b>Email: </b></td><td><input type="text" name="email"></td></tr>
+                    <tr><td><b>Phone: </b></td><td><input type="text" name="phone"></td></tr>
+                    <tr><td></td><td><input type="submit" value="REGISTER"></td></tr>
+                    </table>
+                    <hr>        
+            </form> 
+        </div>
 
-		<form action="RegistrationServlet" method="post">                                      
-                <legend>Site Registration</legend>
-                <hr> 
-                <table>                    
-                <tr><td>Username: </td><td><input type="text" name="uname"></td></tr>
-                <tr><td>Password: </td><td><input type="password" name="password"></td></tr>
-                <tr><td>Email: </td><td><input type="text" name="email"></td></tr>
-                <tr><td>phone: </td><td><input type="text" name="phone"></td></tr>
-                <tr><td></td><td><input type="submit" value="register"></td></tr>
-                </table>
-                <hr>        
-		</form>   
+        
     </div>
 		
         
