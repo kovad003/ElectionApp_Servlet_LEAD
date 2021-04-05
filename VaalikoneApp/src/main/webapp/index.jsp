@@ -44,7 +44,7 @@
                   <a href="#"><h5>Login</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                  <a href="#"><h5>Candidates</h5></a>
+                  <a href="/ServletCandidates"><h5>Candidates</h5></a>
                 </div>
                 <div class = "container-nav-links">
                   <a href="#"><h5>About</h5></a>
