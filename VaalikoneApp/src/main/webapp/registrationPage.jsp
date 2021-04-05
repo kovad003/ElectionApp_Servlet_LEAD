@@ -62,15 +62,7 @@
                 
             </div>
         </div>
-    </div>
-
-    <!-- AD - customises the welcome message
-    <div class="container1a">
-        <h3>WELCOME</h3>
-        <i class="material-icons resize1">account_balance</i> 
-        <h3>ELECTION MACHINE</h3>
-    </div>
-    -->      
+    </div>     
 
     <div class = "container1">
 
@@ -108,17 +100,17 @@
 <!--             <label for="password">Password:</label> -->
 <!--             <input type="password" name="password" size="30" /> -->
 
-    <!-- AD - This will be in the jsp file
+    <!-- AD - This will be in the jsp file -->
 <%--             <br>${message} --%>
-    -->
+ 
 
 <!--             <br><br>            -->
 <!--             <button type="submit">Login</button> -->
 <!--         </form> -->
     
-    <!-- AD - This will be in the jsp file
+   <!-- AD - This will be in the jsp file -->
 <%--             <b>${user.fullname} (${user.email})</b> --%>
-    --> 
+
 
 <!--         <br><br> -->
 <!--         <a href="/logout">Logout</a> -->
