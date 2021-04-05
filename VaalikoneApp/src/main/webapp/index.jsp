@@ -109,7 +109,19 @@
         </div>
 
     </div><!-- AD - End of the main election machine questionnaire (yellow container)-->
-
+    
+    <!-- Reorganise it later 
+    <table>
+      <tr>
+        <td colspan="2" style="font-weight:bold;">Take our survey to find your dream politican</td>        
+      </tr>
+      <tr>
+        <td><a href='/ShowQuestions'>Show Questions</a></td>
+        <td><a href='/ShowAnswers'>Show Answers</a></td>
+        <td><a href='/ShowCandidates'>Show Candidates</a></td>
+      </tr>
+    </table>
+    -->
 
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->
