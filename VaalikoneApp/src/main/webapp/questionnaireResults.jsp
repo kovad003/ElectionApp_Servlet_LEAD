@@ -269,7 +269,7 @@
                 <br><br>
                 Mikki Savolainen
                 <br><br>
-                <hr style = "color:#264653">
+                <hr>
                 <br>
                 Overview: I care deeply about the environment and social issue.
                 <br><br>
