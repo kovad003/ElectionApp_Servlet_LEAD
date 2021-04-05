@@ -60,8 +60,8 @@
     
     
 <%--             <b>${user.fullname} (${user.email})</b> --%>
-        <br><br>
-        <a href="/logout">Logout</a>
+<!--         <br><br> -->
+<!--         <a href="/logout">Logout</a> -->
     
 <!--  <h1>Already registered?</h1> -->
 <!-- <a href="login.html">Login</a> -->
