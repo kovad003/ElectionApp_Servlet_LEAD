@@ -188,6 +188,12 @@
 	</c:forEach>
 	</ol>
 	
+	<ol>
+    <c:forEach var="candidate" items="${requestScope.candidatelist}" >
+	<li>${candidate.id}: ${candidate.candidate} <a href='/delete?id=${candidate.id}'>delete</a> <a href='/readtoupdate?id=${candidate.id}'>update</a>
+	</c:forEach>
+	</ol>
+	
 	<% 
 	/*
 	ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
