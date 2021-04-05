@@ -270,7 +270,7 @@
         }
       ],
       "sourceAttachmentPath": "",
-      "path": "com/google/appengine/appengine-api-1.0-sdk/1.9.77/appengine-api-1.0-sdk-1.9.77.jar",
+      "path": "com/google/appengine/appengine-api-1.0-sdk/1.9.88/appengine-api-1.0-sdk-1.9.88.jar",
       "attributes": [
         {
           "name": "com.google.cloud.tools.eclipse.appengine.libraries.repository",
@@ -290,7 +290,7 @@
         },
         {
           "name": "com.google.cloud.tools.eclipse.appengine.libraries.version",
-          "value": "1.9.77"
+          "value": "1.9.88"
         },
         {
           "name": "org.eclipse.jst.component.dependency",
@@ -1401,7 +1401,7 @@
         "repository": "central",
         "groupId": "com.google.appengine",
         "artifactId": "appengine-api-1.0-sdk",
-        "version": "1.9.77",
+        "version": "1.9.88",
         "type": "jar"
       },
       "javadocUri": "https://cloud.google.com/appengine/docs/java/javadoc/",
