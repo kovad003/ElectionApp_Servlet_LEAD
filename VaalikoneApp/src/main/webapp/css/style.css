@@ -10,6 +10,12 @@
     max-width: 80% !important;
     }
 
+    /* AD - Ensures that the registration page main 
+       yellow box, still looks good on smaller screens*/
+    .container1 {
+        max-width: 60% !important;
+    }
+
     .input-radio {
     font-size: small;
     width: 110% !important;
@@ -37,6 +43,12 @@
     margin-right: 0px !important; 
     padding-left: 0px !important;            
     } 
+
+    /* AD - Ensures that the registration page main 
+       yellow box, still looks good on very small screens*/
+    .container1 {
+    max-width: 90% !important;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -74,6 +86,32 @@ body{
     background-color: #E9C46A;
     box-shadow: 0 2px 16px 2px #264653;         
     margin: 25px auto 60px auto;                
+}
+
+/* AD - Customises the registration page main yellow container */
+.container1{            
+    max-width: 50%;
+    padding: 30px;
+    border-radius: 10px;         
+    background-color: #E9C46A;
+    box-shadow: 0 2px 16px 2px #264653;         
+    margin: 50px auto 60px auto;
+    
+    display: flex;
+    justify-content: center;             
+}
+
+/* AD - Customises the registration page orange box */
+.container1a {
+    background-color:#F4A261;
+    border-radius: 10px; 
+    padding: 0.1px 10px 0.1px 10px;  
+    margin: 10px auto;
+
+    max-width: 25%;
+    text-align: center;
+    height: 100px;
+    color:aliceblue !important;
 }
 
 /* AD - Customises the selection button section (answers) */
