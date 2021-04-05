@@ -9,16 +9,20 @@ public class Question {
 		this.question=question;
 	}
 	public Question() {
-		// TODO Auto-generated constructor stub
+		System.out.println("Question() constructor");
+		
 	}
 	public int getId() {
+		System.out.println("getId()");
 		return id;
 	}
 	public void setId(int id) {
+		System.out.println("setId(int id)");
 		this.id = id;
 	}
 	public void setId(String id) {
 		try {
+			System.out.println("setId(String id)");
 			this.id = Integer.parseInt(id);
 		}
 		catch(NumberFormatException | NullPointerException e) {
@@ -26,9 +30,11 @@ public class Question {
 		}
 	}
 	public String getQuestion() {
+		System.out.println("getQuestion()");
 		return question;
 	}
 	public void setQuestion(String question) {
+		System.out.println("setQuestion(String question)");
 		this.question = question;
 	}
 }

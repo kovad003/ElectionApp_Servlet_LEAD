@@ -42,7 +42,9 @@ public class ShowQuestions extends HttpServlet {
 		ArrayList<Question> list=null;
 		if(dao.getConnection())
 		{
+			System.out.println("Successfully connected to the database");
 			list=dao.readAllQuestion();
+			System.out.println("List: " + list);
 		}
 		else
 		{

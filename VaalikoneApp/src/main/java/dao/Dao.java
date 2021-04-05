@@ -19,12 +19,14 @@ public class Dao {
 	private Connection conn;
 	
 	public Dao(String url, String user, String pass) {
+		System.out.println("Dao(String url, String user, String pass) CONSTRUCTOR ******");
 		this.url=url;
 		this.user=user;
 		this.pass=pass;
 	}
 	
 	public boolean getConnection() {
+		System.out.println("getConnection()");
 		try {
 	        if (conn == null || conn.isClosed()) {
 	            try {
@@ -42,15 +44,17 @@ public class Dao {
 		}
 	}
 	public ArrayList<Question> readAllQuestion() {
+		System.out.println("readAllQuestion()");
 		ArrayList<Question> list=new ArrayList<>();
 		try {
 			Statement stmt=conn.createStatement();
-			ResultSet RS=stmt.executeQuery("select * from fish");
+			ResultSet RS=stmt.executeQuery("select * from questions");
+			System.out.println("RS: " + RS);
 			while (RS.next()){
-				Question f=new Question();
-				f.setId(RS.getInt("id"));
-				f.setQuestion(RS.getString("breed"));
-				list.add(f);
+				Question q=new Question();
+				q.setId(RS.getInt("QUESTION_ID"));
+				q.setQuestion(RS.getString("QUESTION"));
+				list.add(q);
 			}
 			return list;
 		}
@@ -59,8 +63,9 @@ public class Dao {
 		}
 	}
 	public ArrayList<Question> updateQuestion(Question q) {
+		System.out.println("updateQuestion(Question q)");
 		try {
-			String sql="update fish set breed=? where id=?";
+			String sql="update questions set question=? where id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, q.getQuestion());
 			pstmt.setInt(2, q.getId());
@@ -72,8 +77,9 @@ public class Dao {
 		}
 	}
 	public ArrayList<Question> deleteQuestion(String id) {
+		System.out.println("deleteQuestion(String id)");
 		try {
-			String sql="delete from fish where id=?";
+			String sql="delete from question where id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
@@ -87,14 +93,14 @@ public class Dao {
 	public Question readQuestion(String id) {
 		Question f=null;
 		try {
-			String sql="select * from fish where id=?";
+			String sql="select * from questions where id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			ResultSet RS=pstmt.executeQuery();
 			while (RS.next()){
 				f=new Question();
 				f.setId(RS.getInt("id"));
-				f.setQuestion(RS.getString("breed"));
+				f.setQuestion(RS.getString("question"));
 			}
 			return f;
 		}

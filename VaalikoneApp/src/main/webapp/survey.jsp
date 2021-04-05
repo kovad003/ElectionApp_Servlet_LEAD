@@ -142,7 +142,7 @@
 	            <%=(String)request.getAttribute("user_answer")%>
 	    
 	        <hr>
-		        <form id="form" action="/SurveyServlet" method="POST">
+		        <form id="form">
 			        <div class="container2">
 			        	<!-- ******************************************************************************************************** -->
 			            <div class="labels-radio">
@@ -175,7 +175,7 @@
     		<hr>
     </div>
     <!-- ========================================================================================================================================== -->
-    
+    <p> data </p>
     <ol>
     <c:forEach var="question" items="${requestScope.questionlist}" >
 	<li>${question.id}: ${question.question} <a href='/delete?id=${question.id}'>delete</a> <a href='/readtoupdate?id=${question.id}'>update</a>
@@ -189,7 +189,7 @@
 		Question q=questionList.get(i);
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}
-%>
+	%>
     
 </body>
 </html>
