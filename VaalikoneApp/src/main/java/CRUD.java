@@ -4,6 +4,28 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+
+
+
+/* TODO: 
+ * 
+ * storeA()
+ * 		* add get-> select max(user_id) from electionmachine.user_answers; 
+ *		* add this as variable to crud.storeA() before all other sql shit
+ *		* use this variable to feed other sql shit automatic biggest user_id+1
+ *
+ * getA():
+ *		* get length of electionmachine.answers (all candidates)
+ *		* outer for loop to iterate over length of rows
+ *		* inner for loop hashmap:
+ *								- key: candidate_id
+ *								- val: array of answres ordered by question_id number
+ *		* return hashmap
+ */
+
+
 
 class CRUD {
 	
@@ -91,7 +113,7 @@ class CRUD {
 		String arrQ[] = null;
 		try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
 			if (conn != null) {
-				System.out.println("select--connected");
+				System.out.println("getQ is connected to questions table");
 				
 				String script = "SELECT * FROM electionmachine.questions;";
 				java.sql.Statement statement = conn.createStatement();
@@ -109,8 +131,7 @@ class CRUD {
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("select--connection error!\n" + dbURL + "\nTable:" + 
-					"\nUser/Pwd:" + username + "/" + password);
+			System.out.println("select--connection error!\n" + dbURL + "\nUser/Pwd:" + username + "/" + password);
 		}
 		return arrQ;
 	}
@@ -129,7 +150,7 @@ class CRUD {
 		 */
 		try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
 			if (conn != null) {
-				System.out.println("insert--connected");
+				System.out.println("storeA is connected to user_answers table");
 				
 				String sql = "INSERT INTO electionmachine.user_answers (USER_ID, QUESTION_ID, ANSWER, COMMENTS) VALUES (?, ?, ?, ?)";
 
@@ -147,20 +168,18 @@ class CRUD {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("insert--connection error!\n" + dbURL + "\nTable:" + 
-					"\nUser/Pwd:" + username + "/" + password);
+			System.out.println("insert--connection error!\n" + dbURL + "\nUser/Pwd:" + username + "/" + password);
 		}
 	}
 	
 //	public String[] get_A() {
 //		/*
-//		 * Returns -> array of question strings
-//		 * 
+//		 * Returns -> dutch streetworkers
 //		 */
-//		String arrCA[][] = null;
+//		Map map = new HashMap();
 //		try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
 //			if (conn != null) {
-//				System.out.println("select--connected");
+//				System.out.println("getA()--connected");
 //				
 //				String script = "SELECT * FROM electionmachine.answers;";
 //				java.sql.Statement statement = conn.createStatement();
@@ -173,12 +192,13 @@ class CRUD {
 //				 * next step: put hash map in for loop for length of politicians
 //				 */
 //				int count = 0; 
-//				arrCA = new String[19][19];
+////				arrCA = new String[19][19];
 //				while (result.next()) {
 //				    String cid = result.getString("CANDIDATE_ID");
 //				    String qid = result.getString("QUESTION_ID");
 //				    String answer = result.getString("ANSWER");
-//				    arrCA[count] = [cid, qid, answer];
+//				    arrCA[count] = [cid];
+//				    
 ////				    System.out.println(arrQ[count]);
 //				    
 //				}
@@ -186,12 +206,14 @@ class CRUD {
 //		}
 //		catch (SQLException e) {
 //			e.printStackTrace();
-//			System.out.println("select--connection error!\n" + dbURL + "\nTable:" + 
+//			System.out.println("select--connection error!\n" + dbURL +
 //					"\nUser/Pwd:" + username + "/" + password);
 //		}
-//		return arrCA;
+//		return null;
 //	}
 	
 	
-	
-}
+}//end CRUD class
+
+
+
