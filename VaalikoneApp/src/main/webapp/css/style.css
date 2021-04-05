@@ -16,6 +16,12 @@
         max-width: 60% !important;
     }
 
+    /* AD - Ensures that the registration page box inside of the
+        main yellow box, still looks good on smaller screens*/
+       .container1b {
+        max-width: 60% !important;
+    }
+
     .input-radio {
     font-size: small;
     width: 110% !important;
@@ -47,7 +53,24 @@
     /* AD - Ensures that the registration page main 
        yellow box, still looks good on very small screens*/
     .container1 {
-    max-width: 90% !important;
+    max-width: 100% !important;
+    margin: 50px 0px 60px 0px !important;
+    }  
+
+    /* AD - Ensures that the registration page box inside of the
+    main yellow box, still looks good on smaller screens*/
+    .container1b {
+    max-width: 80% !important;
+    padding: 4px;
+    margin: 0px;
+    }
+
+    /* AD - Ensures that the registration page box green box 
+    inside of the main yellow box, still looks good on smaller screens*/
+    .container1c {
+    max-width: 15% !important;
+    padding: 3px;
+    margin: 0px;
     }
 }
 
@@ -90,7 +113,7 @@ body{
 
 /* AD - Customises the registration page main yellow container */
 .container1{            
-    max-width: 50%;
+    max-width: 40%;
     padding: 30px;
     border-radius: 10px;         
     background-color: #E9C46A;
@@ -105,13 +128,39 @@ body{
 .container1a {
     background-color:#F4A261;
     border-radius: 10px; 
-    padding: 0.1px 10px 0.1px 10px;  
+    
     margin: 10px auto;
+    padding: 10px;
 
-    max-width: 25%;
+    max-width: 30%;
     text-align: center;
-    height: 100px;
-    color:aliceblue !important;
+    height: 80%;
+    color: rgba(255, 255, 255, 0.829) !important; 
+}
+
+/* AD - Customises the registration page main form section */
+.container1b{            
+    max-width: 60%;
+    padding: 30px;
+    border-radius: 10px;         
+    background-color:#F4A261;
+    box-shadow: 0 2px 16px 2px #264653;         
+    margin: 10px;
+    
+    display: flex;
+    justify-content: center;                 
+}
+
+/* AD - Customises the registration page main yellow container */
+.container1c{    
+    background-color: #2A9D8F;    
+    border-radius: 10px;    
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 20%;
+    text-align: center;
+    max-height: 90%;
+    color: rgba(255, 255, 255, 0.829) !important;             
 }
 
 /* AD - Customises the selection button section (answers) */
@@ -206,7 +255,6 @@ body{
     padding: 1px;         
     margin: 1px;            
     width: 100%; 
-
     display: flex;
     justify-content: center;                               
 }
@@ -223,7 +271,6 @@ body{
     justify-content: center;
     display: flex;
     align-items: center; 
-
     box-shadow: 0 2px 16px 2px #264653;                                      
 }
 
@@ -232,15 +279,13 @@ body{
     border-radius: 10px; 
     padding: 1px;         
     margin: 4px;             
-    width: 80%; 
-
+    width: 80%;
     display: flex;
     overflow: auto;
     overflow-x: hidden;
     overflow-y: hidden;
     justify-content: center;  
-    align-items: center;   
-
+    align-items: center;
     box-shadow: 0 2px 16px 2px #264653;                             
 }
 
@@ -262,7 +307,6 @@ body{
 }
 
 /* AD - Customises the button hover effects */
-
 /* visited link */
 .button1:visited {
 color: #264653;
