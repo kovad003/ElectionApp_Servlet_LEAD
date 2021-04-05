@@ -44,7 +44,7 @@ public class ShowAnswers extends HttpServlet {
 		if(dao.getConnection())
 		{
 			System.out.println("Successfully connected to the database");
-			list=dao.readAllQuestion();
+			list=dao.readAllAnswer();
 			System.out.println("List: " + list);
 		}
 		else

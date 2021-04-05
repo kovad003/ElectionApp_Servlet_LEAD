@@ -154,9 +154,9 @@ public class Dao_answer {
 			ResultSet RS=stmt.executeQuery("SELECT * FROM answers;");
 			System.out.println("RS: " + RS);
 			while (RS.next()){
-				Answer q=new Answer();
-				a.setCANDIDATE_ID(RS>getInt("CANDIDATE_ID"));
-				a.setQUESTION_ID(RS.getInt("QUESTION_ID"));
+				Answer a=new Answer();
+				a.setCANDIDATE_ID(RS.getString("CANDIDATE_ID"));
+				a.setQUESTION_ID(RS.getString("QUESTION_ID"));
 				a.setANSWER(RS.getString("ANSWER"));
 				list.add(a);
 			}
@@ -169,6 +169,11 @@ public class Dao_answer {
 	}
 	
 	
+	private ResultSet getString(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public ArrayList<Answer> updateAnswer(Answer a) {
 		/*
 		 * PARAMETERS: answer object you wish to ammend with attrib answer, candidate_id, question_id
@@ -186,9 +191,9 @@ public class Dao_answer {
 		try {
 			String sql="UPDATE answers SET answer=? WHERE CANDIDATE_ID=? AND QUESTION_ID=?;";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
-			pstmt.setInt(1, a.getANSWER());
+			pstmt.setString(1, a.getANSWER());
 			pstmt.setString(2, a.getCANDIDATE_ID());
-			pstmt.setInt(3, a.getQUESTION_ID());
+			pstmt.setString(3, a.getQUESTION_ID());
 			pstmt.executeUpdate();
 			return readAllAnswer();
 		}
@@ -247,8 +252,8 @@ public class Dao_answer {
 			ResultSet RS=pstmt.executeQuery();
 			while (RS.next()){
 				politician=new Answer();
-				politician.setId(RS.getInt("QUESTION_ID"));
-				politician.setAnswer(RS.getString("ANSWER"));
+				politician.setQUESTION_ID(RS.getString("QUESTION_ID"));
+				politician.setANSWER(RS.getString("ANSWER"));
 			}
 			System.out.println("Your lies are ready for processing:)");
 			return politician;
