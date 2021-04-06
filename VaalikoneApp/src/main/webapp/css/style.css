@@ -138,9 +138,13 @@ contains the candidate table data */
     max-width: 95%;
     padding: 20px;
     border-radius: 10px;         
-    background-color:rgba(255, 255, 255, 0.336); /* AD -A unique shade for the data in the tables*/
+    background-color:rgba(214, 214, 214, 0.822); /* AD -A unique shade for the data in the tables*/
     box-shadow: 0 2px 16px 2px #264653;         
-    margin: 25px auto 25px auto;                
+    margin: 25px auto 25px auto;    
+    
+    /*
+    background-color:rgba(255, 255, 255, 0.336);
+    */
 }
 
 /* AD - Customises the main election machine questionnaire (yellow container) */
@@ -431,5 +435,48 @@ text-decoration: none;
 a:active {
 color: #2A9D8F;
 text-decoration: none;
-}     
+}  
+
+/* AD - Table heading customisation
+(such as on the adminUpdateCandidates.jsp) */
+.tableCustom1 {
+   
+background-color:#264653;
+color: rgba(255, 255, 255, 0.555);
+/*
+background-color: #E76F51;
+*/
+}
+
+/* AD - Table heading customisation
+for the update and delete buttons
+(such as on the adminUpdateCandidates.jsp) */
+.tableCustom2 {    
+    color: #98a2ff; /* AD - a custom shade for updating */
+}
+
+/* AD - Table heading customisation
+for the update and delete buttons
+(such as on the adminUpdateCandidates.jsp) */
+.tableCustom3 {    
+    color:#ff7171; /* AD - a custom colour for deleting */
+}
+
+/* AD - Table customisation
+for the rows of the table
+(such as on the adminUpdateCandidates.jsp) */
+.tableCustom4 {    
+    background-color:rgba(255, 255, 255, 0.555); /* AD - a custom colour for deleting */
+}
+
+/* AD - Table customisation
+for specific cells (sich as update and delete
+(such as on the adminUpdateCandidates.jsp) */
+.tableCustom5 {    
+    background-color:#264653; /* AD - a custom colour for deleting */
+}
+
+
+
+
  
