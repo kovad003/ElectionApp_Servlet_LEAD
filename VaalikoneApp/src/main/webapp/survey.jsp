@@ -238,5 +238,28 @@
 	}*/
 	%>
     -->
+    
+	   <div align="center">
+		<table border="1" cellpadding="5">
+			<caption><h2>List of Candidates</h2></caption>
+			<tr>
+			<th>CANDIDATE_ID</th>
+			<th>PARTY</th>
+			
+			</tr>
+			<c:forEach var="candidate" items="${requestScope.candidatelist}">
+			<tr>
+			<td><c:out value="${candidate.id}" /></td>
+			<td><c:out value="${candidate.candidate}" /></td>
+			</tr>
+			</c:forEach>
+		</table>
+	</div>
+    
+    
+    
+    
+    
+    
 </body>
 </html>
