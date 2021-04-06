@@ -137,11 +137,26 @@
 	       
 	        <h5>NOTE: This election machine contains 19 questions.
 	         Answer them all to find out which candidate suits you best!</h5>
-	        <h3>Q1) Statement: I believe that the government 
-	            should do more for the environment.</h3>
+	         
+	        <!-- The for loop between the JSP scriptlet tags will print a question out with the given index -->
+	        <h3>
+		      	<% 
+					ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
+			    	Question q=questionList.get(0);
+			    	out.println(q.getId()+") "+q.getQuestion());
+				%>
+			</h3>
 	            <%=(String)request.getAttribute("user_answer")%>
 	    
 	        <hr>
+	        
+	        	<% 
+	        	/*
+				ArrayList<Answer> answerList=(ArrayList<Answer>)request.getAttribute("questionlist");
+		    	Question q=questionList.get(0);
+		    	out.println(q.getId()+") "+q.getQuestion());
+				*/
+				%>
 		        <form id="form">
 			        <div class="container2">
 			        	<!-- ******************************************************************************************************** -->
@@ -175,8 +190,25 @@
     		<hr>
     </div>
     <!-- ========================================================================================================================================== -->
-    <p> data </p>
+    
+    <!-- 
+    
+    <!-- Other solutions for displaying questions 
+	<!-- No list numbers... 
     <ol>
+    <c:forEach begin="<%=2 %>" end="<%=3 %>" var="question" varStatus="status" items="${requestScope.questionlist}" >
+    <c:out value = "${question.id}) ${question.question}"/> <p>
+	</c:forEach>
+	</ol>
+
+    <!-- Questions are numbers 
+    <ol>
+    <c:forEach begin="<%=2 %>" end="<%=4 %>" var="question" items="${requestScope.questionlist}" >
+    <li>${question.question}
+	</c:forEach>
+	</ol>
+	
+	<ol>
     <c:forEach var="question" items="${requestScope.questionlist}" >
 	<li>${question.id}: ${question.question} <a href='/delete?id=${question.id}'>delete</a> <a href='/readtoupdate?id=${question.id}'>update</a>
 	</c:forEach>
@@ -188,6 +220,14 @@
 	</c:forEach>
 	</ol>
 	
+
+	<ol>
+    <c:forEach var="candidate" items="${requestScope.candidatelist}" >
+	<li>${candidate.id}: ${candidate.candidate} <a href='/delete?id=${candidate.id}'>delete</a> <a href='/readtoupdate?id=${candidate.id}'>update</a>
+	</c:forEach>
+	</ol>
+
+		
 	<% 
 	/*
 	ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
@@ -197,6 +237,6 @@
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}*/
 	%>
-    
+    -->
 </body>
 </html>
