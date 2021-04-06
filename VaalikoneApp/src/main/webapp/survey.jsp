@@ -237,6 +237,6 @@
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}*/
 	%>
-    
+    -->
 </body>
 </html>
