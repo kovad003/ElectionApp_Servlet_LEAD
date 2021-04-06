@@ -87,127 +87,127 @@
     <div class="containerUpdateCandidatesTable">   
         <div>                                                                                             
             <div class="table-responsive">          
-                <table class="table">
-                <thead>
-                    <tr>
-                    <th>UPDATE</th>
-                    <th>DELETE</th>
-                    <th>CANDIDATE_ID</th>
-                    <th>SURNAME</th>
-                    <th>FIRSTNAME</th>
-                    <th>PARTY</th>
-                    <th>LOCATION</th>
-                    <th>AGE</th>
-                    <th>REASON FOR RUNNING</th>
-                    <th>AIMS AND GOALS</th>
-                    <th>PROFESSION</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td>UPDATE</td>
-                    <td>DELETE</td>
-                    <td>Demo CANDIDATE_ID 1</td>
-                    <td>Demo SURNAME</td>
-                    <td>Demo FIRSTNAME</td>
-                    <td>Demo PARTY</td>
-                    <td>Demo LOCATION</td>
-                    <td>Demo AGE</td>
-                    <td>Demo REASON FOR RUNNING</td>
-                    <td>Demo AIMS AND GOALS</td>
-                    <td>Demo PROFESSION</td>                  
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                    <td>UPDATE</td>
-                    <td>DELETE</td>
-                    <td>Demo CANDIDATE_ID 1</td>
-                    <td>Demo SURNAME</td>
-                    <td>Demo FIRSTNAME</td>
-                    <td>Demo PARTY</td>
-                    <td>Demo LOCATION</td>
-                    <td>Demo AGE</td>
-                    <td>Demo REASON FOR RUNNING</td>
-                    <td>Demo AIMS AND GOALS</td>
-                    <td>Demo PROFESSION</td>                  
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                    <td>UPDATE</td>
-                    <td>DELETE</td>
-                    <td>Demo CANDIDATE_ID 1</td>
-                    <td>Demo SURNAME</td>
-                    <td>Demo FIRSTNAME</td>
-                    <td>Demo PARTY</td>
-                    <td>Demo LOCATION</td>
-                    <td>Demo AGE</td>
-                    <td>Demo REASON FOR RUNNING</td>
-                    <td>Demo AIMS AND GOALS</td>
-                    <td>Demo PROFESSION</td>                  
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                    <td>UPDATE</td>
-                    <td>DELETE</td>
-                    <td>Demo CANDIDATE_ID 1</td>
-                    <td>Demo SURNAME</td>
-                    <td>Demo FIRSTNAME</td>
-                    <td>Demo PARTY</td>
-                    <td>Demo LOCATION</td>
-                    <td>Demo AGE</td>
-                    <td>Demo REASON FOR RUNNING</td>
-                    <td>Demo AIMS AND GOALS</td>
-                    <td>Demo PROFESSION</td>                  
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                    <td>UPDATE</td>
-                    <td>DELETE</td>
-                    <td>Demo CANDIDATE_ID 1</td>
-                    <td>Demo SURNAME</td>
-                    <td>Demo FIRSTNAME</td>
-                    <td>Demo PARTY</td>
-                    <td>Demo LOCATION</td>
-                    <td>Demo AGE</td>
-                    <td>Demo REASON FOR RUNNING</td>
-                    <td>Demo AIMS AND GOALS</td>
-                    <td>Demo PROFESSION</td>                  
-                    </tr>
+                <table class="table">                    
+                    <thead class = "tableCustom1">
+                        <tr>
+                            <th>UPDATE</th>
+                            <th>DELETE</th>
+                            <th>CANDIDATE_ID</th>
+                            <th>SURNAME</th>
+                            <th>FIRSTNAME</th>
+                            <th>PARTY</th>
+                            <th>LOCATION</th>
+                            <th>AGE</th>
+                            <th>REASON FOR RUNNING</th>
+                            <th>AIMS AND GOALS</th>
+                            <th>PROFESSION</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
-                        <td>UPDATE</td>
-                        <td>DELETE</td>
-                        <td>Demo CANDIDATE_ID 1</td>
-                        <td>Demo SURNAME</td>
-                        <td>Demo FIRSTNAME</td>
-                        <td>Demo PARTY</td>
-                        <td>Demo LOCATION</td>
-                        <td>Demo AGE</td>
-                        <td>Demo REASON FOR RUNNING</td>
-                        <td>Demo AIMS AND GOALS</td>
-                        <td>Demo PROFESSION</td>                  
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+                            <td>Demo CANDIDATE_ID 1</td>
+                            <td>Demo SURNAME</td>
+                            <td>Demo FIRSTNAME</td>
+                            <td>Demo PARTY</td>
+                            <td>Demo LOCATION</td>
+                            <td>Demo AGE</td>
+                            <td>Demo REASON FOR RUNNING</td>
+                            <td>Demo AIMS AND GOALS</td>
+                            <td>Demo PROFESSION</td>                  
                         </tr>
                     </tbody>
                     <tbody>
                         <tr>
-                        <td>UPDATE</td>
-                        <td>DELETE</td>
-                        <td>Demo CANDIDATE_ID 1</td>
-                        <td>Demo SURNAME</td>
-                        <td>Demo FIRSTNAME</td>
-                        <td>Demo PARTY</td>
-                        <td>Demo LOCATION</td>
-                        <td>Demo AGE</td>
-                        <td>Demo REASON FOR RUNNING</td>
-                        <td>Demo AIMS AND GOALS</td>
-                        <td>Demo PROFESSION</td>                  
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+                            <td>Demo CANDIDATE_ID 2</td>
+                            <td>Demo SURNAME</td>
+                            <td>Demo FIRSTNAME</td>
+                            <td>Demo PARTY</td>
+                            <td>Demo LOCATION</td>
+                            <td>Demo AGE</td>
+                            <td>Demo REASON FOR RUNNING</td>
+                            <td>Demo AIMS AND GOALS</td>
+                            <td>Demo PROFESSION</td>                  
                         </tr>
                     </tbody>
-                </tbody>
+                    <tbody>
+                        <tr>
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+                            <td>Demo CANDIDATE_ID 3</td>
+                            <td>Demo SURNAME</td>
+                            <td>Demo FIRSTNAME</td>
+                            <td>Demo PARTY</td>
+                            <td>Demo LOCATION</td>
+                            <td>Demo AGE</td>
+                            <td>Demo REASON FOR RUNNING</td>
+                            <td>Demo AIMS AND GOALS</td>
+                            <td>Demo PROFESSION</td>                  
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+                            <td>Demo CANDIDATE_ID 4</td>
+                            <td>Demo SURNAME</td>
+                            <td>Demo FIRSTNAME</td>
+                            <td>Demo PARTY</td>
+                            <td>Demo LOCATION</td>
+                            <td>Demo AGE</td>
+                            <td>Demo REASON FOR RUNNING</td>
+                            <td>Demo AIMS AND GOALS</td>
+                            <td>Demo PROFESSION</td>                  
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+                            <td>Demo CANDIDATE_ID 5</td>
+                            <td>Demo SURNAME</td>
+                            <td>Demo FIRSTNAME</td>
+                            <td>Demo PARTY</td>
+                            <td>Demo LOCATION</td>
+                            <td>Demo AGE</td>
+                            <td>Demo REASON FOR RUNNING</td>
+                            <td>Demo AIMS AND GOALS</td>
+                            <td>Demo PROFESSION</td>                  
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+                            <td>Demo CANDIDATE_ID 6</td>
+                            <td>Demo SURNAME</td>
+                            <td>Demo FIRSTNAME</td>
+                            <td>Demo PARTY</td>
+                            <td>Demo LOCATION</td>
+                            <td>Demo AGE</td>
+                            <td>Demo REASON FOR RUNNING</td>
+                            <td>Demo AIMS AND GOALS</td>
+                            <td>Demo PROFESSION</td>                  
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+                            <td>Demo CANDIDATE_ID 7</td>
+                            <td>Demo SURNAME</td>
+                            <td>Demo FIRSTNAME</td>
+                            <td>Demo PARTY</td>
+                            <td>Demo LOCATION</td>
+                            <td>Demo AGE</td>
+                            <td>Demo REASON FOR RUNNING</td>
+                            <td>Demo AIMS AND GOALS</td>
+                            <td>Demo PROFESSION</td>                  
+                        </tr>
+                    </tbody>                
                 </table>
             </div>
         </div>
