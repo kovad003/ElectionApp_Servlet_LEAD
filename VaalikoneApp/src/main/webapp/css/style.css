@@ -138,7 +138,7 @@ contains the candidate table data */
     max-width: 95%;
     padding: 20px;
     border-radius: 10px;         
-    background-color: #E9C46A;
+    background-color:rgba(255, 255, 255, 0.336); /* AD -A unique shade for the data in the tables*/
     box-shadow: 0 2px 16px 2px #264653;         
     margin: 25px auto 25px auto;                
 }
