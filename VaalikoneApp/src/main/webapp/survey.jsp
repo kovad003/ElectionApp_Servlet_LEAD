@@ -150,13 +150,13 @@
 	    
 	        <hr>
 	        
+	        <h3>
 	        	<% 
-	        	/*
-				ArrayList<Answer> answerList=(ArrayList<Answer>)request.getAttribute("questionlist");
-		    	Question q=questionList.get(0);
-		    	out.println(q.getId()+") "+q.getQuestion());
-				*/
+				ArrayList<Answer> answerList=(ArrayList<Answer>)request.getAttribute("answerlist");
+		    	Answer a=answerList.get(0);
+		    	out.println(a.getId()+") "+a.getAnswer());
 				%>
+			</h3>
 		        <form id="form">
 			        <div class="container2">
 			        	<!-- ******************************************************************************************************** -->
@@ -191,17 +191,14 @@
     </div>
     <!-- ========================================================================================================================================== -->
     
-    <!-- 
     
-    <!-- Other solutions for displaying questions 
-	<!-- No list numbers... 
+ 
     <ol>
     <c:forEach begin="<%=2 %>" end="<%=3 %>" var="question" varStatus="status" items="${requestScope.questionlist}" >
     <c:out value = "${question.id}) ${question.question}"/> <p>
 	</c:forEach>
 	</ol>
 
-    <!-- Questions are numbers 
     <ol>
     <c:forEach begin="<%=2 %>" end="<%=4 %>" var="question" items="${requestScope.questionlist}" >
     <li>${question.question}
@@ -237,6 +234,6 @@
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}*/
 	%>
-    -->
+    
 </body>
 </html>

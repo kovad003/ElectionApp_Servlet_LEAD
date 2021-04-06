@@ -52,7 +52,7 @@ public class ShowAnswers extends HttpServlet {
 		{
 			System.out.println("doGet has no connection to database");
 		}
-		request.setAttribute("questionlist", list);
+		request.setAttribute("answerlist", list);
 		
 		RequestDispatcher rd=request.getRequestDispatcher("/survey.jsp");
 		rd.forward(request, response);
