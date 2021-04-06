@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.Dao_answer;
+import data.Answer;
 import data.Question;
 
 /**
@@ -26,7 +27,7 @@ public class ShowAnswers extends HttpServlet {
 	
 	@Override
 	public void init() {
-		dao=new Dao_answer("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
+		dao = new Dao_answer("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
 		System.out.println("");
 	}
 	
@@ -40,16 +41,16 @@ public class ShowAnswers extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<Question> list=null;
+		ArrayList<Answer> list=null;
 		if(dao.getConnection())
 		{
-			System.out.println("Successfully connected to the database");
+			System.out.println("Servlet doGet connected to the database");
 			list=dao.readAllAnswer();
 			System.out.println("List: " + list);
 		}
 		else
 		{
-			System.out.println("No connection to database");
+			System.out.println("doGet has no connection to database");
 		}
 		request.setAttribute("questionlist", list);
 		

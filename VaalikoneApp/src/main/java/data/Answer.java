@@ -42,24 +42,24 @@ public class Answer {
 		return CANDIDATE_ID;
 	}
 
-	public void setCANDIDATE_ID(String cANDIDATE_ID) {
-		CANDIDATE_ID = cANDIDATE_ID;
+	public void setCANDIDATE_ID(String CANDIDATE_ID) {
+		CANDIDATE_ID = CANDIDATE_ID;
 	}
 
 	public String getQUESTION_ID() {
 		return QUESTION_ID;
 	}
 
-	public void setQUESTION_ID(String qUESTION_ID) {
-		QUESTION_ID = qUESTION_ID;
+	public void setQUESTION_ID(String QUESTION_ID) {
+		QUESTION_ID = QUESTION_ID;
 	}
 
 	public String getANSWER() {
 		return ANSWER;
 	}
 
-	public void setANSWER(String aNSWER) {
-		ANSWER = aNSWER;
+	public void setANSWER(String ANSWER) {
+		ANSWER = ANSWER;
 	}
 
 	
