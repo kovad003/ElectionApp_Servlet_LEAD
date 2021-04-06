@@ -1,5 +1,8 @@
 package data;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class QAnswer {
 	private int id;
 	private int answer;
@@ -8,6 +11,7 @@ public class QAnswer {
 		this.answer=answer;
 	}
 	public QAnswer() {
+		Map <Integer, Integer> answerMap = new HashMap <Integer, Integer>();
 		System.out.println("QAnswer()");
 		
 	}

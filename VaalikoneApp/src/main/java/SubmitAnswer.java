@@ -42,6 +42,9 @@ public class SubmitAnswer extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ArrayList<QAnswer> resp=null; // How to creat DAO?
+		
+		
 		
 		Map <Integer, Integer> answerMap = new HashMap <Integer, Integer>(); //Data pair will be stored in this map
 		// Usually it is better to handle such data as String however in the DB these data is used as PK so it must be Int
