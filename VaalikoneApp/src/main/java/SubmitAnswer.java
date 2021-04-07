@@ -57,6 +57,7 @@ public class SubmitAnswer extends HttpServlet {
 				
 				System.out.println(i + " - " + selected);
 				System.out.println("Object: " + a);
+				System.out.println("List: " + ans);
 			}
 			
 			
