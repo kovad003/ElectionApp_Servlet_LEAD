@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- AD - links to the election machine external css file-->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet"> 
     
     <title>About</title>
    
@@ -23,33 +23,25 @@
 
 <!-- AD - customises the navbar-->
 <div class="container-nav1">
-<!--
-    <div class="container-nav2">
-       
-        <i class="material-icons resize2">account_balance</i>
-    </div>
--->
 
     <div class="container-nav3">
-        <div class="container-nav4">
-          
-                  <!-- AD - icon customisation -->
-                <div class = "container-nav-links-icon">
-                <i class="material-icons resize3">account_balance</i>              
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5>Register</h5></a>
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5>Login</h5></a>
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5>Candidates</h5></a>
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5>About</h5></a>
-                </div>           
-            
+        <div class="container-nav4">              
+            <!-- AD - icon customisation -->
+            <div class = "container-nav-links-icon">
+            <a href="https://www.google.com/"><i class="material-icons resize3a">account_balance</i></a>              
+            </div>
+            <div class = "container-nav-links">
+                <a href="#"><h5>About</h5></a>
+            </div>
+            <div class = "container-nav-links">
+                <a href="#"><h5>Questionnaire</h5></a>
+            </div>
+            <div class = "container-nav-links">
+                <a href="#"><h5>Candidates</h5></a>
+            </div>
+            <div class = "container-nav-links">
+                <a href="#"><h5>Login</h5></a>
+            </div>               
         </div>
     </div>
 </div>
@@ -217,7 +209,7 @@
         <!-- AD - End of the selection button section (answers)-->
         </div>
 
-	<!-- AD - End of the central (yellow container)-->
+    <!-- AD - End of the central (yellow container)-->
     </div>
 
 
