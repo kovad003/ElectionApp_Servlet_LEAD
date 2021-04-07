@@ -19,39 +19,36 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- AD - links to the election machine external css file-->
-    <link href="../css/style.css" rel="stylesheet"> 
+    <link href="../css/style.css" rel="stylesheet">  
 
     <title>Admin: Update Candidates</title>
     
 </head>
 <body>
-
+    <!-- AD - icon customisation 
+                            Bold styling had to be added due to bootstrap
+                            causing a few issues to the some of
+                            the text sizes-->
 <!-- AD - customises the navbar-->
 <div class="container-nav1">
 
     <div class="container-nav3">
-        <div class="container-nav4">
-          
-                  <!-- AD - icon customisation 
-                            Bold styling had to be added due to bootstrap
-                            causing a few issues to the some of
-                            the text sizes-->
+        <div class="container-nav4">             
                 <div class = "container-nav-links-icon">
-                <i class="material-icons resize3">account_balance</i>              
+                <a href="https://www.google.com/"><i class="material-icons resize3a">account_balance</i></a>             
                 </div>
                 <div class = "container-nav-links">
-                  <a href="#"><h5><b>Register</b></h5></a>
+                  <a href="#"><h5><b>About</b></h5></a>
                 </div>
                 <div class = "container-nav-links">
-                  <a href="#"><h5><b>Login</b></h5></a>
+                  <a href="#"><h5><b>Questionnaire</b></h5></a>
                 </div>
                 <div class = "container-nav-links">
                   <a href="#"><h5><b>Candidates</b></h5></a>
                 </div>
                 <div class = "container-nav-links">
-                  <a href="#"><h5><b>About</b></h5></a>
+                  <a href="#"><h5><b>Login</b></h5></a>
                 </div>           
-            
         </div>
     </div>
 </div>
