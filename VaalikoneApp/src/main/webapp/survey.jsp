@@ -145,12 +145,29 @@
 <!--
 	        <h3>
 		      	<% 
-					ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
+		      	/*	ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
 			    	Question q=questionList.get(0);
-			    	out.println(q.getId()+") "+q.getQuestion());
+			    	out.println(q.getId()+") "+q.getQuestion()); */
 				%>
+
+			</h3>
+			
+				        <h3>
+		    	<% 
+// 					ArrayList<Candidate> candidateList=(ArrayList<Candidate>)request.getAttribute("candidatelist");
+// 			    	Candidate q=candidateList.get(0);
+// 			    	out.println(q.getId()+") "+q.getCandidate());
+				%>
+				
+			</h3>
+	            <%=(String)request.getAttribute("user_answer")%>
+	    
+	        <hr>
+	        
+
 	        </h3>
 	        <h3>
+
 	        	<% 
 					ArrayList<Answer> aList=(ArrayList<Answer>)request.getAttribute("answerlist");
 			    	Answer a = aList.get(0);
@@ -223,6 +240,12 @@
 	    </c:forEach>
 	</table>
     
+
+    <!-- -->
+    
+    <!-- Other solutions for displaying questions -->
+	<!-- No list numbers... -->
+
     <!-- Other solutions for displaying questions  -->
 	<!-- No list numbers...  
 
@@ -231,6 +254,8 @@
     <c:out value = "${question.id}) ${question.question}"/> <p>
 	</c:forEach>
 	</ol>
+
+    <!-- Questions are numbers -->
 
     <ol>
     <c:forEach begin="<%=0 %>" end="<%=16 %>" var="question" items="${requestScope.questionlist}" >
@@ -250,7 +275,31 @@
 	</c:forEach>
 	</ol>
 	
-
+	<!--<c:forEach var="candidate" items="${requestScope.candidatelist}">
+				<tr>
+					<td><c:out value="${candidate.id}" /></td>
+					<td><c:out value="${candidate.candidate}" /></td>
+					
+				</tr>
+			</c:forEach>-->
+			
+			 <div align="center">
+        <table border="1" cellpadding="5">
+            <caption><h2>List of Candidates</h2></caption>
+            <tr>
+                <th>CANDIDATE_ID</th>
+                <th>PARTY</th>
+                
+            </tr>
+           <c:forEach var="candidate" items="${requestScope.candidatelist}">
+				<tr>
+					<td><c:out value="${candidate.id}" /></td>
+					<td><c:out value="${candidate.candidate}" /></td>	
+				</tr>
+			</c:forEach>
+        </table>
+    </div>
+			
 	<ol>
     <c:forEach var="candidate" items="${requestScope.candidatelist}" >
 	<li>${candidate.id}: ${candidate.candidate} <a href='/delete?id=${candidate.id}'>delete</a> <a href='/readtoupdate?id=${candidate.id}'>update</a>
@@ -260,13 +309,105 @@
 
 		
 	<% 
-	/*
-	ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
+	
+	/*ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
 	
 	for (int i=0;questionList!=null && i<questionList.size();i++){
 		Question q=questionList.get(i);
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}*/
+
+    <!-- AD - Beginning the central (yellow container)-->
+    <div class="containerMainUpdateCandidates">
+        <i class="material-icons resize3">account_balance</i>
+        
+        <!-- AD - customises the 'ADMIN: Updates Candidates' message-->
+        <div class="container6a"> 
+        <h3>ADMIN PORTAL: Update Candidates</h3>
+        </div>
+       
+        <!-- AD - A small container to amend the disclaimer background section-->
+        <div class="container4">             
+            <!-- AD - Introductory statement about the ADMIN: Update Candidates page -->
+            <h5>ADMIN NOTE: Once logged in, this page allows for a 'Global Herald Newspaper' 
+                IT Admin to add, edit and remove candidate information.
+                <br><br>
+                Regular users and candidates do not have access to this page 
+                (or its functionality).
+            </h5>        
+        </div>        
+
+        <!-- AD - End of the central (yellow container)-->
+    </div>
+
+    <!-- AD This is a container to contain the data from the Candidate Table.
+            Created utilising bootstrap, this .table-responsive class creates a responsive table
+            which will scroll horizontally on small devices (under 768px). 
+            When viewing on anything larger than 768px wide, 
+            there is no difference:-->
+    <div class="containerUpdateCandidatesTable">   
+        <div>                                                                                             
+            <div class="table-responsive">          
+                <table class="table">                    
+                    <thead class = "tableCustom1">
+                    </thead>
+                    <tbody>
+                        <tr>                  <caption><h2>List of Candidates</h2></caption>
+				            <tr>
+				                <th>CANDIDATE_ID</th>
+				                <th>PARTY</th>  
+				            </tr>
+				           <c:forEach var="candidate" items="${requestScope.candidatelist}">
+								<tr>	
+									<td><c:out value="${candidate.id}" /></td>
+									<td><c:out value="${candidate.candidate}" /></td>	
+									<td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+				                    <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+								</tr>
+							</c:forEach>                  
+                        </tr>
+                    </tbody>                
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- AD This is a container to contain the data from the Candidate Table.
+            Created utilising bootstrap, this .table-responsive class creates a responsive table
+            which will scroll horizontally on small devices (under 768px). 
+            When viewing on anything larger than 768px wide, 
+            there is no difference:-->
+            <div class="containerUpdateCandidatesTable">   
+                <div>                                                                                             
+                    <div class="table-responsive">          
+                        <table class="table">                    
+                            <thead class = "tableCustom1">
+                                <tr>
+                                    <th>UPDATE</th>
+                                    <th>DELETE</th>
+                                    <th>CANDIDATE_ID</th> 
+                                    <th>PARTY</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="CANDIDATE_ID"></td>
+                                    <td><input type="text" name="PARTY"></td>
+                                    <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+                                    <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+                                  
+                                </tr>
+                            </tbody>                        
+                                    
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+</body><!-- AD - End of body-->
+</html><!-- AD - End of html-->
+   
+
 	
   %>
     
@@ -307,3 +448,6 @@
 	</script>
 -->
 </html>
+
+
+
