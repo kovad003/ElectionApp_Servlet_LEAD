@@ -33,36 +33,28 @@
 
 <!-- AD - customises the navbar-->
 <div class="container-nav1">
-    <!--
-        <div class="container-nav2">
-           
-            <i class="material-icons resize2">account_balance</i>
-        </div>
-    -->
-    
+     
         <div class="container-nav3">
-            <div class="container-nav4">
-              
-                      <!-- AD - icon customisation -->
-                    <div class = "container-nav-links-icon">
-                    <i class="material-icons resize3">account_balance</i>              
-                    </div>
-                    <div class = "container-nav-links">
-                      <a href="#"><h5>Register</h5></a>
-                    </div>
-                    <div class = "container-nav-links">
-                      <a href="#"><h5>Login</h5></a>
-                    </div>
-                    <div class = "container-nav-links">
-                      <a href="#"><h5>Candidates</h5></a>
-                    </div>
-                    <div class = "container-nav-links">
-                      <a href="#"><h5>About</h5></a>
-                    </div>           
-                
+            <div class="container-nav4">              
+                <!-- AD - icon customisation -->
+                <div class = "container-nav-links-icon">
+                <a href="https://www.google.com/"><i class="material-icons resize3a">account_balance</i></a>              
+                </div>
+                <div class = "container-nav-links">
+                    <a href="#"><h5>About</h5></a>
+                </div>
+                <div class = "container-nav-links">
+                    <a href="#"><h5>Questionnaire</h5></a>
+                </div>
+                <div class = "container-nav-links">
+                    <a href="#"><h5>Candidates</h5></a>
+                </div>
+                <div class = "container-nav-links">
+                    <a href="#"><h5>Login</h5></a>
+                </div>               
             </div>
         </div>
-    </div>      
+    </div>   
 
     <!-- AD - Welcome message inside the Login Section-->
     <div class = "container1">
@@ -93,37 +85,11 @@
                 </table>
                 <hr>        
         </form> 
-        </div>        
-    </div>
+        </div>
+
         
-
-<!--         <h1> Login</h1> -->
-<!--         <form action="login" method="post"> -->
-<!--             <label for="email">Email:</label> -->
-<!--             <input name="email" size="30" /> -->
-<!--             <br><br> -->
-<!--             <label for="password">Password:</label> -->
-<!--             <input type="password" name="password" size="30" /> -->
-
-    <!-- AD - This will be in the jsp file -->
-<%--             <br>${message} --%>
-   
-
-<!--             <br><br>            -->
-<!--             <button type="submit">Login</button> -->
-<!--         </form> -->
-    
-    <!-- AD - This will be in the jsp file -->
-<%--             <b>${user.fullname} (${user.email})</b> --%>
-   
-
-<!--         <br><br> -->
-<!--         <a href="/logout">Logout</a> -->
-    
-<!--  <h1>Already registered?</h1> -->
-<!-- <a href="login.html">Login</a> -->
-<!-- <a href="LogoutServlet">Logout</a> -->
-<!-- <a href="ProfileServlet">Profile</a> -->
+    </div>
+ 
 </body>
 
 <script type="text/javascript">
