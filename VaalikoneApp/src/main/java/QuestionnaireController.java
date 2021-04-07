@@ -30,11 +30,44 @@ public class QuestionnaireController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		
+		
+		
+		/*
+		//Will update the question counter from ShowQuestion
+		//TODO we need next() and prev() methods in Questions so we can go back and forth in the list of questions
+		int counter = (Integer)request.getAttribute("counter");
+		counter++;
+		System.out.println("counter is: " + counter);
+		request.setAttribute("counter", counter);
+		
+		//Will selcet the next question from the ArrayList
 		ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
-    	Question q=questionList.get(0);
-    	System.out.println(q.getId()+") "+q.getQuestion());
+    	Question q=questionList.get(counter-1); // starts with 0th element
     	
-    	request.getRequestDispatcher("/survey.jsp").forward(request, response);
+    	ArrayList<Question> singleQuestion = new ArrayList<Question>();
+    	singleQuestion.add(q);
+    	
+    	System.out.println("Question object selected: " + questionList.get(counter-1));
+    	System.out.println("Question selected: " + q.getId()+") "+q.getQuestion());
+ 
+    	request.setAttribute("single_question", singleQuestion);
+    	//request.setAttribute("question_id", q.getId());
+    	//request.setAttribute("question_text", q.getQuestion());
+    	
+    	
+    	//Will redirect us to the survey.jsp page
+    	response.sendRedirect("/survey.jsp");
+		    	
+		    	
+		    	
+		    	//Will send the next question back to the survey.jsp file
+		    	//request.getRequestDispatcher("/survey.jsp").forward(request, response);
+		    	
+		    	 */
+		    	
 	}
 
 }
