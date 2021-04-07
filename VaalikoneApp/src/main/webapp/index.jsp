@@ -34,10 +34,10 @@
                 <a href="../about.jsp"><h5>About</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="../election-machine-gui/questionnaire.jsp"><h5>Questionnaire</h5></a>
+                <a href="../questionnaire.jsp"><h5>Questionnaire</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="../election-machine-gui/candidates.jsp"><h5>Candidates</h5></a>
+                <a href="../candidates.jsp"><h5>Candidates</h5></a>
             </div>
             <div class = "container-nav-links">
                 <a href="#"><h5>Login</h5></a>
@@ -91,7 +91,7 @@
             <div class="container3">
 
                 <!-- AD - Buttons for login and registration-->
-                <a href="../election-machine-gui/questionnaire.jsp">
+                <a href="../questionnaire.jsp">
                 <button class="button-main button1"><b>Take Quiz</b></button></a>             
 
             </div>
