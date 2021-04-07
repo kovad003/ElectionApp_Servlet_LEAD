@@ -14,42 +14,34 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- AD - links to the election machine external css file-->
-    <link href="../css/style.css" rel="stylesheet">     
+    <link href="../css/style.css" rel="stylesheet">       
 
-    <title>Welcome</title>
+    <title>Homepage</title>
    
 </head>
 <body>
 
 <!-- AD - customises the navbar-->
 <div class="container-nav1">
-<!--
-    <div class="container-nav2">
-       
-        <i class="material-icons resize2">account_balance</i>
-    </div>
--->
 
     <div class="container-nav3">
         <div class="container-nav4">
-          
-                  <!-- AD - icon customisation -->
-                <div class = "container-nav-links-icon">
-                <i class="material-icons resize3">account_balance</i>              
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5>Register</h5></a>
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5>Login</h5></a>
-                </div>
-                <div class = "container-nav-links">
-                  <a href="/ServletCandidates"><h5>Candidates</h5></a>
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5>About</h5></a>
-                </div>           
-            
+            <!-- AD - icon customisation -->
+            <div class = "container-nav-links-icon">
+            <a href="https://www.google.com/"><i class="material-icons resize3a">account_balance</i></a>              
+            </div>
+            <div class = "container-nav-links">
+                <a href="#"><h5>About</h5></a>
+            </div>
+            <div class = "container-nav-links">
+                <a href="#"><h5>Questionnaire</h5></a>
+            </div>
+            <div class = "container-nav-links">
+                <a href="#"><h5>Candidates</h5></a>
+            </div>
+            <div class = "container-nav-links">
+                <a href="#"><h5>Login</h5></a>
+            </div>           
         </div>
     </div>
 </div>
@@ -60,13 +52,13 @@
         
         <!-- AD - customises the welcome message-->
         <div class="container6"> 
-        <h2>Welcome visitor!</h2>
+        <h2>Homepage</h2>
         </div>
        
         <!-- AD - This container adds colourings and style to the intro message -->
         <div class="container5">
         <!-- AD - Election machine questions -->
-        <h5>This election machine website is run by the 'Global Herald Newspaper',
+        <h5>Welcome to our site! This election machine website is run by the 'Global Herald Newspaper',
             in association with the 'HÄMK's Finest' server programming team. Sign up
             to find out which candidate is right for you!
         </h5>
@@ -74,8 +66,8 @@
 
         <!-- AD - This container customises the 'please register' message-->
         <div class="container7">
-        <h3>To use our innovative election machine, please register 
-            an account below, before logging in.</h3>
+        <h3>To try out our innovative election machine, please click the 
+          'Take Quiz' button down below!</h3>
         </div>
     
         <hr>   
@@ -99,30 +91,15 @@
             <div class="container3">
 
                 <!-- AD - Buttons for login and registration-->
-                <button class="button-main button1"><b>REGISTER</b></button>
-                
-                <button class="button-main button1"><b>LOGIN</b></button>
+                <button class="button-main button1"><b>Take Quiz</b></button>              
 
             </div>
         
         <!-- AD - End of the selection button section (answers)-->
         </div>
 
-	<!-- AD - End of the central (yellow container)-->
+    <!-- AD - End of the central (yellow container)-->
     </div>
-    
-    <!-- Reorganise it later #########################################################################################-->
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Take our survey to find your dream politican</td>        
-      </tr>
-      <tr>
-        <td><a href='/ShowQuestions'>Show Questions</a></td>
-        <td><a href='/ShowAnswers'>Show Answers</a></td>
-        <td><a href='/ShowCandidates'>Show Candidates</a></td>
-      </tr>
-    </table>
-    <!-- ############################################################################################################## -->
 
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->

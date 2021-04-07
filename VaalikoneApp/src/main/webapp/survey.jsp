@@ -138,8 +138,11 @@
 	       
 	        <h5>NOTE: This election machine contains 19 questions.
 	         Answer them all to find out which candidate suits you best!</h5>
-	         
+     		<!-- ******************************************************************************************************** -->
+            <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
+            <!-- ******************************************************************************************************** -->
 	        <!-- The for loop between the JSP scriptlet tags will print a question out with the given index -->
+<!--
 	        <h3>
 		      	<% 
 					ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
@@ -156,6 +159,19 @@
 			</h3>
 		        <form id="form">
 			        <div class="container2">
+-->
+	        
+	            <%= (String)request.getAttribute("user_answer")%>
+	    
+	        <hr>
+
+		        <form id="form" action="/SubmitAnswer" method="POST">
+
+				<ol>
+			    <c:forEach begin="0" end="3" var="question" items="${requestScope.questionlist}" >
+			    <h3><c:out value = "${question.id}) ${question.question}"/></h3>
+			    <div class="container2">
+
 			        	<!-- ******************************************************************************************************** -->
 			            <div class="labels-radio">
 			                <b>Select:</b>
@@ -163,33 +179,53 @@
 			            <!-- ******************************************************************************************************** -->
 			            <div class="input-radio">
 			            <label> <b>(1)</b>
-			            <input type = "radio" name = "select"  value="1">
+			            <input type="radio" name="selected${question.id}" value="1">
 			            </label>
 			            <label> <b>(2)</b>
-			            <input type = "radio" name = "select" value = "2">
+			            <input type = "radio" name="selected${question.id}" value = "2">
 			            </label>
 			            <label> <b>(3)</b>
-			            <input type = "radio" name = "select" value = "3">
+			            <input type = "radio" name="selected${question.id}" value = "3">
 			            </label>
 			            <label> <b>(4)</b>
-			            <input type = "radio" name = "select" value = "4">
+			            <input type = "radio" name="selected${question.id}" value = "4">
 			            </label>
 			            <label> <b>(5)</b>
-			            <input type = "radio" name = "select" value = "5">
+			            <input type = "radio" name="selected${question.id}" value = "5">
 			            </label>
 			            </div>
-			             <!-- ******************************************************************************************************** -->
-			            <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
-			             <!-- ******************************************************************************************************** -->
+			            <br></br>  
 	        		</div>
-		        		<button class="button-main button1" type="submit"><b>NEXT</b></button>
+				</c:forEach>
+				</ol>
+		        		<button class="button-main button1" type="submit" id="button"><b>SUBMIT</b></button>
 	        	</form>	
     		<hr>
     </div>
     <!-- ========================================================================================================================================== -->
+
+    <table hidden>
+		    <!-- here should go some titles... -->
+		    <tr>
+		        <th>Question ID</th>
+		        <th>Question Text</th>
+		    </tr>
+	    <c:forEach begin="0" end= "${ 18 }" step="1" varStatus="loopCounter"
+	        var="question" items="${requestScope.questionlist}">
+		    <tr>
+		        <td>
+		            <c:out value="${question.id}" />
+		        </td>
+		        <td>
+		            <c:out value="${question.question}" />
+		        </td>
+		    </tr>
+	    </c:forEach>
+	</table>
     
-    
- 
+    <!-- Other solutions for displaying questions  -->
+	<!-- No list numbers...  
+
     <ol>
     <c:forEach begin="<%=2 %>" end="<%=3 %>" var="question" varStatus="status" items="${requestScope.questionlist}" >
     <c:out value = "${question.id}) ${question.question}"/> <p>
@@ -197,7 +233,7 @@
 	</ol>
 
     <ol>
-    <c:forEach begin="<%=2 %>" end="<%=4 %>" var="question" items="${requestScope.questionlist}" >
+    <c:forEach begin="<%=0 %>" end="<%=16 %>" var="question" items="${requestScope.questionlist}" >
     <li>${question.question}
 	</c:forEach>
 	</ol>
@@ -219,7 +255,8 @@
     <c:forEach var="candidate" items="${requestScope.candidatelist}" >
 	<li>${candidate.id}: ${candidate.candidate} <a href='/delete?id=${candidate.id}'>delete</a> <a href='/readtoupdate?id=${candidate.id}'>update</a>
 	</c:forEach>
-	</ol>
+	</ol> 
+	-->
 
 		
 	<% 
@@ -230,7 +267,43 @@
 		Question q=questionList.get(i);
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}*/
-	%>
+	
+  %>
     
+	   <div align="center">
+		<table border="1" cellpadding="5">
+			<caption><h2>List of Candidates</h2></caption>
+			<tr>
+			<th>CANDIDATE_ID</th>
+			<th>PARTY</th>
+			
+			</tr>
+			<c:forEach var="candidate" items="${requestScope.candidatelist}">
+			<tr>
+			<td><c:out value="${candidate.id}" /></td>
+			<td><c:out value="${candidate.candidate}" /></td>
+			</tr>
+			</c:forEach>
+		</table>
+	</div>
+    
+    
+    
+
 </body>
+<!--  
+	<script type="text/javascript">
+		document.getElementById("button").addEventListener("click", function(event){
+		event.preventDefault()
+		});
+	
+		var clicks = 0;
+		function onClick() 
+		{
+		    clicks += 1;
+		    document.getElementById("clicks").innerHTML = clicks;
+		};
+		
+	</script>
+-->
 </html>

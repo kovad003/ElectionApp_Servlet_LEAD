@@ -18,28 +18,19 @@
 
     <script type="text/javascript" 
     src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
-   
+
     <!-- allows for the use of special 'materialize' icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- AD - links to the election machine external css file-->
     <link href="../css/style.css" rel="stylesheet"> 
     
-    <title>Registration Page</title>
-   
+    <title>Admin Portal</title>
+
 </head>
-
 <body>
-
-<!-- AD - customises the navbar-->
-<div class="container-nav1">
-    <!--
-        <div class="container-nav2">
-           
-            <i class="material-icons resize2">account_balance</i>
-        </div>
-    -->
-    
+    <!-- AD - customises the navbar-->
+    <div class="container-nav1">   
         <div class="container-nav3">
             <div class="container-nav4">              
                 <!-- AD - icon customisation -->
@@ -63,57 +54,30 @@
     </div>    
 
     <div class = "container1">
-
         <div class = "container1c">          
             <h5>WELCOME</h5>     
             <i class="material-icons resize3">account_balance</i>  
             <h5>ELECTION MACHINE</h5>            
         </div>
 
-        <div class = "container1b">
+        <!-- AD - Configures the Admin Portal -->
+        <div class = "containerAdminPortal">
             <form action="RegistrationServlet" method="post">                                      
-                    <legend><b>Site Registration </b></legend>
-                    <hr> 
+                    <legend class = "adminPortal2"><b>ADMIN PORTAL </b></legend>
+                    <hr>
+                    <legend class = "adminPortal3"><b>MENU: </b></legend>
+                    <hr>  
                     <table>                    
-                    <tr><td><b>Username: </b></td><td><input type="text" name="uname"></td></tr>
-                    <tr><td><b>Password: </b></td><td><input type="password" name="password"></td></tr>
-                    <tr><td><b>Email: </b></td><td><input type="text" name="email"></td></tr>
-                    <tr><td><b>Phone: </b></td><td><input type="text" name="phone"></td></tr>
-                    <tr><td></td><td><input type="submit" value="REGISTER"></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="#"> <u><b>Candidate Data </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="#"> <u><b>Question Data </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="#"> <u><b>Answers Data </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="#"> <u><b>Account Data </b></u></a></td></tr>                  
+                    <tr><td></td><td><br><input type="submit" value="LOGOUT"></td></tr>
                     </table>
                     <hr>        
             </form> 
-        </div>
-
-        
+        </div>        
     </div>
 
 </body>
-
-<script type="text/javascript">
- 
-    $(document).ready(function() {
-        $("#loginForm").validate({
-            rules: {
-                email: {
-                    required: true,
-                    email: true
-                },
-         
-                password: "required",
-            },
-             
-            messages: {
-                email: {
-                    required: "Please enter email",
-                    email: "Please enter a valid email address"
-                },
-                 
-                password: "Please enter password"
-            }
-        });
- 
-    });
-</script>
-
 </html>
