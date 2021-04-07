@@ -42,10 +42,29 @@ public class SubmitAnswer extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<QAnswer> resp=null; // How to creat DAO?
+		//Will create data objects from the collected data => DAO 
+		String selected;
+		ArrayList<QAnswer> ans= new ArrayList<QAnswer>(); // How to creat DAO?
+		QAnswer a = new QAnswer();
+		
+		for (int i = 1; i < ans.size()+2; i++) {
+			selected = request.getParameter("selected" + i);
+			if(selected!=null)
+			{
+				a.setId(i);
+				a.setAnswer(selected);
+				ans.add(a);
+				
+				System.out.println(i + " - " + selected);
+				System.out.println("Object: " + a);
+			}
+			
+			
+		}
 		
 		
 		
+		/*
 		Map <Integer, Integer> answerMap = new HashMap <Integer, Integer>(); //Data pair will be stored in this map
 		// Usually it is better to handle such data as String however in the DB these data is used as PK so it must be Int
 		String str = "selected";
@@ -70,6 +89,7 @@ public class SubmitAnswer extends HttpServlet {
 			
 		}while(answer != null);
 		System.out.println(answerMap);
+		*/
 		/*
 		ArrayList<QAnswer> list=request.getAttribute(name);
 		if(dao.getConnection())

@@ -1,5 +1,6 @@
 package data;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,5 +42,8 @@ public class QAnswer {
 		//System.out.println("setAnswer(String answer)");
 		this.answer = answer;
 	}
-
+	public void setAnswer(String answer) {
+		//System.out.println("setAnswer(String answer)");
+		this.answer = Integer.parseInt(answer);
+	}
 }
