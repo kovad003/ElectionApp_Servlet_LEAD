@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- AD - links to the election machine external css file-->
-    <link href="../css/style.css" rel="stylesheet">       
+    <link href="../css/style.css" rel="stylesheet">      
 
     <title>Homepage</title>
    
@@ -28,16 +28,16 @@
         <div class="container-nav4">
             <!-- AD - icon customisation -->
             <div class = "container-nav-links-icon">
-            <a href="https://www.google.com/"><i class="material-icons resize3a">account_balance</i></a>              
+            <a href="../index.jsp"><i class="material-icons resize3a">account_balance</i></a>              
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>About</h5></a>
+                <a href="../about.jsp"><h5>About</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>Questionnaire</h5></a>
+                <a href="../election-machine-gui/questionnaire.jsp"><h5>Questionnaire</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>Candidates</h5></a>
+                <a href="../election-machine-gui/candidates.jsp"><h5>Candidates</h5></a>
             </div>
             <div class = "container-nav-links">
                 <a href="#"><h5>Login</h5></a>
@@ -52,22 +52,22 @@
         
         <!-- AD - customises the welcome message-->
         <div class="container6"> 
-        <h2>Homepage</h2>
+          <h2>Homepage</h2>
         </div>
        
         <!-- AD - This container adds colourings and style to the intro message -->
         <div class="container5">
-        <!-- AD - Election machine questions -->
-        <h5>Welcome to our site! This election machine website is run by the 'Global Herald Newspaper',
-            in association with the 'HÄMK's Finest' server programming team. Sign up
-            to find out which candidate is right for you!
-        </h5>
+          <!-- AD - Election machine questions -->
+          <h5>Welcome to our site! This election machine website is run by the 'Global Herald Newspaper',
+              in association with the 'HÄMK's Finest' server programming team. 
+              Take our election machine questionnaire to find out which candidate 
+              is the right election candidate for you!
+          </h5>
         </div>
 
         <!-- AD - This container customises the 'please register' message-->
         <div class="container7">
-        <h3>To try out our innovative election machine, please click the 
-          'Take Quiz' button down below!</h3>
+          <h3>Please click the 'Take Quiz' button to start the questionnaire!</h3>
         </div>
     
         <hr>   
@@ -78,7 +78,7 @@
             <div class="container4">  
             
                 <!-- AD - Questionnaire guidance for the user -->
-		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
+		        <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
                 are to be held liable for any views or comments expressed by the candidates 
                 or users of this site. Your data is confidential and will not be shared or
                 sold in any capacity. All rights reserved.</h5>
@@ -91,7 +91,8 @@
             <div class="container3">
 
                 <!-- AD - Buttons for login and registration-->
-                <button class="button-main button1"><b>Take Quiz</b></button>              
+                <a href="../election-machine-gui/questionnaire.jsp">
+                <button class="button-main button1"><b>Take Quiz</b></button></a>             
 
             </div>
         
