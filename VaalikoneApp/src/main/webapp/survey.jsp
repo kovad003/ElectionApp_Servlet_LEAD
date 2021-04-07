@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- 
- <%@ page import="java.util.ArrayList" %>   
- <%@ page import="data.Question" %>   
- <%@ page import="data.Answer" %>  
     
+<%@ page import="java.util.ArrayList" %>   
+<%@ page import="data.Question" %>   
+<%@ page import="data.Answer" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
    
 <!DOCTYPE html>
@@ -305,17 +305,15 @@
 	<li>${candidate.id}: ${candidate.candidate} <a href='/delete?id=${candidate.id}'>delete</a> <a href='/readtoupdate?id=${candidate.id}'>update</a>
 	</c:forEach>
 	</ol> 
-	-->
-
-		
-	<% 
 	
-	/*ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
+	<!-- 
+	ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
 	
 	for (int i=0;questionList!=null && i<questionList.size();i++){
 		Question q=questionList.get(i);
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
-	}*/
+	}
+	-->
 
     <!-- AD - Beginning the central (yellow container)-->
     <div class="containerMainUpdateCandidates">
@@ -352,7 +350,7 @@
                     <thead class = "tableCustom1">
                     </thead>
                     <tbody>
-                        <tr>                  <caption><h2>List of Candidates</h2></caption>
+                        <tr><caption><h2>List of Candidates</h2></caption>
 				            <tr>
 				                <th>CANDIDATE_ID</th>
 				                <th>PARTY</th>  
@@ -404,12 +402,7 @@
                 </div>
             </div>
 
-</body><!-- AD - End of body-->
-</html><!-- AD - End of html-->
-   
 
-	
-  %>
     
 	   <div align="center">
 		<table border="1" cellpadding="5">
