@@ -40,6 +40,7 @@ public class ShowQuestions extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		ArrayList<Question> list=null;
 		if(dao.getConnection())
 		{
