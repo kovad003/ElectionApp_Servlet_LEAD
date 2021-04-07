@@ -41,20 +41,20 @@ public class ShowAnswers extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<Answer> list=null;
+		ArrayList<Answer> alist = null;
 		if(dao.getConnection())
 		{
 			System.out.println("Servlet doGet connected to the database");
-			list=dao.readAllAnswer();
-			System.out.println("List: " + list);
+			alist=dao.readAllAnswer();
+			System.out.println("List: " + alist);
 		}
 		else
 		{
 			System.out.println("doGet has no connection to database");
 		}
-		request.setAttribute("questionlist", list);
+		request.setAttribute("answerlist", alist);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/survey.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/survey.jsp");
 		rd.forward(request, response);
 	}
 
