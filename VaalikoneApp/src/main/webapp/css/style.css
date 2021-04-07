@@ -332,8 +332,7 @@ contains the candidate table data */
 
 .container-nav-links-icon {
     
-    border-radius: 10px; 
-    padding: 1px;         
+    border-radius: 10px;         
     margin: 4px;             
     width: 80%;
     display: flex;
@@ -342,7 +341,9 @@ contains the candidate table data */
     overflow-y: hidden;
     justify-content: center;  
     align-items: center;
-    box-shadow: 0 2px 16px 2px #264653;                             
+    box-shadow: 0 2px 16px 2px #264653;
+    padding: 1px;
+    margin: 4px;       
 }
 
 /* AD - Customises the main button stylings */
@@ -405,6 +406,13 @@ text-decoration: none;
 /* AD - font customisation */
 .resize3 {
     font-size: 25px;          
+}
+
+/* AD - Customising the green home button
+        in the navbar */
+.resize3a {
+    font-size: 22px;
+    padding-top: 4px;          
 }
 
 /* AD - heading customisation */
