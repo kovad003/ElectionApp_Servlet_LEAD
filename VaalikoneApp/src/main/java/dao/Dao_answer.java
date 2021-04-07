@@ -155,9 +155,9 @@ public class Dao_answer {
 			System.out.println("RS: " + RS);
 			while (RS.next()){
 				Answer a=new Answer();
-				a.setCANDIDATE_ID(RS.getString("CANDIDATE_ID"));
-				a.setQUESTION_ID(RS.getString("QUESTION_ID"));
-				a.setANSWER(RS.getString("ANSWER"));
+				a.setCANDIDATE_ID(RS.getInt("CANDIDATE_ID"));
+				a.setQUESTION_ID(RS.getInt("QUESTION_ID"));
+				a.setANSWER(RS.getInt("ANSWER"));
 				list.add(a);
 			}
 			return list;
@@ -191,9 +191,9 @@ public class Dao_answer {
 		try {
 			String sql="UPDATE answers SET answer=? WHERE CANDIDATE_ID=? AND QUESTION_ID=?;";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1, a.getANSWER());
-			pstmt.setString(2, a.getCANDIDATE_ID());
-			pstmt.setString(3, a.getQUESTION_ID());
+			pstmt.setInt(1, a.getANSWER());
+			pstmt.setInt(2, a.getCANDIDATE_ID());
+			pstmt.setInt(3, a.getQUESTION_ID());
 			pstmt.executeUpdate();
 			return readAllAnswer();
 		}
@@ -252,8 +252,8 @@ public class Dao_answer {
 			ResultSet RS=pstmt.executeQuery();
 			while (RS.next()){
 				politician=new Answer();
-				politician.setQUESTION_ID(RS.getString("QUESTION_ID"));
-				politician.setANSWER(RS.getString("ANSWER"));
+				politician.setQUESTION_ID(RS.getInt("QUESTION_ID"));
+				politician.setANSWER(RS.getInt("ANSWER"));
 			}
 			System.out.println("Your lies are ready for processing:)");
 			return politician;

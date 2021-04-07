@@ -3,6 +3,7 @@
  
  <%@ page import="java.util.ArrayList" %>   
  <%@ page import="data.Question" %>   
+ <%@ page import="data.Answer" %>  
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
    
@@ -145,16 +146,12 @@
 			    	Question q=questionList.get(0);
 			    	out.println(q.getId()+") "+q.getQuestion());
 				%>
-			</h3>
-	            <%=(String)request.getAttribute("user_answer")%>
-	    
-	        <hr>
-	        
+	        </h3>
 	        <h3>
 	        	<% 
-				ArrayList<Answer> answerList=(ArrayList<Answer>)request.getAttribute("answerlist");
-		    	Answer a=answerList.get(0);
-		    	out.println(a.getId()+") "+a.getAnswer());
+					ArrayList<Answer> aList=(ArrayList<Answer>)request.getAttribute("answerlist");
+			    	Answer a = aList.get(0);
+			    	out.println("Candidate: " + a.getCANDIDATE_ID() + " Q#) " + a.getQUESTION_ID() + " A: "  + a.getANSWER());
 				%>
 			</h3>
 		        <form id="form">
