@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ 
+<%@ page import="java.util.ArrayList" %>   
+<%@ page import="data.Candidate" %>   
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+
 <html lang="en">
 <head>
 	<!-- AD - This line might potentially be necessary later on 
@@ -27,16 +34,16 @@
             <a href="https://www.google.com/"><i class="material-icons resize3a">account_balance</i></a>              
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>About</h5></a>
+                <a href="index.jsp"><h5>About</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>Questionnaire</h5></a>
+                <a href="/ShowQuestions"><h5>Questionnaire</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>Candidates</h5></a>
+                <a href="/ShowCandidates"><h5>Candidates</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>Login</h5></a>
+                <a href="loginPage.jsp"><h5>Login</h5></a>
             </div>               
         </div>
     </div>
@@ -69,207 +76,34 @@
         <h3>Here, let's let the candidates introduces themselves:</h3>
         </div>
     
-        <hr>   
+        <hr> 
 
         <!-- AD - Candidate 1 intro colourings and text -->
+        <c:forEach begin="0" end="1" var="candidate" items="${requestScope.candidatelist}">
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 1: Hi! My name is ...
+            <h5>
+            	<c:out value = "${candidate.FName} ${candidate.SName} - ${candidate.party}"/>
                 <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                Age:
+                <c:out value = "${candidate.age}"/>
+                <br>
+                Profession:
+                <c:out value = "${candidate.profession}"/>
+                <br>
+                Location:
+                <c:out value = "${candidate.location}"/>
+                <br><br>
+                Hi, my name is
+            	<c:out value = "${candidate.FName}"/>!
+				<br><br>
+                <c:out value = "${candidate.goals}"/>
+                <br><br>
+                <c:out value = "${candidate.reason}"/>
+                <br><br>
             </h5>
         </div>
-
-        <!-- AD - Candidate 2 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 2: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 3 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 3: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 4 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 4: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 5: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 6: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 7: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 8: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 9: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 10: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 11: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 12: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 13: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 14: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 15: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 16: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 17: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 18: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 19: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
-
-        <!-- AD - Candidate 5 intro colourings and text -->
-        <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>Candidate 20: Hi! My name is ...
-                <br><br>
-                Overview: If I get elected I will Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-            </h5>
-        </div>
+        </c:forEach>
 
 
         <!-- End ot the candidate intro / overview section-->
@@ -281,7 +115,7 @@
             <div class="container4">  
             
                 <!-- AD - Questionnaire guidance for the user -->
-		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
+		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÃ„MK's Finest'
                 are to be held liable for any views or comments expressed by the candidates 
                 or users of this site. Your data is confidential and will not be shared or
                 sold in any capacity. All rights reserved.</h5>

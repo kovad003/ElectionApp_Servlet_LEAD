@@ -34,13 +34,13 @@
                 <a href="#"><h5>About</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>Questionnaire</h5></a>
+                <a href="/ShowQuestions"><h5>Questionnaire</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>Candidates</h5></a>
+                <a href="/ShowCandidates"><h5>Candidates</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>Login</h5></a>
+                <a href="/loginPage.jsp"><h5>Login</h5></a>
             </div>           
         </div>
     </div>
@@ -91,7 +91,7 @@
             <div class="container3">
 
                 <!-- AD - Buttons for login and registration-->
-                <button class="button-main button1"><b>Take Quiz</b></button>              
+                <button class="button-main button1" onclick="window.location.href='/ShowQuestions'"><b>Take Quiz</b></button>              
 
             </div>
         

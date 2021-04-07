@@ -45,7 +45,14 @@ public class ShowCandidates extends HttpServlet {
 		{
 			System.out.println("Successfully connected to the database");
 			list=dao.readAllCandidate();
-			System.out.println("List: " + list);
+			System.out.println("Can_List: " + list);
+			
+			for (int i = 0; i < list.size(); i++) {
+				Candidate c = list.get(i);//		
+				System.out.println("Candidate name: " + c.getFName() + " " + c.getSName());//
+				System.out.println("location: " + c.getLocation() );//
+			}
+			
 		}
 		else
 		{
@@ -53,7 +60,7 @@ public class ShowCandidates extends HttpServlet {
 		}
 		request.setAttribute("candidatelist", list);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/survey.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/candidates.jsp");
 		rd.forward(request, response);
 	}
 }
