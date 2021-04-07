@@ -167,12 +167,15 @@
 
 	        </h3>
 	        <h3>
-
+				
 	        	<% 
-					ArrayList<Answer> aList=(ArrayList<Answer>)request.getAttribute("answerlist");
+	        	/*
+	        		ArrayList<Answer> aList=(ArrayList<Answer>)request.getAttribute("answerlist");
 			    	Answer a = aList.get(0);
 			    	out.println("Candidate: " + a.getCANDIDATE_ID() + " Q#) " + a.getQUESTION_ID() + " A: "  + a.getANSWER());
+			    	*/
 				%>
+				
 			</h3>
 		        <form id="form">
 			        <div class="container2">
@@ -316,6 +319,7 @@
 		Question q=questionList.get(i);
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}*/
+	%>
 
     <!-- AD - Beginning the central (yellow container)-->
     <div class="containerMainUpdateCandidates">
