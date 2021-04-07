@@ -248,27 +248,29 @@
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}*/
 	%>
-	
-	<%
-				/*
-				
-				ArrayList<Question> questionList = (ArrayList<Question>) request.getAttribute("questionlist");
-				Question q;
-				for (int i = 0; i < questionList.size(); i++) {
-					 q = questionList.get(i);
-					 out.println(q.getId()+") "+q.getQuestion());
-				}
-				*/
-				%>
-	        	
-		      	<% 
-		      	/*
-					ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
-			    	Question q=questionList.get(0);
-			    	out.println(q.getId()+") "+q.getQuestion());
-			    */
-				%>
-   
+
+    -->
+    
+	   <div align="center">
+		<table border="1" cellpadding="5">
+			<caption><h2>List of Candidates</h2></caption>
+			<tr>
+			<th>CANDIDATE_ID</th>
+			<th>PARTY</th>
+			
+			</tr>
+			<c:forEach var="candidate" items="${requestScope.candidatelist}">
+			<tr>
+			<td><c:out value="${candidate.id}" /></td>
+			<td><c:out value="${candidate.candidate}" /></td>
+			</tr>
+			</c:forEach>
+		</table>
+	</div>
+    
+    
+    
+
 </body>
 <!--  
 	<script type="text/javascript">
