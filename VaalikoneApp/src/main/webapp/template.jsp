@@ -34,7 +34,8 @@
     </h1>
 </div>
 
-    <!-- AD - includes the footer component, into this page -->
+    <!-- AD - includes the footer component into this page 
+    (albeit not visible) -->
 	<%@ include file="../components/footer.jsp" %>    
 
 </body><!-- AD - End of body-->
