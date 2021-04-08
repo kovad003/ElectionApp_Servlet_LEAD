@@ -1,46 +1,19 @@
 <html lang="en">
 <head>
-	<!-- AD - This line might potentially be necessary later on 
-	<meta charset="ISO-8859-1">
-	-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- AD - includes the meta component, into this page -->
+    <%@ include file="../components/meta.jsp" %>
     
-    <!-- allows for the use of special 'materialize' icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- AD - links to the election machine external css file-->
-    <link href="../css/style.css" rel="stylesheet">
-
     <title>Candidates</title>
+    
+    <!-- AD - includes the header component, into this page -->
+    <%@ include file="../components/header.jsp" %> 
     
 </head>
 <body>
 
-<!-- AD - customises the navbar-->
-<div class="container-nav1">
-    <div class="container-nav3">
-        <div class="container-nav4">              
-            <!-- AD - icon customisation -->
-            <div class = "container-nav-links-icon">
-            <a href="https://www.google.com/"><i class="material-icons resize3a">account_balance</i></a>              
-            </div>
-            <div class = "container-nav-links">
-                <a href="#"><h5>About</h5></a>
-            </div>
-            <div class = "container-nav-links">
-                <a href="#"><h5>Questionnaire</h5></a>
-            </div>
-            <div class = "container-nav-links">
-                <a href="#"><h5>Candidates</h5></a>
-            </div>
-            <div class = "container-nav-links">
-                <a href="#"><h5>Login</h5></a>
-            </div>               
-        </div>
-    </div>
-</div>
+   <!-- AD - includes the navbar component, into this page -->
+   <%@ include file="../components/navbar.jsp" %> 
 
     <!-- AD - Beginning the central (yellow container)-->
     <div class="container">
@@ -306,6 +279,9 @@
     <!-- AD - End of the central (yellow container)-->
     </div>
 
+	<!-- AD - includes the footer component into this page 
+    (albeit not visible) -->
+	<%@ include file="../components/footer.jsp" %>
 
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->
