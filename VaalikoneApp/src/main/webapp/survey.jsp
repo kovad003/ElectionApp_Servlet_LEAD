@@ -148,7 +148,7 @@
 		        <form id="form" action="/SubmitAnswer" method="POST">
 
 				<ol>
-			    <c:forEach begin="0" end="3" var="question" items="${requestScope.questionlist}" >
+			    <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
 			    <h3><c:out value = "${question.id}) ${question.question}"/></h3>
 			    <div class="container2">
 
