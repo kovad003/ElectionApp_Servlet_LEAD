@@ -4,11 +4,9 @@
 <html lang="en">
 <head>
 
-    <%@ include file="../components/meta.jsp" %>
+    <%@ include file="../components/meta1.html" %>
 
-    <title>Example Template</title>
-
-    <%@ include file="../components/header.jsp" %>    
+    <title>Example Template</title>	  
 
 <!-- NOTE: If the page requires the use of AD's 
         Bootstrap-based code (such as the adminUpdateCandidates.jsp page),
@@ -22,14 +20,14 @@
 </head>
 <body>
 
-    <%@ include file="../components/navbar.jsp" %>  
+   
 
     <h1>
     	This is simply an example template
         to demonstrate how to utilise the 'include' directive.
     </h1>
 
-    <%@ include file="../components/footer.jsp" %> 
+    
 
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->
