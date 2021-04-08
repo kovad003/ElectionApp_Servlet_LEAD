@@ -9,6 +9,7 @@
   </welcome-file-list>
   
    <servlet>
+   
         <servlet-name>login</servlet-name>
         <servlet-class>Login.LoginServlet</servlet-class>
     </servlet>
@@ -21,4 +22,5 @@
     <welcome-file-list>
         <welcome-file>memberRegistration.jsp</welcome-file>
     </welcome-file-list>
+    
 </web-app>

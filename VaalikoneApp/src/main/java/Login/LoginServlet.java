@@ -25,17 +25,17 @@ public class LoginServlet extends HttpServlet{
 		String n=request.getParameter("username");  
 		String p=request.getParameter("userpass"); 
 		
-		HttpSession session = request.getSession(false);
+		HttpSession session = request.getSession(false); //Creating a session
 		if(session!=null)
-			request.getSession(true).setAttribute("name", n);
+			request.getSession(true).setAttribute("name", n);//setting session attribute
 
 		if(LoginDatabaseConnection.validate(n, p)){  
-			RequestDispatcher rd=request.getRequestDispatcher("Login_welcome.jsp");  
+			RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 			rd.forward(request,response);  
 		}  
 		else{  
 			out.print("<p style=\"color:red\">Sorry email or password error</p>");  
-			RequestDispatcher rd=request.getRequestDispatcher("memberRegistration.jsp");  
+			RequestDispatcher rd=request.getRequestDispatcher("loginPage.jsp");  
 			rd.include(request,response);  
 		}  
 

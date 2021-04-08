@@ -11,5 +11,13 @@
 <!--     <h4> -->
 <!--         Hello, -->
 <%--         <%=session.getAttribute("name")%></h4> --%>
+
+<%
+String name=(String)session.getAttribute("name");
+%>
+
+    <h1>Welcome <%out.println(name); %>!</h1>
+
+	<a href="index.jsp">Logout</a>
 </body>
 </html>

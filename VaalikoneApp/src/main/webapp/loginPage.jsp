@@ -72,8 +72,8 @@
                 <table>
                     <hr> 
                     <tr>
-                        <td><b>Email: </b></td>
-                        <td><input type="email" name="username" required="required" /></td>
+                        <td><b>Username: </b></td>
+                        <td><input type="text" name="username" required="required" /></td>
                     </tr>
                     <tr>
                         <td><b>Password: </b></td>
@@ -92,30 +92,6 @@
  
 </body>
 
-<script type="text/javascript">
- 
-    $(document).ready(function() {
-        $("#loginForm").validate({
-            rules: {
-                email: {
-                    required: true,
-                    email: true
-                },
-         
-                password: "required",
-            },
-             
-            messages: {
-                email: {
-                    required: "Please enter email",
-                    email: "Please enter a valid email address"
-                },
-                 
-                password: "Please enter password"
-            }
-        });
- 
-    });
-</script>
+
 
 </html>
