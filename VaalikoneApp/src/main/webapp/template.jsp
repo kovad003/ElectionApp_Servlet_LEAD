@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 
-    <%@ include file = "../components/meta.jsp" %>
+    <%@ include file = "..webapp/components/meta.jsp" %>
 
     <title>Example Template</title>
 
