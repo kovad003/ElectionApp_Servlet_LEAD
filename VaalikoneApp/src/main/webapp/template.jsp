@@ -16,7 +16,7 @@
         file will need to be used instead of the above line. -->
 
 <!-- Furthermore, if page to be included consists of dynamic elements
-        then the <jsp:include> tag may need to be used as an alternative.
+        then the 'jsp include' tag may need to be used as an alternative.
         (This does not seem to currently be an issue, however.) -->
    
 </head>
