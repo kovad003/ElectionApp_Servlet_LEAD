@@ -4,11 +4,11 @@
 <html lang="en">
 <head>
 
-    <%@ include file="../meta2.html" %>
+    <%@ include file="../components/meta.jsp" %>
 
     <title>Example Template</title>	
     
-    <%@ include file="../header2.html" %>  
+    <%@ include file="../components/header.jsp" %>  
 
 <!-- NOTE: If the page requires the use of AD's 
         Bootstrap-based code (such as the adminUpdateCandidates.jsp page),
