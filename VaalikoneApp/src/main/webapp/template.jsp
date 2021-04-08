@@ -24,7 +24,8 @@
 
     <%@ include file = "../components/navbar.jsp" %>  
 
-    <h1>This is simply an example template
+    <h1>
+    	This is simply an example template
         to demonstrate how to utilise the 'include' directive.
     </h1>
 
