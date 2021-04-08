@@ -6,7 +6,9 @@
 
     <%@ include file="../components/meta1.html" %>
 
-    <title>Example Template</title>	  
+    <title>Example Template</title>	
+    
+    <% include file="../components/header1.html" %>  
 
 <!-- NOTE: If the page requires the use of AD's 
         Bootstrap-based code (such as the adminUpdateCandidates.jsp page),
