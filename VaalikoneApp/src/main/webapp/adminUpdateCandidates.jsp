@@ -60,8 +60,6 @@
         <!-- AD - customises the 'ADMIN: Updates Candidates' message-->
         <div class="container6a"> 
         <h3>ADMIN PORTAL: Update Candidates</h3>
-        <%String n = (String)session.getAttribute("n");%>
-        <h3>Welcome <%out.println(n); %></h3>
         </div>
        
         <!-- AD - A small container to amend the disclaimer background section-->

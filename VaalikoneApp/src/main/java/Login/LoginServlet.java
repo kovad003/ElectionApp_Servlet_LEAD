@@ -28,10 +28,10 @@ public class LoginServlet extends HttpServlet{
 		HttpSession session = request.getSession(false); //Creating a session
 		if(session!=null)
 			request.getSession(true).setAttribute("name", n);//setting session attribute
-
 		if(LoginDatabaseConnection.validate(n, p)){  
 			RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 			rd.forward(request,response);  
+
 		}  
 		else{  
 			out.print("<p style=\"color:red\">Sorry email or password error</p>");  
