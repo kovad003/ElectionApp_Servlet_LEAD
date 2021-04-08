@@ -4,10 +4,12 @@
 <html lang="en">
 <head>
 
+	<!-- AD - includes the meta component, into this page -->
     <%@ include file="../components/meta.jsp" %>
 
     <title>Example Template</title>	
     
+    <!-- AD - includes the header component, into this page -->
     <%@ include file="../components/header.jsp" %>  
 
 <!-- NOTE: If the page requires the use of AD's 
@@ -22,8 +24,8 @@
 </head>
 <body>
 
+   <!-- AD - includes the navbar component, into this page -->
    <%@ include file="../components/navbar.jsp" %> 
-
 
 <div class = "container1">
     <h1>
@@ -32,6 +34,7 @@
     </h1>
 </div>
 
+    <!-- AD - includes the footer component, into this page -->
 	<%@ include file="../components/footer.jsp" %>    
 
 </body><!-- AD - End of body-->
