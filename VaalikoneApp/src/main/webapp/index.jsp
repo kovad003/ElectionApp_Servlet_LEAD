@@ -28,7 +28,7 @@
         <div class="container-nav4">
             <!-- AD - icon customisation -->
             <div class = "container-nav-links-icon">
-            <a href="https://www.google.com/"><i class="material-icons resize3a">account_balance</i></a>              
+            <a href="/adminPortal.jsp"><i class="material-icons resize3a">account_balance</i></a>              
             </div>
             <div class = "container-nav-links">
                 <a href="#"><h5>About</h5></a>
