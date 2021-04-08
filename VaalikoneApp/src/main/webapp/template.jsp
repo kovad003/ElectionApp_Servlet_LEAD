@@ -22,14 +22,17 @@
 </head>
 <body>
 
-   
+   <%@ include file="../components/navbar.jsp" %> 
 
+
+<div class = "container1">
     <h1>
     	This is simply an example template
         to demonstrate how to utilise the 'include' directive.
     </h1>
+</div>
 
-    
+	<%@ include file="../components/footer.jsp" %>    
 
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->
