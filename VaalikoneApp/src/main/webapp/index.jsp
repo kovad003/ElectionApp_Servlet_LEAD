@@ -40,7 +40,7 @@
                 <a href="../candidates.jsp"><h5>Candidates</h5></a>
             </div>
             <div class = "container-nav-links">
-                <a href="#"><h5>Login</h5></a>
+                <a href="../loginPage.jsp"><h5>Login</h5></a>
             </div>           
         </div>
     </div>
