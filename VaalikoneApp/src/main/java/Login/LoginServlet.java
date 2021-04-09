@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,9 +23,23 @@ public class LoginServlet extends HttpServlet{
 		response.setContentType("text/html");  
 		PrintWriter out = response.getWriter(); 
 		
-		// get request parameters for username and userpass
+		// get request parameters for name and pass
 		String n=request.getParameter("username");  
 		String p=request.getParameter("userpass"); 
+		
+		
+//		if(name.equals(n) && pass.equals(p)){
+//			Cookie loginCookie = new Cookie("username",n);
+//			//setting cookie to expiry in 30 mins
+//			loginCookie.setMaxAge(30*60);
+//			response.addCookie(loginCookie);
+//			response.sendRedirect("index.jsp");
+//		}else{
+//			RequestDispatcher rd = getServletContext().getRequestDispatcher("index.jsp");
+//			PrintWriter out= response.getWriter();
+//			out.println("<font color=red>Either user name or password is wrong.</font>");
+//			rd.include(request, response);
+		
 		
 		HttpSession session = request.getSession(false); //Creating a session
 		if(session!=null)
