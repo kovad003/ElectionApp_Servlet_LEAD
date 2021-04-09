@@ -560,3 +560,14 @@ for specific cells (sich as update and delete
     color: rgba(255, 255, 255, 0.856);;
 }
 
+/* AD - Customises the container for the dynamic question
+        inside the questionnaire question section. */
+.containerDynamicQuestion {
+    background-color:#264653;
+    border-radius: 10px; 
+    padding: 0.1px 10px 0.1px 10px;  
+    color: rgba(255, 255, 255, 0.658);
+    
+    margin:1px;    
+}
+
