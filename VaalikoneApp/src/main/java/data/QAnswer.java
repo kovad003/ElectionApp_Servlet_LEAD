@@ -41,6 +41,10 @@ public class QAnswer {
 		//System.out.println("setAnswer(String answer)");
 		this.answer = Integer.parseInt(answer);
 	}
+	public void setScore(int score) {
+		//System.out.println("setAnswer(String answer)");
+		this.score = score;
+	}
 	
 	// ***************************************************
 	// ******************** GETTERS **********************
@@ -55,6 +59,9 @@ public class QAnswer {
 	}
 	public int getQId() {
 		return qId;	
+	}
+	public int getScore() {
+		return score;
 	}
 	
 	// ***************************************************
