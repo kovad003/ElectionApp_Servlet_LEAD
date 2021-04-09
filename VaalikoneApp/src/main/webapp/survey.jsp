@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- 
- <%@ page import="java.util.ArrayList" %>   
- <%@ page import="data.Question" %>   
+
     
+<%@ page import="java.util.ArrayList" %>   
+<%@ page import="data.Question" %>   
+<%@ page import="data.Answer" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
    
 <!DOCTYPE html>
@@ -138,36 +140,16 @@
 	        <h5>NOTE: This election machine contains 19 questions.
 	         Answer them all to find out which candidate suits you best!</h5>
 	         
-	        <!-- The for loop between the JSP scriptlet tags will print a question out with the given index -->
-	        <h3>
-		      	<% 
-		      	/*	ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
-			    	Question q=questionList.get(0);
-			    	out.println(q.getId()+") "+q.getQuestion()); */
-				%>
-			</h3>
-			
-				        <h3>
-		    	<% 
-// 					ArrayList<Candidate> candidateList=(ArrayList<Candidate>)request.getAttribute("candidatelist");
-// 			    	Candidate q=candidateList.get(0);
-// 			    	out.println(q.getId()+") "+q.getCandidate());
-				%>
-				
-			</h3>
-	            <%=(String)request.getAttribute("user_answer")%>
-	    
+  
 	        <hr>
-	        
-	        	<% 
-	        	/*
-				ArrayList<Answer> answerList=(ArrayList<Answer>)request.getAttribute("questionlist");
-		    	Question q=questionList.get(0);
-		    	out.println(q.getId()+") "+q.getQuestion());
-				*/
-				%>
-		        <form id="form">
-			        <div class="container2">
+
+		        <form id="form" action="/SubmitAnswer" method="POST">
+
+				<ol>
+			    <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
+			    <h3><c:out value = "${question.id}) ${question.question}"/></h3>
+			    <div class="container2">
+
 			        	<!-- ******************************************************************************************************** -->
 			            <div class="labels-radio">
 			                <b>Select:</b>
@@ -200,17 +182,9 @@
     </div>
     <!-- ========================================================================================================================================== -->
     
-    <!-- -->
-    
-    <!-- Other solutions for displaying questions -->
-	<!-- No list numbers... -->
-    <ol>
-    <c:forEach begin="<%=2 %>" end="<%=3 %>" var="question" varStatus="status" items="${requestScope.questionlist}" >
-    <c:out value = "${question.id}) ${question.question}"/> <p>
-	</c:forEach>
-	</ol>
 
     <!-- Questions are numbers -->
+
     <ol>
     <c:forEach begin="<%=2 %>" end="<%=4 %>" var="question" items="${requestScope.questionlist}" >
     <li>${question.question}
@@ -260,9 +234,9 @@
 	</c:forEach>
 	</ol>
 
-		
-	<% 
-	
+  
+  <%
+
 	/*ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
 	
 	for (int i=0;questionList!=null && i<questionList.size();i++){
@@ -270,37 +244,6 @@
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}*/
 	%>
-	
-
-<!-- AD - customises the navbar-->
-<div class="container-nav1">
-
-    <div class="container-nav3">
-        <div class="container-nav4">
-          
-                  <!-- AD - icon customisation 
-                            Bold styling had to be added due to bootstrap
-                            causing a few issues to the some of
-                            the text sizes-->
-                <div class = "container-nav-links-icon">
-                <i class="material-icons resize3">account_balance</i>              
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5><b>Register</b></h5></a>
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5><b>Login</b></h5></a>
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5><b>Candidates</b></h5></a>
-                </div>
-                <div class = "container-nav-links">
-                  <a href="#"><h5><b>About</b></h5></a>
-                </div>           
-            
-        </div>
-    </div>
-</div>
 
     <!-- AD - Beginning the central (yellow container)-->
     <div class="containerMainUpdateCandidates">
@@ -337,7 +280,7 @@
                     <thead class = "tableCustom1">
                     </thead>
                     <tbody>
-                        <tr>                  <caption><h2>List of Candidates</h2></caption>
+                        <tr><caption><h2>List of Candidates</h2></caption>
 				            <tr>
 				                <th>CANDIDATE_ID</th>
 				                <th>PARTY</th>  
@@ -389,11 +332,29 @@
                 </div>
             </div>
 
+
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->
    
-</body>
-</html>
+
+
+<!--  
+	<script type="text/javascript">
+		document.getElementById("button").addEventListener("click", function(event){
+		event.preventDefault()
+		});
+	
+		var clicks = 0;
+		function onClick() 
+		{
+		    clicks += 1;
+		    document.getElementById("clicks").innerHTML = clicks;
+		};
+		
+	</script>
+-->
+
+
 
 
 

@@ -504,6 +504,20 @@ for the update and delete buttons
 }
 
 /* AD - Table heading customisation
+for the add button
+(such as on the adminUpdateCandidates.jsp) */
+.tableAdd {    
+    color: #04a138; /* AD - a custom shade for updating */
+}
+
+/* AD - Table background customisation
+for the add button (such as on the adminUpdateCandidates.jsp) */
+.tableAddBackground {    
+    background-color:#264653; /* AD - a custom colour for deleting */
+    text-align: center;
+} 
+
+/* AD - Table heading customisation
 for the update and delete buttons
 (such as on the adminUpdateCandidates.jsp) */
 .tableCustom3 {    
@@ -523,3 +537,4 @@ for specific cells (sich as update and delete
 .tableCustom5 {    
     background-color:#264653; /* AD - a custom colour for deleting */
 } 
+
