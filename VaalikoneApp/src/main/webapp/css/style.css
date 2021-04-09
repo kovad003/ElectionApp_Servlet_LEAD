@@ -7,12 +7,13 @@
         on smaller devices. */
 @media only screen and (max-width: 900px) {
 	
-	/* Container for the dynamic questions
-		on the questionnaire pages 
-	containerDynamicQuestion {
-	max-width: 60% !important;
+	/* AD - Customises the container for the dynamic question
+        inside the questionnaire question section. 
+        This media query ensures that it looks good
+        on smaller devices.*/
+	.containerDynamicQuestion {
+    max-width: 85% !important;
 	}
-	*/
 	
     .container {
     max-width: 80% !important;
@@ -573,10 +574,16 @@ for specific cells (sich as update and delete
 .containerDynamicQuestion {
     background-color:#264653;
     border-radius: 10px; 
-    padding: 0.1px 10px 0.1px 10px;  
+    
     color: rgba(255, 255, 255, 0.658);
     
-    margin:5px;
-    margin-right: 10px;    
+    margin: 5px 10px 5px 5px;
+    padding: 0.1px 10px 0.1px 10px;   
+    
+    
+    /*
+    padding: 0.1px 10px 0.1px 10px;
+     width: 90%;   
+    */  
 }
 
