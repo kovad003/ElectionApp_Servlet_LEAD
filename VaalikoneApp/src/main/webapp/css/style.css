@@ -276,6 +276,16 @@ contains the candidate table data */
     color: rgba(255, 255, 255, 0.658);                 
 }
 
+/* AD - Customises the question section
+        of the questionnaire page, where the
+        questions will be placed dynamically. */
+.container5a {
+    background-color:#2A9D8F;
+    border-radius: 10px; 
+    padding: 0.1px 10px 0.1px 10px;             
+    color: rgba(255, 255, 255, 0.658);                 
+}
+
 /* AD - Customises the Welcome message colourings */
 .container6 {
     background-color:#F4A261;
@@ -401,6 +411,12 @@ contains the candidate table data */
     border-radius: 10px;
     margin: 20px 10px 0px 10px; 
     width: 90px;            
+}
+
+/* AD - Questionnaire button modifications */
+
+.questionnaireButton {
+    background-color: #2A9D8F;
 }
 
 /* AD - Customises the button hover effects */
@@ -541,7 +557,6 @@ for specific cells (sich as update and delete
 /* AD - customises the word 'select'
     on the questionnaire page.*/
 .questionnaireSelect {
-    color: #E76F51;
+    color: rgba(255, 255, 255, 0.856);;
 }
-
 
