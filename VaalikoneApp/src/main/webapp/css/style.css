@@ -12,7 +12,7 @@
         This media query ensures that it looks good
         on smaller devices.*/
 	.containerDynamicQuestion {
-    max-width: 80% !important;
+    max-width: 82% !important;
 	}
 	
     .container {
@@ -284,6 +284,15 @@ contains the candidate table data */
     color: rgba(255, 255, 255, 0.658);                    
 }
 
+/* AD - Customises the disclaimer message
+	on the questionnaire page colourings */
+.container4a {
+    background-color:#2A9D8F;
+    border-radius: 10px; 
+    padding: 0.1px 10px 0.1px 10px;  
+    color: rgba(255, 255, 255, 0.658);                    
+}
+
 /* AD - Customises the introduction colourings on the welcome page
         and in addition, the candidate page introductory message */
 .container5 {
@@ -297,10 +306,12 @@ contains the candidate table data */
         of the questionnaire page, where the
         questions will be placed dynamically. */
 .container5a {
-    background-color:#2A9D8F ;
+    background-color:#264653;
     border-radius: 10px; 
-    padding: 0.1px 10px 0.1px 10px;             
+    padding: 0.1px 10px 0.1px 10px;    
+    /*            
     color: rgba(255, 255, 255, 0.658);                 
+	*/
 }
 
 /* AD - Customises the Welcome message colourings */
@@ -583,10 +594,9 @@ for specific cells (sich as update and delete
     background-color:#E76F51;
     border-radius: 10px; 
     
-    color: rgba(255, 255, 255, 0.658);
-    
-    margin: 3px 20px 3px 5px;
-    padding: 0.2px;   
+    color: white;    
+    margin: 5px 20px 5px 5px;
+    padding: 0.1px 10px 0.1px 10px;  
     
     
     /*

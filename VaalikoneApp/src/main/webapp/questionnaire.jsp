@@ -37,7 +37,7 @@
         </div>
 
         <!-- AD - A small container to amend the disclaimer background section-->
-        <div class="container4">  
+        <div class="container4a">  
             
             <!-- AD - Questionnaire guidance for the user -->
             <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
@@ -106,6 +106,7 @@
                     <button class="button-main button1 questionnaireButton" type="submit"><b>NEXT</b></button>
                 </div>  
 
+				<br>
                 <hr> 
 
                 <!-- AD - Questionnaire guidance for the user -->
