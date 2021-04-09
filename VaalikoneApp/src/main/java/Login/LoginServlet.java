@@ -31,12 +31,16 @@ public class LoginServlet extends HttpServlet {
 		 * -> setup user/pass in db
 		 * -> boolean authenticate = false;
 		 * -> String user/pwd = read in those 2 fields
+		 * 
 		 * -> String sql = "SELECT * FROM table WHERE username=" + user + " AND password=" + pwd + ";";
+		 * 
 		 * -> if((sql==null) || (sql.equals("") || sql.length()==0) {
 		 * authenticate = false;
 		 * }
 		 * else {
 		 * }...cookie cont from here
+		 * 
+		 * instead of else-> else if (sql.length()==1)
 		 * 
 		 * other way if that doesn't work:
 		 * leave if statement as is and just check that user and pwd in sql.
@@ -46,7 +50,7 @@ public class LoginServlet extends HttpServlet {
 		String user = request.getParameter("user");
 		String pwd = request.getParameter("pwd");
 		
-		
+		String sql = "SELECT * FROM electionmachine.candidates WHERE username=" + userID + " AND password=" + password + ";";
 		
 		if(userID.equals(user) && password.equals(pwd)) {
 			Cookie loginCookie = new Cookie("user",user);
@@ -59,10 +63,7 @@ public class LoginServlet extends HttpServlet {
 			/*
 			 * login not ok ->
 			 */
-			RequestDispatcher rd = getServletContext().getRequestDispatcher("/loginPage.html");
-			PrintWriter out= response.getWriter();
-			out.println("<font color=red>You are a poopiehead</font>");
-			rd.include(request, response);
+			response.sendRedirect("loginPage.jsp");
 		}
 
 	}
