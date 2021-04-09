@@ -40,9 +40,10 @@ public class SubmitAnswer extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// *******************************************************
-		// GET CLIENT SELECTIONS
-		// *******************************************************
+
+//		**********************************************************************************************************************************************
+//		**************** GET CLIENT SELECTIONS *******************************************************************************************************
+//		**********************************************************************************************************************************************
 		String selected;
 		ArrayList<QAnswer> selectionList= new ArrayList<QAnswer>(); // How to creat DAO?
 		for (int i = 1; i < selectionList.size()+2; i++) {
@@ -62,9 +63,9 @@ public class SubmitAnswer extends HttpServlet {
 			}	
 		}
 		
-		// *******************************************************
-		// GET CANDIDATE SELECTIONS/ANSWERS
-		// *******************************************************
+//		*********************************************************************************************************************************************
+//		*********** GET CANDIDATE SELECTIONS/ANSWERS ************************************************************************************************
+//		*********************************************************************************************************************************************
 		ArrayList<QAnswer> answerList=null;
 		if(dao.getConnection())
 		{
@@ -91,21 +92,53 @@ public class SubmitAnswer extends HttpServlet {
 		}
 		*/
 		
-		// *******************************************************
-		// COMPARE CLIENT WITH CANDIDATES
-		// *******************************************************
+//		*********************************************************************************************************************************************
+//		************ COMPARE CLIENT WITH CANDIDATES *************************************************************************************************
+//		*********************************************************************************************************************************************
 
-		ListIterator<QAnswer> clientIterator = selectionList.listIterator();
+		listAvlblCandidates(selectionList, answerList); // Will return a SET with the available Candidate IDs (CID)	
+		
+		extractCandidate(1, answerList); // Will return an arrayList filled with data for the given CID.
+		
+		
+
+	}
+	
+//	************************************************************************************************************************************************************
+//	****************************** CUSTOM METHODS **************************************************************************************************************
+//	************************************************************************************************************************************************************
+	public ArrayList<QAnswer> extractCandidate(int c_id, ArrayList<QAnswer> answerList)
+	{
+		ArrayList<QAnswer> candidateSingleArrList = new ArrayList<QAnswer>();
 		ListIterator<QAnswer> candidateIterator = answerList.listIterator();
+		candidateIterator = answerList.listIterator(); // iterator has to be reseted
 		
-
-		
-		// Collecting candidate ID's
-		
-		//int avlblCID [] = null;
-		
+		boolean exit = false;
+		while(candidateIterator.hasNext() && !exit)
+		{
+			QAnswer candidateSingle = candidateIterator.next();
+			if (c_id == candidateSingle.getCId()) {
+				candidateSingle.getCId();
+				candidateSingle.getQId();
+				candidateSingle.getAnswer();
+				
+				candidateSingleArrList.add(candidateSingle);
+				
+				System.out.println("CID: " + candidateSingle.getCId() + " - QID: " + candidateSingle.getQId() + " - A: " + candidateSingle.getAnswer());
+			}
+			else
+			{	
+				exit = true;
+				candidateSingle = candidateIterator.previous();
+			}	
+		}
+		return candidateSingleArrList;
+	}
+	
+	public Set<Integer> listAvlblCandidates(ArrayList<QAnswer> selectionList, ArrayList<QAnswer> answerList)
+	{
 		Set<Integer> avlblCID = new HashSet<Integer>();
-		
+		ListIterator<QAnswer> candidateIterator = answerList.listIterator();
 		while(candidateIterator.hasNext())
 		{
 			QAnswer candidate = candidateIterator.next();			
@@ -113,91 +146,7 @@ public class SubmitAnswer extends HttpServlet {
 		}
 		System.out.println("Available CIDs: " + avlblCID);
 		
-		
-		// Results will be stored in an arraylist
-		ArrayList<QAnswer> results = null;
-		
-		candidateIterator = answerList.listIterator(); // iterator has to be reseted
-		int num = 1;
-		while(candidateIterator.hasNext())
-		{
-			QAnswer candidateSingle = candidateIterator.next();
-			if (num == candidateSingle.getCId()) {
-				candidateSingle.getCId();
-				candidateSingle.getQId();
-				candidateSingle.getAnswer();
-				
-				System.out.println("CID: " + candidateSingle.getCId() + " - QID: " + candidateSingle.getQId() + " - A: " + candidateSingle.getAnswer());
-			}
-			else
-			{
-				candidateSingle = candidateIterator.previous();
-				num++;
-			}	
-		}
-				
-		/*
-		int score = 0; // Initialising score variable
-		while (candidateIterator.hasNext() && clientIterator.hasNext()) {
-			QAnswer candidate = candidateIterator.next();
-			int can_ans = candidate.getAnswer();
-			
-			QAnswer client = clientIterator.next();
-			int cli_ans = client.getAnswer();
-			
-			// Calculating score
-    		score = score + Math.abs(can_ans - cli_ans);
-//    		System.out.println("***cli: " + cli);
-//    		System.out.println("cli.getAnswer(): " + cliAns);
-    		System.out.println("Score:" + score);
-    		
-    		// Save and reset score
-    		if (!clientIterator.hasNext()) {
-    			QAnswer result = new QAnswer();
-    			result.setCId(candidate.getCId());
-    			result.setScore(score);
-    			System.out.println("CID: " + result.getCId() + "Score: " + result.getScore());
-    			
-    			clientIterator = selectionList.listIterator();
-    			score = 0;
-			}
-	
-		}
-		*/
-		
-		
-		
-/*
-		ListIterator<QAnswer> clientIterator = selectionList.listIterator();
-		ListIterator<QAnswer> candidateIterator = answerList.listIterator();
-
-		int score = 0; // Initialising score variable
-		while (candidateIterator.hasNext() && clientIterator.hasNext()) {
-			QAnswer candidate = candidateIterator.next();
-			int can_ans = candidate.getAnswer();
-			
-			QAnswer client = clientIterator.next();
-			int cli_ans = client.getAnswer();
-			
-			// Calculating score
-    		score = score + Math.abs(can_ans - cli_ans);
-//    		System.out.println("***cli: " + cli);
-//    		System.out.println("cli.getAnswer(): " + cliAns);
-    		System.out.println("Score:" + score);
-    		
-    		// Save and reset score
-    		if (!clientIterator.hasNext()) {
-    			QAnswer result = new QAnswer();
-    			result.setCId(candidate.getCId());
-    			result.setScore(score);
-    			System.out.println("CID: " + result.getCId() + "Score: " + result.getScore());
-    			
-    			clientIterator = selectionList.listIterator();
-    			score = 0;
-			}
-	
-		}
-*/
+		return avlblCID;
 	}
 	
 }
