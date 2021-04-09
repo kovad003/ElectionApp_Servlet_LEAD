@@ -72,19 +72,19 @@
 			            <div class="input-radio">
 			            <!-- Display Radio buttons -->
 			            <label> <b>(1)</b>
-			            <input type = "radio" name = "select${question.id}"  value="1">
+			            <input type = "radio" name = "selected${question.id}"  value="1">
 			            </label>
 			            <label> <b>(2)</b>
-			            <input type = "radio" name = "select${question.id}" value = "2">
+			            <input type = "radio" name = "selected${question.id}" value = "2">
 			            </label>
 			            <label> <b>(3)</b>
-			            <input type = "radio" name = "select${question.id}" value = "3">
+			            <input type = "radio" name = "selected${question.id}" value = "3">
 			            </label>
 			            <label> <b>(4)</b>
-			            <input type = "radio" name = "select${question.id}" value = "4">
+			            <input type = "radio" name = "selected${question.id}" value = "4">
 			            </label>
 			            <label> <b>(5)</b>
-			            <input type = "radio" name = "select${question.id}" value = "5">
+			            <input type = "radio" name = "selected${question.id}" value = "5">
 			            </label>
 			            </div>
 	        		</div>

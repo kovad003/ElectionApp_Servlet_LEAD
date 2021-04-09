@@ -51,6 +51,7 @@ public class SubmitAnswer extends HttpServlet {
 		for (int i = 1; i < selectionList.size()+2; i++) { // Will "grab" each answer from jsp page.
 			QAnswer s = new QAnswer(); // Has to be placed inside the for loop.
 			selected = request.getParameter("selected" + i); // The client's selections will be saved and stored in QAnswer objects.
+			System.out.println("SELECTED by client: " + selected);
 			if(selected!=null)
 			{
 				s.setQId(i);
@@ -58,10 +59,10 @@ public class SubmitAnswer extends HttpServlet {
 				selectionList.add(s);
 				
 //				<<< Debugging Messages >>>
-//				System.out.println(i + " - " + selected);
-//				System.out.println("Object: " + s);
-//				System.out.println("List: " + selectionList);
-//				System.out.println("Client-QID: " + s.getQId() + " - Client-Answ: " + s.getAnswer());		
+				System.out.println(i + " - " + selected);
+				System.out.println("Object: " + s);
+				System.out.println("List: " + selectionList);
+				System.out.println("Client-QID: " + s.getQId() + " - Client-Answ: " + s.getAnswer());		
 			}	
 		}
 		
@@ -101,13 +102,14 @@ public class SubmitAnswer extends HttpServlet {
   
         System.out.println("The iterator values are: "); // Displaying the values after iterating through the iterator
 
-        while (iterator.hasNext()) {
-
-        	Integer myInteger = iterator.next();
-            int c_id = myInteger.intValue();
-            System.out.println(c_id);
-        	extractCandidate(c_id, answerList);
-        }
+//        while (iterator.hasNext()) {
+//        	Integer myInteger = iterator.next();
+//            int c_id = myInteger.intValue();
+//            System.out.println(c_id);
+//        	extractTopCandidate(c_id, answerList, selectionList);
+//        	
+//        	
+//        }
 	}
 	
 	
@@ -116,6 +118,70 @@ public class SubmitAnswer extends HttpServlet {
 //	****************************** CUSTOM METHODS **************************************************************************************************************
 //	************************************************************************************************************************************************************
 //	************************************************************************************************************************************************************
+	
+	public ArrayList<QAnswer> extractTopCandidate(int c_id, ArrayList<QAnswer> answerList, ArrayList<QAnswer> selectionList)
+	{
+		int id_num = c_id; // c_id have to be initialised as a new integer. If c_id is used as a condition in the control flow " == " will re-assign its value => Error!
+		ArrayList<QAnswer> candidateScoredArrLi = new ArrayList<QAnswer>(); // Will be returned at the end.
+		ListIterator<QAnswer> iterator = answerList.listIterator(); // Will iterate through the ArrayList.
+		ListIterator<QAnswer> iterator2 = selectionList.listIterator(); // Will iterate through the ArrayList.
+
+//		<<< Debugging Messages >>>
+//		System.out.println("answerList: " + answerList);
+//		System.out.println("iterator: " + iterator);
+		
+		while(iterator.hasNext())
+		{
+			int totalScore;
+			int score = 0;
+			QAnswer candidateSingle = iterator.next();
+			//System.out.println("c_id: " + c_id +  " CID: " + candidateSingle.getCId());
+			if (id_num == candidateSingle.getCId()) { // Will amend QAnswer objects with attributes.
+				candidateSingle.getCId();
+				candidateSingle.getQId();
+				int answerCnddt = candidateSingle.getAnswer();
+				
+				System.out.println("iterator2.hasNext(): " + iterator2.hasNext());
+				
+				if (iterator2.hasNext()) {
+					QAnswer client = iterator2.next(); // Will create an empty object for the client, which will be amended with relevant data.
+					client.getQId();
+					int answerClnt = client.getAnswer();
+					
+					score = answerClnt - answerCnddt;
+					candidateSingle.setScore(score);
+				}
+				else
+				{
+					System.out.println("Not enough user selection!");
+				}
+				
+				
+				candidateScoredArrLi.add(candidateSingle); // Will add the QAnswer object to the ArrayList
+
+//				<<< Debugging Messages >>>
+//				System.out.println("CID: " + candidateSingle.getCId() + " - QID: " + 
+//				candidateSingle.getQId() + " - A: " + candidateSingle.getAnswer());
+//				System.out.println("Score: " + score);
+			}
+			else if (id_num < candidateSingle.getCId()) // It will prevent exit!
+			{
+//				<<< Debugging Messages >>>
+//				System.out.println("c_id < CID");
+			}
+			else if (id_num > candidateSingle.getCId()) // It will prevent exit!
+			{
+//				<<< Debugging Messages >>>
+//				System.out.println("c_id > CID"); 
+			}
+			totalScore =+ score;
+			candidateSingle.setTotalScore(totalScore);
+			System.out.println("c_id > CID"); 
+			
+		}
+		return candidateScoredArrLi;
+	}
+	
 	public ArrayList<QAnswer> extractCandidate(int c_id, ArrayList<QAnswer> answerList)
 	{
 		int id_num = c_id; // c_id have to be initialised as a new integer. If c_id is used as a condition in the control flow " == " will re-assign its value => Error!
@@ -135,7 +201,7 @@ public class SubmitAnswer extends HttpServlet {
 				candidateSingle.getQId();
 				candidateSingle.getAnswer();
 				
-				candidateSingleArrList.add(candidateSingle);
+				candidateSingleArrList.add(candidateSingle); // Will add the QAnswer object to the ArrayList
 
 //				<<< Debugging Messages >>>
 //				System.out.println("CID: " + candidateSingle.getCId() + " - QID: " + 
@@ -144,12 +210,12 @@ public class SubmitAnswer extends HttpServlet {
 			else if (id_num < candidateSingle.getCId()) // It will prevent exit!
 			{
 //				<<< Debugging Messages >>>
-				//System.out.println("c_id < CID");
+//				System.out.println("c_id < CID");
 			}
 			else if (id_num > candidateSingle.getCId()) // It will prevent exit!
 			{
 //				<<< Debugging Messages >>>
-				//System.out.println("c_id > CID"); 
+//				System.out.println("c_id > CID"); 
 			}	
 		}
 		return candidateSingleArrList;
