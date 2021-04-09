@@ -51,12 +51,18 @@ public class Dao_candidate {
 			ResultSet RS=stmt.executeQuery("select * from candidates");
 			System.out.println("RS: " + RS);
 			while (RS.next()){
-				Candidate q=new Candidate();
-				q.setId(RS.getInt("CANDIDATE_ID"));
-				q.setCandidate(RS.getString("PARTY"));
-//				q.setCandidateLocation(RS.getString("LOCATION"));
+				Candidate c=new Candidate();
+				c.setId(RS.getInt("CANDIDATE_ID"));
+				c.setSName(RS.getString("SURNAME"));
+				c.setFName(RS.getString("FIRSTNAME"));
+				c.setParty(RS.getString("PARTY"));
+				c.setLocation(RS.getString("LOCATION"));
+				c.setAge(RS.getInt("AGE"));
+				c.setReason(RS.getString("REASON_FOR_RUNNING"));
+				c.setGoals(RS.getString("AIMS_AND_GOALS"));
+				c.setProfession(RS.getString("PROFESSION"));
 
-				list.add(q);
+				list.add(c);
 			}
 			return list;
 		}
@@ -69,7 +75,7 @@ public class Dao_candidate {
 		try {
 			String sql="update candidates set candidate=? where id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1, q.getCandidate());
+			pstmt.setString(1, q.getParty());
 			pstmt.setInt(2, q.getId());
 //			pstmt.setInt(3, q.getCandidateLocation());
 			pstmt.executeUpdate();
@@ -103,7 +109,7 @@ public class Dao_candidate {
 			while (RS.next()){
 				f=new Candidate();
 				f.setId(RS.getInt("CANDIDATE_ID"));
-				f.setCandidate(RS.getString("PARTY"));
+				f.setParty(RS.getString("PARTY"));
 //				f.setCandidateLocation(RS.getString("LOCATION"));
 
 			}
