@@ -273,65 +273,7 @@
             which will scroll horizontally on small devices (under 768px). 
             When viewing on anything larger than 768px wide, 
             there is no difference:-->
-    <div class="containerUpdateCandidatesTable">   
-        <div>                                                                                             
-            <div class="table-responsive">          
-                <table class="table">                    
-                    <thead class = "tableCustom1">
-                    </thead>
-                    <tbody>
-                        <tr><caption><h2>List of Candidates</h2></caption>
-				            <tr>
-				                <th>CANDIDATE_ID</th>
-				                <th>PARTY</th>  
-				            </tr>
-				           <c:forEach var="candidate" items="${requestScope.candidatelist}">
-								<tr>	
-									<td><c:out value="${candidate.id}" /></td>
-									<td><c:out value="${candidate.candidate}" /></td>	
-									<td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-				                    <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
-								</tr>
-							</c:forEach>                  
-                        </tr>
-                    </tbody>                
-                </table>
-            </div>
-        </div>
-    </div>
-    <!-- AD This is a container to contain the data from the Candidate Table.
-            Created utilising bootstrap, this .table-responsive class creates a responsive table
-            which will scroll horizontally on small devices (under 768px). 
-            When viewing on anything larger than 768px wide, 
-            there is no difference:-->
-            <div class="containerUpdateCandidatesTable">   
-                <div>                                                                                             
-                    <div class="table-responsive">          
-                        <table class="table">                    
-                            <thead class = "tableCustom1">
-                                <tr>
-                                    <th>UPDATE</th>
-                                    <th>DELETE</th>
-                                    <th>CANDIDATE_ID</th> 
-                                    <th>PARTY</th>
-                                   
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="text" name="CANDIDATE_ID"></td>
-                                    <td><input type="text" name="PARTY"></td>
-                                    <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-                                    <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
-                                  
-                                </tr>
-                            </tbody>                        
-                                    
-                        </table>
-                    </div>
-                </div>
-            </div>
-
+  
 
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->
