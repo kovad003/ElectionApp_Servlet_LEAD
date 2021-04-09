@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- 
+
 <%@ page import="java.util.ArrayList" %>   
 <%@ page import="data.Candidate" %>   
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
@@ -18,36 +16,9 @@
     
 </head>
 <body>
-
- 
    <!-- AD - includes the navbar component, into this page -->
    <%@ include file="../components/navbar.jsp" %> 
  
-<!-- Dan's to copy into header:
-<div class="container-nav1">
-    <div class="container-nav3">
-        <div class="container-nav4">              
-       
-            <div class = "container-nav-links-icon">
-            <a href="https://www.google.com/"><i class="material-icons resize3a">account_balance</i></a>              
-            </div>
-            <div class = "container-nav-links">
-                <a href="index.jsp"><h5>About</h5></a>
-            </div>
-            <div class = "container-nav-links">
-                <a href="/ShowQuestions"><h5>Questionnaire</h5></a>
-            </div>
-            <div class = "container-nav-links">
-                <a href="/ShowCandidates"><h5>Candidates</h5></a>
-            </div>
-            <div class = "container-nav-links">
-                <a href="loginPage.jsp"><h5>Login</h5></a>
-            </div>               
-        </div>
-    </div>
-</div>
-  -->
-
     <!-- AD - Beginning the central (yellow container)-->
     <div class="container">
         <i class="material-icons resize1">account_balance</i>
@@ -75,10 +46,10 @@
         <h3>Here, let's let the candidates introduces themselves:</h3>
         </div>
     
-        <hr> 
-
+        <hr>
+         
         <!-- AD - Candidate 1 intro colourings and text -->
-        <c:forEach begin="0" end="1" var="candidate" items="${requestScope.candidatelist}">
+        <c:forEach begin="0" end="18" var="candidate" items="${requestScope.candidatelist}">
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>
@@ -104,7 +75,6 @@
         </div>
         </c:forEach>
 
-
         <!-- End ot the candidate intro / overview section-->
         <hr>
 
@@ -114,7 +84,7 @@
             <div class="container4">  
             
                 <!-- AD - Questionnaire guidance for the user -->
-		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÃ„MK's Finest'
+		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
                 are to be held liable for any views or comments expressed by the candidates 
                 or users of this site. Your data is confidential and will not be shared or
                 sold in any capacity. All rights reserved.</h5>

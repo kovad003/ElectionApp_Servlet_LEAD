@@ -144,8 +144,10 @@
 	        <hr>
 
 		        <form id="form" action="/SubmitAnswer" method="POST">
+			             <!-- ******************************************************************************************************** -->
+			            <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
+			             <!-- ******************************************************************************************************** -->
 
-				<ol>
 			    <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
 			    <h3><c:out value = "${question.id}) ${question.question}"/></h3>
 			    <div class="container2">
@@ -157,25 +159,23 @@
 			            <!-- ******************************************************************************************************** -->
 			            <div class="input-radio">
 			            <label> <b>(1)</b>
-			            <input type = "radio" name = "select"  value="1">
+			            <input type = "radio" name = "select${question.id}"  value="1">
 			            </label>
 			            <label> <b>(2)</b>
-			            <input type = "radio" name = "select" value = "2">
+			            <input type = "radio" name = "select${question.id}" value = "2">
 			            </label>
 			            <label> <b>(3)</b>
-			            <input type = "radio" name = "select" value = "3">
+			            <input type = "radio" name = "select${question.id}" value = "3">
 			            </label>
 			            <label> <b>(4)</b>
-			            <input type = "radio" name = "select" value = "4">
+			            <input type = "radio" name = "select${question.id}" value = "4">
 			            </label>
 			            <label> <b>(5)</b>
-			            <input type = "radio" name = "select" value = "5">
+			            <input type = "radio" name = "select${question.id}" value = "5">
 			            </label>
 			            </div>
-			             <!-- ******************************************************************************************************** -->
-			            <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
-			             <!-- ******************************************************************************************************** -->
 	        		</div>
+	        		</c:forEach>
 		        		<button class="button-main button1" type="submit"><b>NEXT</b></button>
 	        	</form>	
     		<hr>

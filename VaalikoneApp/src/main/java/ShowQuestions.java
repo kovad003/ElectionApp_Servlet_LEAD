@@ -57,7 +57,7 @@ public class ShowQuestions extends HttpServlet {
 		}
 		request.setAttribute("questionlist", list);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/survey.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/questionnaire.jsp");
 		rd.forward(request, response);
 	}
 }
