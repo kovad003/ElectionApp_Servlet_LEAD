@@ -14,17 +14,17 @@ public class LoginDatabaseConnection {
 		ResultSet rs = null;
 
 		String url = "jdbc:mysql://localhost:3306/";
-		String dbName = "userdb";
+		String dbName = "electionmachine";
 		String driver = "com.mysql.jdbc.Driver";
-		String userName = "root";
-		String password = "root";
+		String userName = "pena";
+		String password = "kukkuu";
 		try {
 			Class.forName(driver).newInstance();
 			conn = DriverManager
 					.getConnection(url + dbName, userName, password);
 
 			pst = conn
-					.prepareStatement("select * from member where email=? and password=?");
+					.prepareStatement("select * from CANDIDATES where SURNAME=? and FIRSTNAME=?");
 			pst.setString(1, name);
 			pst.setString(2, pass);
 

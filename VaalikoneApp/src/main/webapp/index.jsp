@@ -38,7 +38,9 @@
                 <a href="/ShowCandidates"><h5>Candidates</h5></a>
             </div>
             <div class = "container-nav-links">
+
                 <a href="/loginPage.jsp"><h5>Login</h5></a>
+
             </div>           
         </div>
     </div>
@@ -48,10 +50,15 @@
     <!-- AD - Beginning the central (yellow container)-->
     <div class="container">
         <i class="material-icons resize1">account_balance</i>
+          <%String name = (String) session.getAttribute("name");%>
+        <h3>Welcome <%out.println(name); %></h3>
+
         
         <!-- AD - customises the welcome message-->
         <div class="container6"> 
-          <h2>Homepage</h2>
+          
+        <h2>Homepage</h2>
+
         </div>
        
         <!-- AD - This container adds colourings and style to the intro message -->
