@@ -1,5 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ 
+<%@ page import="java.util.ArrayList" %>   
+<%@ page import="data.Question" %>   
+<%@ page import="data.Answer" %>  
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,110 +108,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
-                            <td>Demo CANDIDATE_ID 1</td>
-                            <td>Demo SURNAME</td>
-                            <td>Demo FIRSTNAME</td>
-                            <td>Demo PARTY</td>
-                            <td>Demo LOCATION</td>
-                            <td>Demo AGE</td>
-                            <td>Demo REASON FOR RUNNING</td>
-                            <td>Demo AIMS AND GOALS</td>
-                            <td>Demo PROFESSION</td>                  
-                        </tr>
+                        <c:forEach begin="0" end="8" var="candidate" items="${requestScope.candidatelist}">
+	                        <tr>
+	                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
+	                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+	                            <td><c:out value = "${candidate.id}"/></td>
+	                            <td><c:out value = "${candidate.SName}"/></td>
+	                            <td><c:out value = "${candidate.FName}"/></td>
+	                            <td><c:out value = "${candidate.party}"/></td>
+	                            <td><c:out value = "${candidate.location}"/></td>
+	                            <td><c:out value = "${candidate.age}"/></td>
+	                            <td><c:out value = "${candidate.reason}"/></td>
+	                            <td><c:out value = "${candidate.goals}"/></td>
+	                            <td><c:out value = "${candidate.profession}"/></td>                 
+	                        </tr>
+                        </c:forEach>
                     </tbody>
-                    <tbody>
-                        <tr>
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
-                            <td>Demo CANDIDATE_ID 2</td>
-                            <td>Demo SURNAME</td>
-                            <td>Demo FIRSTNAME</td>
-                            <td>Demo PARTY</td>
-                            <td>Demo LOCATION</td>
-                            <td>Demo AGE</td>
-                            <td>Demo REASON FOR RUNNING</td>
-                            <td>Demo AIMS AND GOALS</td>
-                            <td>Demo PROFESSION</td>                  
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
-                            <td>Demo CANDIDATE_ID 3</td>
-                            <td>Demo SURNAME</td>
-                            <td>Demo FIRSTNAME</td>
-                            <td>Demo PARTY</td>
-                            <td>Demo LOCATION</td>
-                            <td>Demo AGE</td>
-                            <td>Demo REASON FOR RUNNING</td>
-                            <td>Demo AIMS AND GOALS</td>
-                            <td>Demo PROFESSION</td>                  
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
-                            <td>Demo CANDIDATE_ID 4</td>
-                            <td>Demo SURNAME</td>
-                            <td>Demo FIRSTNAME</td>
-                            <td>Demo PARTY</td>
-                            <td>Demo LOCATION</td>
-                            <td>Demo AGE</td>
-                            <td>Demo REASON FOR RUNNING</td>
-                            <td>Demo AIMS AND GOALS</td>
-                            <td>Demo PROFESSION</td>                  
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
-                            <td>Demo CANDIDATE_ID 5</td>
-                            <td>Demo SURNAME</td>
-                            <td>Demo FIRSTNAME</td>
-                            <td>Demo PARTY</td>
-                            <td>Demo LOCATION</td>
-                            <td>Demo AGE</td>
-                            <td>Demo REASON FOR RUNNING</td>
-                            <td>Demo AIMS AND GOALS</td>
-                            <td>Demo PROFESSION</td>                  
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
-                            <td>Demo CANDIDATE_ID 6</td>
-                            <td>Demo SURNAME</td>
-                            <td>Demo FIRSTNAME</td>
-                            <td>Demo PARTY</td>
-                            <td>Demo LOCATION</td>
-                            <td>Demo AGE</td>
-                            <td>Demo REASON FOR RUNNING</td>
-                            <td>Demo AIMS AND GOALS</td>
-                            <td>Demo PROFESSION</td>                  
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
-                            <td>Demo CANDIDATE_ID 7</td>
-                            <td>Demo SURNAME</td>
-                            <td>Demo FIRSTNAME</td>
-                            <td>Demo PARTY</td>
-                            <td>Demo LOCATION</td>
-                            <td>Demo AGE</td>
-                            <td>Demo REASON FOR RUNNING</td>
-                            <td>Demo AIMS AND GOALS</td>
-                            <td>Demo PROFESSION</td>                  
-                        </tr>
-                    </tbody>                
                 </table>
             </div>
         </div>
