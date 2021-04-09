@@ -19,7 +19,7 @@
         
 <!-- NOTE: If the page requires the use of AD's 
         Script-based code (such as the login.jsp page),
-        then the '../components/headerBootstrap.jsp' 
+        then the '../components/headerScript.jsp' 
         file will need to be used instead of the above line. -->
 
 <!-- Furthermore, if page to be included consists of dynamic elements
