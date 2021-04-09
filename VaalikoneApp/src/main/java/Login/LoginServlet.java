@@ -16,30 +16,32 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
+	
 	private final String userID = "admin";
 	private final String password = "admin";
 
+	
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		// get request parameters for userID and password
 		String user = request.getParameter("user");
 		String pwd = request.getParameter("pwd");
 		
-		boolean login_correct = false;
+
+		
 		if(userID.equals(user) && password.equals(pwd)) {
-			login_correct = true;
-			}
-		
-		
-		if (login_correct == true) {
 			Cookie loginCookie = new Cookie("user",user);
-			//setting cookie to expiry in 30 mins
-			loginCookie.setMaxAge(30*60);
 			response.addCookie(loginCookie);
+			/*
+			 * login ok -> 
+			 */
 			response.sendRedirect("_TEST_LOGIN_SUCCESS.jsp");
 		}else{
+			/*
+			 * login not ok ->
+			 */
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/loginPage.html");
 			PrintWriter out= response.getWriter();
 			out.println("<font color=red>You are a poopiehead</font>");
