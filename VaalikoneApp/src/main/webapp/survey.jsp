@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- 
+    
 <%@ page import="java.util.ArrayList" %>   
 <%@ page import="data.Question" %>   
-<%@ page import="data.Answer" %>  
-    
+<%@ page import="data.Answer" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
    
 <!DOCTYPE html>
@@ -253,9 +253,9 @@
 	</ol> 
 	-->
 
-		
-	<% 
-	
+  
+  <%
+
 	/*ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
 	
 	for (int i=0;questionList!=null && i<questionList.size();i++){
@@ -299,7 +299,7 @@
                     <thead class = "tableCustom1">
                     </thead>
                     <tbody>
-                        <tr>                  <caption><h2>List of Candidates</h2></caption>
+                        <tr><caption><h2>List of Candidates</h2></caption>
 				            <tr>
 				                <th>CANDIDATE_ID</th>
 				                <th>PARTY</th>  
@@ -350,9 +350,6 @@
                     </div>
                 </div>
             </div>
-
-</body><!-- AD - End of body-->
-</html><!-- AD - End of html-->
 
 <!--  
 	<script type="text/javascript">
