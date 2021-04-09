@@ -16,6 +16,11 @@
         Bootstrap-based code (such as the adminUpdateCandidates.jsp page),
         then the '../components/headerBootstrap.jsp' 
         file will need to be used instead of the above line. -->
+        
+<!-- NOTE: If the page requires the use of AD's 
+        Script-based code (such as the login.jsp page),
+        then the '../components/headerBootstrap.jsp' 
+        file will need to be used instead of the above line. -->
 
 <!-- Furthermore, if page to be included consists of dynamic elements
         then the 'jsp include' tag may need to be used as an alternative.
