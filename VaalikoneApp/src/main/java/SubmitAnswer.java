@@ -59,10 +59,10 @@ public class SubmitAnswer extends HttpServlet {
 				selectionList.add(s);
 				
 //				<<< Debugging Messages >>>
-				System.out.println(i + " - " + selected);
-				System.out.println("Object: " + s);
-				System.out.println("List: " + selectionList);
-				System.out.println("Client-QID: " + s.getQId() + " - Client-Answ: " + s.getAnswer());		
+//				System.out.println(i + " - " + selected);
+//				System.out.println("Object: " + s);
+//				System.out.println("List: " + selectionList);
+//				System.out.println("Client-QID: " + s.getQId() + " - Client-Answ: " + s.getAnswer());		
 			}	
 		}
 		
