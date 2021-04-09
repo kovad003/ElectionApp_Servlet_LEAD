@@ -1,7 +1,9 @@
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.ListIterator;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -96,12 +98,27 @@ public class SubmitAnswer extends HttpServlet {
 		ListIterator<QAnswer> clientIterator = selectionList.listIterator();
 		ListIterator<QAnswer> candidateIterator = answerList.listIterator();
 		
+
+		
+		// Collecting candidate ID's
+		
+		//int avlblCID [] = null;
+		
+		Set<Integer> avlblCID = new HashSet<Integer>();
+		
+		while(candidateIterator.hasNext())
+		{
+			QAnswer candidate = candidateIterator.next();			
+			avlblCID.add(candidate.getCId()); // Will add the occuring CIDs to a set (no duplicates allowed!)	
+		}
+		System.out.println("Available CIDs: " + avlblCID);
+		
+		
 		// Results will be stored in an arraylist
 		ArrayList<QAnswer> results = null;
 		
-		
+		candidateIterator = answerList.listIterator(); // iterator has to be reseted
 		int num = 1;
-		
 		while(candidateIterator.hasNext())
 		{
 			QAnswer candidateSingle = candidateIterator.next();
