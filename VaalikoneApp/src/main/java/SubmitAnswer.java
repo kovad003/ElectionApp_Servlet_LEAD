@@ -95,6 +95,64 @@ public class SubmitAnswer extends HttpServlet {
 
 		ListIterator<QAnswer> clientIterator = selectionList.listIterator();
 		ListIterator<QAnswer> candidateIterator = answerList.listIterator();
+		
+		// Results will be stored in an arraylist
+		ArrayList<QAnswer> results = null;
+		
+		
+		int num = 1;
+		
+		while(candidateIterator.hasNext())
+		{
+			QAnswer candidateSingle = candidateIterator.next();
+			if (num == candidateSingle.getCId()) {
+				candidateSingle.getCId();
+				candidateSingle.getQId();
+				candidateSingle.getAnswer();
+				
+				System.out.println("CID: " + candidateSingle.getCId() + " - QID: " + candidateSingle.getQId() + " - A: " + candidateSingle.getAnswer());
+			}
+			else
+			{
+				candidateSingle = candidateIterator.previous();
+				num++;
+			}	
+		}
+				
+		/*
+		int score = 0; // Initialising score variable
+		while (candidateIterator.hasNext() && clientIterator.hasNext()) {
+			QAnswer candidate = candidateIterator.next();
+			int can_ans = candidate.getAnswer();
+			
+			QAnswer client = clientIterator.next();
+			int cli_ans = client.getAnswer();
+			
+			// Calculating score
+    		score = score + Math.abs(can_ans - cli_ans);
+//    		System.out.println("***cli: " + cli);
+//    		System.out.println("cli.getAnswer(): " + cliAns);
+    		System.out.println("Score:" + score);
+    		
+    		// Save and reset score
+    		if (!clientIterator.hasNext()) {
+    			QAnswer result = new QAnswer();
+    			result.setCId(candidate.getCId());
+    			result.setScore(score);
+    			System.out.println("CID: " + result.getCId() + "Score: " + result.getScore());
+    			
+    			clientIterator = selectionList.listIterator();
+    			score = 0;
+			}
+	
+		}
+		*/
+		
+		
+		
+/*
+		ListIterator<QAnswer> clientIterator = selectionList.listIterator();
+		ListIterator<QAnswer> candidateIterator = answerList.listIterator();
 
 		int score = 0; // Initialising score variable
 		while (candidateIterator.hasNext() && clientIterator.hasNext()) {
@@ -122,7 +180,7 @@ public class SubmitAnswer extends HttpServlet {
 			}
 	
 		}
-
+*/
 	}
 	
 }
