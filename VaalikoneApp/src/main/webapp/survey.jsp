@@ -147,7 +147,7 @@
 			             <!-- ******************************************************************************************************** -->
 			            <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
 			             <!-- ******************************************************************************************************** -->
-				<ol>
+
 			    <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
 			    <h3><c:out value = "${question.id}) ${question.question}"/></h3>
 			    <div class="container2">
