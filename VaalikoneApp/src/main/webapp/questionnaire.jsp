@@ -70,8 +70,9 @@
 			            
                         <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
 
+							<div class = "containerDynamicQuestion">
 					        <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->
-					    
+					    	</div>
                                 <!-- ******************************************************************************************************** -->
                                                                    
                                     <!-- Display Radio buttons -->

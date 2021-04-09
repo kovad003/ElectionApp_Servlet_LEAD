@@ -6,6 +6,14 @@
         Ensures that the election machine looks good
         on smaller devices. */
 @media only screen and (max-width: 900px) {
+	
+	/* Container for the dynamic questions
+		on the questionnaire pages 
+	containerDynamicQuestion {
+	max-width: 60% !important;
+	}
+	*/
+	
     .container {
     max-width: 80% !important;
     }
@@ -568,6 +576,7 @@ for specific cells (sich as update and delete
     padding: 0.1px 10px 0.1px 10px;  
     color: rgba(255, 255, 255, 0.658);
     
-    margin:1px;    
+    margin:5px;
+    margin-right: 10px;    
 }
 
