@@ -52,7 +52,8 @@ public class Dao_qanswer {
 			System.out.println("RS: " + RS);
 			while (RS.next()){
 				QAnswer a=new QAnswer();
-				a.setId(RS.getInt("ANSWER_ID"));
+				a.setCId(RS.getInt("CANDIDATE_ID"));
+				a.setQId(RS.getInt("QUESTION_ID"));
 				a.setAnswer(RS.getInt("ANSWER"));
 				list.add(a);
 			}
@@ -71,7 +72,7 @@ public class Dao_qanswer {
 			String sql="insert into answers (QUESTION_ID, ANSWER) values (?, ?)";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setInt(1, a.getAnswer());
-			pstmt.setInt(2, a.getId());
+			pstmt.setInt(2, a.getQId());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -85,7 +86,7 @@ public class Dao_qanswer {
 			String sql="update questions set answer=? where id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setInt(1, a.getAnswer());
-			pstmt.setInt(2, a.getId());
+			pstmt.setInt(2, a.getQId());
 			pstmt.executeUpdate();
 			return readAllAnswer();
 		}
@@ -116,7 +117,7 @@ public class Dao_qanswer {
 			ResultSet RS=pstmt.executeQuery();
 			while (RS.next()){
 				a=new QAnswer();
-				a.setId(RS.getInt("ANSWER_ID"));
+				a.setQId(RS.getInt("ANSWER_ID"));
 				a.setAnswer(RS.getInt("ANSWER"));
 			}
 			return a;

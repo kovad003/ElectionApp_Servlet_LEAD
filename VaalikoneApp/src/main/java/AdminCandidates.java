@@ -34,8 +34,8 @@ import data.Candidate;
 /**
  * Servlet implementation class ShowCandidates
  */
-@WebServlet("/ShowCandidates")
-public class ShowCandidates extends HttpServlet {
+@WebServlet("/AdminCandidates")
+public class AdminCandidates extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao_candidate dao=null;
 	
@@ -49,7 +49,7 @@ public class ShowCandidates extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ShowCandidates() { // CONSTRUCTOR, leave it here
+    public AdminCandidates() { // CONSTRUCTOR, leave it here
         super();
         // TODO Auto-generated constructor stub
     }
@@ -78,41 +78,8 @@ public class ShowCandidates extends HttpServlet {
 		}
 		request.setAttribute("candidatelist", list);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/candidates.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/adminUpdateCandidates.jsp");
 		rd.forward(request, response);
-/*		
-		// get URLs
-		URL currentUrl = new URL(request.getRequestURL().toString());
-		URL prevUrl = new URL(request.getHeader("referer"));
-		
-		// convert the absolute path to URI
-	    URI path1 = null;
-		try {
-			path1 = currentUrl.toURI();
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    URI path2 = null;
-		try {
-			path2 = prevUrl.toURI();
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	    // create a relative path from the two paths
-	    URI relativePath = path2.relativize(path1);
-	    
-
-	    // convert the URI to string
-	    String path = relativePath.getPath();
-		
-		System.out.println("Current URL path:" + currentUrl);
-		System.out.println("Request is comming from : " + prevUrl);
-		System.out.println("Relative path : " + relativePath);
-		
-*/
 	}
 }
 
