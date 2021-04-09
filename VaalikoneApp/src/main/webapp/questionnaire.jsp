@@ -1,5 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
+   
+<%@ page import="java.util.ArrayList" %>   
+<%@ page import="data.Question" %>   
+<%@ page import="data.Answer" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,26 +56,41 @@
                 <!-- AD - Beginning of the section with 5 selection buttons-->
                 <div class="input-radio">
 
-                    <!-- AD - The 5 selection buttons, for choosing the answers-->
-                    <label>
-                        <b style = "color:#E9C46A">
-                        SELECT :</b>
-                    </label>
-                    <label><b>(1)</b>
-                    <input type = "radio" name = "select">
-                    </label>
-                    <label><b>(2)</b>
-                    <input type = "radio" name = "select">
-                    </label>
-                    <label><b>(3)</b>
-                    <input type = "radio" name = "select">
-                    </label>
-                    <label><b>(4)</b>
-                    <input type = "radio" name = "select">
-                    </label>
-                    <label><b>(5)</b>
-                    <input type = "radio" name = "select">
-                    </label>
+                    <form id="form" action="/SubmitAnswer" method="POST">
+			             <!-- ******************************************************************************************************** -->
+			            <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
+			             <!-- ******************************************************************************************************** -->
+					    <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
+					    <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->
+					    <div class="container2">
+
+			        	<!-- ******************************************************************************************************** -->
+			            <div class="labels-radio">
+			                <b>Select:</b>
+			            </div>
+			            <!-- ******************************************************************************************************** -->
+			            <div class="input-radio">
+			            <!-- Display Radio buttons -->
+			            <label> <b>(1)</b>
+			            <input type = "radio" name = "select${question.id}"  value="1">
+			            </label>
+			            <label> <b>(2)</b>
+			            <input type = "radio" name = "select${question.id}" value = "2">
+			            </label>
+			            <label> <b>(3)</b>
+			            <input type = "radio" name = "select${question.id}" value = "3">
+			            </label>
+			            <label> <b>(4)</b>
+			            <input type = "radio" name = "select${question.id}" value = "4">
+			            </label>
+			            <label> <b>(5)</b>
+			            <input type = "radio" name = "select${question.id}" value = "5">
+			            </label>
+			            </div>
+	        		</div>
+	        		</c:forEach>
+		        		<button class="button-main button1" type="submit"><b>NEXT</b></button>
+	        	</form>	
         
                 </div>
             
