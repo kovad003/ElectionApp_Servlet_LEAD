@@ -538,3 +538,10 @@ for specific cells (sich as update and delete
     background-color:#264653; /* AD - a custom colour for deleting */
 } 
 
+/* AD - customises the word 'select'
+    on the questionnaire page.*/
+.questionnaireSelect {
+    color: #E76F51;
+}
+
+
