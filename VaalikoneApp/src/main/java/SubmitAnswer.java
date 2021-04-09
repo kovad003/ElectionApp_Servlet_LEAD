@@ -2,6 +2,7 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Set;
 
@@ -45,21 +46,22 @@ public class SubmitAnswer extends HttpServlet {
 //		**************** GET CLIENT SELECTIONS *******************************************************************************************************
 //		**********************************************************************************************************************************************
 		String selected;
-		ArrayList<QAnswer> selectionList= new ArrayList<QAnswer>(); // How to creat DAO?
-		for (int i = 1; i < selectionList.size()+2; i++) {
-			QAnswer s = new QAnswer(); // has to be placed inside the for loop
-			selected = request.getParameter("selected" + i);
+		ArrayList<QAnswer> selectionList= new ArrayList<QAnswer>(); // Empty ArrayList for the client's answers.
+		
+		for (int i = 1; i < selectionList.size()+2; i++) { // Will "grab" each answer from jsp page.
+			QAnswer s = new QAnswer(); // Has to be placed inside the for loop.
+			selected = request.getParameter("selected" + i); // The client's selections will be saved and stored in QAnswer objects.
 			if(selected!=null)
 			{
 				s.setQId(i);
 				s.setAnswer(selected);
 				selectionList.add(s);
 				
+//				<<< Debugging Messages >>>
 //				System.out.println(i + " - " + selected);
 //				System.out.println("Object: " + s);
 //				System.out.println("List: " + selectionList);
-//				System.out.println("Client-QID: " + s.getQId() + " - Client-Answ: " + s.getAnswer());
-				
+//				System.out.println("Client-QID: " + s.getQId() + " - Client-Answ: " + s.getAnswer());		
 			}	
 		}
 		
@@ -77,6 +79,7 @@ public class SubmitAnswer extends HttpServlet {
 				QAnswer a = answerList.get(i);
 				a.getAnswer();
 				
+//				<<< Debugging Messages >>>
 //				System.out.println("Candidate ID: " + a.getCId());
 //				System.out.println("Question ID: " + a.getQId());
 //				System.out.println("Answer : " + a.getAnswer());
@@ -86,50 +89,67 @@ public class SubmitAnswer extends HttpServlet {
 		{
 			System.out.println("No connection to database");
 		}
-		/*
-		for (int i = 0; i < selectionList.size(); i++) {
-			System.out.println("print: " + selectionList.get(i).getQId());	
-		}
-		*/
+
 		
 //		*********************************************************************************************************************************************
 //		************ COMPARE CLIENT WITH CANDIDATES *************************************************************************************************
 //		*********************************************************************************************************************************************
 
-		listAvlblCandidates(selectionList, answerList); // Will return a SET with the available Candidate IDs (CID)	
+		Set<Integer> avlblCID = listAvlblCandidates(selectionList, answerList); // Will return a SET with the available Candidate IDs (CID)	
 		
-		extractCandidate(1, answerList); // Will return an arrayList filled with data for the given CID.
-		
-		
+        Iterator<Integer> iterator = avlblCID.iterator(); // Creating an iterator
+  
+        System.out.println("The iterator values are: "); // Displaying the values after iterating through the iterator
 
+        while (iterator.hasNext()) {
+
+        	Integer myInteger = iterator.next();
+            int c_id = myInteger.intValue();
+            System.out.println(c_id);
+        	extractCandidate(c_id, answerList);
+        }
 	}
 	
+	
+//	************************************************************************************************************************************************************	
 //	************************************************************************************************************************************************************
 //	****************************** CUSTOM METHODS **************************************************************************************************************
 //	************************************************************************************************************************************************************
+//	************************************************************************************************************************************************************
 	public ArrayList<QAnswer> extractCandidate(int c_id, ArrayList<QAnswer> answerList)
 	{
-		ArrayList<QAnswer> candidateSingleArrList = new ArrayList<QAnswer>();
-		ListIterator<QAnswer> candidateIterator = answerList.listIterator();
-		candidateIterator = answerList.listIterator(); // iterator has to be reseted
+		int id_num = c_id; // c_id have to be initialised as a new integer. If c_id is used as a condition in the control flow " == " will re-assign its value => Error!
+		ArrayList<QAnswer> candidateSingleArrList = new ArrayList<QAnswer>(); // Will be returned at the end.
+		ListIterator<QAnswer> iterator = answerList.listIterator(); // Will iterate through the ArrayList.
+
+//		<<< Debugging Messages >>>
+//		System.out.println("answerList: " + answerList);
+//		System.out.println("iterator: " + iterator);
 		
-		boolean exit = false;
-		while(candidateIterator.hasNext() && !exit)
+		while(iterator.hasNext())
 		{
-			QAnswer candidateSingle = candidateIterator.next();
-			if (c_id == candidateSingle.getCId()) {
+			QAnswer candidateSingle = iterator.next();
+			//System.out.println("c_id: " + c_id +  " CID: " + candidateSingle.getCId());
+			if (id_num == candidateSingle.getCId()) { // Will amend QAnswer objects with attributes.
 				candidateSingle.getCId();
 				candidateSingle.getQId();
 				candidateSingle.getAnswer();
 				
 				candidateSingleArrList.add(candidateSingle);
-				
-				System.out.println("CID: " + candidateSingle.getCId() + " - QID: " + candidateSingle.getQId() + " - A: " + candidateSingle.getAnswer());
+
+//				<<< Debugging Messages >>>
+//				System.out.println("CID: " + candidateSingle.getCId() + " - QID: " + 
+//				candidateSingle.getQId() + " - A: " + candidateSingle.getAnswer());
 			}
-			else
-			{	
-				exit = true;
-				candidateSingle = candidateIterator.previous();
+			else if (id_num < candidateSingle.getCId()) // It will prevent exit!
+			{
+//				<<< Debugging Messages >>>
+				//System.out.println("c_id < CID");
+			}
+			else if (id_num > candidateSingle.getCId()) // It will prevent exit!
+			{
+//				<<< Debugging Messages >>>
+				//System.out.println("c_id > CID"); 
 			}	
 		}
 		return candidateSingleArrList;
@@ -137,7 +157,7 @@ public class SubmitAnswer extends HttpServlet {
 	
 	public Set<Integer> listAvlblCandidates(ArrayList<QAnswer> selectionList, ArrayList<QAnswer> answerList)
 	{
-		Set<Integer> avlblCID = new HashSet<Integer>();
+		Set<Integer> avlblCID = new HashSet<Integer>(); // Will be used as a "filer" to create a set of unique CIDs from repetative data set.
 		ListIterator<QAnswer> candidateIterator = answerList.listIterator();
 		while(candidateIterator.hasNext())
 		{
@@ -145,8 +165,6 @@ public class SubmitAnswer extends HttpServlet {
 			avlblCID.add(candidate.getCId()); // Will add the occuring CIDs to a set (no duplicates allowed!)	
 		}
 		System.out.println("Available CIDs: " + avlblCID);
-		
 		return avlblCID;
-	}
-	
+	}	
 }
