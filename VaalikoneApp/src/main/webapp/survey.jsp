@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  
- <%@ page import="java.util.ArrayList" %>   
- <%@ page import="data.Question" %>   
- <%@ page import="data.Answer" %>  
+<%@ page import="java.util.ArrayList" %>   
+<%@ page import="data.Question" %>   
+<%@ page import="data.Answer" %>  
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
    
@@ -142,50 +142,13 @@
             <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
             <!-- ******************************************************************************************************** -->
 	        <!-- The for loop between the JSP scriptlet tags will print a question out with the given index -->
-<!--
-	        <h3>
-		      	<% 
-		      	/*	ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");
-			    	Question q=questionList.get(0);
-			    	out.println(q.getId()+") "+q.getQuestion()); */
-				%>
-
-			</h3>
-			
-				        <h3>
-		    	<% 
-// 					ArrayList<Candidate> candidateList=(ArrayList<Candidate>)request.getAttribute("candidatelist");
-// 			    	Candidate q=candidateList.get(0);
-// 			    	out.println(q.getId()+") "+q.getCandidate());
-				%>
-				
-			</h3>
-	            <%=(String)request.getAttribute("user_answer")%>
-	    
-	        <hr>
-	        
-
-	        </h3>
-	        <h3>
-
-	        	<% 
-					ArrayList<Answer> aList=(ArrayList<Answer>)request.getAttribute("answerlist");
-			    	Answer a = aList.get(0);
-			    	out.println("Candidate: " + a.getCANDIDATE_ID() + " Q#) " + a.getQUESTION_ID() + " A: "  + a.getANSWER());
-				%>
-			</h3>
-		        <form id="form">
-			        <div class="container2">
--->
-	        
-	            <%= (String)request.getAttribute("user_answer")%>
 	    
 	        <hr>
 
 		        <form id="form" action="/SubmitAnswer" method="POST">
 
 				<ol>
-			    <c:forEach begin="0" end="3" var="question" items="${requestScope.questionlist}" >
+			    <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
 			    <h3><c:out value = "${question.id}) ${question.question}"/></h3>
 			    <div class="container2">
 
@@ -240,23 +203,6 @@
 	    </c:forEach>
 	</table>
     
-
-    <!-- -->
-    
-    <!-- Other solutions for displaying questions -->
-	<!-- No list numbers... -->
-
-    <!-- Other solutions for displaying questions  -->
-	<!-- No list numbers...  
-
-    <ol>
-    <c:forEach begin="<%=2 %>" end="<%=3 %>" var="question" varStatus="status" items="${requestScope.questionlist}" >
-    <c:out value = "${question.id}) ${question.question}"/> <p>
-	</c:forEach>
-	</ol>
-
-    <!-- Questions are numbers -->
-
     <ol>
     <c:forEach begin="<%=0 %>" end="<%=16 %>" var="question" items="${requestScope.questionlist}" >
     <li>${question.question}
@@ -316,6 +262,7 @@
 		Question q=questionList.get(i);
 		out.println(q.getId()+": "+q.getQuestion()+"<a href='/delete?id="+q.getId()+"'>delete</a> <a href='/readtoupdate?id="+q.getId()+"'>update</a>");
 	}*/
+	%>
 
     <!-- AD - Beginning the central (yellow container)-->
     <div class="containerMainUpdateCandidates">
@@ -406,32 +353,7 @@
 
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->
-   
 
-	
-  %>
-    
-	   <div align="center">
-		<table border="1" cellpadding="5">
-			<caption><h2>List of Candidates</h2></caption>
-			<tr>
-			<th>CANDIDATE_ID</th>
-			<th>PARTY</th>
-			
-			</tr>
-			<c:forEach var="candidate" items="${requestScope.candidatelist}">
-			<tr>
-			<td><c:out value="${candidate.id}" /></td>
-			<td><c:out value="${candidate.candidate}" /></td>
-			</tr>
-			</c:forEach>
-		</table>
-	</div>
-    
-    
-    
-
-</body>
 <!--  
 	<script type="text/javascript">
 		document.getElementById("button").addEventListener("click", function(event){
@@ -447,7 +369,7 @@
 		
 	</script>
 -->
-</html>
+
 
 
 

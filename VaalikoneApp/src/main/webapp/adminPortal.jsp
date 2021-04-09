@@ -33,7 +33,9 @@
                     <legend class = "adminPortal3"><b>MENU: </b></legend>
                     <hr>  
                     <table>                    
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="../adminUpdateCandidates.jsp"> <u><b>Candidate Data </b></u></a></td></tr>
+
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/AdminCandidates"> <u><b>Candidate Data </b></u></a></td></tr>
+
                     <tr><td><b class = "adminPortal4">Access:</b><a href="#"> <u><b>Question Data </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="#"> <u><b>Answers Data </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="#"> <u><b>Account Data </b></u></a></td></tr>                  
