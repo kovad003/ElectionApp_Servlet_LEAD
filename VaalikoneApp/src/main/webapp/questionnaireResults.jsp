@@ -286,7 +286,7 @@
             </h5>
         </div>
 
-        <!-- End ot the candidate intro / overview section-->
+        <!-- End of the candidate intro / overview section-->
         <hr>
 
         <!-- AD - Beginning of the selection button section (answers)-->
