@@ -6,6 +6,15 @@
         Ensures that the election machine looks good
         on smaller devices. */
 @media only screen and (max-width: 900px) {
+	
+	/* AD - Customises the container for the dynamic question
+        inside the questionnaire question section. 
+        This media query ensures that it looks good
+        on smaller devices.*/
+	.containerDynamicQuestion {
+    max-width: 82% !important;
+	}
+	
     .container {
     max-width: 80% !important;
     }
@@ -52,7 +61,15 @@
 @media (max-width: 544px)   {            
     h2{font-size: 1.25rem !important;}
     h3{font-size: 1rem !important;}
-    h5{font-size: 0.6rem !important;}    
+    h5{font-size: 0.6rem !important;} 
+    
+    /* AD - Customises the container for the dynamic question
+        inside the questionnaire question section. 
+        This media query ensures that it looks good
+        on very small devices.*/
+	.containerDynamicQuestion {
+    max-width: 82% !important;
+	}   
     
     /* AD - ensures that the answer selection buttons look good on small devices */
     .input-radio {
@@ -267,6 +284,15 @@ contains the candidate table data */
     color: rgba(255, 255, 255, 0.658);                    
 }
 
+/* AD - Customises the disclaimer message
+	on the questionnaire page colourings */
+.container4a {
+    background-color:#2A9D8F;
+    border-radius: 10px; 
+    padding: 0.1px 10px 0.1px 10px;  
+    color: rgba(255, 255, 255, 0.658);                    
+}
+
 /* AD - Customises the introduction colourings on the welcome page
         and in addition, the candidate page introductory message */
 .container5 {
@@ -274,6 +300,18 @@ contains the candidate table data */
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;             
     color: rgba(255, 255, 255, 0.658);                 
+}
+
+/* AD - Customises the question section
+        of the questionnaire page, where the
+        questions will be placed dynamically. */
+.container5a {
+    background-color:#264653;
+    border-radius: 10px; 
+    padding: 0.1px 10px 0.1px 10px;    
+    /*            
+    color: rgba(255, 255, 255, 0.658);                 
+	*/
 }
 
 /* AD - Customises the Welcome message colourings */
@@ -308,15 +346,14 @@ contains the candidate table data */
     width: 100%;               
 }
 
-/* AD - Customises the candidate overviews */
+/* AD - Customises the Team member overviews */
 .container8 {
-    /* AD - This is a lighter shade of green and a darker shade of text */
-    background-color:#2a9d909f;
-    border-radius: 10px; 
-    padding: 0.1px 10px 0.1px 10px;             
+    background-color:#264653;
     color: rgba(255, 255, 255, 0.856);
-    margin: 10px auto;                
-}
+    border-radius: 10px; 
+    padding: 0.1px 10px 0.1px 10px;   
+    margin: 10px auto;      
+  }
 
 /* AD - Customises the navbar */
 .container-nav1 {
@@ -401,6 +438,12 @@ contains the candidate table data */
     border-radius: 10px;
     margin: 20px 10px 0px 10px; 
     width: 90px;            
+}
+
+/* AD - Questionnaire button modifications */
+
+.questionnaireButton {
+    background-color: #2A9D8F;
 }
 
 /* AD - Customises the button hover effects */
@@ -537,4 +580,30 @@ for specific cells (sich as update and delete
 .tableCustom5 {    
     background-color:#264653; /* AD - a custom colour for deleting */
 } 
+
+/* AD - customises the word 'select'
+    on the questionnaire page.*/
+.questionnaireSelect {
+    color: rgba(255, 255, 255, 0.856);;
+}
+
+/* AD - Customises the container for the dynamic question
+        inside the questionnaire question section. */
+.containerDynamicQuestion {
+    background-color:#E76F51;
+    border-radius: 10px;    
+    color: white;    
+    margin: 5px 20px 5px 5px;
+    padding: 0.1px 10px 0.1px 10px;  
+}
+
+/* AD - Customises the container for the dynamic question
+        inside the questionnaire question section. */
+.containerDynamicCandidate {
+    background-color:#E76F51;
+    border-radius: 10px;    
+    color: white;    
+    margin: 25px;
+    padding: 25px;  
+}
 

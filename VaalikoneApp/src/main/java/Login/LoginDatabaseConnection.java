@@ -20,11 +20,9 @@ public class LoginDatabaseConnection {
 		String password = "kukkuu";
 		try {
 			Class.forName(driver).newInstance();
-			conn = DriverManager
-					.getConnection(url + dbName, userName, password);
+			conn = DriverManager.getConnection(url + dbName, userName, password);
 
-			pst = conn
-					.prepareStatement("select * from CANDIDATES where SURNAME=? and FIRSTNAME=?");
+			pst = conn.prepareStatement("select * from CANDIDATES where SURNAME=? and FIRSTNAME=?");
 			pst.setString(1, name);
 			pst.setString(2, pass);
 

@@ -2,7 +2,6 @@ package Login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,8 +9,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import data.Candidate;
+
 
 /**
  * Servlet implementation class LoginServlet
@@ -51,7 +50,7 @@ public class LoginServlet extends HttpServlet {
 		//set this to sql data
 		String user = request.getParameter("user");
 		String pwd = request.getParameter("pwd");
-		
+
 		Candidate orban = new Candidate();
 		orban.setId(69);
 		orban.setUSERNAME(user);
@@ -75,5 +74,6 @@ public class LoginServlet extends HttpServlet {
 		}
 
 	}
+		out.close();  
+	}
 
-}
