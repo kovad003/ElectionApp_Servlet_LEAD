@@ -53,6 +53,8 @@
                 <br><br>
                 Greetings! Our motto: "Global News for a Global Era!"
                 <br><br>
+                <hr>
+                <br>
                 Overview: During this project, we are the (imaginary) 'Global Herald Newspaper' team! 
                 We don't actually exist, yet with this scenario, we are the Newspaper that is supposedly
                 running this Election Machine. Our aim is to help election voters get matched with the
@@ -73,6 +75,8 @@
                 <br><br>
                 Daniel Kovacs (Project Manager)
                 <br><br>
+                <hr>
+                <br>
                 Overview: This project was a very enjoyable project, 
                 yet but it was certainly quite challenging.
                 During this project, I was mainly responsible for...
@@ -94,6 +98,8 @@
                 <br><br>
                 Les Heidrich (Server Programmer)
                 <br><br>
+                <hr>
+                <br>
                 Overview: This project was a very enjoyable project, 
                 yet but it was certainly quite challenging.
                 During this project, I was mainly responsible for...
@@ -115,6 +121,8 @@
                 <br><br>
                 Ashley Davis (Server Programmer)
                 <br><br>
+                <hr>
+                <br>
                 Overview: This project was a very enjoyable project, 
                 yet but it was certainly quite challenging.
                 During this project, I was mainly responsible for...
@@ -136,6 +144,8 @@
                 <br><br>
                 Evangelos Kaikas (Server Programmer)
                 <br><br>
+                <hr>
+                <br>
                 Overview: This project was a very enjoyable project, 
                 yet but it was certainly quite challenging.
                 During this project, I was mainly responsible for...
