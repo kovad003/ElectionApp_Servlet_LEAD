@@ -42,31 +42,10 @@
         <!-- AD - This container customises the heading to the candidate overviews-->
         <hr>
         <div class="container7">
-            <h3>Your candidate matches:</h3>
+            <h3>Your suitable candidate matches (click buttons to view):</h3>
         </div>
         <hr>
-        
-        
-        
-
-
-
-
-
-        
-        <!-- AD - button container, containing buttons
-        <div class="container3">
-
-            <button class="button-main button1"><b>1st Place Candidate</b></button>
-            
-            <button class="button-main button1"><b>2nd Place Candidate</b></button>
-
-            <button class="button-main button1"><b>3rd Place Candidate</b></button>
-
-        </div>
-        <br>
-        <hr>
-        -->
+                
 
             <!-- AD - button container, containing the Suitable Candidate 
                 ShowHide Toggle buttons -->
