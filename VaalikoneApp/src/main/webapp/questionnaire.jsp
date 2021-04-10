@@ -40,7 +40,7 @@
         <div class="container4a">  
             
             <!-- AD - Questionnaire guidance for the user -->
-            <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
+            <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'Hï¿½MK's Finest'
             are to be held liable for any views or comments expressed by the candidates 
             or users of this site. Your data is confidential and will not be shared or
             sold in any capacity. All rights reserved.</h5>
@@ -65,6 +65,7 @@
                     where the questions will be placed dynamically-->
                 <div class="container5a">                  
             
+
                     <!-- AD - Beginning of the section with 5 selection buttons-->
                     <div class="input-radio">                  
 			            
@@ -80,25 +81,25 @@
                                         <b>SELECT :</b>
                                     </label>
                                     <label> <b>(1)</b>
-                                    <input type = "radio" name = "select${question.id}"  value="1">
+                                    <input type = "radio" name = "selected${question.id}"  value="1">
                                     </label>
                                     <label> <b>(2)</b>
-                                    <input type = "radio" name = "select${question.id}" value = "2">
+                                    <input type = "radio" name = "selected${question.id}" value = "2">
                                     </label>
                                     <label> <b>(3)</b>
-                                    <input type = "radio" name = "select${question.id}" value = "3">
+                                    <input type = "radio" name = "selected${question.id}" value = "3">
                                     </label>
                                     <label> <b>(4)</b>
-                                    <input type = "radio" name = "select${question.id}" value = "4">
+                                    <input type = "radio" name = "selected${question.id}" value = "4">
                                     </label>
                                     <label> <b>(5)</b>
-                                    <input type = "radio" name = "select${question.id}" value = "5">
+                                    <input type = "radio" name = "selected${question.id}" value = "5">
                                     </label>                                                      
 
 	        		    </c:forEach>       		
 	        	
-                    </div>                 
-           
+                    </div>          
+
                 </div>
 
                 <!-- AD - A container for the questionnaire button-->
