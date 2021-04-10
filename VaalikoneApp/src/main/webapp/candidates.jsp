@@ -16,6 +16,7 @@
     
 </head>
 <body>
+
    <!-- AD - includes the navbar component, into this page -->
    <%@ include file="../components/navbar.jsp" %> 
  
