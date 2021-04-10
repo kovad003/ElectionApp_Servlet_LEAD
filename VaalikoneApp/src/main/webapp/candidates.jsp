@@ -56,7 +56,8 @@
                 <h3>    
             	<c:out value = "${candidate.FName} ${candidate.SName} - ${candidate.party}"/>
             	</h3>            	
-               
+               	<hr>
+               	
                	<h5>
                 Age:
                 <c:out value = "${candidate.age}"/>
