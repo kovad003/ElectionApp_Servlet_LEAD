@@ -65,10 +65,8 @@
 		    
             <hr>      
     
-            <!-- AD - A container for the login and registration buttons-->
-            <div class="container3">
-
-                <!-- AD - Buttons for login and registration-->
+            <!-- AD - button container, containing buttons-->
+            <div class="container3">                
 
                 <button class="button-main button1" onclick="window.location.href='/ShowQuestions'"><b>Take Quiz</b></button>
               
