@@ -1,20 +1,13 @@
 package Login;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import dao.Dao_candidate;
 import data.Candidate;
 
@@ -34,21 +27,25 @@ public class LoginServlet extends HttpServlet {
 		System.out.println("");
 	}
 
-	
+
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
 		ArrayList<Candidate> list=null;
-		
+		//user input from loginPage.jsp
+		String user = request.getParameter("user");
+		String pwd = request.getParameter("pwd");
+		String sql = "SELECT * FROM electionmachine.candidates where USERNAME='" + user + 
+				"' and PASSWORD='" + pwd + "' and CANDIDATE_ID not like '9%';";
+		String un = null;
+
 		/*
 		 * delete this shit later
 		 */
-		final String userID = "'Aintila'"; // these should be read out of input
-		final String password = "'puppyfarts'";
-		String un = "test";
+		//userID = "'Aintila
+		//password = "'puppyfarts'";
+		
 
-		String sql = "SELECT * FROM electionmachine.candidates where USERNAME=" + userID + 
-				"and PASSWORD=" + password + " and CANDIDATE_ID not like '9%';";
 		
 		if(dao.getConnection())
 		{
@@ -57,9 +54,13 @@ public class LoginServlet extends HttpServlet {
 			
 			//test
 			System.out.println("Can_List: " + list);
+
 			for (int i = 0; i < list.size(); i++) {
-				Candidate c = list.get(i);//	
-//				un = String.valueOf(c.getUSERNAME());
+				Candidate c = list.get(i);
+				
+//				un = c.getUSERNAME().toString();
+				un = String.valueOf(c.getId());
+
 				System.out.println("Candidate id/name: " + c.getId() + " " + c.getUSERNAME());//
 			}	
 		}
@@ -69,9 +70,10 @@ public class LoginServlet extends HttpServlet {
 		}
 		
 
+		//cookie -> send login ID
 		if(list != null) {
 			Cookie loginCookie = new Cookie("user", un);
-			response.addCookie(loginCookie);
+			response.addCookie(loginCookie);			
 			/*
 			 * if login ok -> 
 			 */

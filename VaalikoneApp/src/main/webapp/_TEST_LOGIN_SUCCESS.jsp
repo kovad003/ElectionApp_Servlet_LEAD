@@ -10,7 +10,6 @@
 
 <%
 // init empty vars
-String userName = null;
 String id = null;
 
 // grab loginCookie info
@@ -20,15 +19,15 @@ if(login !=null){
 		/*
 		 * LoginServlet: loginCookie -> userName
 		 */
-		if(i.getName().equals("user")) userName = i.getValue();
+		if(i.getName().equals("user")) id = i.getValue();
 		}
 }
 
 // if cookie can't grab userName -> redirect to 
-if(userName == null) response.sendRedirect("login.html");
+if(id == null) response.sendRedirect("login.html");
 %>
 
-<h3>Hi <%=userName %>, Login successful on id: <%=id %>.</h3>
+<h3>Logged in with id: <%=id %>.</h3>
 <br>
 
 <!-- logs out -->
