@@ -51,10 +51,14 @@
         <!-- AD - Candidate 1 intro colourings and text -->
         <c:forEach begin="0" end="18" var="candidate" items="${requestScope.candidatelist}">
         <div class="container8">
-            <!-- AD - Intro / overview statement about the candidate -->
-            <h5>
+            <!-- AD - Intro / overview statement about the candidates -->
+            <div class = "containerDynamicCandidate" >
+                <h3>    
             	<c:out value = "${candidate.FName} ${candidate.SName} - ${candidate.party}"/>
-                <br><br>
+            	</h3>            	
+               	<hr>
+               	
+               	<h5>
                 Age:
                 <c:out value = "${candidate.age}"/>
                 <br>
@@ -70,8 +74,9 @@
                 <c:out value = "${candidate.goals}"/>
                 <br><br>
                 <c:out value = "${candidate.reason}"/>
-                <br><br>
-            </h5>
+                </h5>                
+               
+            </div>
         </div>
         </c:forEach>
 
@@ -81,7 +86,7 @@
         <!-- AD - Beginning of the selection button section (answers)-->
         <div class="container2">           
             <!-- AD - A small container to amend the disclaimer background section-->
-            <div class="container4">  
+            <div class="container5">  
             
                 <!-- AD - Questionnaire guidance for the user -->
 		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'

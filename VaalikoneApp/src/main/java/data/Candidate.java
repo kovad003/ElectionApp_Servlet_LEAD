@@ -11,13 +11,39 @@ public class Candidate {
 	private String profession;
 	private String fName;
 	private String sName;
+	private String USERNAME;
+	private String PASSWORD;
 	
-	public Candidate(String id, String party) {
+	public Candidate(String id, String sName, String fName, String party, String location, String age, String reason, 
+			String goals, String profession, String USERNAME, String PASSWORD) {
 		setId(id);
+		this.sName=sName;
+		this.fName=fName;
 		this.party=party;
+		this.location=location;
+		setAge(age);
+		this.reason=reason;
+		this.goals=goals;
+		this.profession=profession;
+		this.USERNAME=USERNAME;
+		this.PASSWORD=PASSWORD;	
+	}
+	public Candidate(int id, String sName, String fName, String party, String location, int age, String reason, 
+			String goals, String profession, String USERNAME, String PASSWORD) {
+		setId(id);
+		this.sName=sName;
+		this.fName=fName;
+		this.party=party;
+		this.location=location;
+		setAge(age);
+		this.reason=reason;
+		this.goals=goals;
+		this.profession=profession;
+		this.USERNAME=USERNAME;
+		this.PASSWORD=PASSWORD;	
 	}
 	public Candidate() {
-		System.out.println("Candidate() constructor");		
+		System.out.println("Candidate() default constructor");		
 	}
 	
 	// **********************************
@@ -53,6 +79,15 @@ public class Candidate {
 	public void setAge(int age) {
 		this.age = age;	
 	}
+	public void setAge(String age) {
+		//System.out.println("setId(String id)");
+		try {
+			this.age = Integer.parseInt(age);
+		}
+		catch(NumberFormatException | NullPointerException e) {
+			//Do nothing - the value of id won't be changed
+		}	
+	}
 	public void setReason(String reason) {
 		this.reason = reason;		
 	}
@@ -61,6 +96,12 @@ public class Candidate {
 	}
 	public void setProfession(String profession) {
 		this.profession = profession;		
+	}
+	public void setUSERNAME(String USERNAME) {
+		this.USERNAME = USERNAME;		
+	}
+	public void setPASSWORD(String PASSWORD) {
+		this.PASSWORD = PASSWORD;		
 	}
 	
 	
@@ -96,5 +137,11 @@ public class Candidate {
 	public String getProfession() {
 		return profession;
 	}	
+	public String getUSERNAME() {
+		return USERNAME;		
+	}
+	public String getPASSWORD() {
+		return PASSWORD;		
+	}
 }
 

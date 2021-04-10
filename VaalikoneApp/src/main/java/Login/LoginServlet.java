@@ -2,59 +2,78 @@ package Login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import data.Candidate;
 
-import Login.LoginDatabaseConnection;
 
-public class LoginServlet extends HttpServlet{
-
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
+	
+	private final String userID = "admin";
+	private final String password = "admin";
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)  
-			throws ServletException, IOException {  
+	
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		
+		/*
+		 * TODO:
+		 * -> setup user/pass in db
+		 * -> boolean authenticate = false;
+		 * -> String user/pwd = read in those 2 fields
+		 * 
+		 * -> String sql = "SELECT * FROM electionmachine.candidates WHERE username=" + userID + " AND password=" + password + ";";
+		 * 
+		 * -> if((sql==null) || (sql.equals("") || sql.length()==0) {
+		 * authenticate = false;
+		 * }
+		 * else {
+		 * }...cookie cont from here
+		 * 
+		 * instead of else-> else if (sql.length()==1)
+		 * 
+		 * other way if that doesn't work:
+		 * leave if statement as is and just check that user and pwd in sql.
+		 */
+		
+		//set this to sql data
+		String user = request.getParameter("user");
+		String pwd = request.getParameter("pwd");
 
-		response.setContentType("text/html");  
-		PrintWriter out = response.getWriter(); 
+		Candidate orban = new Candidate();
+		orban.setId(69);
+		orban.setUSERNAME(user);
+		orban.setPASSWORD(pwd);
 		
-		// get request parameters for name and pass
-		String n=request.getParameter("username");  
-		String p=request.getParameter("userpass"); 
+		System.out.println(orban.getId() + orban.getUSERNAME() + orban.getPASSWORD());
 		
-		
-//		if(name.equals(n) && pass.equals(p)){
-//			Cookie loginCookie = new Cookie("username",n);
-//			//setting cookie to expiry in 30 mins
-//			loginCookie.setMaxAge(30*60);
-//			response.addCookie(loginCookie);
-//			response.sendRedirect("index.jsp");
-//		}else{
-//			RequestDispatcher rd = getServletContext().getRequestDispatcher("index.jsp");
-//			PrintWriter out= response.getWriter();
-//			out.println("<font color=red>Either user name or password is wrong.</font>");
-//			rd.include(request, response);
-		
-		
-		HttpSession session = request.getSession(false); //Creating a session
-		if(session!=null)
-			request.getSession(true).setAttribute("name", n);//setting session attribute
-		if(LoginDatabaseConnection.validate(n, p)){  
-			RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
-			rd.forward(request,response);  
+		if(userID.equals(user) && password.equals(pwd)) {
+			Cookie loginCookie = new Cookie("user", orban.getUSERNAME());
+			Cookie phallos = new Cookie("id", String.valueOf(orban.getId()));
+			response.addCookie(loginCookie);
+			/*
+			 * if login ok -> 
+			 */
+			response.sendRedirect("_TEST_LOGIN_SUCCESS.jsp");
+		}else{
+			/*
+			 * if login not ok ->
+			 */
+			response.sendRedirect("loginPage.jsp");
+		}
 
-		}  
-		else{  
-			out.print("<p style=\"color:red\">Sorry email or password error</p>");  
-			RequestDispatcher rd=request.getRequestDispatcher("loginPage.jsp");  
-			rd.include(request,response);  
-		}  
+	}
+		
+	}
 
-		out.close();  
-	}  
-}  

@@ -1,6 +1,7 @@
 package Login;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,7 +34,10 @@ public class LogoutServlet extends HttpServlet {
     		loginCookie.setMaxAge(0);
         	response.addCookie(loginCookie);
     	}
-    	response.sendRedirect("login.html");
+    	/*
+    	 * go here after logout ->
+    	 */
+    	response.sendRedirect("loginPage.jsp");
     }
 
 }
