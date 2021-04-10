@@ -6,6 +6,8 @@ public class QAnswer {
 	private int answer;
 	private int score;
 	private int totalScore;
+	private Integer totalScoreInteger;
+	
 	
 //	 *************************************************************************************************
 //	 ******************** CONSTRUCTERS ***************************************************************
@@ -48,6 +50,10 @@ public class QAnswer {
 	public void setTotalScore(int totalScore) { // Has to be calculated in the Servlet by summing each score.
 		this.totalScore = totalScore; // Should be added to the last CANDIDATE object of the ArrayList.
 	}
+	public void setTotalScoreAsInteger(int totalScore) { 
+		this.totalScoreInteger = Integer.valueOf(totalScore);
+	}
+	
 	
 //	 *************************************************************************************************
 //	 ******************** GETTERS ********************************************************************
@@ -67,6 +73,9 @@ public class QAnswer {
 	}
 	public int getTotalScore() { // Should be stored in the last CANDIDATE object of the ArrayList.
 		return totalScore; 
+	}
+	public int getTotalScoreAsInteger() { 
+		return totalScoreInteger; 
 	}
 	
 //	 *************************************************************************************************
