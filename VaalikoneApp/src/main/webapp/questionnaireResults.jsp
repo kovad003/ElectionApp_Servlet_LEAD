@@ -34,7 +34,7 @@
             utilises innovative algorithm techniques to match you with the candidate 
             that suits you best. Carry on reading below to review your anwsers.
             <br><br>
-            Please note, that you can make amendements if necessary.
+            Please note, that you can make amendments if necessary.
         </h5>
         </div>
 
