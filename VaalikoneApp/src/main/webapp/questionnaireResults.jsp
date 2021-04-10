@@ -48,88 +48,139 @@
         
         
         
+
+
+
+
+
         
-         <!-- AD - This HTML markup contains a DIV, which contains inside of it
-                another div element, which will have show / hide functionality.
-                The button has been assigned a JavaScript Onclick event handler.
-                When clicked, the function is executed. Based in the value of
-                the button, the HTML div toggle functionality will be executed.
-                AKA the div will be shown, and the button text changed.-->       
-            <script type="text/javascript">
-                function ShowHideToggle(btnCandResults1) {
-                    var dvCandResults1 = document.getElementById("dvCandResults1");
-                    if (btnCandResults1.value == "SHOW") {
-                        dvCandResults1.style.display = "block";
-                        btnCandResults1.value = "HIDE";
-                    } else {
-                        dvCandResults1.style.display = "none";
-                        btnCandResults1.value = "SHOW";
-                    }
-                }
-            </script>
-
-            <span>1st Place Candidate:</span>
-
-            <!--
-            <input id="btnCandidateResults" type="button" value="SHOW" onclick="ShowHideToggle(this)" />
-            -->
-
-            <input class = "buttonShowHide" id = "btnCandResults1" type="button" value="SHOW" onclick="ShowHideToggle(this)" >
-            </input>
-
-            <hr />
-            <div id="dvCandResults1" style="display: none">
-
-                1st Place suitable candidate match for you:
-                <div class="container8">          
-                    <h5>Q1: "I think that parliament should do more for the environment..."
-                        <br><br>
-                        Your answer (Number): 4    
-                    </h5>
-                </div>           
-            
-            </div>
-            
-            
-            
-        
-         <!-- AD - A container for the login and registration buttons-->
+        <!-- AD - button container, containing buttons
         <div class="container3">
 
-            <!-- AD - Buttons for login and registration-->
-            <button class="button-main button1"><b>1st Place Match</b></button>
+            <button class="button-main button1"><b>1st Place Candidate</b></button>
             
-            <button class="button-main button1"><b>2nd Place Match</b></button>
+            <button class="button-main button1"><b>2nd Place Candidate</b></button>
 
-            <button class="button-main button1"><b>3rd Place Match</b></button>
+            <button class="button-main button1"><b>3rd Place Candidate</b></button>
 
-        </div>  
-
-        <!-- AD - Matched candidate colourings and text -->
-        <div class="container6">
-            <!-- AD - Overview info about the matched candidate -->
-            <h5>Suitable Candidate Match: 1st Place               
-                <br><br>
-                Mikko Savolainen
-                <br><br>
-                <hr>
-                <br>
-                Overview: I care deeply about the environment and social issue.
-                <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
-            </h5>
         </div>
-       
-
-        <!-- End of the candidate intro / overview section-->
+        <br>
         <hr>
+        -->
 
+            <!-- AD - button container, containing the Suitable Candidate 
+                ShowHide Toggle buttons -->
+            <div class="container3">
+
+                <input class = "buttonShowHide button1" id = "btnCandResults1" 
+                type="button" value="1st Place" onclick="ShowHideToggle1(this)" >
+                </input>
+                
+                <input class = "buttonShowHide button1" id = "btnCandResults2" 
+                type="button" value="2nd Place" onclick="ShowHideToggle2(this)" >
+                </input>
+
+                <input class = "buttonShowHide button1" id = "btnCandResults3" 
+                type="button" value="3rd Place" onclick="ShowHideToggle3(this)" >
+                </input>
+
+            </div>
+            <br>
+            <hr>     
+
+
+            <!-- AD - This 'hidden div' shows the 1st place suitable candidate.
+                      The div becomes visible once the '1st Place Candidate'
+                      button is pressed. Conversely, the div disappears once the
+                      button is pressed again (toggle button).-->
+            <div id="dvCandResults1" style="display: none">
+            
+                
+                <div class="container6">         
+                    <h5>Suitable Candidate Match: 1st Place                  
+                        <br><br>
+                        Mikko Savolainen
+                        <br><br>
+                        <hr>
+                        <br>
+                        Overview: I care deeply about the environment and social issue.
+                        <br><br>
+                        sed do eiusmod tempor incididunt ut labore 
+                        et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                        officia deserunt mollit anim id est laborum.
+                    </h5>
+                </div>  
+            </div>
+
+
+            <!-- AD - This 'hidden div' shows the 2nd place suitable candidate.
+                    The div becomes visible once the '2nd Place Candidate'
+                    button is pressed. Conversely, the div disappears once the
+                    button is pressed again (toggle button).-->
+
+       
+            <div id="dvCandResults2" style="display: none">    
+              
+                <!-- AD - This section shows the top suitable candidate(s)-->
+                <div class="container6">         
+                    <h5>Suitable Candidate Match: 2nd Place 
+                        <br><br>
+                        Sara Koskinen 
+                        <br><br>
+                        <hr>
+                        <br>
+                        Overview: I care deeply about the environment and social issue.
+                        <br><br>
+                        sed do eiusmod tempor incididunt ut labore 
+                        et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                        officia deserunt mollit anim id est laborum.
+                    </h5>
+                </div>  
+            </div>
+
+
+
+            <!-- AD - This 'hidden div' shows the 3rd place suitable candidate.
+                    The div becomes visible once the '3rd Place Candidate'
+                    button is pressed. Conversely, the div disappears once the
+                    button is pressed again (toggle button).-->
+
+         
+            <div id="dvCandResults3" style="display: none">    
+              
+                <!-- AD - This section shows the top suitable candidate(s)-->
+                <div class="container6">         
+                    <h5>Suitable Candidate Match: 3rd Place 
+                        <br><br>
+                        Timo Salomaa
+                        <br><br>
+                        <hr>
+                        <br>
+                        Overview: I care deeply about the environment and social issue.
+                        <br><br>
+                        sed do eiusmod tempor incididunt ut labore 
+                        et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                        officia deserunt mollit anim id est laborum.
+                    </h5>
+                </div>  
+            </div>
+        
+        
+        
+        
+        
         <!-- AD - Beginning of the selection button section (answers)-->
         <div class="container2">           
             <!-- AD - A small container to amend the disclaimer background section-->
