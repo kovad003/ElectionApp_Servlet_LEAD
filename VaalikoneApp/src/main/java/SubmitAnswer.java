@@ -3,11 +3,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.ListIterator;
-import java.util.Set;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -48,17 +44,21 @@ public class SubmitAnswer extends HttpServlet {
 //		**********************************************************************************************************************************************
 //		**************** GET CLIENT SELECTIONS *******************************************************************************************************
 //		**********************************************************************************************************************************************
+		String questionText;
 		String selected;
 		ArrayList<QAnswer> selectionList= new ArrayList<QAnswer>(); // Empty ArrayList for the client's answers.
 		
 		for (int i = 1; i <= selectionList.size()+1; i++) { // Will "grab" each answer from jsp page.
 			QAnswer s = new QAnswer(); // Has to be placed inside the for loop.
+			questionText = request.getParameter("question_text" + i);
 			selected = request.getParameter("selected" + i); // The client's selections will be saved and stored in QAnswer objects.
 			System.out.println("Q" + i + ", SELECTED by client: " + selected);
+			System.out.println("Q" + i + ", QUESTION TEXT: " + questionText);
 			if(selected!=null)
 			{
 				s.setQId(i);
 				s.setAnswer(selected);
+				s.setQTxt(questionText);
 				selectionList.add(s);
 				
 //				<<< Debugging Messages >>>
@@ -97,25 +97,24 @@ public class SubmitAnswer extends HttpServlet {
 		
 //		*********************************************************************************************************************************************
 //		************ COMPARE CLIENT WITH CANDIDATES *************************************************************************************************
-//		*********************************************************************************************************************************************
+//		*********************************************************************************************************************************************	
+		ArrayList<QAnswer> answerListScored = scoreStackedData(answerList, selectionList); //Will produce a "stacked" ArrayList containing all the QA objects with individual score values.
+		ArrayList<QAnswer> scoreBoard = findBestCnds(answerListScored);
+		ArrayList<QAnswer> result1 = sliceFromStacked(0, scoreBoard, answerListScored);
+		ArrayList<QAnswer> result2 = sliceFromStacked(1, scoreBoard, answerListScored);
+		ArrayList<QAnswer> result3 = sliceFromStacked(2, scoreBoard, answerListScored);
 
-		int[] topCandidates = findTopCandidates(answerList, selectionList);
-		
-		for (int i = 0; i < topCandidates.length; i++) {
-			
-			extractCandidate(topCandidates[i], answerList);
-			System.out.println("");
-		}
 		
 //		*********************************************************************************************************************************************
 //		************ SENDING DATA TO THE JSP PAGE *************************************************************************************************
 //		*********************************************************************************************************************************************
-		
-		request.setAttribute("topCnd_1", scoringCandidate(1, answerList, selectionList));
+
+		request.setAttribute("topCnd_1", result1);
+		request.setAttribute("topCnd_2", result2);
+		request.setAttribute("topCnd_3", result3);
 		
 		RequestDispatcher rd=request.getRequestDispatcher("/myCandidate.jsp");
 		rd.forward(request, response);
-		
 	}
 	
 	
@@ -124,7 +123,121 @@ public class SubmitAnswer extends HttpServlet {
 //	****************************** CUSTOM METHODS **************************************************************************************************************
 //	************************************************************************************************************************************************************
 //	************************************************************************************************************************************************************
+
+	public ArrayList<QAnswer> scoreStackedData(ArrayList<QAnswer> answerList, ArrayList<QAnswer> selectionList)
+	{
+		ArrayList<QAnswer> answerListScored= new ArrayList<QAnswer>(); // Will be returned at the end.
+		ListIterator<QAnswer> iteratorCnd = answerList.listIterator(); // Will iterate through the ArrayList.
+		ListIterator<QAnswer> iteratorClnt = selectionList.listIterator(); // Will iterate through the ArrayList.
+		
+		int cumulativeScore = 0;
+		while (iteratorCnd.hasNext()) {
+//			############ ITERATION #############
+			QAnswer cnd = new QAnswer();
+			cnd = iteratorCnd.next(); // Will select the next object in the ArrayList and assign it to QAnswer object.
+			
+			QAnswer clnt = new QAnswer();
+			if (iteratorClnt.hasNext()) {
+				clnt = iteratorClnt.next(); // Will select the next object in the ArrayList and assign it to QAnswer object.
+			}
+			else
+			{
+				iteratorClnt = selectionList.listIterator(); // Will reset the iterator <= answerList is the "stacked" QAnswer ArrayList with all the Q/A data given by the candidates.
+				clnt = iteratorClnt.next(); // Afterreset we continue the assessment.
+				
+				cumulativeScore = 0; // Will reset value for nect candidate.
+			}
+			
+			if(cnd.getQId() == clnt.getQId()) { // Checks if question IDs are matching or not (Data integrity error!) 	
+//				############ SCORING #############
+				int score = Math.abs(cnd.getAnswer() - clnt.getAnswer());
+				cnd.setScore(score); // Will store the absolut value of the diff between 2 answer values. => SCORE
+				
+				cumulativeScore = cumulativeScore + score; // Will calculate a cumulative score.
+				if(clnt.getQId() == selectionList.size()) {cnd.setTotalScore(cumulativeScore);} // Cumulative score is the total score (ONLY!) for last QA object.
+				else {cnd.setTotalScore(-1);}
+				
+//				############ ADDING QUESTION TEXT #############
+				cnd.setQTxt(clnt.getQTxt());
+				
+//				############ POPULATING ARRAYLIST #############
+				answerListScored.add(cnd); // Adding QA object to ArrayList.
+			}
+			else {
+				System.out.println("Data integrity error at scoreStacked()! Question IDs are not matching.");
+			}	
+		}
+//		<<< Debugging Messages >>> 		
+//		for (int i = 0; i < answerListScored.size(); i++) {
+//			System.out.println("scoring results: " + "CID: " + answerListScored.get(i).getCId() + 
+//					", QID: " + answerListScored.get(i).getQId() + ", Score: " + answerListScored.get(i).getScore() + 
+//					", Total score: " + answerListScored.get(i).getTotalScore() + ", Q-TXT: " + answerListScored.get(i).getQTxt());}
+		
+		return answerListScored;		
+	}
 	
+	public ArrayList<QAnswer> findBestCnds(ArrayList<QAnswer> scoredStackedData)
+	{	
+		ArrayList<QAnswer> cndsToSlice = new ArrayList<QAnswer>();// Will be returned at the end.
+		ArrayList<QAnswer> stackedArrLi = scoredStackedData; 
+		ListIterator<QAnswer> iterator = stackedArrLi.listIterator(); // Will iterate through the ArrayList.
+		
+//		############ DROP FALSE DATA #############			
+		while(iterator.hasNext()) // Will remove "junk" (false) total score data (-1).
+		{
+			QAnswer object = new QAnswer();
+			object = iterator.next();
+			if(object.getTotalScore() >= 0) {
+				cndsToSlice.add(object);
+			}
+			else {
+//				<<< Debugging Messages >>> 	
+//				System.out.println("False data removed: total_score = -1");
+			}
+		}
+
+//		############ SORTING BASED ON TOTAL SCORE #############	
+        Collections.sort(cndsToSlice, new Comparator<QAnswer>() { // Will organise elements into ascending order.
+            @Override public int compare(QAnswer o1, QAnswer o2) {
+                return o1.getTotalScore() - o2.getTotalScore(); }}); 
+        
+//		<<< Debugging Messages >>> 		
+		for (int i = 0; i < cndsToSlice.size(); i++) {
+			System.out.println("scoring results: " + "CID: " + cndsToSlice.get(i).getCId() + 
+					", Total score: " + cndsToSlice.get(i).getTotalScore());}
+	
+		return cndsToSlice;
+	}
+	
+	
+	public ArrayList<QAnswer> sliceFromStacked(int rankAchieved, ArrayList<QAnswer> scoreBoard, ArrayList<QAnswer> scoredStackedData)
+	{
+		int ranking = rankAchieved;
+		ArrayList<QAnswer> resultsArrLi = new ArrayList<QAnswer>();
+		ArrayList<QAnswer> scores = scoreBoard;
+		ArrayList<QAnswer> scoredStackedArrLi = scoredStackedData; 
+		ListIterator<QAnswer> iterator = scoredStackedArrLi.listIterator(); // Will reset iterator.
+		
+		while(iterator.hasNext()) {
+			QAnswer object = new QAnswer();
+			object = iterator.next();
+			
+			if(object.getCId() == scores.get(ranking).getCId()) {
+				resultsArrLi.add(object);
+			}
+		}
+		
+//		<<< Debugging Messages >>> 		
+		for (int i = 0; i < resultsArrLi.size(); i++) {
+			System.out.println("Cnd data sliced: " + "CID: " + resultsArrLi.get(i).getCId() + 
+					", QID: " + resultsArrLi.get(i).getQId() + ", Score: " + resultsArrLi.get(i).getScore() + 
+					", Total score: " + resultsArrLi.get(i).getTotalScore() + ", Q-TXT: " + resultsArrLi.get(i).getQTxt());}
+		
+		return resultsArrLi;
+	}
+	
+	
+/*	
 	public int[] findTopCandidates(ArrayList<QAnswer> answerList, ArrayList<QAnswer> selectionList)
 	{
 		ArrayList<QAnswer> RankedArrList = new ArrayList<QAnswer>();
@@ -276,5 +389,6 @@ public class SubmitAnswer extends HttpServlet {
 		}
 		System.out.println("Available CIDs: " + avlblCID);
 		return avlblCID;
-	}	
+	}
+*/	
 }

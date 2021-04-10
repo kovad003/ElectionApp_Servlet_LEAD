@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>My Candidates</title>
 </head>
 <body>
 
@@ -19,22 +19,79 @@
     <thead class = "tableCustom1">
     </thead>
     <tbody>
-        <tr><caption><h2>List of Candidates</h2></caption>
+        <tr><caption><h2>My Candidates</h2></caption>
         <tr>
             <th>CANDIDATE_ID</th>
-            <th>PARTY</th>  
+            <th>Question ID</th>
+            <th>Question Text</th>
+            <th>Answer</th>
+            <th>Score</th> 
+            <th>Total Score</th>   
         </tr>
-       <c:forEach var="candidate" items="${requestScope.topCnd_1}">
+       <c:forEach var="qanswer" items="${requestScope.topCnd_1}">
 		<tr>	
-		<td><c:out value="${candidate.cid}" /></td>
-		<td><c:out value="${candidate.score}" /></td>	
-		<td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-        <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+		<td><c:out value="${qanswer.CId}" /></td>
+		<td><c:out value="${qanswer.QId}" /></td>
+		<td><c:out value="${qanswer.QTxt}" /></td>
+		<td><c:out value="${qanswer.answer}" /></td>
+		<td><c:out value="${qanswer.score}" /></td>
+		<td><c:out value="${qanswer.totalScore}" /></td>			
 		</tr>
 	</c:forEach>                  
-        </tr>
              </tbody>                
-         </table>
+</table>
+
+<table class="table">                    
+    <thead class = "tableCustom1">
+    </thead>
+    <tbody>
+        <tr><caption><h2>My Candidates</h2></caption>
+        <tr>
+            <th>CANDIDATE_ID</th>
+            <th>Question ID</th>
+            <th>Question Text</th>
+            <th>Answer</th>
+            <th>Score</th> 
+            <th>Total Score</th>   
+        </tr>
+       <c:forEach var="qanswer" items="${requestScope.topCnd_2}">
+		<tr>	
+		<td><c:out value="${qanswer.CId}" /></td>
+		<td><c:out value="${qanswer.QId}" /></td>
+		<td><c:out value="${qanswer.QTxt}" /></td>
+		<td><c:out value="${qanswer.answer}" /></td>
+		<td><c:out value="${qanswer.score}" /></td>
+		<td><c:out value="${qanswer.totalScore}" /></td>			
+		</tr>
+	</c:forEach>                  
+             </tbody>                
+</table>
+
+<table class="table">                    
+    <thead class = "tableCustom1">
+    </thead>
+    <tbody>
+        <tr><caption><h2>My Candidates</h2></caption>
+        <tr>
+            <th>CANDIDATE_ID</th>
+            <th>Question ID</th>
+            <th>Question Text</th>
+            <th>Answer</th>
+            <th>Score</th> 
+            <th>Total Score</th>   
+        </tr>
+       <c:forEach var="qanswer" items="${requestScope.topCnd_3}">
+		<tr>	
+		<td><c:out value="${qanswer.CId}" /></td>
+		<td><c:out value="${qanswer.QId}" /></td>
+		<td><c:out value="${qanswer.QTxt}" /></td>
+		<td><c:out value="${qanswer.answer}" /></td>
+		<td><c:out value="${qanswer.score}" /></td>
+		<td><c:out value="${qanswer.totalScore}" /></td>			
+		</tr>
+	</c:forEach>                  
+             </tbody>                
+</table>
     
 </body>
 </html>
