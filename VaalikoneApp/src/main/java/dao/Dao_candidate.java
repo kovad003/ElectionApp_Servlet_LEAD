@@ -62,9 +62,6 @@ public class Dao_candidate {
 				c.setReason(RS.getString("REASON_FOR_RUNNING"));
 				c.setGoals(RS.getString("AIMS_AND_GOALS"));
 				c.setProfession(RS.getString("PROFESSION"));
-				c.setUSERNAME(RS.getString("USERNAME"));
-				c.setPASSWORD(RS.getString("PASSWORD"));
-
 				list.add(c);
 			}
 			return list;
