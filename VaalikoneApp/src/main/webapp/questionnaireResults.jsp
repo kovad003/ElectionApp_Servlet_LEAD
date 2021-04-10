@@ -98,10 +98,9 @@
 		    
             <hr>      
     
-            <!-- AD - A container for the login and registration buttons-->
+            <!-- AD - button container, containing buttons-->
             <div class="container3">
-
-                <!-- AD - Buttons for login and registration-->
+                 
                 <button class="button-main button1"><b>RESTART</b></button>
                 
                 <button class="button-main button1"><b>HOME</b></button>
