@@ -32,7 +32,7 @@
             <br><br>
             By analysing your questionnaire answers, this election machine 
             utilises innovative algorithm techniques to match you with the candidate 
-            that suits you best. Carry on reading below to review your anwsers.
+            that suits you best. Carry on reading below to review your answers.
             <br><br>
             Please note, that you can make amendments if necessary.
         </h5>
