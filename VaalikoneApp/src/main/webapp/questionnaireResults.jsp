@@ -143,7 +143,52 @@
     </div>
     
     
-    <!-- AD - This section contains the full list of selected answers
+    <!-- AD - Here are the extra two candidates that may be revealed later
+         <div class="container6">
+          
+            <h5>Suitable candidate number 2 (the 2nd best match):
+                <br><br>
+                Sara Koskinen 
+                <br><br>
+                <hr>
+                <br>
+                Overview: I care deeply about the environment and social issue.
+                <br><br>
+                sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                officia deserunt mollit anim id est laborum.
+            </h5>
+        </div>
+
+       
+         <div class="container6">
+          
+            <h5>Suitable candidate number 3 (the 3rd best match):
+                <br><br>
+                Timo Salomaa
+                <br><br>
+                <hr>
+                <br>
+                Overview: I care deeply about the environment and social issue.
+                <br><br>
+                sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                officia deserunt mollit anim id est laborum.
+            </h5>
+        </div>
+
+        -->
+
+
+     <!-- AD - This section contains the full list of selected answers
         <hr>       
         <div class="container7">
         <h3>Your answers:</h3>
