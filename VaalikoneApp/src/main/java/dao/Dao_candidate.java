@@ -70,6 +70,26 @@ public class Dao_candidate {
 			return null;
 		}
 	}
+	public ArrayList<Candidate> loginCandidate(String login_sql) {
+		System.out.println("loginCandidate() is connected..");
+		ArrayList<Candidate> list = new ArrayList<>();
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet RS = stmt.executeQuery(login_sql);
+			System.out.println("RS: " + RS);
+			while (RS.next()){
+				Candidate c=new Candidate();
+				c.setId(RS.getInt("CANDIDATE_ID"));
+				c.setUSERNAME(RS.getString("USERNAME"));
+				c.setPASSWORD(RS.getString("PASSWORD"));
+				list.add(c);
+			}
+			return list;
+		}
+		catch(SQLException e) {
+			return null;
+		}
+	}
 	public ArrayList<Candidate> updateCandidate(Candidate q) {
 		System.out.println("updateCandidate(Candidate q)");
 		try {

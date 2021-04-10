@@ -7,20 +7,35 @@
 <title>Login Success Page</title>
 </head>
 <body>
+
 <%
+// init empty vars
 String userName = null;
-Cookie[] cookies = request.getCookies();
-if(cookies !=null){
-for(Cookie cookie : cookies){
-	if(cookie.getName().equals("user")) userName = cookie.getValue();
-	}
+String id = null;
+
+// grab loginCookie info
+Cookie[] login = request.getCookies();
+if(login !=null){
+	for(Cookie i : login){
+		/*
+		 * LoginServlet: loginCookie -> userName
+		 */
+		if(i.getName().equals("user")) userName = i.getValue();
+		}
 }
+
+// if cookie can't grab userName -> redirect to 
 if(userName == null) response.sendRedirect("login.html");
 %>
-<h3>Hi <%=userName %>, Login successful.</h3>
+
+<h3>Hi <%=userName %>, Login successful on id: <%=id %>.</h3>
 <br>
+
+<!-- logs out -->
 <form action="LogoutServlet" method="post">
 <input type="submit" value="Logout" >
 </form>
+
+
 </body>
 </html>
