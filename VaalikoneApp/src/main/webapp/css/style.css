@@ -440,6 +440,26 @@ contains the candidate table data */
     width: 90px;            
 }
 
+/* AD - Customises the main button stylings */
+.buttonShowHide {
+    background-color: #E76F51;
+    border: none;
+    color: rgba(255, 255, 255, 0.829); 
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    margin: 20px 10px 0px 10px; 
+    width: 90px;   
+    
+    font-weight: bold;
+     
+}
+
 /* AD - Questionnaire button modifications */
 
 .questionnaireButton {
