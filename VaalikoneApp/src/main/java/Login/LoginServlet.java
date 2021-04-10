@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import data.Candidate;
+
 /**
  * Servlet implementation class LoginServlet
  */
@@ -32,7 +34,7 @@ public class LoginServlet extends HttpServlet {
 		 * -> boolean authenticate = false;
 		 * -> String user/pwd = read in those 2 fields
 		 * 
-		 * -> String sql = "SELECT * FROM table WHERE username=" + user + " AND password=" + pwd + ";";
+		 * -> String sql = "SELECT * FROM electionmachine.candidates WHERE username=" + userID + " AND password=" + password + ";";
 		 * 
 		 * -> if((sql==null) || (sql.equals("") || sql.length()==0) {
 		 * authenticate = false;
@@ -50,18 +52,24 @@ public class LoginServlet extends HttpServlet {
 		String user = request.getParameter("user");
 		String pwd = request.getParameter("pwd");
 		
-		String sql = "SELECT * FROM electionmachine.candidates WHERE username=" + userID + " AND password=" + password + ";";
+		Candidate orban = new Candidate();
+		orban.setId(69);
+		orban.setUSERNAME(user);
+		orban.setPASSWORD(pwd);
+		
+		System.out.println(orban.getId() + orban.getUSERNAME() + orban.getPASSWORD());
 		
 		if(userID.equals(user) && password.equals(pwd)) {
-			Cookie loginCookie = new Cookie("user",user);
+			Cookie loginCookie = new Cookie("user", orban.getUSERNAME());
+			Cookie phallos = new Cookie("id", String.valueOf(orban.getId()));
 			response.addCookie(loginCookie);
 			/*
-			 * login ok -> 
+			 * if login ok -> 
 			 */
 			response.sendRedirect("_TEST_LOGIN_SUCCESS.jsp");
 		}else{
 			/*
-			 * login not ok ->
+			 * if login not ok ->
 			 */
 			response.sendRedirect("loginPage.jsp");
 		}

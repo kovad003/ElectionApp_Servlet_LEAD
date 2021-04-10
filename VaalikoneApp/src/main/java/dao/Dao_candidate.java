@@ -13,6 +13,7 @@ import java.sql.Connection;
 
 
 public class Dao_candidate {
+	
 	private String url;
 	private String user;
 	private String pass;
@@ -61,6 +62,8 @@ public class Dao_candidate {
 				c.setReason(RS.getString("REASON_FOR_RUNNING"));
 				c.setGoals(RS.getString("AIMS_AND_GOALS"));
 				c.setProfession(RS.getString("PROFESSION"));
+				c.setUSERNAME(RS.getString("USERNAME"));
+				c.setPASSWORD(RS.getString("PASSWORD"));
 
 				list.add(c);
 			}
