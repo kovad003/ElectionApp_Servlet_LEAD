@@ -37,188 +37,10 @@
             Please note, that you can make amendments if necessary.
         </h5>
         </div>
-
-        <hr> 
-
-        <!-- AD - This container customises the heading to the candidate overviews-->
-        <div class="container7">
-        <h3>Your answers:</h3>
-        </div>         
         
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q1: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 4    
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q2: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 3    
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q3: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 1   
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q4: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 5   
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q5: "I think that parliament should do more for the environment..."
-                <br><br>               
-                Your answer (Number): 1    
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q6: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 4              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q7: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 2              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q8: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 3              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q9: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 3              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q10: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 5              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q11: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 1              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q12: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 4              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q13: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 2              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q14: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 5              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q15: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 5              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q16: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 2              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q17: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 4              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q18: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 3              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q19: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 1              
-            </h5>
-        </div>
-
-        <hr>
-
+       
         <!-- AD - This container customises the heading to the candidate overviews-->
+        <hr>
         <div class="container7">
             <h3>Your candidate matches:</h3>
         </div>  
@@ -319,6 +141,167 @@
 
     <!-- AD - End of the central (yellow container)-->
     </div>
+    
+    
+    <!-- AD - This section contains the full list of selected answers
+        <hr>       
+        <div class="container7">
+        <h3>Your answers:</h3>
+        </div>       
+        
+        <div class="container8">
+          
+            <h5>Q1: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 4    
+            </h5>
+        </div>
+
+        <div class="container8">
+
+            <h5>Q2: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 3    
+            </h5>
+        </div>
+        
+        <div class="container8">
+           
+            <h5>Q3: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 1   
+            </h5>
+        </div>
+        
+        <div class="container8">
+
+            <h5>Q4: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 5   
+            </h5>
+        </div>
+        
+        <div class="container8">
+        
+            <h5>Q5: "I think that parliament should do more for the environment..."
+                <br><br>               
+                Your answer (Number): 1    
+            </h5>
+        </div>
+    
+        <div class="container8">
+          
+            <h5>Q6: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 4              
+            </h5>
+        </div>
+       
+        <div class="container8">
+            
+            <h5>Q7: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 2              
+            </h5>
+        </div>
+       
+        <div class="container8">
+         
+            <h5>Q8: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 3              
+            </h5>
+        </div>
+     
+        <div class="container8">
+           
+            <h5>Q9: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 3              
+            </h5>
+        </div>
+      
+        <div class="container8">
+         
+            <h5>Q10: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 5              
+            </h5>
+        </div>
+
+        <div class="container8">
+      
+            <h5>Q11: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 1              
+            </h5>
+        </div>
+ 
+        <div class="container8">
+
+            <h5>Q12: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 4              
+            </h5>
+        </div>
+
+        <div class="container8">
+          
+            <h5>Q13: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 2              
+            </h5>
+        </div>
+ 
+        <div class="container8">
+      
+            <h5>Q14: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 5              
+            </h5>
+        </div>
+ 
+        <div class="container8">
+       
+            <h5>Q15: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 5              
+            </h5>
+        </div>
+    
+        <div class="container8">
+    
+            <h5>Q16: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 2              
+            </h5>
+        </div>
+
+        <div class="container8">
+  
+            <h5>Q17: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 4              
+            </h5>
+        </div>
+
+        <div class="container8">
+  
+            <h5>Q18: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 3              
+            </h5>
+        </div>
+
+        <div class="container8">
+
+            <h5>Q19: "I think that parliament should do more for the environment..."
+                <br><br>
+                Your answer (Number): 1              
+            </h5>
+        </div>
+        -->
+        
     
     <!-- AD - includes the footer component into this page 
     (albeit not visible) -->
