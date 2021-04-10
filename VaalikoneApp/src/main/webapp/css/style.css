@@ -346,15 +346,14 @@ contains the candidate table data */
     width: 100%;               
 }
 
-/* AD - Customises the candidate overviews */
+/* AD - Customises the Team member overviews */
 .container8 {
-    /* AD - This is a lighter shade of green and a darker shade of text */
-    background-color:#2a9d909f;
-    border-radius: 10px; 
-    padding: 0.1px 10px 0.1px 10px;             
+    background-color:#264653;
     color: rgba(255, 255, 255, 0.856);
-    margin: 10px auto;                
-}
+    border-radius: 10px; 
+    padding: 0.1px 10px 0.1px 10px;   
+    margin: 10px auto;      
+  }
 
 /* AD - Customises the navbar */
 .container-nav1 {
@@ -592,16 +591,9 @@ for specific cells (sich as update and delete
         inside the questionnaire question section. */
 .containerDynamicQuestion {
     background-color:#E76F51;
-    border-radius: 10px; 
-    
+    border-radius: 10px;    
     color: white;    
     margin: 5px 20px 5px 5px;
     padding: 0.1px 10px 0.1px 10px;  
-    
-    
-    /*
-    padding: 0.1px 10px 0.1px 10px;
-     width: 90%;   
-    */  
 }
 
