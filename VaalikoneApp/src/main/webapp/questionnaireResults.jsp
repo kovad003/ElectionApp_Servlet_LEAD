@@ -365,6 +365,61 @@
         </div>
         -->
         
+        
+         <!-- AD - This is the function for the ShowHideToggle 
+                for the 1st Place Suitable Candidate-->
+
+            <!-- AD - This HTML markup contains a DIV, which contains inside of it
+                another div element, which possesses show / hide functionality.
+                The button has been assigned a JavaScript Onclick event handler.
+                When clicked, the function is executed. Furthermore, 
+                based on the value of the button, the HTML div toggle 
+                functionality will be executed. AKA the div will be shown, 
+                and the button text changed.-->       
+                <script type="text/javascript">
+                    function ShowHideToggle1(btnCandResults1) {
+                        var dvCandResults1 = document.getElementById("dvCandResults1");
+                        if (btnCandResults1.value == "1st Place") {
+                            dvCandResults1.style.display = "block";
+                            btnCandResults1.value = "HIDE";
+                        } else {
+                            dvCandResults1.style.display = "none";
+                            btnCandResults1.value = "1st Place";
+                        }
+                    }
+                </script>
+
+            <!-- AD - This is the function for the ShowHideToggle 
+                for the 2nd Place Suitable Candidate-->    
+                <script type="text/javascript">
+                    function ShowHideToggle2(btnCandResults2) {
+                        var dvCandResults2 = document.getElementById("dvCandResults2");
+                        if (btnCandResults2.value == "2nd Place") {
+                            dvCandResults2.style.display = "block";
+                            btnCandResults2.value = "HIDE";
+                        } else {
+                            dvCandResults2.style.display = "none";
+                            btnCandResults2.value = "2nd Place";
+                        }
+                    }
+                </script>
+
+
+            <!-- AD - This is the function for the ShowHideToggle 
+                for the 3rd Place Suitable Candidate-->    
+                <script type="text/javascript">
+                    function ShowHideToggle3(btnCandResults3) {
+                        var dvCandResults3 = document.getElementById("dvCandResults3");
+                        if (btnCandResults3.value == "3rd Place") {
+                            dvCandResults3.style.display = "block";
+                            btnCandResults3.value = "HIDE";
+                        } else {
+                            dvCandResults3.style.display = "none";
+                            btnCandResults3.value = "3rd Place";
+                        }
+                    }
+                </script>
+        
     
     <!-- AD - includes the footer component into this page 
     (albeit not visible) -->
