@@ -46,6 +46,53 @@
         </div>
         <hr>
         
+        
+        
+        
+         <!-- AD - This HTML markup contains a DIV, which contains inside of it
+                another div element, which will have show / hide functionality.
+                The button has been assigned a JavaScript Onclick event handler.
+                When clicked, the function is executed. Based in the value of
+                the button, the HTML div toggle functionality will be executed.
+                AKA the div will be shown, and the button text changed.-->       
+            <script type="text/javascript">
+                function ShowHideToggle(btnCandResults1) {
+                    var dvCandResults1 = document.getElementById("dvCandResults1");
+                    if (btnCandResults1.value == "SHOW") {
+                        dvCandResults1.style.display = "block";
+                        btnCandResults1.value = "HIDE";
+                    } else {
+                        dvCandResults1.style.display = "none";
+                        btnCandResults1.value = "SHOW";
+                    }
+                }
+            </script>
+
+            <span>1st Place Candidate:</span>
+
+            <!--
+            <input id="btnCandidateResults" type="button" value="SHOW" onclick="ShowHideToggle(this)" />
+            -->
+
+            <input class = "buttonShowHide" id = "btnCandResults1" type="button" value="SHOW" onclick="ShowHideToggle(this)" >
+            </input>
+
+            <hr />
+            <div id="dvCandResults1" style="display: none">
+
+                1st Place suitable candidate match for you:
+                <div class="container8">          
+                    <h5>Q1: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (Number): 4    
+                    </h5>
+                </div>           
+            
+            </div>
+            
+            
+            
+        
          <!-- AD - A container for the login and registration buttons-->
         <div class="container3">
 
