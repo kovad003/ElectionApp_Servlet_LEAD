@@ -5,21 +5,40 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Login.LoginDatabaseConnection;
-
-public class LoginServlet extends HttpServlet{
-
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LoginServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)  
-			throws ServletException, IOException {  
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");  
 		PrintWriter out = response.getWriter(); 
 		
@@ -29,7 +48,7 @@ public class LoginServlet extends HttpServlet{
 		
 		
 //		if(name.equals(n) && pass.equals(p)){
-//			Cookie loginCookie = new Cookie("username",n);
+			Cookie loginCookie = new Cookie("username",n);
 //			//setting cookie to expiry in 30 mins
 //			loginCookie.setMaxAge(30*60);
 //			response.addCookie(loginCookie);
@@ -56,5 +75,6 @@ public class LoginServlet extends HttpServlet{
 		}  
 
 		out.close();  
-	}  
-}  
+	}
+
+}
