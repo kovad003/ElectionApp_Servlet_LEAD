@@ -43,12 +43,25 @@
         <hr>
         <div class="container7">
             <h3>Your candidate matches:</h3>
+        </div>
+        <hr>
+        
+         <!-- AD - A container for the login and registration buttons-->
+        <div class="container3">
+
+            <!-- AD - Buttons for login and registration-->
+            <button class="button-main button1"><b>1st Place Match</b></button>
+            
+            <button class="button-main button1"><b>2nd Place Match</b></button>
+
+            <button class="button-main button1"><b>3rd Place Match</b></button>
+
         </div>  
 
         <!-- AD - Matched candidate colourings and text -->
         <div class="container6">
             <!-- AD - Overview info about the matched candidate -->
-            <h5>Suitable candidate number 1 (the best match):                
+            <h5>Suitable Candidate Match: 1st Place               
                 <br><br>
                 Mikki Savolainen
                 <br><br>
@@ -65,48 +78,7 @@
                 officia deserunt mollit anim id est laborum.
             </h5>
         </div>
-
-         <!-- AD - Matched candidate colourings and text -->
-         <div class="container6">
-            <!-- AD - Overview info about the matched candidate -->
-            <h5>Suitable candidate number 2 (the 2nd best match):
-                <br><br>
-                Sara Koskinen 
-                <br><br>
-                <hr>
-                <br>
-                Overview: I care deeply about the environment and social issue.
-                <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
-            </h5>
-        </div>
-
-         <!-- AD - Matched candidate colourings and text -->
-         <div class="container6">
-            <!-- AD - Overview info about the matched candidate -->
-            <h5>Suitable candidate number 3 (the 3rd best match):
-                <br><br>
-                Timo Salomaa
-                <br><br>
-                <hr>
-                <br>
-                Overview: I care deeply about the environment and social issue.
-                <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
-            </h5>
-        </div>
+       
 
         <!-- End of the candidate intro / overview section-->
         <hr>
