@@ -63,7 +63,7 @@
             <!-- AD - Overview info about the matched candidate -->
             <h5>Suitable Candidate Match: 1st Place               
                 <br><br>
-                Mikki Savolainen
+                Mikko Savolainen
                 <br><br>
                 <hr>
                 <br>
