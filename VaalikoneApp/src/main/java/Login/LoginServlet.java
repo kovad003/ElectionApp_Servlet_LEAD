@@ -2,7 +2,6 @@ package Login;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,14 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import dao.Dao_candidate;
 import data.Candidate;
 
-
 /**
  * Servlet implementation class LoginServlet
  */
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
-	
 	private static final long serialVersionUID = 1L;
+
 	private Dao_candidate dao=null;
 	
 	@Override
@@ -82,3 +80,4 @@ public class LoginServlet extends HttpServlet {
 		
 }
 
+}
