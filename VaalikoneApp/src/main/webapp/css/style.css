@@ -1,13 +1,13 @@
 @charset "ISO-8859-1";
 
-/* AD - This file contains all of the css for the entire site (external css).*/
+/* AD - This file contains all of the CSS for the entire site (external CSS).*/
 
 /* AD - Media query in respect of smaller screens.
         Ensures that the election machine looks good
         on smaller devices. */
 @media only screen and (max-width: 900px) {
 	
-	/* AD - Customises the container for the dynamic question
+	/* AD - Customizes the container for the dynamic question
         inside the questionnaire question section. 
         This media query ensures that it looks good
         on smaller devices.*/
@@ -23,7 +23,7 @@
     max-width: 80% !important;
     }
 
-    /* AD - Customises the yellow container
+    /* AD - Customizes the yellow container
     on the adminUpdateCandidate page, which
     contains the candidate table data */
     .containerUpdateCandidatesTable {
@@ -49,7 +49,7 @@
     padding: 0.1px 10px 0.1px 10px !important;  /*AD Needed on the questionnaire page */ 
     }  
 
-    /* AD - Customises the navbar for smaller screens */
+    /* AD - Customizes the NAV-bar for smaller screens */
     .container-nav1 {                           
         width: 97% !important;                                    
     }  
@@ -731,3 +731,22 @@ questionnaireResults page */
         padding: 0.1px 10px 0.1px 10px;   
         margin: 10px auto;        
     }
+    
+/*Les - Logout button*/
+
+div.container-nav-links input[type="submit" i] {
+	background-color: #E9C46A !important; 
+	color: #264653 !important;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+div.container-nav-links input[type="submit" i]:hover {
+	background-color: #E9C46A !important; 
+	color: rgba(255, 255, 255, 0.829) !important;
+
+}
+
+

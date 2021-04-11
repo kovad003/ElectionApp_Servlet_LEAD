@@ -45,7 +45,7 @@ if (id!=null) {
                 <div class = "container-nav-links">
                     <a href=#>
                     	<h5>
-		                    <form cass=logout-button action="LogoutServlet" method="post">
+		                    <form class=logout-button action="LogoutServlet" method="post">
 							<input type="submit" value="Logout" >
 							</form>
                     	</h5>
