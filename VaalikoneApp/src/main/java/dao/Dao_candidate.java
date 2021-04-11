@@ -90,6 +90,8 @@ public class Dao_candidate {
 			return null;
 		}
 	}
+	
+	
 	public ArrayList<Candidate> updateCandidate(Candidate q) {
 		System.out.println("updateCandidate(Candidate q)");
 		try {

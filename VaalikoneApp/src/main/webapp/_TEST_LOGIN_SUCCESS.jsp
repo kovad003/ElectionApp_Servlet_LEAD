@@ -26,6 +26,9 @@ if(login !=null){
 
 // if cookie can't grab userName -> redirect to 
 if(id == null) response.sendRedirect("login.html");
+{
+	
+}
 %>
 
 <h3>Logged in with id: <%=id %>.</h3>
