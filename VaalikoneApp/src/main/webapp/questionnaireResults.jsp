@@ -277,18 +277,8 @@
                         </div>               
                     </div>  
                 </div>
-
-
-				<div id="dvCompareResults" style="display: none">
-
-                	<div class="containerUserAnswers">
-                	Hello!
-                	
-                	
-                	</div>
-                	
-				</div>
-
+                
+                
 
 
                 <!-- AD - This 'hidden div' shows the 2nd place suitable candidate.
@@ -322,7 +312,7 @@
                             <!-- AD - button container, containing the compareResults 
                             ShowHide Toggle button -->                    
                         <div class="containerCompareResults"> 
-                            <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                            <input class = "buttonShowHide3 button1" id = "btnCompareResults" 
                             type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
                         </div> 
                     </div>  
@@ -336,7 +326,7 @@
                 
                     <!-- AD - This section shows the top suitable candidate(s)-->
                     <div class="container6">         
-                        <h5>2nd Place Match:
+                        <h5>3rd Place Match:
                         <c:out value="${requestScope.profile_3rd.FName} ${requestScope.profile_3rd.SName} - ${requestScope.profile_3rd.party}"></c:out>                  
                             <br>
                             <br>
@@ -360,7 +350,7 @@
                         <!-- AD - button container, containing the compareResults 
                         ShowHide Toggle button -->                    
                         <div class="containerCompareResults"> 
-                            <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                            <input class = "buttonShowHide3 button1" id = "btnCompareResults" 
                             type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
                         </div> 
                     </div>  
@@ -368,6 +358,48 @@
             
                 <hr>
                 <!-- End of the candidate matches section-->
+
+
+ <!-- AD - This 'hidden div' shows the Compare Results (answers).
+            The div becomes visible once the 'COMPARE YOUR ANSWERS'
+            button is pressed. Conversely, the div disappears once the
+            button is pressed again (toggle button).-->
+            <div id="dvCompareResults" style="display: none">
+
+                <div class="containerCompareAnswers">
+          
+                    <h5>Q1: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 4    
+                    </h5>
+                    
+                </div>
+
+                <div class="containerCompareAnswers">
+
+                    <h5>Q2: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 3    
+                    </h5>
+                </div>
+                
+                <div class="containerCompareAnswers">
+                   
+                    <h5>Q3: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 1   
+                    </h5>
+                </div>               
+        
+                <div class="containerCompareAnswers">
+        
+                    <h5>Q19: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 1              
+                    </h5>
+                </div>
+
+            </div>
 
 
 
@@ -462,7 +494,7 @@
 
 		            /* AD - This is the function for the ShowHideToggle 
 		                for the User Results (answers) */             
-                    function ShowHideToggle4(btnCandResults3) {
+                    function ShowHideToggle4(btnUserResults) {
                         var dvUserResults = document.getElementById("dvUserResults");
                         if (btnUserResults.value == "ANSWERS") {
                             dvUserResults.style.display = "block";
@@ -472,6 +504,22 @@
                             dvUserResults.style.display = "none";
                             btnUserResults.value = "ANSWERS";
                             btnUserResults.style.backgroundColor = "#2ea100";    
+                        }
+                    }
+
+
+                      /* AD - This is the function for the ShowHideToggle 
+		                for the compareResults (answers) */             
+                        function ShowHideToggle5(btnCompareResults) {
+                        var dvCompareResults = document.getElementById("dvCompareResults");
+                        if (btnCompareResults.value == "COMPARE YOUR ANSWERS") {
+                            dvCompareResults.style.display = "block";
+                            btnCompareResults.value = "HIDE";
+                            btnCompareResults.style.backgroundColor = "#E76F51";
+                        } else {
+                            dvCompareResults.style.display = "none";
+                            btnCompareResults.value = "COMPARE YOUR ANSWERS";
+                            btnCompareResults.style.backgroundColor = "purple";    
                         }
                     }
                 </script>
