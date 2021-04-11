@@ -39,30 +39,18 @@ public class LoginServlet extends HttpServlet {
 		String pwd = request.getParameter("pwd");
 		String sql = "SELECT * FROM electionmachine.candidates where USERNAME='" + user + 
 				"' and PASSWORD='" + pwd + "';";
-		String un = null;
-
-		/*
-		 * delete this shit later
-		 */
-		//userID = "'Aintila
-		//password = "'puppyfarts'";
-		
+		String id_push = null;
 
 		
 		if(dao.getConnection())
 		{
 			System.out.println("Successfully connected to Candidates to fetch login info");
 			list=dao.loginCandidate(sql);
-			
-			//test
 			System.out.println("Can_List: " + list);
-
 			for (int i = 0; i < list.size(); i++) {
 				Candidate c = list.get(i);
-				
-//				un = c.getUSERNAME().toString();
-				un = String.valueOf(c.getId());
 
+				id_push = String.valueOf(c.getId());
 				System.out.println("Candidate id/name: " + c.getId() + " " + c.getUSERNAME());//
 			}	
 		}
@@ -74,8 +62,8 @@ public class LoginServlet extends HttpServlet {
 
 		//cookie -> send login ID
 		if(list != null) {
-			Cookie loginCookie = new Cookie("user", un);
-			response.addCookie(loginCookie);			
+			Cookie id_cookie = new Cookie("user", id_push);
+			response.addCookie(id_cookie);			
 			/*
 			 * if login ok -> 
 			 */
