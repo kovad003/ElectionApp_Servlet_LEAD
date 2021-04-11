@@ -69,7 +69,7 @@ public class Dao_qanswer {
 		System.out.println("insertAnswer()");
 		try {
 			//CANDIDATE_ID has to be added later
-			String sql="insert into answers (QUESTION_ID, ANSWER) values (?, ?)";
+			String sql="insert into answers (CANDIDATE_ID, QUESTION_ID, ANSWER) values (?, ?, ?)";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setInt(1, a.getAnswer());
 			pstmt.setInt(2, a.getQId());
@@ -77,9 +77,43 @@ public class Dao_qanswer {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
+		}	
 	}
+	
+	// Will insert new record to the answers table
+	public void insertAllAnswer(ArrayList<QAnswer> answerList) {
+		System.out.println("insertAllAnswer()");
+		try {
+			String sql="insert into answers (CANDIDATE_ID, QUESTION_ID, ANSWER, COMMENTS) values (?, ?, ?, ?)";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			
+			for (QAnswer qAnswer : answerList) {
+				pstmt.setInt(1, qAnswer.getCId());
+				pstmt.setInt(2, qAnswer.getQId());
+				pstmt.setInt(3, qAnswer.getAnswer());
+				pstmt.setString(4, "candidate's answer to question");
+				pstmt.addBatch();
+			}
+			pstmt.executeBatch();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
+//	List<Student> students = ...
+//			Connection con = ...
+//	String insertSql = "INSERT INTO student VALUES (?, ?, ?)";
+//	PreparedStatement pstmt = con.prepareStatement(insertSql);
+//	for (Student student : students) {
+//	    pstmt.setString(1, student.getId()); //not sure if String or int or long
+//	    pstmt.setString(2, student.getName());
+//	    pstmt.setString(3, student.getCity());
+//	    pstmt.addBatch();
+//	}
+//	pstmt.executeBatch();
+//	//close resources...
+	
 	public ArrayList<QAnswer> updateAnswer(QAnswer a) {
 		System.out.println("updateAnswer(QAnswer a)");
 		try {
@@ -126,4 +160,5 @@ public class Dao_qanswer {
 			return null;
 		}
 	}
+
 }
