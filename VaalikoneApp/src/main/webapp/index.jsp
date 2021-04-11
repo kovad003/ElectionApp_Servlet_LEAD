@@ -15,37 +15,8 @@
 </head>
 <body>
 
-
    <!-- AD - includes the navbar component, into this page -->
    <%@ include file="../components/navbar.jsp" %> 
-
-<!-- Check this later
-<div class="container-nav1">
-
-    <div class="container-nav3">
-        <div class="container-nav4">
-           
-            <div class = "container-nav-links-icon">
-            <a href="/adminPortal.jsp"><i class="material-icons resize3a">account_balance</i></a>              
-            </div>
-            <div class = "container-nav-links">
-                <a href="#"><h5>About</h5></a>
-            </div>
-            <div class = "container-nav-links">
-                <a href="/ShowQuestions"><h5>Questionnaire</h5></a>
-            </div>
-            <div class = "container-nav-links">
-                <a href="/ShowCandidates"><h5>Candidates</h5></a>
-            </div>
-            <div class = "container-nav-links">
-
-                <a href="/loginPage.jsp"><h5>Login</h5></a>
-
-            </div>           
-        </div>
-    </div>
-</div>
-  -->
 
     <!-- AD - Beginning the central (yellow container)-->
     <div class="container">
@@ -66,7 +37,7 @@
         <div class="container5">
           <!-- AD - Election machine questions -->
           <h5>Welcome to our site! This election machine website is run by the 'Global Herald Newspaper',
-              in association with the 'HÄMK's Finest' server programming team. 
+              in association with the 'HAMK's Finest' server programming team. 
               Take our election machine questionnaire to find out which candidate 
               is the right election candidate for you!
           </h5>
@@ -85,7 +56,7 @@
             <div class="container4">  
             
                 <!-- AD - Questionnaire guidance for the user -->
-		        <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
+		        <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HAMK's Finest'
                 are to be held liable for any views or comments expressed by the candidates 
                 or users of this site. Your data is confidential and will not be shared or
                 sold in any capacity. All rights reserved.</h5>
@@ -94,10 +65,8 @@
 		    
             <hr>      
     
-            <!-- AD - A container for the login and registration buttons-->
-            <div class="container3">
-
-                <!-- AD - Buttons for login and registration-->
+            <!-- AD - button container, containing buttons-->
+            <div class="container3">                
 
                 <button class="button-main button1" onclick="window.location.href='/ShowQuestions'"><b>Take Quiz</b></button>
               
