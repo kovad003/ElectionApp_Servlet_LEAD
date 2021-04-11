@@ -392,11 +392,9 @@
                             btnCandResults1.style.backgroundColor = "#2A9D8F";                           
                         }
                     }
-                </script>
-
-            <!-- AD - This is the function for the ShowHideToggle 
-                for the 2nd Place Suitable Candidate-->    
-                <script type="text/javascript">
+           
+		            /* AD - This is the function for the ShowHideToggle 
+		                for the 2nd Place Suitable Candidate */		          
                     function ShowHideToggle2(btnCandResults2) {
                         var dvCandResults2 = document.getElementById("dvCandResults2");
                         if (btnCandResults2.value == "2nd Place") {
@@ -409,12 +407,11 @@
                             btnCandResults2.style.backgroundColor = "#2A9D8F";    
                         }
                     }
-                </script>
+    
 
 
-            <!-- AD - This is the function for the ShowHideToggle 
-                for the 3rd Place Suitable Candidate-->    
-                <script type="text/javascript">
+		            /* AD - This is the function for the ShowHideToggle 
+		                for the 3rd Place Suitable Candidate */          
                     function ShowHideToggle3(btnCandResults3) {
                         var dvCandResults3 = document.getElementById("dvCandResults3");
                         if (btnCandResults3.value == "3rd Place") {
@@ -427,12 +424,11 @@
                             btnCandResults3.style.backgroundColor = "#2A9D8F";    
                         }
                     }
-                </script>
+       
             
 
-            <!-- AD - This is the function for the ShowHideToggle 
-                for the User Results (answers)-->    
-                <script type="text/javascript">
+		            /* AD - This is the function for the ShowHideToggle 
+		                for the User Results (answers) */             
                     function ShowHideToggle4(btnCandResults3) {
                         var dvUserResults = document.getElementById("dvUserResults");
                         if (btnUserResults.value == "ANSWERS") {
