@@ -158,3 +158,16 @@ INSERT INTO ANSWERS VALUES (3, 16, 3, "candidate 3's answer to question 16");
 INSERT INTO ANSWERS VALUES (3, 17, 4, "candidate 3's answer to question 17");
 INSERT INTO ANSWERS VALUES (3, 18, 4, "candidate 3's answer to question 18");
 INSERT INTO ANSWERS VALUES (3, 19, 5, "candidate 3's answer to question 19");
+
+/*alters candidates adding username and password columns*/
+ALTER TABLE electionmachine.candidates ADD COLUMN(
+USERNAME varchar(255),
+PASSWORD varchar(255)
+);
+
+/*inserts admin into candidates table*/
+insert into candidates values(999, "admin", "admin", "employee", "Helsinki", 99, "n/a", "n/a", "n/a", "admin", 9999);
+
+/*updates username and password fields in candidate*/
+update candidates set USERNAME=CONCAT(RTRIM((LTRIM(SURNAME))), CONVERT(CANDIDATE_ID, CHAR)) limit 50;
+update candidates set PASSWORD=CONVERT(CONCAT(CANDIDATE_ID, (YEAR(CURDATE())-AGE)), CHAR) limit 50;
