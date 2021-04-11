@@ -4,6 +4,11 @@
 	<!-- AD - includes the meta component, into this page -->
     <%@ include file="../components/meta.jsp" %>
     
+    <%@ page import="java.util.ArrayList" %>   
+	<%@ page import="data.Question" %>   
+	<%@ page import="data.Answer" %>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+    
     <title>Questionnaire Results</title>
     
     <!-- AD - includes the header component, into this page -->
@@ -243,30 +248,48 @@
                         button is pressed again (toggle button).-->
                 <div id="dvCandResults1" style="display: none">               
                     <div class="container6">         
-                        <h5>Suitable Candidate Match: 1st Place                  
-                            <br><br>
-                            Mikko Savolainen
-                            <br><br>
+                        <h5>1st Place Match:
+                        <c:out value="${requestScope.profile_1st.FName} ${requestScope.profile_1st.SName} - ${requestScope.profile_1st.party}"></c:out>                  
+                            <br>
+                            <br>
                             <hr>
                             <br>
-                            Overview: I care deeply about the environment and social issue.
+                            
+							Age: <c:out value="${requestScope.profile_1st.age}"></c:out>
+							<br>
+							Occupation: <c:out value="${requestScope.profile_1st.profession}"></c:out>
+							<br>
+                            Location: <c:out value="${requestScope.profile_1st.location}"></c:out>
+                            <br>
+                            <br>
+                            Goals: <c:out value="${requestScope.profile_1st.goals}"></c:out>
                             <br><br>
-                            sed do eiusmod tempor incididunt ut labore 
-                            et dolore magna aliqua. Ut enim ad minim veniam, 
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                            officia deserunt mollit anim id est laborum.
+                           	Reason: <c:out value="${requestScope.profile_1st.reason}"></c:out>
+                           	<br>
+                           	<br>
+                           	<hr>
                         </h5>
                             <!-- AD - button container, containing the compareResults 
                             ShowHide Toggle button -->                    
                         <div class="containerCompareResults"> 
-                            <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                            <input class = "buttonShowHide3 button1" id = "btnCompareResults" 
                             type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
                         </div>               
                     </div>  
                 </div>
+
+
+				<div id="dvCompareResults" style="display: none">
+
+                	<div class="containerUserAnswers">
+                	Hello!
+                	
+                	
+                	</div>
+                	
+				</div>
+
+
 
                 <!-- AD - This 'hidden div' shows the 2nd place suitable candidate.
                         The div becomes visible once the '2nd Place Candidate'
@@ -275,21 +298,26 @@
                 <div id="dvCandResults2" style="display: none">             
                     <!-- AD - This section shows the top suitable candidate(s)-->
                     <div class="container6">         
-                        <h5>Suitable Candidate Match: 2nd Place 
-                            <br><br>
-                            Sara Koskinen 
-                            <br><br>
+                        <h5>2nd Place Match:
+                        <c:out value="${requestScope.profile_2nd.FName} ${requestScope.profile_2nd.SName} - ${requestScope.profile_2nd.party}"></c:out>                  
+                            <br>
+                            <br>
                             <hr>
                             <br>
-                            Overview: I care deeply about the environment and social issue.
+                            
+							Age: <c:out value="${requestScope.profile_2nd.age}"></c:out>
+							<br>
+							Occupation: <c:out value="${requestScope.profile_2nd.profession}"></c:out>
+							<br>
+                            Location: <c:out value="${requestScope.profile_2nd.location}"></c:out>
+                            <br>
+                            <br>
+                            Goals: <c:out value="${requestScope.profile_2nd.goals}"></c:out>
                             <br><br>
-                            sed do eiusmod tempor incididunt ut labore 
-                            et dolore magna aliqua. Ut enim ad minim veniam, 
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                            officia deserunt mollit anim id est laborum.
+                           	Reason: <c:out value="${requestScope.profile_2nd.reason}"></c:out>
+                           	<br>
+                           	<br>
+                           	<hr>
                         </h5>
                             <!-- AD - button container, containing the compareResults 
                             ShowHide Toggle button -->                    
@@ -308,22 +336,27 @@
                 
                     <!-- AD - This section shows the top suitable candidate(s)-->
                     <div class="container6">         
-                        <h5>Suitable Candidate Match: 3rd Place 
-                            <br><br>
-                            Timo Salomaa
-                            <br><br>
+                        <h5>2nd Place Match:
+                        <c:out value="${requestScope.profile_3rd.FName} ${requestScope.profile_3rd.SName} - ${requestScope.profile_3rd.party}"></c:out>                  
+                            <br>
+                            <br>
                             <hr>
                             <br>
-                            Overview: I care deeply about the environment and social issue.
+                            
+							Age: <c:out value="${requestScope.profile_3rd.age}"></c:out>
+							<br>
+							Occupation: <c:out value="${requestScope.profile_3rd.profession}"></c:out>
+							<br>
+                            Location: <c:out value="${requestScope.profile_3rd.location}"></c:out>
+                            <br>
+                            <br>
+                            Goals: <c:out value="${requestScope.profile_3rd.goals}"></c:out>
                             <br><br>
-                            sed do eiusmod tempor incididunt ut labore 
-                            et dolore magna aliqua. Ut enim ad minim veniam, 
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                            officia deserunt mollit anim id est laborum.
-                        </h5>                                       
+                           	Reason: <c:out value="${requestScope.profile_3rd.reason}"></c:out>
+                           	<br>
+                           	<br>
+                           	<hr>
+                        </h5>                                     
                         <!-- AD - button container, containing the compareResults 
                         ShowHide Toggle button -->                    
                         <div class="containerCompareResults"> 

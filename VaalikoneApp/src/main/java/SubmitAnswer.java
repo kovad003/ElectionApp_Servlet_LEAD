@@ -160,7 +160,7 @@ public class SubmitAnswer extends HttpServlet {
 		request.setAttribute("profile_2nd", profile_2nd);
 		request.setAttribute("profile_3rd", profile_3rd);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/myCandidate.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/questionnaireResults.jsp");
 		rd.forward(request, response);
 	}
 	
