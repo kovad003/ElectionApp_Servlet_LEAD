@@ -4,7 +4,7 @@
 	<!-- AD - includes the meta component, into this page -->
     <%@ include file="../components/meta.jsp" %>
     
-    <title>Questionnaire Results</title>
+    <title>Compare Results</title>
     
     <!-- AD - includes the header component, into this page -->
     <%@ include file="../components/header.jsp" %> 

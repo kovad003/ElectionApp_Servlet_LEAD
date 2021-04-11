@@ -721,3 +721,13 @@ questionnaireResults page */
 .textRestyle1 {
  font-size:large;
 }
+
+/* AD - Customises the Answers hidden div
+	on the questionnaireResults page colourings */
+    .containerCompareAnswers {        
+        background-color: purple;
+        color: rgba(255, 255, 255, 0.829);
+        border-radius: 10px; 
+        padding: 0.1px 10px 0.1px 10px;   
+        margin: 10px auto;        
+    }
