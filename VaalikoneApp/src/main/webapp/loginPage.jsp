@@ -36,11 +36,11 @@
                     <hr> 
                     <tr>
                         <td><b>Username: </b></td>
-                        <td><input type="text" name="username" required="required" /></td>
+                        <td><input type="text" name="user" required="required" /></td>
                     </tr>
                     <tr>
                         <td><b>Password: </b></td>
-                        <td><input type="text" name="userpass" required="required" /></td>
+                        <td><input type="password" name="pwd" required="required" /></td>
                     </tr>                    
                     <tr>                        
                         <td><br><input type="submit" value="LOGIN" /></td>
