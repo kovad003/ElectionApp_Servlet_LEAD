@@ -66,7 +66,7 @@
         <div class="container5">
           <!-- AD - Election machine questions -->
           <h5>Welcome to our site! This election machine website is run by the 'Global Herald Newspaper',
-              in association with the 'HÄMK's Finest' server programming team. 
+              in association with the 'HAMK's Finest' server programming team. 
               Take our election machine questionnaire to find out which candidate 
               is the right election candidate for you!
           </h5>
@@ -85,7 +85,7 @@
             <div class="container4">  
             
                 <!-- AD - Questionnaire guidance for the user -->
-		        <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
+		        <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HAMK's Finest'
                 are to be held liable for any views or comments expressed by the candidates 
                 or users of this site. Your data is confidential and will not be shared or
                 sold in any capacity. All rights reserved.</h5>
