@@ -27,25 +27,23 @@
         <!-- AD - This container adds colourings and style to the intro message -->
         <div class="container5">
         <!-- AD - Introductory statement about the candidates page -->
-        <h5>Thank you for successfully completing our questionnaire!
-            This section covers your results.
-            <br><br>
-            By analysing your questionnaire answers, this election machine 
-            utilises innovative algorithm techniques to match you with the candidate 
-            that suits you best. Carry on reading below to review your answers.
-            <br><br>
-            Please note, that you can make amendments if necessary.
-        </h5>
+	        <h5>Thank you for successfully completing our questionnaire!
+	            This section covers your results.
+	            <br><br>
+	            By analysing your questionnaire answers, this election machine 
+	            utilises innovative algorithm techniques to match you with the candidate 
+	            that suits you best. Carry on reading below to review your answers.
+	            <br>           
+	        </h5>
         </div>
         
        
         <!-- AD - This container customises the heading to the candidate overviews-->
         <hr>        
         <div class="container7">
-            <h3>Your candidate matches (click buttons to view):</h3>
+            <h3>Your candidate matches (click to view):</h3>
         </div>
-        <hr>
-
+    
             <!-- AD - button container, containing the Suitable Candidate 
                 ShowHide Toggle buttons -->
             <div class="container3">
@@ -59,8 +57,7 @@
                 type="button" value="3rd Place" onclick="ShowHideToggle3(this)" >             
 
             </div>
-            <br>
-            <hr>
+            <br>            
 
             <!-- AD - This 'hidden div' shows the 1st place suitable candidate.
                       The div becomes visible once the '1st Place Candidate'
@@ -141,15 +138,15 @@
                     </h5>
                 </div>  
             </div>
-        
+            
+            <hr>        
             <!-- End of the candidate matches section-->
 
             <!-- AD - Start of the User Answers section-->
 
             <div class="container7">
-                <h3>View your answers (click button to view):</h3>
-            </div>
-            <hr>
+                <h3>View your answers (click to view):</h3>
+            </div>       
 
             <!-- AD - button container, containing the UserResults 
             ShowHide Toggle button -->
