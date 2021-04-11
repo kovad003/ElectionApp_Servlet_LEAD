@@ -328,10 +328,7 @@ contains the candidate table data */
 .container5a {
     background-color:#264653;
     border-radius: 10px; 
-    padding: 0.1px 10px 0.1px 10px;    
-    /*            
-    color: rgba(255, 255, 255, 0.658);                 
-	*/
+    padding: 0.1px 10px 0.1px 10px;
 }
 
 /* AD - Customises the Welcome message colourings */
@@ -377,7 +374,7 @@ questionnaireResults page */
     height: 60px; 
 }
 
-/* AD - Cutomises the 'your top candidate matches'
+/* AD - Customises the 'your top candidate matches'
 container on the questionnaireResults page */
 .container7c {          
     padding: 0.1px 10px 0.1px 10px; 
@@ -401,8 +398,7 @@ container on the questionnaireResults page */
     background-color:#2A9D8F;
     border-radius: 10px; 
     padding: 1px;         
-    margin: 1px auto;  
-
+    margin: 1px auto;
     display: flex;
     justify-content: center;             
     width: 90%;
@@ -415,8 +411,7 @@ container on the questionnaireResults page */
     border-radius: 10px; 
     padding: 1px;         
     margin: 1px;           
-    width: 100%;  
-
+    width: 100%;
     display: flex;
     justify-content: center;                    
 }
@@ -495,8 +490,7 @@ container on the questionnaireResults page */
     transition-duration: 0.4s;
     border-radius: 10px;
     margin: 20px 10px 0px 10px; 
-    width: 90px;   
-    
+    width: 90px;    
     font-weight: bold;     
 }
 
@@ -620,20 +614,20 @@ background-color: #E76F51;
 for the update and delete buttons
 (such as on the adminUpdateCandidates.jsp) */
 .tableCustom2 {    
-    color: #98a2ff; /* AD - a custom shade for updating */
+    color: #98a2ff; /* AD - a custom shade */
 }
 
 /* AD - Table heading customisation
 for the add button
 (such as on the adminUpdateCandidates.jsp) */
 .tableAdd {    
-    color: #04a138; /* AD - a custom shade for updating */
+    color: #04a138; /* AD - a custom shade */
 }
 
 /* AD - Table background customisation
 for the add button (such as on the adminUpdateCandidates.jsp) */
 .tableAddBackground {    
-    background-color:#264653; /* AD - a custom colour for deleting */
+    background-color:#264653; /* AD - a custom colour */
     text-align: center;
 } 
 
@@ -641,7 +635,7 @@ for the add button (such as on the adminUpdateCandidates.jsp) */
 for the update and delete buttons
 (such as on the adminUpdateCandidates.jsp) */
 .tableCustom3 {    
-    color:#ff7171; /* AD - a custom colour for deleting */
+    color:#ff7171; /* AD - a custom colour */
 }
 
 /* AD - Table customisation
@@ -655,7 +649,7 @@ for the rows of the table
 for specific cells (sich as update and delete
 (such as on the adminUpdateCandidates.jsp) */
 .tableCustom5 {    
-    background-color:#264653; /* AD - a custom colour for deleting */
+    background-color:#264653; /* AD - a custom colour */
 } 
 
 /* AD - customises the word 'select'
@@ -689,11 +683,6 @@ for specific cells (sich as update and delete
         of the questionnaireResults page.*/
 .containerCompareResults {   
     text-align: left;
-    
-    /*
-padding-bottom: 20px;
-    margin-bottom: 20px;
-    */
 }
 
 /* AD - Customises the 'compareResults' Button stylings */
