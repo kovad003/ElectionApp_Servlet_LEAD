@@ -300,7 +300,7 @@ contains the candidate table data */
         color: rgba(255, 255, 255, 0.829);
         border-radius: 10px; 
         padding: 0.1px 10px 0.1px 10px;   
-        margin: 10px auto;        
+        margin: 10px auto;     
     }
 
 /* AD - Customises the introduction colourings on the welcome page
@@ -483,8 +483,7 @@ contains the candidate table data */
     transition-duration: 0.4s;
     border-radius: 10px;
     margin: 20px 10px 0px 10px; 
-    width: 90px;   
-    
+    width: 90px;    
     font-weight: bold;     
 }
 
@@ -654,3 +653,30 @@ for specific cells (sich as update and delete
     padding: 25px;  
 }
 
+/* AD - Customises the compareResults container
+        under the candidate matches section
+        of the questionnaireResults page.*/
+.containerCompareResults {
+    align-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* AD - Customises the ShowHide 'ANSWERS' Button stylings */
+.buttonShowHide3 {
+    background-color: purple;
+    border: none;
+    color: rgba(255, 255, 255, 0.829); 
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    margin: 20px 10px 0px 10px; 
+    width: 90px;    
+    font-weight: bold;     
+}
