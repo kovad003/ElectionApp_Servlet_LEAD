@@ -54,10 +54,10 @@
 <%--         <h3>Welcome <%out.println(name); %></h3> --%>
 
         
-    <%   String n=request.getParameter("username");  %>  
-    <%  out.print("Welcome "+n+",");  %> 
-    <br>
-    your session id is: <%= session.getId() %>
+<%--     <%   String n=request.getParameter("username");  %>   --%>
+<%--     <%  out.print("Welcome "+n+",");  %>  --%>
+<!--     <br> -->
+<%--     your session id is: <%= session.getId() %> --%>
            
         
         <!-- AD - customises the welcome message-->
