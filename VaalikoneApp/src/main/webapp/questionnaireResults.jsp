@@ -145,7 +145,7 @@
             <!-- AD - Start of the User Answers section-->
 
             <div class="container7">
-                <h3>View your answers (click to view):</h3>
+                <h3>Your answers (click to view):</h3>
             </div>       
 
             <!-- AD - button container, containing the UserResults 
