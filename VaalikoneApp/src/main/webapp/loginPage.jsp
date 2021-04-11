@@ -16,8 +16,6 @@
 
 <body>
 
-	<!-- AD - includes the meta component, into this page -->
-    <%@ include file="../components/accessManagement.jsp" %>
 
    <!-- AD - includes the navbar component, into this page -->
    <%@ include file="../components/navbar.jsp" %>  

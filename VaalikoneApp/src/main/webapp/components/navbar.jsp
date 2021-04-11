@@ -30,7 +30,7 @@
         
     </div>
     
-    
+
 <% 
 // init empty vars
 String id = null;
