@@ -186,7 +186,7 @@
           
                     <h5>Q1: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 4    
+                        Your answer (number): 4    
                     </h5>
                     
                 </div>
@@ -195,7 +195,7 @@
 
                     <h5>Q2: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 3    
+                        Your answer (number): 3    
                     </h5>
                 </div>
                 
@@ -203,7 +203,7 @@
                    
                     <h5>Q3: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 1   
+                        Your answer (number): 1   
                     </h5>
                 </div>
                 
@@ -211,7 +211,7 @@
         
                     <h5>Q4: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 5   
+                        Your answer (number): 5   
                     </h5>
                 </div>
                 
@@ -219,7 +219,7 @@
                 
                     <h5>Q5: "I think that parliament should do more for the environment..."
                         <br><br>               
-                        Your answer (Number): 1    
+                        Your answer (number): 1    
                     </h5>
                 </div>
             
@@ -227,7 +227,7 @@
                   
                     <h5>Q6: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 4              
+                        Your answer (number): 4              
                     </h5>
                 </div>
                
@@ -235,7 +235,7 @@
                     
                     <h5>Q7: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 2              
+                        Your answer (number): 2              
                     </h5>
                 </div>
 
@@ -243,7 +243,7 @@
          
                     <h5>Q8: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 3              
+                        Your answer (number): 3              
                     </h5>
                 </div>
              
@@ -251,7 +251,7 @@
                    
                     <h5>Q9: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 3              
+                        Your answer (number): 3              
                     </h5>
                 </div>
               
@@ -259,7 +259,7 @@
                  
                     <h5>Q10: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 5              
+                        Your answer (number): 5              
                     </h5>
                 </div>
         
@@ -267,7 +267,7 @@
               
                     <h5>Q11: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 1              
+                        Your answer (number): 1              
                     </h5>
                 </div>
          
@@ -275,7 +275,7 @@
         
                     <h5>Q12: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 4              
+                        Your answer (number): 4              
                     </h5>
                 </div>
         
@@ -283,7 +283,7 @@
                   
                     <h5>Q13: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 2              
+                        Your answer (number): 2              
                     </h5>
                 </div>
          
@@ -291,7 +291,7 @@
               
                     <h5>Q14: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 5              
+                        Your answer (number): 5              
                     </h5>
                 </div>
          
@@ -299,7 +299,7 @@
                
                     <h5>Q15: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 5              
+                        Your answer (number): 5              
                     </h5>
                 </div>
             
@@ -307,7 +307,7 @@
             
                     <h5>Q16: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 2              
+                        Your answer (number): 2              
                     </h5>
                 </div>
         
@@ -315,7 +315,7 @@
           
                     <h5>Q17: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 4              
+                        Your answer (number): 4              
                     </h5>
                 </div>
         
@@ -323,7 +323,7 @@
           
                     <h5>Q18: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 3              
+                        Your answer (number): 3              
                     </h5>
                 </div>
         
@@ -331,7 +331,7 @@
         
                     <h5>Q19: "I think that parliament should do more for the environment..."
                         <br><br>
-                        Your answer (Number): 1              
+                        Your answer (number): 1              
                     </h5>
                 </div>
 
@@ -367,18 +367,16 @@
 
     <!-- AD - End of the central (yellow container)-->
     </div>  
-
-
             <!-- AD - This is the function for the ShowHideToggle 
                 for the 1st Place Suitable Candidate-->
 
             <!-- AD - This HTML markup contains a DIV, which contains inside of it
-                another div element, which possesses show / hide functionality.
+          ch possesses show / hide functionality.
                 The button has been assigned a JavaScript Onclick event handler.
                 When clicked, the function is executed. Furthermore, 
-                based on the value of the button, the HTML div toggle 
+                based on the value of the bu      another div element, whitton, the HTML div toggle 
                 functionality will be executed. AKA the div will be shown, 
-                and the button text and colour changed.-->       
+                and the button text and colour changed.--       
                 <script type="text/javascript">
                     function ShowHideToggle1(btnCandResults1) {
                         var dvCandResults1 = document.getElementById("dvCandResults1");
@@ -446,8 +444,7 @@
                             btnUserResults.style.backgroundColor = "#2ea100";    
                         }
                     }
-                </script>
-       
+                </script>       
                 
     
     <!-- AD - includes the footer component into this page 
