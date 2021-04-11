@@ -75,7 +75,9 @@
 					        <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->
 					    	</div>
                                 <!-- ******************************************************************************************************** -->
-                                                                   
+                                    
+                                    <input hidden ="question_text" type = "text" name = "question_text${question.id}"  value="${question.question}">
+                                                          
                                     <!-- Display Radio buttons -->
                                     <label class = "questionnaireSelect">
                                         <b>SELECT :</b>
