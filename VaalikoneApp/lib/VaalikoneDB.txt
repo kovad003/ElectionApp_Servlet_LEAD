@@ -159,8 +159,9 @@ INSERT INTO ANSWERS VALUES (3, 17, 4, "candidate 3's answer to question 17");
 INSERT INTO ANSWERS VALUES (3, 18, 4, "candidate 3's answer to question 18");
 INSERT INTO ANSWERS VALUES (3, 19, 5, "candidate 3's answer to question 19");
 
+
 /*alters candidates adding username and password columns*/
-ALTER TABLE electionmachine.candidates ADD COLUMN(
+ALTER TABLE candidates ADD COLUMN(
 USERNAME varchar(255),
 PASSWORD varchar(255)
 );

@@ -4,6 +4,7 @@ public class QAnswer {
 	private int cId;
 	private int qId;
 	private int answer;
+	private String questionTxt;
 	private int score;
 	private int totalScore;
 	private Integer totalScoreInteger;
@@ -53,6 +54,10 @@ public class QAnswer {
 	public void setTotalScoreAsInteger(int totalScore) { 
 		this.totalScoreInteger = Integer.valueOf(totalScore);
 	}
+	public void setQTxt(String questionText) {
+		this.questionTxt = questionText;
+		
+	}
 	
 	
 //	 *************************************************************************************************
@@ -76,6 +81,9 @@ public class QAnswer {
 	}
 	public int getTotalScoreAsInteger() { 
 		return totalScoreInteger; 
+	}
+	public String getQTxt() {
+		return questionTxt;	
 	}
 	
 //	 *************************************************************************************************

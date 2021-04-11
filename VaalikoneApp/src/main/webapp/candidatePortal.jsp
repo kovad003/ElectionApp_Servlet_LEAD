@@ -7,7 +7,7 @@
 	<!-- AD - includes the meta component, into this page -->
     <%@ include file="../components/meta.jsp" %>
 
-	<title>Admin Portal</title>
+	<title>Candidate Portal</title>
 
     <!-- AD - includes the header component, into this page -->
     <%@ include file="../components/header.jsp" %>     
@@ -28,16 +28,16 @@
         <!-- AD - Configures the Admin Portal -->
         <div class = "containerAdminPortal">
             <form action="RegistrationServlet" method="post">                                      
-                    <legend class = "adminPortal2"><b>ADMIN PORTAL </b></legend>
+                    <legend class = "adminPortal2"><b>CANDIDATE PORTAL </b></legend>
                     <hr>
                     <legend class = "adminPortal3"><b>MENU: </b></legend>
                     <hr>  
                     <table>                    
-					<tr><td><b class = "adminPortal4">Access:</b><a href="/siteArchitecture.jsp" target="_blank"> <u><b>Site Architecture </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/AdminCandidates" target="_blank"> <u><b>Candidate Data </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Question Data </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Answers Data </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Account Data </b></u></a></td></tr>                  
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Home Page </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Update Your Data </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/questionnaire.jsp" target="_blank"> <u><b>Take Questionnaire </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Update Questions </b></u></a></td></tr> 
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Contact Admin </b></u></a></td></tr>                   
                     <tr><td></td><td><br><input type="submit" value="LOGOUT"></td></tr>
                     </table>
                     <hr>        
