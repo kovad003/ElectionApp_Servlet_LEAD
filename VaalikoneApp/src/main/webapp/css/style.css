@@ -52,7 +52,8 @@
     /* AD - Customises the navbar for smaller screens */
     .container-nav1 {                           
         width: 97% !important;                                    
-    }          
+    }  
+    
 }  
 
 /* Adjustments for a responsive website*/
@@ -681,9 +682,12 @@ padding-bottom: 20px;
     font-weight: bold;    
     padding: 10px;
     margin-bottom: 15px;
-    margin-left: 07px;
-    /*
-    padding: 10px;
-    margin: 20px 10px 0px 10px; 
-    */
+    margin-left: 07px;   
+}
+
+/* AD - Cutomises the 'your questionnaire results'
+and 'your suitable candidate matches' text on the
+questionnaireResults page */
+.textRestyle1 {
+ font-size:large !important;
 }
