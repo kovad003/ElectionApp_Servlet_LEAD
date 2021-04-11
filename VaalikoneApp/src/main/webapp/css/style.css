@@ -52,7 +52,8 @@
     /* AD - Customises the navbar for smaller screens */
     .container-nav1 {                           
         width: 97% !important;                                    
-    }          
+    }  
+    
 }  
 
 /* Adjustments for a responsive website*/
@@ -107,6 +108,15 @@
     .containerUpdateCandidatesTable {
     max-width: 99% !important;
     }
+
+    /* AD - Cutomises the 'your questionnaire results'
+    and 'your suitable candidate matches' text on the
+    questionnaireResults page. Ensures that the text
+    still looks good on small screens. */
+    .textRestyle1 {
+    font-size:small !important;
+   }
+   
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -293,6 +303,16 @@ contains the candidate table data */
     color: rgba(255, 255, 255, 0.658);                    
 }
 
+/* AD - Customises the Answers hidden div
+	on the questionnaireResults page colourings */
+    .containerUserAnswers {        
+        background-color: #589e3cc4;
+        color: rgba(255, 255, 255, 0.829);
+        border-radius: 10px; 
+        padding: 0.1px 10px 0.1px 10px;   
+        margin: 10px auto;     
+    }
+
 /* AD - Customises the introduction colourings on the welcome page
         and in addition, the candidate page introductory message */
 .container5 {
@@ -344,6 +364,27 @@ contains the candidate table data */
     color:#264653; 
     text-align: center; 
     width: 100%;               
+}
+
+/* AD - Cutomises the 'your answers'
+and container on the
+questionnaireResults page */
+.container7b {          
+    padding: 0.1px 10px 0.1px 10px; 
+    margin-top: 0px;
+    margin-bottom: 2px;              
+    color:#264653;    
+    height: 60px; 
+}
+
+/* AD - Cutomises the 'your top candidate matches'
+container on the questionnaireResults page */
+.container7c {          
+    padding: 0.1px 10px 0.1px 10px; 
+    margin-top: 0px;
+    margin-bottom: 20px;              
+    color:#264653;    
+    height: 60px;   
 }
 
 /* AD - Customises the Team member overviews */
@@ -440,8 +481,44 @@ contains the candidate table data */
     width: 90px;            
 }
 
-/* AD - Questionnaire button modifications */
+/* AD - Customises the ShowHide Button stylings */
+.buttonShowHide {
+    background-color: #2A9D8F;
+    border: none;
+    color: rgba(255, 255, 255, 0.829); 
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    margin: 20px 10px 0px 10px; 
+    width: 90px;   
+    
+    font-weight: bold;     
+}
 
+/* AD - Customises the ShowHide 'ANSWERS' Button stylings */
+.buttonShowHide2 {
+    background-color: #2ea100;
+    border: none;
+    color: rgba(255, 255, 255, 0.829); 
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    margin: 20px 10px 0px 10px; 
+    width: 90px;    
+    font-weight: bold;     
+}
+
+/* AD - Questionnaire button modifications */
 .questionnaireButton {
     background-color: #2A9D8F;
 }
@@ -607,3 +684,40 @@ for specific cells (sich as update and delete
     padding: 25px;  
 }
 
+/* AD - Customises the compareResults container
+        under the candidate matches section
+        of the questionnaireResults page.*/
+.containerCompareResults {   
+    text-align: left;
+    
+    /*
+padding-bottom: 20px;
+    margin-bottom: 20px;
+    */
+}
+
+/* AD - Customises the 'compareResults' Button stylings */
+.buttonShowHide3 {
+    background-color: purple;
+    border: none;
+    color: rgba(255, 255, 255, 0.829);    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;    
+    width: 205px;    
+    font-weight: bold;    
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 07px;   
+}
+
+/* AD - Cutomises the 'your questionnaire results'
+and 'your suitable candidate matches' text on the
+questionnaireResults page */
+.textRestyle1 {
+ font-size:large;
+}
