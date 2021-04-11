@@ -24,33 +24,44 @@ public class LoginServlet extends HttpServlet {
 	@Override
 	public void init() {
 		dao=new Dao_candidate("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
+		System.out.println("");
 	}
 
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
-		ArrayList<Candidate> list = null;
+		ArrayList<Candidate> list=null;
 		//user input from loginPage.jsp
 		String user = request.getParameter("user");
 		String pwd = request.getParameter("pwd");
-		
 		String sql = "SELECT * FROM electionmachine.candidates where USERNAME='" + user + 
 				"' and PASSWORD='" + pwd + "';";
-		String send_id = null;
+		String un = null;
+
+		/*
+		 * delete this shit later
+		 */
+		//userID = "'Aintila
+		//password = "'puppyfarts'";
+		
 
 		
 		if(dao.getConnection())
 		{
 			System.out.println("Successfully connected to Candidates to fetch login info");
-			list = dao.loginCandidate(sql);
+			list=dao.loginCandidate(sql);
 			
+			//test
 			System.out.println("Can_List: " + list);
+
 			for (int i = 0; i < list.size(); i++) {
 				Candidate c = list.get(i);
-				//fetch id -> (String) send_id
-				send_id = String.valueOf(c.getId());
-				System.out.println("Candidate id/name: " + c.getId() + " " + c.getUSERNAME());
+				
+//				un = c.getUSERNAME().toString();
+				un = String.valueOf(c.getId());
+
+				System.out.println("Candidate id/name: " + c.getId() + " " + c.getUSERNAME());//
 			}	
 		}
 		else
@@ -60,9 +71,9 @@ public class LoginServlet extends HttpServlet {
 		
 
 		//cookie -> send login ID
-		if(send_id != null) {
-			Cookie id_cookie = new Cookie("user", send_id);
-			response.addCookie(id_cookie);			
+		if(list != null) {
+			Cookie loginCookie = new Cookie("user", un);
+			response.addCookie(loginCookie);			
 			/*
 			 * if login ok -> 
 			 */
@@ -70,11 +81,8 @@ public class LoginServlet extends HttpServlet {
 		}else{
 			/*
 			 * if login not ok ->
-			 * must add error message!
 			 */
-			response.getWriter().println("<p style=\"color:red\">Sorry username or password error</p>");
-			RequestDispatcher rd = request.getRequestDispatcher("loginPage.jsp");
-			rd.include(request,response);
+			response.sendRedirect("loginPage.jsp");
 		}
 	}
 		
