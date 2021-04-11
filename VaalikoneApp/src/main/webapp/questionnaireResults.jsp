@@ -37,13 +37,12 @@
 	        </h5>
         </div>
         
-       
         <!-- AD - This container customises the heading to the candidate overviews-->
         <hr>        
         <div class="container7">
             <h3>Your candidate matches (click to view):</h3>
         </div>
-    
+      
             <!-- AD - button container, containing the Suitable Candidate 
                 ShowHide Toggle buttons -->
             <div class="container3">
@@ -57,7 +56,7 @@
                 type="button" value="3rd Place" onclick="ShowHideToggle3(this)" >             
 
             </div>
-            <br>            
+            <br>        
 
             <!-- AD - This 'hidden div' shows the 1st place suitable candidate.
                       The div becomes visible once the '1st Place Candidate'
@@ -81,6 +80,12 @@
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
                         officia deserunt mollit anim id est laborum.
                     </h5>
+                        <!-- AD - button container, containing the compareResults 
+                        ShowHide Toggle button -->                    
+                    <div class="containerCompareResults"> 
+                        <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                        type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                    </div>               
                 </div>  
             </div>
 
@@ -108,6 +113,12 @@
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
                         officia deserunt mollit anim id est laborum.
                     </h5>
+                        <!-- AD - button container, containing the compareResults 
+                        ShowHide Toggle button -->                    
+                    <div class="containerCompareResults"> 
+                        <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                        type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                    </div> 
                 </div>  
             </div>
 
@@ -135,18 +146,24 @@
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
                         officia deserunt mollit anim id est laborum.
-                    </h5>
+                    </h5>                                       
+                    <!-- AD - button container, containing the compareResults 
+                    ShowHide Toggle button -->                    
+                    <div class="containerCompareResults"> 
+                        <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                        type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                    </div> 
                 </div>  
             </div>
-            
-            <hr>        
+        
+            <hr>
             <!-- End of the candidate matches section-->
 
             <!-- AD - Start of the User Answers section-->
 
             <div class="container7">
                 <h3>Your answers (click to view):</h3>
-            </div>       
+            </div>  
 
             <!-- AD - button container, containing the UserResults 
             ShowHide Toggle button -->
@@ -171,6 +188,7 @@
                         <br><br>
                         Your answer (Number): 4    
                     </h5>
+                    
                 </div>
 
                 <div class="containerUserAnswers">
@@ -429,6 +447,7 @@
                         }
                     }
                 </script>
+       
                 
     
     <!-- AD - includes the footer component into this page 
