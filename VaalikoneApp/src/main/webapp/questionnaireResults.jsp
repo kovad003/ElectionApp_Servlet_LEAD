@@ -168,7 +168,7 @@
             button is pressed again (toggle button).-->
             <div id="dvUserResults" style="display: none">
 
-                <div class="container8">
+                <div class="containerUserAnswers">
           
                     <h5>Q1: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -176,7 +176,7 @@
                     </h5>
                 </div>
 
-                <div class="container8">
+                <div class="containerUserAnswers">
 
                     <h5>Q2: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -184,7 +184,7 @@
                     </h5>
                 </div>
                 
-                <div class="container8">
+                <div class="containerUserAnswers">
                    
                     <h5>Q3: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -192,7 +192,7 @@
                     </h5>
                 </div>
                 
-                <div class="container8">
+                <div class="containerUserAnswers">
         
                     <h5>Q4: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -200,7 +200,7 @@
                     </h5>
                 </div>
                 
-                <div class="container8">
+                <div class="containerUserAnswers">
                 
                     <h5>Q5: "I think that parliament should do more for the environment..."
                         <br><br>               
@@ -208,7 +208,7 @@
                     </h5>
                 </div>
             
-                <div class="container8">
+                <div class="containerUserAnswers">
                   
                     <h5>Q6: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -216,7 +216,7 @@
                     </h5>
                 </div>
                
-                <div class="container8">
+                <div class="containerUserAnswers">
                     
                     <h5>Q7: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -224,7 +224,7 @@
                     </h5>
                 </div>
 
-                <div class="container8">
+                <div class="containerUserAnswers">
          
                     <h5>Q8: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -232,7 +232,7 @@
                     </h5>
                 </div>
              
-                <div class="container8">
+                <div class="containerUserAnswers">
                    
                     <h5>Q9: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -240,7 +240,7 @@
                     </h5>
                 </div>
               
-                <div class="container8">
+                <div class="containerUserAnswers">
                  
                     <h5>Q10: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -248,7 +248,7 @@
                     </h5>
                 </div>
         
-                <div class="container8">
+                <div class="containerUserAnswers">
               
                     <h5>Q11: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -256,7 +256,7 @@
                     </h5>
                 </div>
          
-                <div class="container8">
+                <div class="containerUserAnswers">
         
                     <h5>Q12: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -264,7 +264,7 @@
                     </h5>
                 </div>
         
-                <div class="container8">
+                <div class="containerUserAnswers">
                   
                     <h5>Q13: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -272,7 +272,7 @@
                     </h5>
                 </div>
          
-                <div class="container8">
+                <div class="containerUserAnswers">
               
                     <h5>Q14: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -280,7 +280,7 @@
                     </h5>
                 </div>
          
-                <div class="container8">
+                <div class="containerUserAnswers">
                
                     <h5>Q15: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -288,7 +288,7 @@
                     </h5>
                 </div>
             
-                <div class="container8">
+                <div class="containerUserAnswers">
             
                     <h5>Q16: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -296,7 +296,7 @@
                     </h5>
                 </div>
         
-                <div class="container8">
+                <div class="containerUserAnswers">
           
                     <h5>Q17: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -304,7 +304,7 @@
                     </h5>
                 </div>
         
-                <div class="container8">
+                <div class="containerUserAnswers">
           
                     <h5>Q18: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -312,7 +312,7 @@
                     </h5>
                 </div>
         
-                <div class="container8">
+                <div class="containerUserAnswers">
         
                     <h5>Q19: "I think that parliament should do more for the environment..."
                         <br><br>
@@ -432,6 +432,7 @@
                         }
                     }
                 </script>
+                
     
     <!-- AD - includes the footer component into this page 
     (albeit not visible) -->
