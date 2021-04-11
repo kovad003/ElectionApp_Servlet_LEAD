@@ -49,76 +49,43 @@ public class SubmitAnswer extends HttpServlet {
 //		**********************************************************************************************************************************************
 //		**************** GET CLIENT SELECTIONS *******************************************************************************************************
 //		**********************************************************************************************************************************************
-		String questionText;
-		String selected;
+		
 		ArrayList<QAnswer> selectionList= new ArrayList<QAnswer>(); // Empty ArrayList for the client's answers.
 		
-		for (int i = 1; i <= selectionList.size()+1; i++) { // Will "grab" each answer from jsp page.
-			QAnswer s = new QAnswer(); // Has to be placed inside the for loop.
-			questionText = request.getParameter("question_text" + i);
-			selected = request.getParameter("selected" + i); // The client's selections will be saved and stored in QAnswer objects.
-			System.out.println("Q" + i + ", SELECTED by client: " + selected);
-			System.out.println("Q" + i + ", QUESTION TEXT: " + questionText);
-			if(selected!=null)
-			{
-				s.setQId(i);
-				s.setAnswer(selected);
-				s.setQTxt(questionText);
-				selectionList.add(s);
-				
-//				<<< Debugging Messages >>>
-//				System.out.println(i + " - " + selected);
-//				System.out.println("Object: " + s);
-//				System.out.println("List: " + selectionList);
-//				System.out.println("Client-QID: " + s.getQId() + " - Client-Answ: " + s.getAnswer());		
+		for (int i = 1; i <= selectionList.size()+1; i++) {
+			QAnswer qans = new QAnswer();
+			String questionText = request.getParameter("question_text" + i);
+			String selected = request.getParameter("selected" + i); // The client's selections will be saved and stored in QAnswer objects.
+
+//			<<< Debugging Messages >>>
+//			System.out.println("Q" + i + ", SELECTED by client: " + selected);
+//			System.out.println("Q" + i + ", QUESTION TEXT: " + questionText);
+			
+			if (selected != null) {
+				qans.setQId(i);
+				qans.setQTxt(questionText);
+				qans.setAnswer(selected);
+				selectionList.add(qans);
 			}	
 		}
-		
+//		<<< Debugging Messages >>>
+//		for(int i = 0; i < selectionList.size(); i++)
+//		{
+//			System.out.println("QID: " + selectionList.get(i).getQId() + " - Answer: " + selectionList.get(i).getAnswer()
+//					+ " - QText: " +  selectionList.get(i).getQTxt());
+//		}	
+
 //		*********************************************************************************************************************************************
 //		*********** GET CANDIDATE SELECTIONS/ANSWERS ************************************************************************************************
 //		*********************************************************************************************************************************************
-		ArrayList<QAnswer> answerList=null;
-		if(dao_qanswer.getConnection())
-		{
-			System.out.println("Successfully connected to the database");
-			answerList=dao_qanswer.readAllAnswer();
-			System.out.println("Answer_List: " + answerList);
-	
-//			<<< Debugging Messages >>>
-//			for (int i = 0; i < answerList.size(); i++) {		
-//				QAnswer a = answerList.get(i);
-//				a.getAnswer();
-//				System.out.println("Candidate ID: " + a.getCId());
-//				System.out.println("Question ID: " + a.getQId());
-//				System.out.println("Answer : " + a.getAnswer());
-//			}	
-		}
-		else
-		{
-			System.out.println("No connection to database");
-		}
+		ArrayList<QAnswer> answerList = returnCndAnswersStacked();
+
 		
 //		*********************************************************************************************************************************************
 //		************ GET ALL CANDIDATE PROFILE ******************************************************************************************************
 //		*********************************************************************************************************************************************	
-		ArrayList<Candidate> candidateProfileStacked=null;
-		if(dao_candidate.getConnection())
-		{
-			System.out.println("Successfully connected to the database");
-			candidateProfileStacked=dao_candidate.readAllCandidate();
-			System.out.println("Can_List: " + candidateProfileStacked);
-			
-//			<<< Debugging Messages >>> 		
-//			for (int i = 0; i < candidateList.size(); i++) {
-//				Candidate c = candidateList.get(i);//		
-//				System.out.println("Candidate name: " + c.getFName() + " " + c.getSName());
-//				System.out.println("location: " + c.getLocation() );
-//			}	
-		}
-		else
-		{
-			System.out.println("No connection to database");
-		}
+		ArrayList<Candidate> candidateProfileStacked = returnCndProfileStacked();
+		
 
 //		*********************************************************************************************************************************************
 //		************ PREPARE QUESTIONNAIRE RESULT****************************************************************************************************
@@ -170,7 +137,55 @@ public class SubmitAnswer extends HttpServlet {
 //	****************************** CUSTOM METHODS **************************************************************************************************************
 //	************************************************************************************************************************************************************
 //	************************************************************************************************************************************************************
+	
+	public ArrayList<QAnswer> returnCndAnswersStacked()
+	{
+		ArrayList<QAnswer> answerList=null;
+		if(dao_qanswer.getConnection())
+		{
+			System.out.println("Successfully connected to the database");
+			answerList=dao_qanswer.readAllAnswer();
+			System.out.println("Answer_List: " + answerList);
 
+//			<<< Debugging Messages >>>
+//			for (int i = 0; i < answerList.size(); i++) {		
+//				QAnswer a = answerList.get(i);
+//				a.getAnswer();
+//				System.out.println("Candidate ID: " + a.getCId());
+//				System.out.println("Question ID: " + a.getQId());
+//				System.out.println("Answer : " + a.getAnswer());
+//			}	
+		}
+		else
+		{
+			System.out.println("No connection to database");
+		}
+		return answerList;
+	}
+	
+	public ArrayList<Candidate> returnCndProfileStacked()
+	{
+		ArrayList<Candidate> candidateProfileStacked=null;
+		if(dao_candidate.getConnection())
+		{
+			System.out.println("Successfully connected to the database");
+			candidateProfileStacked=dao_candidate.readAllCandidate();
+			System.out.println("Can_List: " + candidateProfileStacked);
+			
+//			<<< Debugging Messages >>> 		
+//			for (int i = 0; i < candidateList.size(); i++) {
+//				Candidate c = candidateList.get(i);//		
+//				System.out.println("Candidate name: " + c.getFName() + " " + c.getSName());
+//				System.out.println("location: " + c.getLocation() );
+//			}	
+		}
+		else
+		{
+			System.out.println("No connection to database");
+		}
+		return candidateProfileStacked;
+	}
+	
 	public ArrayList<QAnswer> scoreStackedData(ArrayList<QAnswer> answerList, ArrayList<QAnswer> selectionList)
 	{
 		ArrayList<QAnswer> answerListScored= new ArrayList<QAnswer>(); // Will be returned at the end.
