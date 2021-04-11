@@ -405,7 +405,7 @@
                 When clicked, the function is executed. Furthermore, 
                 based on the value of the button, the HTML div toggle 
                 functionality will be executed. AKA the div will be shown, 
-                and the button text changed.-->       
+                and the button text and colour changed.-->      
                 <script type="text/javascript">
                     function ShowHideToggle1(btnCandResults1) {
                         var dvCandResults1 = document.getElementById("dvCandResults1");
