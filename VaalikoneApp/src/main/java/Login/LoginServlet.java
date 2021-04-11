@@ -61,7 +61,7 @@ public class LoginServlet extends HttpServlet {
 		
 
 		//cookie -> send login ID
-		if(list != null) {
+		if(id_push != null) {
 			Cookie id_cookie = new Cookie("user", id_push);
 			response.addCookie(id_cookie);			
 			/*
@@ -72,7 +72,10 @@ public class LoginServlet extends HttpServlet {
 			/*
 			 * if login not ok ->
 			 */
-			response.sendRedirect("loginPage.jsp");
+			response.getWriter().println("<p style=\"color:red\">Sorry username or password error</p>");
+			RequestDispatcher rd = request.getRequestDispatcher("loginPage.jsp");
+			rd.include(request,response);
+			
 		}
 	}
 		
