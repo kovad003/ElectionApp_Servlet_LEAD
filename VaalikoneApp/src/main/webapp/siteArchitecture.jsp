@@ -28,16 +28,18 @@
         <!-- AD - Configures the Admin Portal -->
         <div class = "containerAdminPortal">
             <form action="RegistrationServlet" method="post">                                      
-                    <legend class = "adminPortal2"><b>ADMIN PORTAL </b></legend>
+                    <legend class = "adminPortal2"><b>ADMIN: Site Architecture </b></legend>
                     <hr>
                     <legend class = "adminPortal3"><b>MENU: </b></legend>
                     <hr>  
                     <table>                    
-					<tr><td><b class = "adminPortal4">Access:</b><a href="/siteArchitecture.jsp" target="_blank"> <u><b>Site Architecture </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/AdminCandidates" target="_blank"> <u><b>Candidate Data </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Question Data </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Answers Data </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Account Data </b></u></a></td></tr>                  
+					<tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>index.jsp </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/about.jsp" target="_blank"> <u><b>about.jsp </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/candidates.jsp" target="_blank"> <u><b>candidates.jsp </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/adminUpdateCandidates.jsp" target="_blank"> <u><b>adminUpdateCandidates.jsp </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/candidates.jsp" target="_blank"> <u><b>candidates.jsp </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/login.jsp" target="_blank"> <u><b>login.jsp </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/AdminCandidates" target="_blank"> <u><b>Candidate Data </b></u></a></td></tr>                     
                     <tr><td></td><td><br><input type="submit" value="LOGOUT"></td></tr>
                     </table>
                     <hr>        
