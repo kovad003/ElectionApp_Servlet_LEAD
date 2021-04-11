@@ -27,269 +27,317 @@
         <!-- AD - This container adds colourings and style to the intro message -->
         <div class="container5">
         <!-- AD - Introductory statement about the candidates page -->
-        <h5>Thank you for successfully completing our questionnaire!
-            This section covers your results.
-            <br><br>
-            By analysing your questionnaire answers, this election machine 
-            utilises innovative algorithm techniques to match you with the candidate 
-            that suits you best. Carry on reading below to review your anwsers.
-            <br><br>
-            Please note, that you can make amendements if necessary.
-        </h5>
+	        <h5>Thank you for successfully completing our questionnaire!
+	            This section covers your results.
+	            <br><br>
+	            By analysing your questionnaire answers, this election machine 
+	            utilises innovative algorithm techniques to match you with the candidate 
+	            that suits you best. Carry on reading below to review your answers.
+	            <br>           
+	        </h5>
         </div>
-
-        <hr> 
-
-        <!-- AD - This container customises the heading to the candidate overviews-->
-        <div class="container7">
-        <h3>Your answers:</h3>
-        </div>         
         
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q1: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 4    
-            </h5>
-        </div>
+        <!-- AD - Start of the User Answers section-->
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q2: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 3    
-            </h5>
-        </div>
+            <div class="container7b">
+                <h6 class = "textRestyle1">Your answers (click to view):</h6>
+            </div>  
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q3: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 1   
-            </h5>
-        </div>
+            <!-- AD - button container, containing the UserResults 
+            ShowHide Toggle button -->
+            <div class="container3">
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q4: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 5   
-            </h5>
-        </div>
+                <input class = "buttonShowHide2 button1" id = "btnUserResults" 
+                type="button" value="ANSWERS" onclick="ShowHideToggle4(this)" >                
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q5: "I think that parliament should do more for the environment..."
-                <br><br>               
-                Your answer (Number): 1    
-            </h5>
-        </div>
+            </div>
+            <br>
+                
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q6: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 4              
-            </h5>
-        </div>
+  <!-- AD - This 'hidden div' shows the User Results (answers).
+            The div becomes visible once the 'ANSWERS'
+            button is pressed. Conversely, the div disappears once the
+            button is pressed again (toggle button).-->
+            <div id="dvUserResults" style="display: none">
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q7: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 2              
-            </h5>
-        </div>
+                <div class="containerUserAnswers">
+          
+                    <h5>Q1: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 4    
+                    </h5>
+                    
+                </div>
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q8: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 3              
-            </h5>
-        </div>
+                <div class="containerUserAnswers">
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q9: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 3              
-            </h5>
-        </div>
+                    <h5>Q2: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 3    
+                    </h5>
+                </div>
+                
+                <div class="containerUserAnswers">
+                   
+                    <h5>Q3: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 1   
+                    </h5>
+                </div>
+                
+                <div class="containerUserAnswers">
+        
+                    <h5>Q4: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 5   
+                    </h5>
+                </div>
+                
+                <div class="containerUserAnswers">
+                
+                    <h5>Q5: "I think that parliament should do more for the environment..."
+                        <br><br>               
+                        Your answer (number): 1    
+                    </h5>
+                </div>
+            
+                <div class="containerUserAnswers">
+                  
+                    <h5>Q6: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 4              
+                    </h5>
+                </div>
+               
+                <div class="containerUserAnswers">
+                    
+                    <h5>Q7: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 2              
+                    </h5>
+                </div>
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q10: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 5              
-            </h5>
-        </div>
+                <div class="containerUserAnswers">
+         
+                    <h5>Q8: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 3              
+                    </h5>
+                </div>
+             
+                <div class="containerUserAnswers">
+                   
+                    <h5>Q9: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 3              
+                    </h5>
+                </div>
+              
+                <div class="containerUserAnswers">
+                 
+                    <h5>Q10: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 5              
+                    </h5>
+                </div>
+        
+                <div class="containerUserAnswers">
+              
+                    <h5>Q11: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 1              
+                    </h5>
+                </div>
+         
+                <div class="containerUserAnswers">
+        
+                    <h5>Q12: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 4              
+                    </h5>
+                </div>
+        
+                <div class="containerUserAnswers">
+                  
+                    <h5>Q13: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 2              
+                    </h5>
+                </div>
+         
+                <div class="containerUserAnswers">
+              
+                    <h5>Q14: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 5              
+                    </h5>
+                </div>
+         
+                <div class="containerUserAnswers">
+               
+                    <h5>Q15: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 5              
+                    </h5>
+                </div>
+            
+                <div class="containerUserAnswers">
+            
+                    <h5>Q16: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 2              
+                    </h5>
+                </div>
+        
+                <div class="containerUserAnswers">
+          
+                    <h5>Q17: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 4              
+                    </h5>
+                </div>
+        
+                <div class="containerUserAnswers">
+          
+                    <h5>Q18: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 3              
+                    </h5>
+                </div>
+        
+                <div class="containerUserAnswers">
+        
+                    <h5>Q19: "I think that parliament should do more for the environment..."
+                        <br><br>
+                        Your answer (number): 1              
+                    </h5>
+                </div>
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q11: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 1              
-            </h5>
-        </div>
+            </div>
+            
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q12: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 4              
-            </h5>
-        </div>
+            <!-- AD - This container customises the heading to the candidate overviews-->
+            <hr>        
+            <div class="container7c">
+                <h6 class = "textRestyle1">Your top candidate matches (click to view):</h6>
+            </div>
+        
+                <!-- AD - button container, containing the Suitable Candidate 
+                    ShowHide Toggle buttons -->
+                <div class="container3">
+                    <input class = "buttonShowHide button1" id = "btnCandResults1" 
+                    type="button" value="1st Place" onclick="ShowHideToggle1(this)" >           
+                    
+                    <input class = "buttonShowHide button1" id = "btnCandResults2" 
+                    type="button" value="2nd Place" onclick="ShowHideToggle2(this)" >             
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q13: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 2              
-            </h5>
-        </div>
+                    <input class = "buttonShowHide button1" id = "btnCandResults3" 
+                    type="button" value="3rd Place" onclick="ShowHideToggle3(this)" >             
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q14: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 5              
-            </h5>
-        </div>
+                </div>
+                <br>        
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q15: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 5              
-            </h5>
-        </div>
+                <!-- AD - This 'hidden div' shows the 1st place suitable candidate.
+                        The div becomes visible once the '1st Place Candidate'
+                        button is pressed. Conversely, the div disappears once the
+                        button is pressed again (toggle button).-->
+                <div id="dvCandResults1" style="display: none">               
+                    <div class="container6">         
+                        <h5>Suitable Candidate Match: 1st Place                  
+                            <br><br>
+                            Mikko Savolainen
+                            <br><br>
+                            <hr>
+                            <br>
+                            Overview: I care deeply about the environment and social issue.
+                            <br><br>
+                            sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                            officia deserunt mollit anim id est laborum.
+                        </h5>
+                            <!-- AD - button container, containing the compareResults 
+                            ShowHide Toggle button -->                    
+                        <div class="containerCompareResults"> 
+                            <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                            type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                        </div>               
+                    </div>  
+                </div>
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q16: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 2              
-            </h5>
-        </div>
+                <!-- AD - This 'hidden div' shows the 2nd place suitable candidate.
+                        The div becomes visible once the '2nd Place Candidate'
+                        button is pressed. Conversely, the div disappears once the
+                        button is pressed again (toggle button).-->       
+                <div id="dvCandResults2" style="display: none">             
+                    <!-- AD - This section shows the top suitable candidate(s)-->
+                    <div class="container6">         
+                        <h5>Suitable Candidate Match: 2nd Place 
+                            <br><br>
+                            Sara Koskinen 
+                            <br><br>
+                            <hr>
+                            <br>
+                            Overview: I care deeply about the environment and social issue.
+                            <br><br>
+                            sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                            officia deserunt mollit anim id est laborum.
+                        </h5>
+                            <!-- AD - button container, containing the compareResults 
+                            ShowHide Toggle button -->                    
+                        <div class="containerCompareResults"> 
+                            <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                            type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                        </div> 
+                    </div>  
+                </div>
 
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q17: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 4              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q18: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 3              
-            </h5>
-        </div>
-
-        <!-- AD - Results colourings and text -->
-        <div class="container8">
-            <!-- AD - Results answer -->
-            <h5>Q19: "I think that parliament should do more for the environment..."
-                <br><br>
-                Your answer (Number): 1              
-            </h5>
-        </div>
-
-        <hr>
-
-        <!-- AD - This container customises the heading to the candidate overviews-->
-        <div class="container7">
-            <h3>Your candidate matches:</h3>
-        </div>  
-
-        <!-- AD - Matched candidate colourings and text -->
-        <div class="container6">
-            <!-- AD - Overview info about the matched candidate -->
-            <h5>Suitable candidate number 1 (the best match):                
-                <br><br>
-                Mikki Savolainen
-                <br><br>
+                <!-- AD - This 'hidden div' shows the 3rd place suitable candidate.
+                        The div becomes visible once the '3rd Place Candidate'
+                        button is pressed. Conversely, the div disappears once the
+                        button is pressed again (toggle button).-->         
+                <div id="dvCandResults3" style="display: none">    
+                
+                    <!-- AD - This section shows the top suitable candidate(s)-->
+                    <div class="container6">         
+                        <h5>Suitable Candidate Match: 3rd Place 
+                            <br><br>
+                            Timo Salomaa
+                            <br><br>
+                            <hr>
+                            <br>
+                            Overview: I care deeply about the environment and social issue.
+                            <br><br>
+                            sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                            officia deserunt mollit anim id est laborum.
+                        </h5>                                       
+                        <!-- AD - button container, containing the compareResults 
+                        ShowHide Toggle button -->                    
+                        <div class="containerCompareResults"> 
+                            <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                            type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                        </div> 
+                    </div>  
+                </div>
+            
                 <hr>
-                <br>
-                Overview: I care deeply about the environment and social issue.
-                <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
-            </h5>
-        </div>
+                <!-- End of the candidate matches section-->
 
-         <!-- AD - Matched candidate colourings and text -->
-         <div class="container6">
-            <!-- AD - Overview info about the matched candidate -->
-            <h5>Suitable candidate number 2 (the 2nd best match):
-                <br><br>
-                Sara Koskinen 
-                <br><br>
-                <hr>
-                <br>
-                Overview: I care deeply about the environment and social issue.
-                <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
-            </h5>
-        </div>
 
-         <!-- AD - Matched candidate colourings and text -->
-         <div class="container6">
-            <!-- AD - Overview info about the matched candidate -->
-            <h5>Suitable candidate number 3 (the 3rd best match):
-                <br><br>
-                Timo Salomaa
-                <br><br>
-                <hr>
-                <br>
-                Overview: I care deeply about the environment and social issue.
-                <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
-            </h5>
-        </div>
 
-        <!-- End of the candidate intro / overview section-->
-        <hr>
-
-        <!-- AD - Beginning of the selection button section (answers)-->
         <div class="container2">           
             <!-- AD - A small container to amend the disclaimer background section-->
             <div class="container4">  
@@ -304,10 +352,9 @@
 		    
             <hr>      
     
-            <!-- AD - A container for the login and registration buttons-->
+            <!-- AD - button container, containing buttons-->
             <div class="container3">
 
-                <!-- AD - Buttons for login and registration-->
                 <button class="button-main button1"><b>RESTART</b></button>
                 
                 <button class="button-main button1"><b>HOME</b></button>
@@ -318,7 +365,85 @@
         </div>
 
     <!-- AD - End of the central (yellow container)-->
-    </div>
+    </div>  
+
+
+            <!-- AD - This is the function for the ShowHideToggle 
+                for the 1st Place Suitable Candidate-->
+
+            <!-- AD - This HTML markup contains a DIV, which contains inside of it
+                another div element, which possesses show / hide functionality.
+                The button has been assigned a JavaScript Onclick event handler.
+                When clicked, the function is executed. Furthermore, 
+                based on the value of the button, the HTML div toggle 
+                functionality will be executed. AKA the div will be shown, 
+                and the button text and colour changed.-->       
+                <script type="text/javascript">
+                    function ShowHideToggle1(btnCandResults1) {
+                        var dvCandResults1 = document.getElementById("dvCandResults1");
+                        if (btnCandResults1.value == "1st Place") {
+                            dvCandResults1.style.display = "block";
+                            btnCandResults1.value = "HIDE";
+                            btnCandResults1.style.backgroundColor = "#E76F51";
+                            
+                        } else {
+                            dvCandResults1.style.display = "none";
+                            btnCandResults1.value = "1st Place";
+                            btnCandResults1.style.backgroundColor = "#2A9D8F";                           
+                        }
+                    }
+           
+		            /* AD - This is the function for the ShowHideToggle 
+		                for the 2nd Place Suitable Candidate */		          
+                    function ShowHideToggle2(btnCandResults2) {
+                        var dvCandResults2 = document.getElementById("dvCandResults2");
+                        if (btnCandResults2.value == "2nd Place") {
+                            dvCandResults2.style.display = "block";
+                            btnCandResults2.value = "HIDE";
+                            btnCandResults2.style.backgroundColor = "#E76F51";
+                        } else {
+                            dvCandResults2.style.display = "none";
+                            btnCandResults2.value = "2nd Place";
+                            btnCandResults2.style.backgroundColor = "#2A9D8F";    
+                        }
+                    }
+    
+
+
+		            /* AD - This is the function for the ShowHideToggle 
+		                for the 3rd Place Suitable Candidate */          
+                    function ShowHideToggle3(btnCandResults3) {
+                        var dvCandResults3 = document.getElementById("dvCandResults3");
+                        if (btnCandResults3.value == "3rd Place") {
+                            dvCandResults3.style.display = "block";
+                            btnCandResults3.value = "HIDE";
+                            btnCandResults3.style.backgroundColor = "#E76F51";
+                        } else {
+                            dvCandResults3.style.display = "none";
+                            btnCandResults3.value = "3rd Place";
+                            btnCandResults3.style.backgroundColor = "#2A9D8F";    
+                        }
+                    }
+       
+            
+
+		            /* AD - This is the function for the ShowHideToggle 
+		                for the User Results (answers) */             
+                    function ShowHideToggle4(btnCandResults3) {
+                        var dvUserResults = document.getElementById("dvUserResults");
+                        if (btnUserResults.value == "ANSWERS") {
+                            dvUserResults.style.display = "block";
+                            btnUserResults.value = "HIDE";
+                            btnUserResults.style.backgroundColor = "#E76F51";
+                        } else {
+                            dvUserResults.style.display = "none";
+                            btnUserResults.value = "ANSWERS";
+                            btnUserResults.style.backgroundColor = "#2ea100";    
+                        }
+                    }
+                </script>
+        
+                
     
     <!-- AD - includes the footer component into this page 
     (albeit not visible) -->
