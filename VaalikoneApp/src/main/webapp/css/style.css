@@ -459,6 +459,25 @@ contains the candidate table data */
     font-weight: bold;     
 }
 
+/* AD - Customises the ShowHide 'ANSWERS' Button stylings */
+.buttonShowHide2 {
+    background-color: #2ea100;
+    border: none;
+    color: rgba(255, 255, 255, 0.829); 
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    margin: 20px 10px 0px 10px; 
+    width: 90px;   
+    
+    font-weight: bold;     
+}
+
 /* AD - Questionnaire button modifications */
 .questionnaireButton {
     background-color: #2A9D8F;
