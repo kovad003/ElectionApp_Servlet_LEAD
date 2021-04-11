@@ -296,7 +296,7 @@ contains the candidate table data */
 /* AD - Customises the Answers hidden div
 	on the questionnaireResults page colourings */
     .containerUserAnswers {        
-        background-color: #247e00c4;
+        background-color: #589e3cc4;
         color: rgba(255, 255, 255, 0.829);
         border-radius: 10px; 
         padding: 0.1px 10px 0.1px 10px;   
