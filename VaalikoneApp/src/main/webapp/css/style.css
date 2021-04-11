@@ -108,6 +108,15 @@
     .containerUpdateCandidatesTable {
     max-width: 99% !important;
     }
+
+    /* AD - Cutomises the 'your questionnaire results'
+    and 'your suitable candidate matches' text on the
+    questionnaireResults page. Ensures that the text
+    still looks good on small screens. */
+    .textRestyle1 {
+    font-size:small !important;
+   }
+   
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -355,6 +364,27 @@ contains the candidate table data */
     color:#264653; 
     text-align: center; 
     width: 100%;               
+}
+
+/* AD - Cutomises the 'your answers'
+and container on the
+questionnaireResults page */
+.container7b {          
+    padding: 0.1px 10px 0.1px 10px; 
+    margin-top: 0px;
+    margin-bottom: 2px;              
+    color:#264653;    
+    height: 60px; 
+}
+
+/* AD - Cutomises the 'your top candidate matches'
+container on the questionnaireResults page */
+.container7c {          
+    padding: 0.1px 10px 0.1px 10px; 
+    margin-top: 0px;
+    margin-bottom: 20px;              
+    color:#264653;    
+    height: 60px;   
 }
 
 /* AD - Customises the Team member overviews */
@@ -689,5 +719,5 @@ padding-bottom: 20px;
 and 'your suitable candidate matches' text on the
 questionnaireResults page */
 .textRestyle1 {
- font-size:large !important;
+ font-size:large;
 }
