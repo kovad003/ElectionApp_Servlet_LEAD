@@ -291,16 +291,49 @@
                         <!-- AD - button container, containing the compareResults 
                         ShowHide Toggle button -->                    
                         <div class="containerCompareResults"> 
-                            <input class = "buttonShowHide3 button1" id = "btnCompareResults" 
-                            type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                            <input class = "buttonShowHide3 button1" id = "btnCompareResults3" 
+                            type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle7(this)" >                
                         </div> 
                     </div>  
                 </div>
             
                 <hr>
                 <!-- End of the candidate matches section-->
+                
+                
 
-
+<!-- AD - This 'hidden div' shows the 3rd Compare Results (answers).
+	            The div becomes visible once the 'COMPARE YOUR ANSWERS'
+	            button is pressed. Conversely, the div disappears once the
+	            button is pressed again (toggle button).-->
+	            <div id="dvCompareResults3" style="display: none">
+	
+	                <div class="containerCompareAnswers">
+	          
+	                    <h5>Q1: "I think that parliament should do more for the environment..."
+	                        <br><br>
+	                        Your answer (number): 4    
+	                    </h5>
+	                    
+	                </div>
+	
+	                <div class="containerCompareAnswers">
+	
+	                    <h5>Q2: "I think that parliament should do more for the environment..."
+	                        <br><br>
+	                        Your answer (number): 3    
+	                    </h5>
+	                </div>
+	                
+	                <div class="containerCompareAnswers">
+	                   
+	                    <h5>Q3: "I think that parliament should do more for the environment..."
+	                        <br><br>
+	                        Your answer (number): 1   
+	                    </h5>
+	                </div>               
+	
+	            </div> 
  
 
 
@@ -411,7 +444,7 @@
 
 
                       /* AD - This is the function for the ShowHideToggle 
-		                for the compareResults (answers) */             
+		                for the 1st compareResults (answers) */             
                         function ShowHideToggle5(btnCompareResults) {
                         var dvCompareResults = document.getElementById("dvCompareResults");
                         if (btnCompareResults.value == "COMPARE YOUR ANSWERS") {
@@ -440,11 +473,22 @@
                             btnCompareResults2.style.backgroundColor = "purple";    
                         }
                     }
-                      
-                      
-                      
-                      
-                      
+                        
+                        
+                        /* AD - This is the function for the 3rd ShowHideToggle 
+		                for the compareResults (answers) */             
+                        function ShowHideToggle7(btnCompareResults3) {
+                        var dvCompareResults3 = document.getElementById("dvCompareResults3");
+                        if (btnCompareResults3.value == "COMPARE YOUR ANSWERS") {
+                        	dvCompareResults3.style.display = "block";
+                        	btnCompareResults3.value = "HIDE";
+                        	btnCompareResults3.style.backgroundColor = "#E76F51";
+                        } else {
+                        	dvCompareResults3.style.display = "none";
+                        	btnCompareResults3.value = "COMPARE YOUR ANSWERS";
+                        	btnCompareResults3.style.backgroundColor = "purple";    
+                        }
+                    }        
                       
                 </script>
         
