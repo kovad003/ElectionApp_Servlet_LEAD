@@ -53,15 +53,15 @@
 
                 <input class = "buttonShowHide button1" id = "btnCandResults1" 
                 type="button" value="1st Place" onclick="ShowHideToggle1(this)" >
-                </input>
+          
                 
                 <input class = "buttonShowHide button1" id = "btnCandResults2" 
                 type="button" value="2nd Place" onclick="ShowHideToggle2(this)" >
-                </input>
+              
 
                 <input class = "buttonShowHide button1" id = "btnCandResults3" 
                 type="button" value="3rd Place" onclick="ShowHideToggle3(this)" >
-                </input>
+               
 
             </div>
             <br>
@@ -396,7 +396,7 @@
         -->
         
         
-         <!-- AD - This is the function for the ShowHideToggle 
+         	<!-- AD - This is the function for the ShowHideToggle 
                 for the 1st Place Suitable Candidate-->
 
             <!-- AD - This HTML markup contains a DIV, which contains inside of it
@@ -405,16 +405,19 @@
                 When clicked, the function is executed. Furthermore, 
                 based on the value of the button, the HTML div toggle 
                 functionality will be executed. AKA the div will be shown, 
-                and the button text and colour changed.-->      
+                and the button text and colour changed.-->       
                 <script type="text/javascript">
                     function ShowHideToggle1(btnCandResults1) {
                         var dvCandResults1 = document.getElementById("dvCandResults1");
                         if (btnCandResults1.value == "1st Place") {
                             dvCandResults1.style.display = "block";
                             btnCandResults1.value = "HIDE";
+                            btnCandResults1.style.backgroundColor = "#E76F51";
+                            
                         } else {
                             dvCandResults1.style.display = "none";
                             btnCandResults1.value = "1st Place";
+                            btnCandResults1.style.backgroundColor = "#2A9D8F";                           
                         }
                     }
                 </script>
@@ -427,9 +430,11 @@
                         if (btnCandResults2.value == "2nd Place") {
                             dvCandResults2.style.display = "block";
                             btnCandResults2.value = "HIDE";
+                            btnCandResults2.style.backgroundColor = "#E76F51";
                         } else {
                             dvCandResults2.style.display = "none";
                             btnCandResults2.value = "2nd Place";
+                            btnCandResults2.style.backgroundColor = "#2A9D8F";    
                         }
                     }
                 </script>
@@ -443,9 +448,11 @@
                         if (btnCandResults3.value == "3rd Place") {
                             dvCandResults3.style.display = "block";
                             btnCandResults3.value = "HIDE";
+                            btnCandResults3.style.backgroundColor = "#E76F51";
                         } else {
                             dvCandResults3.style.display = "none";
                             btnCandResults3.value = "3rd Place";
+                            btnCandResults3.style.backgroundColor = "#2A9D8F";    
                         }
                     }
                 </script>

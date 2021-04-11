@@ -456,12 +456,10 @@ contains the candidate table data */
     margin: 20px 10px 0px 10px; 
     width: 90px;   
     
-    font-weight: bold;
-     
+    font-weight: bold;     
 }
 
 /* AD - Questionnaire button modifications */
-
 .questionnaireButton {
     background-color: #2A9D8F;
 }
