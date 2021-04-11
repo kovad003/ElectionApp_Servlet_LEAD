@@ -37,132 +37,10 @@
 	        </h5>
         </div>
         
-        <!-- AD - This container customises the heading to the candidate overviews-->
-        <hr>        
-        <div class="container7">
-            <h3>Your candidate matches (click to view):</h3>
-        </div>
-      
-            <!-- AD - button container, containing the Suitable Candidate 
-                ShowHide Toggle buttons -->
-            <div class="container3">
-                <input class = "buttonShowHide button1" id = "btnCandResults1" 
-                type="button" value="1st Place" onclick="ShowHideToggle1(this)" >           
-                
-                <input class = "buttonShowHide button1" id = "btnCandResults2" 
-                type="button" value="2nd Place" onclick="ShowHideToggle2(this)" >             
+        <!-- AD - Start of the User Answers section-->
 
-                <input class = "buttonShowHide button1" id = "btnCandResults3" 
-                type="button" value="3rd Place" onclick="ShowHideToggle3(this)" >             
-
-            </div>
-            <br>        
-
-            <!-- AD - This 'hidden div' shows the 1st place suitable candidate.
-                      The div becomes visible once the '1st Place Candidate'
-                      button is pressed. Conversely, the div disappears once the
-                      button is pressed again (toggle button).-->
-            <div id="dvCandResults1" style="display: none">               
-                <div class="container6">         
-                    <h5>Suitable Candidate Match: 1st Place                  
-                        <br><br>
-                        Mikko Savolainen
-                        <br><br>
-                        <hr>
-                        <br>
-                        Overview: I care deeply about the environment and social issue.
-                        <br><br>
-                        sed do eiusmod tempor incididunt ut labore 
-                        et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                        officia deserunt mollit anim id est laborum.
-                    </h5>
-                        <!-- AD - button container, containing the compareResults 
-                        ShowHide Toggle button -->                    
-                    <div class="containerCompareResults"> 
-                        <input class = "buttonShowHide3 button1" id = "btncompareResults" 
-                        type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
-                    </div>               
-                </div>  
-            </div>
-
-
-            <!-- AD - This 'hidden div' shows the 2nd place suitable candidate.
-                    The div becomes visible once the '2nd Place Candidate'
-                    button is pressed. Conversely, the div disappears once the
-                    button is pressed again (toggle button).-->       
-            <div id="dvCandResults2" style="display: none">             
-                <!-- AD - This section shows the top suitable candidate(s)-->
-                <div class="container6">         
-                    <h5>Suitable Candidate Match: 2nd Place 
-                        <br><br>
-                        Sara Koskinen 
-                        <br><br>
-                        <hr>
-                        <br>
-                        Overview: I care deeply about the environment and social issue.
-                        <br><br>
-                        sed do eiusmod tempor incididunt ut labore 
-                        et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                        officia deserunt mollit anim id est laborum.
-                    </h5>
-                        <!-- AD - button container, containing the compareResults 
-                        ShowHide Toggle button -->                    
-                    <div class="containerCompareResults"> 
-                        <input class = "buttonShowHide3 button1" id = "btncompareResults" 
-                        type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
-                    </div> 
-                </div>  
-            </div>
-
-
-            <!-- AD - This 'hidden div' shows the 3rd place suitable candidate.
-                    The div becomes visible once the '3rd Place Candidate'
-                    button is pressed. Conversely, the div disappears once the
-                    button is pressed again (toggle button).-->         
-            <div id="dvCandResults3" style="display: none">    
-              
-                <!-- AD - This section shows the top suitable candidate(s)-->
-                <div class="container6">         
-                    <h5>Suitable Candidate Match: 3rd Place 
-                        <br><br>
-                        Timo Salomaa
-                        <br><br>
-                        <hr>
-                        <br>
-                        Overview: I care deeply about the environment and social issue.
-                        <br><br>
-                        sed do eiusmod tempor incididunt ut labore 
-                        et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                        officia deserunt mollit anim id est laborum.
-                    </h5>                                       
-                    <!-- AD - button container, containing the compareResults 
-                    ShowHide Toggle button -->                    
-                    <div class="containerCompareResults"> 
-                        <input class = "buttonShowHide3 button1" id = "btncompareResults" 
-                        type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
-                    </div> 
-                </div>  
-            </div>
-        
-            <hr>
-            <!-- End of the candidate matches section-->
-
-            <!-- AD - Start of the User Answers section-->
-
-            <div class="container7">
-                <h3>Your answers (click to view):</h3>
+            <div class="container7b">
+                <h6 class = "textRestyle1">Your answers (click to view):</h6>
             </div>  
 
             <!-- AD - button container, containing the UserResults 
@@ -336,7 +214,128 @@
                 </div>
 
             </div>
-            <hr>
+            
+
+            <!-- AD - This container customises the heading to the candidate overviews-->
+            <hr>        
+            <div class="container7c">
+                <h6 class = "textRestyle1">Your top candidate matches (click to view):</h6>
+            </div>
+        
+                <!-- AD - button container, containing the Suitable Candidate 
+                    ShowHide Toggle buttons -->
+                <div class="container3">
+                    <input class = "buttonShowHide button1" id = "btnCandResults1" 
+                    type="button" value="1st Place" onclick="ShowHideToggle1(this)" >           
+                    
+                    <input class = "buttonShowHide button1" id = "btnCandResults2" 
+                    type="button" value="2nd Place" onclick="ShowHideToggle2(this)" >             
+
+                    <input class = "buttonShowHide button1" id = "btnCandResults3" 
+                    type="button" value="3rd Place" onclick="ShowHideToggle3(this)" >             
+
+                </div>
+                <br>        
+
+                <!-- AD - This 'hidden div' shows the 1st place suitable candidate.
+                        The div becomes visible once the '1st Place Candidate'
+                        button is pressed. Conversely, the div disappears once the
+                        button is pressed again (toggle button).-->
+                <div id="dvCandResults1" style="display: none">               
+                    <div class="container6">         
+                        <h5>Suitable Candidate Match: 1st Place                  
+                            <br><br>
+                            Mikko Savolainen
+                            <br><br>
+                            <hr>
+                            <br>
+                            Overview: I care deeply about the environment and social issue.
+                            <br><br>
+                            sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                            officia deserunt mollit anim id est laborum.
+                        </h5>
+                            <!-- AD - button container, containing the compareResults 
+                            ShowHide Toggle button -->                    
+                        <div class="containerCompareResults"> 
+                            <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                            type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                        </div>               
+                    </div>  
+                </div>
+
+                <!-- AD - This 'hidden div' shows the 2nd place suitable candidate.
+                        The div becomes visible once the '2nd Place Candidate'
+                        button is pressed. Conversely, the div disappears once the
+                        button is pressed again (toggle button).-->       
+                <div id="dvCandResults2" style="display: none">             
+                    <!-- AD - This section shows the top suitable candidate(s)-->
+                    <div class="container6">         
+                        <h5>Suitable Candidate Match: 2nd Place 
+                            <br><br>
+                            Sara Koskinen 
+                            <br><br>
+                            <hr>
+                            <br>
+                            Overview: I care deeply about the environment and social issue.
+                            <br><br>
+                            sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                            officia deserunt mollit anim id est laborum.
+                        </h5>
+                            <!-- AD - button container, containing the compareResults 
+                            ShowHide Toggle button -->                    
+                        <div class="containerCompareResults"> 
+                            <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                            type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                        </div> 
+                    </div>  
+                </div>
+
+                <!-- AD - This 'hidden div' shows the 3rd place suitable candidate.
+                        The div becomes visible once the '3rd Place Candidate'
+                        button is pressed. Conversely, the div disappears once the
+                        button is pressed again (toggle button).-->         
+                <div id="dvCandResults3" style="display: none">    
+                
+                    <!-- AD - This section shows the top suitable candidate(s)-->
+                    <div class="container6">         
+                        <h5>Suitable Candidate Match: 3rd Place 
+                            <br><br>
+                            Timo Salomaa
+                            <br><br>
+                            <hr>
+                            <br>
+                            Overview: I care deeply about the environment and social issue.
+                            <br><br>
+                            sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                            officia deserunt mollit anim id est laborum.
+                        </h5>                                       
+                        <!-- AD - button container, containing the compareResults 
+                        ShowHide Toggle button -->                    
+                        <div class="containerCompareResults"> 
+                            <input class = "buttonShowHide3 button1" id = "btncompareResults" 
+                            type="button" value="COMPARE YOUR ANSWERS" onclick="ShowHideToggle5(this)" >                
+                        </div> 
+                    </div>  
+                </div>
+            
+                <hr>
+                <!-- End of the candidate matches section-->
+
 
 
         <div class="container2">           
@@ -367,9 +366,8 @@
 
     <!-- AD - End of the central (yellow container)-->
     </div>  
-    
-       
-    
+
+
             <!-- AD - This is the function for the ShowHideToggle 
                 for the 1st Place Suitable Candidate-->
 
@@ -448,6 +446,7 @@
                         }
                     }
                 </script>
+        
                 
     
     <!-- AD - includes the footer component into this page 
