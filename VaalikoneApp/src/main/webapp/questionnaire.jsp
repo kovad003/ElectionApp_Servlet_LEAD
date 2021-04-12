@@ -168,72 +168,99 @@
                 <form id="form" action="/SubmitAnswer" method="POST">              
              
                 
-	            <ul id="questionsContainer">        
+	            <ul id="questionsContainer2">        
 	            
-	            <div id="q1">
+	            <div id="q1a">
 	                  <li style="display:list-item">
 	                      
-	                      <h3>1) This is hidden div 1 </h3>
+	                      <h3>1) This is hidden div 1 </h3>                      
 	                      
-	                      
-	                      <c:forEach begin="0" end="0" var="question" items="${requestScope.questionlist}" >
-	
-								
-								
-						        <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->
-						    
-	                                <!-- ******************************************************************************************************** -->
-	                                    
+	                      <c:forEach begin="0" end="0" var="question" items="${requestScope.questionlist}" >	
+															
+						        <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->						    
+	                                	                                    
                                     <input hidden ="question_text" type = "text" name = "question_text${question.id}"  value="${question.question}">
                                                           
                                     <!-- Display Radio buttons -->
                                     <label class = "questionnaireSelect">
                                         <b>SELECT :</b>
-                                    </label>                                                                         
-	
-		        		    	                  
-		                      <input type = "radio" name = "selected${question.id}"  value="1">
-		                      <input type = "radio" name = "selected${question.id}"  value="2">
-		                      <input type = "radio" name = "selected${question.id}"  value="2">
-		                      <input type = "radio" name = "selected${question.id}"  value="3">
-		                      <input type = "radio" name = "selected${question.id}"  value="4"> 
+                                    </label>       		    	                  
+				                      <input type = "radio" name = "selected${question.id}"  value="1">
+				                      <input type = "radio" name = "selected${question.id}"  value="2">
+				                      <input type = "radio" name = "selected${question.id}"  value="2">
+				                      <input type = "radio" name = "selected${question.id}"  value="3">
+				                      <input type = "radio" name = "selected${question.id}"  value="4"> 	                      
 		                      
-		                      
-		                      </c:forEach>              
+		                     </c:forEach>              
 		                  
-		                  </li>
-		                </div>
-		            
-		                <div id="q2"  >
-		                  <li style="display:none">
-		                    <h3>Q2) This is hidden div 2 </h3>
-		                    <input type="radio" name="q2" value="1"/>1<br/>
-		                    <input type="radio" name="q2" value="2"/>2<br/>
-		                    <input type="radio" name="q2" value="3"/>3<br/>
-		                    <input type="radio" name="q2" value="4"/>4<br/>
-		                    <input type="radio" name="q2" value="4"/>5<br/>
-		                  </li>
-		                </div>
+	                  	</li>
+	                </div>
+	                
+	                
+	                
+	                
+	                <div id="q2a">
+	                  <li style="display:none">
+	                      
+	                      <h3>1) This is hidden div 2 </h3>                      
+	                      
+	                      <c:forEach begin="1" end="1" var="question" items="${requestScope.questionlist}" >	
+															
+						        <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->						    
+	                                	                                    
+                                    <input hidden ="question_text" type = "text" name = "question_text${question.id}"  value="${question.question}">
+                                                          
+                                    <!-- Display Radio buttons -->
+                                    <label class = "questionnaireSelect">
+                                        <b>SELECT :</b>
+                                    </label>       		    	                  
+				                      <input type = "radio" name = "selected${question.id}"  value="1">
+				                      <input type = "radio" name = "selected${question.id}"  value="2">
+				                      <input type = "radio" name = "selected${question.id}"  value="2">
+				                      <input type = "radio" name = "selected${question.id}"  value="3">
+				                      <input type = "radio" name = "selected${question.id}"  value="4"> 	                      
+		                      
+		                     </c:forEach>              
+		                  
+	                  	</li>
+	                </div>
+	                
+	                
+	                  <div id="q3a">
+	                  <li style="display:none">
+	                      
+	                      <h3>1) This is hidden div 3 </h3>                      
+	                      
+	                      <c:forEach begin="2" end="2" var="question" items="${requestScope.questionlist}" >	
+															
+						        <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->						    
+	                                	                                    
+                                    <input hidden ="question_text" type = "text" name = "question_text${question.id}"  value="${question.question}">
+                                                          
+                                    <!-- Display Radio buttons -->
+                                    <label class = "questionnaireSelect">
+                                        <b>SELECT :</b>
+                                    </label>       		    	                  
+				                      <input type = "radio" name = "selected${question.id}"  value="1">
+				                      <input type = "radio" name = "selected${question.id}"  value="2">
+				                      <input type = "radio" name = "selected${question.id}"  value="2">
+				                      <input type = "radio" name = "selected${question.id}"  value="3">
+				                      <input type = "radio" name = "selected${question.id}"  value="4"> 	                      
+		                      
+		                     </c:forEach>              
+		                  
+	                  	</li>
+	                </div>
+	                       
 		
-		                <div id="q3" >
-		                  <li  style="display:none">
-		                    <h3>Q3) This is hidden div 3 </h3>
-		                    <input type="radio" name="q3" value="1"/>1<br/>
-		                    <input type="radio" name="q3" value="2"/>2<br/>
-		                    <input type="radio" name="q3" value="3"/>3<br/>
-		                    <input type="radio" name="q3" value="4"/>4<br/>
-		                    <input type="radio" name="q3" value="4"/>5<br/>
-		                  </li>
-		                </div>	                
-		
-		                  <div id="q4" >
+		                  <div id="q4a" >
 		                    <li  style="display:none">
 		                      <h3>All Finished! Please click 'Submit' to continue </h3>                      
 		                    </li>
 		                  </div>
 		
 		            </ul>
-		                <button id="nextQuestion" >next</button>
+		                <button id="nextQuestion" >Next Question</button>
 	           
 	           
 	           
@@ -422,7 +449,7 @@
                  /* AD - This is an alternate script to facilitate the questionnaire functionality to
                  display the questions one by one (dynamically) */
 				  document.getElementById('nextQuestion').addEventListener("click",function(){            
-				 var questionsContainer = document.getElementById("questionsContainer");
+				 var questionsContainer = document.getElementById("questionsContainer2");
 				 var question = questionsContainer.getElementsByTagName("li");            
 				         for (var i=0; i < question.length-1; i++) 
 				         {
