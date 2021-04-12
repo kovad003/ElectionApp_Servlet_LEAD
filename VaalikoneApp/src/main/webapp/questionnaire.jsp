@@ -184,14 +184,10 @@
             
 
                     <!-- AD - Beginning of the section with 5 selection buttons-->
-                    <div class="input-radio">                  
-			            
-                        <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
-
-							<div class = "containerDynamicQuestion">
-							
-							
-							<ul id="questionsContainer">
+                    <div class="input-radio"> 
+                    
+                    
+                    <ul id="questionsContainer">
 					            <div id="q1">
 					                  <li style="display:list-item">
 					                      <h3>Q1) What is the answer to question 1? </h3>
@@ -245,15 +241,21 @@
 					
 					            </ul>
 					                <button id="next" >next</button>
-										
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                                     
+			            
+                        <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
+
+							<div class = "containerDynamicQuestion">
 							
 							
-							
-							
-							
-							
-							
-							
+									
 							
 							
 							
