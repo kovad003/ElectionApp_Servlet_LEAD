@@ -117,7 +117,60 @@
         
         
         
-        
+        <ul id="questionsContainer">
+            <div id="q1">
+                  <li style="display:list-item">
+                      <h3>Q1) What is the answer to question 1? </h3>
+                      <input type="radio" name="q1" value="1"/>1<br/>
+                      <input type="radio" name="q1" value="2"/>2<br/>
+                      <input type="radio" name="q1" value="3"/>3<br/>
+                      <input type="radio" name="q1" value="4"/>4<br/>
+                      <input type="radio" name="q1" value="4"/>5<br/>
+                  </li>
+                </div>
+            
+                <div id="q2"  >
+                  <li style="display:none">
+                    <h3>Q2) What is the answer to question 2? </h3>
+                    <input type="radio" name="q2" value="1"/>1<br/>
+                    <input type="radio" name="q2" value="2"/>2<br/>
+                    <input type="radio" name="q2" value="3"/>3<br/>
+                    <input type="radio" name="q2" value="4"/>4<br/>
+                    <input type="radio" name="q2" value="4"/>5<br/>
+                  </li>
+                </div>
+
+                <div id="q3" >
+                  <li  style="display:none">
+                    <h3>Q3) What is the answer to question 3? </h3>
+                    <input type="radio" name="q3" value="1"/>1<br/>
+                    <input type="radio" name="q3" value="2"/>2<br/>
+                    <input type="radio" name="q3" value="3"/>3<br/>
+                    <input type="radio" name="q3" value="4"/>4<br/>
+                    <input type="radio" name="q3" value="4"/>5<br/>
+                  </li>
+                </div>
+
+                <div id="q4" >
+                    <li  style="display:none">
+                      <h3>Q4) What is the answer to question 4? </h3>
+                      <input type="radio" name="q4" value="1"/>1<br/>
+                      <input type="radio" name="q4" value="2"/>2<br/>
+                      <input type="radio" name="q4" value="3"/>3<br/>
+                      <input type="radio" name="q4" value="4"/>4<br/>
+                      <input type="radio" name="q4" value="4"/>5<br/>
+                    </li>
+                  </div>
+
+                  <div id="q5" >
+                    <li  style="display:none">
+                      <h3>All Finished! Please click 'Submit' to continue </h3>            
+                      
+                    </li>
+                  </div>
+
+            </ul>
+                <button id="next" >next</button>
            
         
         <!-- AD - Beginning of the selection button section (answers)-->
@@ -125,7 +178,7 @@
 
             <form id="form" action="/SubmitAnswer" method="POST">
 
-                <!-- AD - The main questionnaire container 
+                <!-- AD - The main blue questionnaire container 
                     where the questions will be placed dynamically-->
                 <div class="container5a">                  
             
@@ -136,6 +189,75 @@
                         <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
 
 							<div class = "containerDynamicQuestion">
+							
+							
+							<ul id="questionsContainer">
+					            <div id="q1">
+					                  <li style="display:list-item">
+					                      <h3>Q1) What is the answer to question 1? </h3>
+					                      <input type="radio" name="q1" value="1"/>1<br/>
+					                      <input type="radio" name="q1" value="2"/>2<br/>
+					                      <input type="radio" name="q1" value="3"/>3<br/>
+					                      <input type="radio" name="q1" value="4"/>4<br/>
+					                      <input type="radio" name="q1" value="4"/>5<br/>
+					                  </li>
+					                </div>
+					            
+					                <div id="q2"  >
+					                  <li style="display:none">
+					                    <h3>Q2) What is the answer to question 2? </h3>
+					                    <input type="radio" name="q2" value="1"/>1<br/>
+					                    <input type="radio" name="q2" value="2"/>2<br/>
+					                    <input type="radio" name="q2" value="3"/>3<br/>
+					                    <input type="radio" name="q2" value="4"/>4<br/>
+					                    <input type="radio" name="q2" value="4"/>5<br/>
+					                  </li>
+					                </div>
+					
+					                <div id="q3" >
+					                  <li  style="display:none">
+					                    <h3>Q3) What is the answer to question 3? </h3>
+					                    <input type="radio" name="q3" value="1"/>1<br/>
+					                    <input type="radio" name="q3" value="2"/>2<br/>
+					                    <input type="radio" name="q3" value="3"/>3<br/>
+					                    <input type="radio" name="q3" value="4"/>4<br/>
+					                    <input type="radio" name="q3" value="4"/>5<br/>
+					                  </li>
+					                </div>
+					
+					                <div id="q4" >
+					                    <li  style="display:none">
+					                      <h3>Q4) What is the answer to question 4? </h3>
+					                      <input type="radio" name="q4" value="1"/>1<br/>
+					                      <input type="radio" name="q4" value="2"/>2<br/>
+					                      <input type="radio" name="q4" value="3"/>3<br/>
+					                      <input type="radio" name="q4" value="4"/>4<br/>
+					                      <input type="radio" name="q4" value="4"/>5<br/>
+					                    </li>
+					                  </div>
+					
+					                  <div id="q5" >
+					                    <li  style="display:none">
+					                      <h3>All Finished! Please click 'Submit' to continue </h3>            
+					                      
+					                    </li>
+					                  </div>
+					
+					            </ul>
+					                <button id="next" >next</button>
+										
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
 					        <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->
 					    	</div>
                                 <!-- ******************************************************************************************************** -->
