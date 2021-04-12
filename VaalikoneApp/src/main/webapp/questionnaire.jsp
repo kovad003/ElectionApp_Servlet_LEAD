@@ -313,7 +313,7 @@
                                         <b>SELECT :</b>
                                     </label>
                                     <label> <b>(1)</b>
-                                    <input type = "radio" name = "selected${question.id}"  value="1">
+                                    <input type = "radio" name = "selected${question.id}"  value="1" required>
                                     </label>
                                     <label> <b>(2)</b>
                                     <input type = "radio" name = "selected${question.id}" value = "2">

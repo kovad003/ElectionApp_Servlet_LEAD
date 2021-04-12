@@ -42,8 +42,16 @@ if (id!=null) {
                 <div class = "container-nav-links">
                     <a href="../ShowCandidates"><h5>Candidates</h5></a>
                 </div>
-                <div class = "container-nav-links">
-                    <a href="../index.jsp"><h5>Logout</h5></a>
+                <div class = "container-nav-links">               
+
+                    <a href=#>
+                    	<h5>
+		                    <form class=logout-button action="LogoutServlet" method="post">
+                        <input type="submit" value="Logout" >
+                        </form>
+                    	</h5>
+                    </a>
+
                 </div>           
             </div>
         </div>
@@ -77,7 +85,7 @@ else {
                     <a href="../ShowCandidates"><h5>Candidates</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                    <a href="../LoginPage.jsp"><h5>Login</h5></a>
+                  <a href="../loginPage.jsp"><h5>Login</h5></a>
                 </div>           
             </div>
         </div>
