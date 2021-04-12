@@ -16,8 +16,8 @@ import data.QAnswer;
 /**
  * Servlet implementation class EditQuastionnaire
  */
-@WebServlet("/EditQuastionnaire")
-public class EditQuastionnaire extends HttpServlet {
+@WebServlet("/EditQuestionnaire")
+public class EditQuestionnaire extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao_qanswer dao_qanswer=null;
 	
@@ -31,7 +31,7 @@ public class EditQuastionnaire extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditQuastionnaire() {
+    public EditQuestionnaire() {
         super();
         // TODO Auto-generated constructor stub
     }

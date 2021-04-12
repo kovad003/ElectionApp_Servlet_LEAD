@@ -68,10 +68,10 @@
 
                     <!-- AD - Beginning of the section with 5 selection buttons-->
                     <div class="input-radio">                  
-			            
+			            <p>Clicks: <a id="clicks">0</a></p>
                         <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
 
-							<div class = "containerDynamicQuestion">
+							<div id="q${question.id}" class = "containerDynamicQuestion">
 					        <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->
 					    	</div>
                                 <!-- ******************************************************************************************************** -->
@@ -97,7 +97,7 @@
                                     <label> <b>(5)</b>
                                     <input type = "radio" name = "selected${question.id}" value = "5">
                                     </label>                                                      
-
+									<button class="button-main button1 questionnaireButton" onclick="onClick()"><b>NEXT</b></button>
 	        		    </c:forEach>       		
 	        	
                     </div>          
@@ -138,7 +138,62 @@
 
 	<!-- AD - includes the footer component, into this page (albeit not visible) -->
 	<%@ include file="../components/footer.jsp" %>
+
+	<script type="text/javascript">
+		document.getElementById("button").addEventListener("click", function(event){
+		event.preventDefault()
+		});
+	
+		var clicks = 0;
+		function onClick() 
+		{
+		    clicks += 1;
+		    document.getElementById("clicks").innerHTML = clicks;
+		};
+		
+	</script>
+	<script>document.getElementById('firstName').value = 'john';</script>   
     
+	<script>
+                /* AD - This Script will facilitate the questionnaire functionality to
+                                display the questions one by one (dynamically) */
+                document.getElementById('next').addEventListener("click",function(){           
+                var questionsContainer = document.getElementById("questionsContainer");
+                var question = questionsContainer.getElementsByTagName("li");           
+                        for (var i=0; i < question.length-1; i++)
+                        {
+                            if(question[i].style.display == "list-item")
+                            {
+                                question[i].style.display = "none";
+                                question[i+1].style.display = "list-item";
+                                if(i == question.length-2 )
+                                    this.disabled = "true";
+                                break;
+                            }
+                        }               
+                    });
+               
+               
+                 /* AD - This is an alternate script to facilitate the questionnaire functionality to
+                 display the questions one by one (dynamically) */
+                  document.getElementById('nextQuestion').addEventListener("click",function(){           
+                 var questionsContainer = document.getElementById("questionsContainer2");
+                 var question = questionsContainer.getElementsByTagName("li");           
+                         for (var i=0; i < question.length-1; i++)
+                         {
+                             if(question[i].style.display == "list-item")
+                             {
+                                 question[i].style.display = "none";
+                                 question[i+1].style.display = "list-item";
+                                 if(i == question.length-2 )
+                                     this.disabled = "true";
+                 break;
+             }
+         }               
+     });
+                 </script>
+	
 
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->
+
