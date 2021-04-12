@@ -186,7 +186,7 @@
                       <h3>1) This is hidden div 1 </h3>
                       
                       
-                      <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
+                      <c:forEach begin="0" end="0" var="question" items="${requestScope.questionlist}" >
 
 							<div class = "containerDynamicQuestion">						
 							
@@ -217,9 +217,10 @@
                                     <input type = "radio" name = "selected${question.id}" value = "5">
                                     </label>                                                      
 
-	        		    </c:forEach>   
-                      
-          </form>    
+	        		    </c:forEach>  
+	        		    
+	        		
+           
            
                       
                                    
@@ -235,7 +236,7 @@
             
                 <div id="q2"  >
                   <li style="display:none">
-                    <h3>Q2) What is the answer to question 2? </h3>
+                    <h3>Q2) This is hidden div 2 </h3>
                     <input type="radio" name="q2" value="1"/>1<br/>
                     <input type="radio" name="q2" value="2"/>2<br/>
                     <input type="radio" name="q2" value="3"/>3<br/>
@@ -246,7 +247,7 @@
 
                 <div id="q3" >
                   <li  style="display:none">
-                    <h3>Q3) What is the answer to question 3? </h3>
+                    <h3>Q3) This is hidden div 3 </h3>
                     <input type="radio" name="q3" value="1"/>1<br/>
                     <input type="radio" name="q3" value="2"/>2<br/>
                     <input type="radio" name="q3" value="3"/>3<br/>
@@ -257,7 +258,7 @@
 
                 <div id="q4" >
                     <li  style="display:none">
-                      <h3>Q4) What is the answer to question 4? </h3>
+                      <h3>Q4) This is hidden div 4 </h3>
                       <input type="radio" name="q4" value="1"/>1<br/>
                       <input type="radio" name="q4" value="2"/>2<br/>
                       <input type="radio" name="q4" value="3"/>3<br/>
@@ -274,6 +275,17 @@
 
             </ul>
                 <button id="next" >next</button>
+           
+           
+           
+               <!-- AD - A container for the questionnaire button -->
+                <div class="container3">
+                    <button class="button-main button1 questionnaireButton" type="submit"><b>NEXT</b></button>
+                </div>   
+                      
+           
+           
+            </form>  
            
            
            
@@ -331,6 +343,7 @@
                     </div>          
 
                 </div>
+                
                 
                 
         <!-- AD - Delete this later
@@ -394,7 +407,8 @@
                 <div class="container3">
                     <button class="button-main button1 questionnaireButton" type="submit"><b>NEXT</b></button>
                 </div>  
-				-->
+                -->
+				
 				
 				<br>
                 <hr> 
