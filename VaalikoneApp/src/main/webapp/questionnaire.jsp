@@ -177,13 +177,13 @@
                 
                 
                 
-                
+            <form id="form" action="/SubmitAnswer" method="POST">    
                 
             <ul id="questionsContainer">
             <div id="q1">
                   <li style="display:list-item">
                       
-                      <h3>Q1) What is the answer to question 1? </h3>
+                      <h3>1) This is hidden div 1 </h3>
                       
                       
                       <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
@@ -219,24 +219,10 @@
 
 	        		    </c:forEach>   
                       
+          </form>    
+           
                       
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
+                                   
                       
                       <input type="radio" name="q1" value="1"/>1<br/>
                       <input type="radio" name="q1" value="2"/>2<br/>
