@@ -57,7 +57,7 @@
         <hr>     
         
         
-        <!-- AD - Delete this later
+        <!-- AD - Delete this later-->
          <ul id="questionsContainer">
             <div id="q1">
                   <li style="display:list-item">
@@ -113,7 +113,7 @@
             </ul>
                 <button id="next" >next</button>
         
-        -->
+
         
         
         <!--  AD delete later 2
@@ -176,9 +176,9 @@
                 
                 
                 
-                
+                <form id="form" action="/SubmitAnswer" method="POST">  
+                 
              
-             <form id="form" action="/SubmitAnswer" method="POST">  
                 
 	            <ul id="questionsContainer">        
 	            
@@ -188,7 +188,7 @@
 	                      <h3>1) This is hidden div 1 </h3>
 	                      
 	                      
-	                      <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
+	                      <c:forEach begin="0" end="0" var="question" items="${requestScope.questionlist}" >
 	
 								
 								
@@ -218,14 +218,7 @@
 	                                    <input type = "radio" name = "selected${question.id}" value = "5">
 	                                    </label>                                                      
 	
-		        		    	</c:forEach>  
-		        		    	
-		        		    	
-		        		    	
-		        		    	
-		        		    	
-		        		    	
-		        		    	
+		        		    	</c:forEach>  		    	
 		        		    	                                   
 		                      
 		                      <input type="radio" name="q1" value="1"/>1<br/>
@@ -288,7 +281,7 @@
                       -->
            
            
-        </form>  
+     </form> 
            
            
            
