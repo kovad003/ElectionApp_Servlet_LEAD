@@ -340,7 +340,7 @@ contains the candidate table data */
 /* AD - Customises the 'please register an account' message */
 .container7 {          
     padding: 0.1px 10px 0.1px 10px;              
-    color:#264653;                 
+    color:#264653;                     
 }
 
 /* AD - Questionnaire guidance for the user */
@@ -449,7 +449,7 @@ container on the questionnaireResults page */
 
 /* AD - Customises the main button stylings */
 .button-main {
-    background-color: #E76F51;
+    background: linear-gradient(180deg, #E76F51, 95%, #F4A261);
     border: none;
     color: rgba(255, 255, 255, 0.829); 
     padding: 10px;
