@@ -314,7 +314,7 @@ contains the candidate table data */
         of the questionnaire page, where the
         questions will be placed dynamically. */
 .container5a {
-    background-color:#264653;
+    background: linear-gradient(45deg, #264653, 50%, #2A9D8F, #F4A261);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;
 }
