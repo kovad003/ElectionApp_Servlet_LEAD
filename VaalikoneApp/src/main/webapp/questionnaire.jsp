@@ -165,8 +165,7 @@
                 
                 
                 
-                <form id="form" action="/SubmitAnswer" method="POST">  
-                 
+                <form id="form" action="/SubmitAnswer" method="POST">              
              
                 
 	            <ul id="questionsContainer">        
@@ -191,6 +190,8 @@
 	                                    <label class = "questionnaireSelect">
 	                                        <b>SELECT :</b>
 	                                    </label>
+	                                    
+	                                    <!--  
 	                                    <label> <b>(1)</b>
 	                                    <input type = "radio" name = "selected${question.id}"  value="1">
 	                                    </label>
@@ -205,7 +206,8 @@
 	                                    </label>
 	                                    <label> <b>(5)</b>
 	                                    <input type = "radio" name = "selected${question.id}" value = "5">
-	                                    </label>                                                      
+	                                    </label> 
+	                                    -->                                                     
 	
 		        		    	</c:forEach>  		    	
 		        		    	                                   
