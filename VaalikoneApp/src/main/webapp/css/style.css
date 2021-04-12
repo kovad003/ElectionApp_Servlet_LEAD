@@ -374,7 +374,7 @@ container on the questionnaireResults page */
 
 /* AD - Customises the Team member overviews */
 .container8 {
-    background-color:#264653;
+    background: linear-gradient(45deg, #264653, 50%, #2A9D8F, #F4A261);
     color: rgba(255, 255, 255, 0.856);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;   
