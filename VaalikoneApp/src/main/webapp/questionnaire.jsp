@@ -136,6 +136,32 @@
 
 	<!-- AD - End of the central (yellow container)-->
     </div>
+    
+    
+    			<!--  AD - Scripts / functions section */--> 
+			    <script>
+			    /* AD - This Script will facilitate the questionnaire functionality to
+			                    display the questions one by one (dynamically) */
+                 document.getElementById('next').addEventListener("click",function(){            
+                var questionsContainer = document.getElementById("questionsContainer");
+                var question = questionsContainer.getElementsByTagName("li");            
+                        for (var i=0; i < question.length-1; i++) 
+                        {
+                            if(question[i].style.display == "list-item")
+                            {
+                                question[i].style.display = "none";
+                                question[i+1].style.display = "list-item";
+                                if(i == question.length-2 )
+                                    this.disabled = "true";
+                                break;
+                            }
+                        }                
+                    });
+                 </script>
+    
+    
+    
+    
 
 	<!-- AD - includes the footer component, into this page (albeit not visible) -->
 	<%@ include file="../components/footer.jsp" %>
