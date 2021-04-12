@@ -29,13 +29,13 @@
         
         <!-- AD - customises the 'ADMIN: Updates Candidates' message-->
         <div class="container6a"> 
-        <h3>ADMIN PORTAL: Update Candidates</h3>
+        <h3 class = "adminTextCorrection1">ADMIN PORTAL: Update Candidates</h3>
         </div>
        
         <!-- AD - A small container to amend the admin note background section-->
         <div class="container4">             
             <!-- AD - Introductory statement about the ADMIN: Update Candidates page -->
-            <h5>ADMIN NOTE: Once logged in, this page allows for a 'Global Herald Newspaper' 
+            <h5 class = "adminTextCorrection2">ADMIN NOTE: Once logged in, this page allows for a 'Global Herald Newspaper' 
                 IT Admin to add, edit and remove candidate information.
                 <br><br>
                 Regular users and candidates do not have access to this page 
