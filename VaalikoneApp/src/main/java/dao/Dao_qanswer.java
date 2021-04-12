@@ -64,6 +64,30 @@ public class Dao_qanswer {
 		}
 	}
 	
+	public ArrayList<QAnswer> readAnswersForCandidate(String id) {
+		System.out.println("readAnswersForCandidate()");
+		ArrayList<QAnswer> answerList = new ArrayList<QAnswer>();
+		try {
+			String sql="select a.CANDIDATE_ID, a.QUESTION_ID, q.QUESTION, a.ANSWER from electionmachine.answers a join electionmachine.questions q on q.QUESTION_ID=a.QUESTION_ID where CANDIDATE_ID = ?";
+			PreparedStatement stmt=conn.prepareStatement(sql);
+			stmt.setString(1, id);
+			ResultSet RS=stmt.executeQuery();
+			while(RS.next())
+			{
+				QAnswer qanswer = new QAnswer();
+				qanswer.setCId(RS.getInt("CANDIDATE_ID"));
+				qanswer.setQId(RS.getInt("QUESTION_ID"));
+				qanswer.setQTxt(RS.getString("QUESTION"));
+				qanswer.setAnswer(RS.getInt("ANSWER"));
+				answerList.add(qanswer);
+			}
+			return answerList;
+		}
+		catch(SQLException e) {
+			return null;
+		}
+	}
+	
 	// Will insert new record to the answers table
 	public void insertAnswer(QAnswer a) {
 		System.out.println("insertAnswer()");
@@ -100,19 +124,6 @@ public class Dao_qanswer {
 		}	
 	}
 	
-//	List<Student> students = ...
-//			Connection con = ...
-//	String insertSql = "INSERT INTO student VALUES (?, ?, ?)";
-//	PreparedStatement pstmt = con.prepareStatement(insertSql);
-//	for (Student student : students) {
-//	    pstmt.setString(1, student.getId()); //not sure if String or int or long
-//	    pstmt.setString(2, student.getName());
-//	    pstmt.setString(3, student.getCity());
-//	    pstmt.addBatch();
-//	}
-//	pstmt.executeBatch();
-//	//close resources...
-	
 	public ArrayList<QAnswer> updateAnswer(QAnswer a) {
 		System.out.println("updateAnswer(QAnswer a)");
 		try {
@@ -135,25 +146,6 @@ public class Dao_qanswer {
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
 			return readAllAnswer();
-		}
-		catch(SQLException e) {
-			return null;
-		}
-	}
-
-	public QAnswer readAnswer(String id) {
-		QAnswer a=null;
-		try {
-			String sql="select * from questions where id=?";
-			PreparedStatement pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1, id);
-			ResultSet RS=pstmt.executeQuery();
-			while (RS.next()){
-				a=new QAnswer();
-				a.setQId(RS.getInt("ANSWER_ID"));
-				a.setAnswer(RS.getInt("ANSWER"));
-			}
-			return a;
 		}
 		catch(SQLException e) {
 			return null;
