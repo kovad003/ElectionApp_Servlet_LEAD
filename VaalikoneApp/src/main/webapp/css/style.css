@@ -646,6 +646,7 @@ for specific cells (sich as update and delete
 /* AD - Customises the container for the dynamic question
         inside the questionnaire question section. */
 .containerDynamicQuestion {
+    background: linear-gradient(0deg, #0075ac, 90%, #264653);
     background-color:#0075ac;
     border-radius: 10px;    
     color: white;    
@@ -656,7 +657,7 @@ for specific cells (sich as update and delete
 /* AD - Customises the container for the dynamic candidate
         inside the questionnaire question section. */
 .containerDynamicCandidate {
-    background-color:#0075ac;
+    background: linear-gradient(0deg, #0075ac, 90%, #264653);
     border-radius: 10px;    
     color: white;    
     margin: 25px;
