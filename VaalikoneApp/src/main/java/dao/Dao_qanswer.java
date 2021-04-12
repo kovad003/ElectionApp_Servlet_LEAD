@@ -64,12 +64,35 @@ public class Dao_qanswer {
 		}
 	}
 	
+	public ArrayList<QAnswer> readAnswersForCandidate(String id) {
+		System.out.println("readAnswersForCandidate()");
+		ArrayList<QAnswer> answerList = new ArrayList<QAnswer>();
+		try {
+			String sql="select a.CANDIDATE_ID, a.QUESTION_ID, q.QUESTION, a.ANSWER from electionmachine.answers a join electionmachine.questions q on q.QUESTION_ID=a.QUESTION_ID where CANDIDATE_ID = ?";
+			PreparedStatement stmt=conn.prepareStatement(sql);
+			stmt.setString(1, id);
+			ResultSet RS=stmt.executeQuery();
+			while(RS.next())
+			{
+				QAnswer qanswer = new QAnswer();
+				qanswer.setCId(RS.getInt("CANDIDATE_ID"));
+				qanswer.setQId(RS.getInt("QUESTION_ID"));
+				qanswer.setQTxt(RS.getString("QUESTION"));
+				qanswer.setAnswer(RS.getInt("ANSWER"));
+				answerList.add(qanswer);
+			}
+			return answerList;
+		}
+		catch(SQLException e) {
+			return null;
+		}
+	}
+	
 	// Will insert new record to the answers table
 	public void insertAnswer(QAnswer a) {
 		System.out.println("insertAnswer()");
 		try {
-			//CANDIDATE_ID has to be added later
-			String sql="insert into answers (QUESTION_ID, ANSWER) values (?, ?)";
+			String sql="insert into answers (CANDIDATE_ID, QUESTION_ID, ANSWER) values (?, ?, ?)";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setInt(1, a.getAnswer());
 			pstmt.setInt(2, a.getQId());
@@ -77,9 +100,30 @@ public class Dao_qanswer {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
+		}	
 	}
+	
+	// Will insert new record to the answers table
+	public void insertAllAnswer(ArrayList<QAnswer> answerList) {
+		System.out.println("insertAllAnswer()");
+		try {
+			String sql="insert into answers (CANDIDATE_ID, QUESTION_ID, ANSWER, COMMENTS) values (?, ?, ?, ?)";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			
+			for (QAnswer qAnswer : answerList) {
+				pstmt.setInt(1, qAnswer.getCId());
+				pstmt.setInt(2, qAnswer.getQId());
+				pstmt.setInt(3, qAnswer.getAnswer());
+				pstmt.setString(4, "candidate's answer to question");
+				pstmt.addBatch();
+			}
+			pstmt.executeBatch();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
 	public ArrayList<QAnswer> updateAnswer(QAnswer a) {
 		System.out.println("updateAnswer(QAnswer a)");
 		try {
@@ -108,22 +152,4 @@ public class Dao_qanswer {
 		}
 	}
 
-	public QAnswer readAnswer(String id) {
-		QAnswer a=null;
-		try {
-			String sql="select * from questions where id=?";
-			PreparedStatement pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1, id);
-			ResultSet RS=pstmt.executeQuery();
-			while (RS.next()){
-				a=new QAnswer();
-				a.setQId(RS.getInt("ANSWER_ID"));
-				a.setAnswer(RS.getInt("ANSWER"));
-			}
-			return a;
-		}
-		catch(SQLException e) {
-			return null;
-		}
-	}
 }
