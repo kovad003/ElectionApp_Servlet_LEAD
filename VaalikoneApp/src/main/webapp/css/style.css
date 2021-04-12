@@ -275,8 +275,8 @@ contains the candidate table data */
 }
 
 /* AD - Customises the disclaimer colourings */
-.container4 {
-    background-color:#264653;
+.container4 { 
+    background: linear-gradient(0deg, #264653, 90%, #2A9D8F);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;  
     color: rgba(255, 255, 255, 0.658);                    
@@ -304,7 +304,7 @@ contains the candidate table data */
 /* AD - Customises the introduction colourings on the welcome page
         and in addition, the candidate page introductory message */
 .container5 {
-    background-color:#2A9D8F;
+    background: linear-gradient(180deg, #264653, 20%, #2A9D8F);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;             
     color: rgba(255, 255, 255, 0.658);                 
@@ -321,7 +321,7 @@ contains the candidate table data */
 
 /* AD - Customises the Welcome message colourings */
 .container6 {
-    background-color:#F4A261;
+    background: linear-gradient(180deg, #E76F51, 20%, #F4A261);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;  
     margin: 10px auto;                                   
