@@ -51,7 +51,8 @@
     /* AD - Customizes the NAV-bar for smaller screens */
     .container-nav1 {                           
         width: 97% !important;                                    
-    }      
+    }    
+   
 }  
 
 /* Adjustments for a responsive website*/
@@ -722,4 +723,38 @@ div.container-nav-links input[type="submit" i]:hover {
 	color: rgba(255, 255, 255, 0.829) !important;
 }
 
+/* AD - Amendments to offset boostrap 
+    font-size conflicts, such as on the
+    admintUpdateCandidates.jsp page. */
+.adminTextCorrection1 {
+    font-weight: bold;
+	font-size: 22px !important;
+    /*AD - I removed the media query as it was not working
+        due to other conflicts that would take a
+        lot of time to investigate and fix.
+        Looks OK as is, on all screen sizes. */
+}
 
+/* AD - Amendments to offset boostrap 
+    font-size conflicts, such as on the
+    admintUpdateCandidates.jsp page. */
+    .adminTextCorrection2 {
+        font-weight: bold;
+        font-size: 16px !important;
+    /*AD - I removed the media query as it was not working
+        due to other conflicts that would take a
+        lot of time to investigate and fix.
+        Looks OK as is, on all screen sizes. */
+    }
+
+    /* AD - Amendments to offset boostrap 
+    font-size conflicts, such as on the
+    admintUpdateCandidates.jsp page. */
+    .adminTextCorrection3 {
+        font-weight: bold;
+        font-size: 16px !important;
+    /*AD - I removed the media query as it was not working
+        due to other conflicts that would take a
+        lot of time to investigate and fix.
+        Looks OK as is, on all screen sizes. */
+    }
