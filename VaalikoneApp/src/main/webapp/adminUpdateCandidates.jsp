@@ -20,8 +20,11 @@
 </head>
 <body>
 
-    <!-- AD - includes the navbar component, into this page -->
-    <%@ include file="../components/navbar.jsp" %> 
+    <!-- AD - includes the navbarBootstrap component, 
+    		which is modified version of our regular navbar,
+    		in order to offset some negative effects
+    		caused by bootsrap, onto our code. -->
+    <%@ include file="../components/navbarBootstrap.jsp" %> 
 
     <!-- AD - Beginning the central (yellow container)-->
     <div class="containerMainUpdateCandidates">
