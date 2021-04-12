@@ -170,13 +170,15 @@
                 
 	            <ul id="questionsContainer2">        
 	            
-	            <div id="q1a">
+	            
 	                  <li style="display:list-item">
 	                      
 	                      <h3>1) This is hidden div 1 </h3>                      
 	                      
-	                      <c:forEach begin="0" end="0" var="question" items="${requestScope.questionlist}" >	
-															
+	                      <c:forEach var="question" items="${requestScope.questionlist}" >	
+	                      
+						  <div id="q${question.id}">		
+						  						
 						        <h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->						    
 	                                	                                    
                                     <input hidden ="question_text" type = "text" name = "question_text${question.id}"  value="${question.question}">
@@ -191,10 +193,11 @@
 				                      <input type = "radio" name = "selected${question.id}"  value="3">
 				                      <input type = "radio" name = "selected${question.id}"  value="4"> 	                      
 		                      
+		                     </div>
 		                     </c:forEach>              
 		                  
 	                  	</li>
-	                </div>
+	               
 	                
 	                
 	                
