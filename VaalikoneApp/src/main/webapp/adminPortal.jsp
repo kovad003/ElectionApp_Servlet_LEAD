@@ -38,7 +38,8 @@
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Question Data </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Answers Data </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Account Data </b></u></a></td></tr>                  
-                    <tr><td></td><td><br><input type="submit" value="LOGOUT"></td></tr>
+                    <tr><td></td><td><br>
+
                     </table>
                     <hr>        
             </form> 
