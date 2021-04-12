@@ -653,10 +653,10 @@ for specific cells (sich as update and delete
     padding: 0.1px 10px 0.1px 10px;  
 }
 
-/* AD - Customises the container for the dynamic question
+/* AD - Customises the container for the dynamic candidate
         inside the questionnaire question section. */
 .containerDynamicCandidate {
-    background-color:#E76F51;
+    background-color:#0075ac;
     border-radius: 10px;    
     color: white;    
     margin: 25px;
