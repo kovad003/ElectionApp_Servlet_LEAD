@@ -100,17 +100,15 @@
                 <br><br>
                 <hr>
                 <br>
-                Overview: This project was a very enjoyable project, 
-                yet but it was certainly quite challenging.
-                During this project, I was mainly responsible for...
+                Overview: Whilst challenging, this project was rewarding in the end!
                 <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
+                I learned a lot from this project. Java servlets are 
+                certainly challenging at first, but rewarding in the end. 
+                I'm sure the database management skills I have acquired 
+                will come in handy in my future endeavours. 
+                My main contributions to the vaalikone project were 
+                within the scope of DAO/CRUD and login related issues 
+                where I had the chance to work with Evangelos. 
             </h5>
         </div>
 
