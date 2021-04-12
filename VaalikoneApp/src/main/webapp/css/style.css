@@ -44,16 +44,14 @@
 
     .input-radio {
     font-size: small;
-    width: 110% !important;
-    
+    width: 110% !important;    
     padding: 0.1px 10px 0.1px 10px !important;  /*AD Needed on the questionnaire page */ 
     }  
 
     /* AD - Customizes the NAV-bar for smaller screens */
     .container-nav1 {                           
         width: 97% !important;                                    
-    }  
-    
+    }      
 }  
 
 /* Adjustments for a responsive website*/
@@ -157,7 +155,6 @@ on the adminUpdateCandidate page */
     margin: 25px auto 25px auto;                
 }
 
-
 /* AD - Customises the yellow container
 on the adminUpdateCandidate page, which
 contains the candidate table data */
@@ -167,11 +164,7 @@ contains the candidate table data */
     border-radius: 10px;         
     background-color:rgba(214, 214, 214, 0.822); /* AD -A unique shade for the data in the tables*/
     box-shadow: 0 2px 16px 2px #264653;         
-    margin: 25px auto 25px auto;    
-    
-    /*
-    background-color:rgba(255, 255, 255, 0.336);
-    */
+    margin: 25px auto 25px auto;   
 }
 
 /* AD - Customises the main election machine questionnaire (yellow container) */
@@ -179,7 +172,7 @@ contains the candidate table data */
     max-width: 50%;
     padding: 30px;
     border-radius: 10px;         
-    background-color: #E9C46A;
+    background: linear-gradient(0deg,#F4A261, 10%, #E9C46A);
     box-shadow: 0 2px 16px 2px #264653;         
     margin: 25px auto 60px auto;                
 }
@@ -191,8 +184,7 @@ contains the candidate table data */
     border-radius: 10px;         
     background-color: #E9C46A;
     box-shadow: 0 2px 16px 2px #264653;         
-    margin: 70px auto 60px auto;
-    
+    margin: 70px auto 60px auto;    
     display: flex;
     justify-content: center;             
 }
@@ -200,11 +192,9 @@ contains the candidate table data */
 /* AD - Customises the registration page orange box */
 .container1a {
     background-color:#F4A261;
-    border-radius: 10px; 
-    
+    border-radius: 10px;    
     margin: 10px auto;
     padding: 10px;
-
     max-width: 30%;
     text-align: center;
     height: 80%;
@@ -218,8 +208,7 @@ contains the candidate table data */
     border-radius: 10px;         
     background-color:#F4A261;
     box-shadow: 0 2px 16px 2px #264653;         
-    margin: 10px;
-    
+    margin: 10px;    
     display: flex;
     justify-content: center;                 
 }
@@ -231,8 +220,7 @@ contains the candidate table data */
     border-radius: 10px;         
     background: linear-gradient(0deg, #E76F51, #F4A261);
     box-shadow: 0 2px 16px 2px #264653;         
-    margin: 10px;
-    
+    margin: 10px;    
     display: flex;
     justify-content: center;                 
 }
@@ -722,7 +710,6 @@ questionnaireResults page */
     }
     
 /*Les - Logout button*/
-
 div.container-nav-links input[type="submit" i] {
 	background-color: #E9C46A !important; 
 	color: #264653 !important;
@@ -735,7 +722,6 @@ div.container-nav-links input[type="submit" i] {
 div.container-nav-links input[type="submit" i]:hover {
 	background-color: #E9C46A !important; 
 	color: rgba(255, 255, 255, 0.829) !important;
-
 }
 
 
