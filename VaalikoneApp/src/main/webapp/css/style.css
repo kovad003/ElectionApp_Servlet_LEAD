@@ -593,9 +593,6 @@ text-decoration: none;
    
 background-color:#264653;
 color: rgba(255, 255, 255, 0.555);
-/*
-background-color: #E76F51;
-*/
 }
 
 /* AD - Table heading customisation
@@ -649,7 +646,7 @@ for specific cells (sich as update and delete
 /* AD - Customises the container for the dynamic question
         inside the questionnaire question section. */
 .containerDynamicQuestion {
-    background-color:#E76F51;
+    background-color:#0075ac;
     border-radius: 10px;    
     color: white;    
     margin: 5px 20px 5px 5px;
