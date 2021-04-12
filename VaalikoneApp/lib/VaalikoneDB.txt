@@ -478,3 +478,7 @@ insert into candidates values(999, "admin", "admin", "employee", "Helsinki", 99,
 /*updates username and password fields in candidate*/
 update candidates set USERNAME=CONCAT(RTRIM((LTRIM(SURNAME))), CONVERT(CANDIDATE_ID, CHAR)) limit 50;
 update candidates set PASSWORD=CONVERT(CONCAT(CANDIDATE_ID, (YEAR(CURDATE())-AGE)), CHAR) limit 50;
+
+/*makes CANDIDATE_ID auto incremented, and alters the initial number to 21 since we have 20 candidates*/
+ALTER TABLE CANDIDATES MODIFY CANDIDATE_ID INT AUTO_INCREMENT;
+ALTER TABLE CANDIDATES auto_increment = 21;

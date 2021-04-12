@@ -1,29 +1,10 @@
 
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.EventListener;
-import java.util.Map;
-import java.util.Set;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterRegistration;
 import javax.servlet.RequestDispatcher;
-import javax.servlet.Servlet;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
-import javax.servlet.SessionCookieConfig;
-import javax.servlet.SessionTrackingMode;
-import javax.servlet.FilterRegistration.Dynamic;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.descriptor.JspConfigDescriptor;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -62,7 +43,7 @@ public class AdminCandidates extends HttpServlet {
 		if(dao.getConnection())
 		{
 			System.out.println("Successfully connected to the database");
-			list=dao.readAllCandidate();
+			list=dao.readAllCandidateDesc();
 			System.out.println("Can_List: " + list);
 			
 			for (int i = 0; i < list.size(); i++) {

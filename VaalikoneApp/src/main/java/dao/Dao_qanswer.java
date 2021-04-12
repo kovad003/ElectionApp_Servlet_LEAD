@@ -68,7 +68,6 @@ public class Dao_qanswer {
 	public void insertAnswer(QAnswer a) {
 		System.out.println("insertAnswer()");
 		try {
-			//CANDIDATE_ID has to be added later
 			String sql="insert into answers (CANDIDATE_ID, QUESTION_ID, ANSWER) values (?, ?, ?)";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setInt(1, a.getAnswer());
