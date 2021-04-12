@@ -163,7 +163,7 @@
                 
                 
                 
-                
+                <hr>
                 
                 <form id="form" action="/SubmitAnswer" method="POST">              
              
@@ -184,39 +184,22 @@
 						    
 	                                <!-- ******************************************************************************************************** -->
 	                                    
-	                                    <input hidden ="question_text" type = "text" name = "question_text${question.id}"  value="${question.question}">
-	                                                          
-	                                    <!-- Display Radio buttons -->
-	                                    <label class = "questionnaireSelect">
-	                                        <b>SELECT :</b>
-	                                    </label>
-	                                    
-	                                    <!--  
-	                                    <label> <b>(1)</b>
-	                                    <input type = "radio" name = "selected${question.id}"  value="1">
-	                                    </label>
-	                                    <label> <b>(2)</b>
-	                                    <input type = "radio" name = "selected${question.id}" value = "2">
-	                                    </label>
-	                                    <label> <b>(3)</b>
-	                                    <input type = "radio" name = "selected${question.id}" value = "3">
-	                                    </label>
-	                                    <label> <b>(4)</b>
-	                                    <input type = "radio" name = "selected${question.id}" value = "4">
-	                                    </label>
-	                                    <label> <b>(5)</b>
-	                                    <input type = "radio" name = "selected${question.id}" value = "5">
-	                                    </label> 
-	                                    -->                                                     
+                                    <input hidden ="question_text" type = "text" name = "question_text${question.id}"  value="${question.question}">
+                                                          
+                                    <!-- Display Radio buttons -->
+                                    <label class = "questionnaireSelect">
+                                        <b>SELECT :</b>
+                                    </label>                                                                         
 	
-		        		    	</c:forEach>  		    	
-		        		    	                                   
+		        		    	                  
+		                      <input type = "radio" name = "selected${question.id}"  value="1">
+		                      <input type = "radio" name = "selected${question.id}"  value="2">
+		                      <input type = "radio" name = "selected${question.id}"  value="2">
+		                      <input type = "radio" name = "selected${question.id}"  value="3">
+		                      <input type = "radio" name = "selected${question.id}"  value="4"> 
 		                      
-		                      <input type="radio" name="q1" value="1"/>1<br/>
-		                      <input type="radio" name="q1" value="2"/>2<br/>
-		                      <input type="radio" name="q1" value="3"/>3<br/>
-		                      <input type="radio" name="q1" value="4"/>4<br/>
-		                      <input type="radio" name="q1" value="4"/>5<br/>
+		                      
+		                      </c:forEach>              
 		                  
 		                  </li>
 		                </div>
@@ -250,19 +233,20 @@
 		                  </div>
 		
 		            </ul>
-		                <button id="next" >next</button>
+		                <button id="nextQuestion" >next</button>
 	           
 	           
 	           
-	               <!-- AD - A container for the questionnaire button 
+	               <!-- AD - A container for the questionnaire button -->
 	                <div class="container3">
 	                    <button class="button-main button1 questionnaireButton" type="submit"><b>NEXT</b></button>
 	                </div>   
-                      -->
+                 
            
            
      </form> 
            
+     <hr>
            
            
            
@@ -433,6 +417,25 @@
                             }
                         }                
                     });
+			    
+			    
+                 /* AD - This is an alternate script to facilitate the questionnaire functionality to
+                 display the questions one by one (dynamically) */
+				  document.getElementById('nextQuestion').addEventListener("click",function(){            
+				 var questionsContainer = document.getElementById("questionsContainer");
+				 var question = questionsContainer.getElementsByTagName("li");            
+				         for (var i=0; i < question.length-1; i++) 
+				         {
+				             if(question[i].style.display == "list-item")
+				             {
+				                 question[i].style.display = "none";
+				                 question[i+1].style.display = "list-item";
+				                 if(i == question.length-2 )
+				                     this.disabled = "true";
+                 break;
+             }
+         }                
+     });
                  </script>
     
     
