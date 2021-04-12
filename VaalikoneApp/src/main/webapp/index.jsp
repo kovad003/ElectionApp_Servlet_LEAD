@@ -21,11 +21,7 @@
     <!-- AD - Beginning the central (yellow container)-->
     <div class="container">
         <i class="material-icons resize1">account_balance</i>
-<%--           <%String name = (String) session.getAttribute("name");%> --%>
-<%--         <h3>Welcome <%out.println(name); %></h3> --%>
-        <h3>Welcome, you have successfully logged in! </h3> 
-
-        
+    
         <!-- AD - customises the welcome message-->
         <div class="container6"> 
           
