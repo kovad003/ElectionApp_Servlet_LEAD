@@ -202,7 +202,7 @@
 	                <div id="q2a">
 	                  <li style="display:none">
 	                      
-	                      <h3>1) This is hidden div 2 </h3>                      
+	                      <h3>2) This is hidden div 2 </h3>                      
 	                      
 	                      <c:forEach begin="1" end="1" var="question" items="${requestScope.questionlist}" >	
 															
@@ -229,7 +229,7 @@
 	                  <div id="q3a">
 	                  <li style="display:none">
 	                      
-	                      <h3>1) This is hidden div 3 </h3>                      
+	                      <h3>3) This is hidden div 3 </h3>                      
 	                      
 	                      <c:forEach begin="2" end="2" var="question" items="${requestScope.questionlist}" >	
 															
