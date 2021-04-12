@@ -57,7 +57,7 @@
         <hr>     
         
         
-        
+        <!-- AD - Delete this later
          <ul id="questionsContainer">
             <div id="q1">
                   <li style="display:list-item">
@@ -113,7 +113,7 @@
             </ul>
                 <button id="next" >next</button>
         
-        
+        -->
         
         
         
@@ -167,6 +167,64 @@
                     </div>          
 
                 </div>
+                
+                
+        <!-- AD - Delete this later
+        <div class="container2">            
+
+            <form id="form" action="/SubmitAnswer" method="POST">
+
+               
+                  
+                <div class="container5a">                  
+            
+
+                  
+                    <div class="input-radio">                  
+			            
+                        <c:forEach begin="0" end="18" var="question" items="${requestScope.questionlist}" >
+
+							<div class = "containerDynamicQuestion">
+					        <h3><c:out value = "${question.id}) ${question.question}"/></h3> 	</div>
+                                                                  
+                                    <input hidden ="question_text" type = "text" name = "question_text${question.id}"  value="${question.question}">
+                                                          
+                                   
+                                    <label class = "questionnaireSelect">
+                                        <b>SELECT :</b>
+                                    </label>
+                                    <label> <b>(1)</b>
+                                    <input type = "radio" name = "selected${question.id}"  value="1">
+                                    </label>
+                                    <label> <b>(2)</b>
+                                    <input type = "radio" name = "selected${question.id}" value = "2">
+                                    </label>
+                                    <label> <b>(3)</b>
+                                    <input type = "radio" name = "selected${question.id}" value = "3">
+                                    </label>
+                                    <label> <b>(4)</b>
+                                    <input type = "radio" name = "selected${question.id}" value = "4">
+                                    </label>
+                                    <label> <b>(5)</b>
+                                    <input type = "radio" name = "selected${question.id}" value = "5">
+                                    </label>                                                      
+
+	        		    </c:forEach>       		
+	        	
+                    </div>          
+
+                </div>
+                -->
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 
                 <!-- AD - A container for the questionnaire button
                 <div class="container3">
