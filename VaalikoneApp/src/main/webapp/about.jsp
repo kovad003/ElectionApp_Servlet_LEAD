@@ -31,7 +31,7 @@
         <div class="container5">
         <!-- AD - Introductory statement about the candidates page -->
         <h5>This section covers the team of the 'Global Herald Newspaper' as well as
-            the server programming team over at 'HÄMK's Finest.'
+            the server programming team over at 'HAMK's Finest.'
             <br><br>
             Have a quick read to find out more
             about each team member. In particular, you can find out what aspects of the
@@ -60,8 +60,8 @@
                 running this Election Machine. Our aim is to help election voters get matched with the
                 right candidate for them!
                 <br><br>
-                In order to create this Election Machine, we 'hired' the HÄMK's Finest server programming team.
-                This team is comprised of student server programmers from HÄMK polytechnic university, and
+                In order to create this Election Machine, we 'hired' the HAMK's Finest server programming team.
+                This team is comprised of student server programmers from HAMK polytechnic university, and
                 they created this Election Machine using Java server-side programming.         
                 <br><br>
                 Read on to meet the server programming team!
@@ -71,7 +71,7 @@
         <!-- AD - Team member 1 intro colourings and text -->
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidate -->
-            <h5>(HÄMK's Finest) Team member 1:
+            <h5>(HAMK's Finest) Team member 1:
                 <br><br>
                 Daniel Kovacs (Project Manager)
                 <br><br>
@@ -94,7 +94,7 @@
         <!-- AD - Team member 2 intro colourings and text -->
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidate -->
-            <h5>(HÄMK's Finest) Team member 2:
+            <h5>(HAMK's Finest) Team member 2:
                 <br><br>
                 Les Heidrich (Server Programmer)
                 <br><br>
@@ -115,30 +115,29 @@
         <!-- AD - Team member 3 intro colourings and text -->
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidate -->
-            <h5>(HÄMK's Finest) Team member 3:
+            <h5>(HAMK's Finest) Team member 3:
                 <br><br>
                 Ashley Davis (Server Programmer)
                 <br><br>
                 <hr>
                 <br>
-                Overview: This project was a very enjoyable project, 
-                yet but it was certainly quite challenging.
-                During this project, I was mainly responsible for...
+                Overview: Server cookies are tough cookies, but they're pretty tasty!
                 <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
+                For most of our team, servlets, DAO, and cookies were completely 
+                new topics to get to grips with. Nevertheless, with a bit of persistence 
+                and determination, the team worked hard, and things fell into place. 
+                During this project, my main contributions were towards the UI, 
+                Scrum planning, as well as some of the application's 
+                JavaScript 'dynamic' functionality. 
+                Our team worked very well together, despite the project challenges, 
+                and it was a real pleasure to be part of the team.
             </h5>
         </div>
 
         <!-- AD - Team member 4 intro colourings and text -->
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidate -->
-            <h5>(HÄMK's Finest) Team member 4:
+            <h5>(HAMK's Finest) Team member 4:
                 <br><br>
                 Evangelos Kaikas (Server Programmer)
                 <br><br>
@@ -167,7 +166,7 @@
             <div class="container5">  
             
                 <!-- AD - Questionnaire guidance for the user -->
-		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
+		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HAMK's Finest'
                 are to be held liable for any views or comments expressed by the candidates 
                 or users of this site. Your data is confidential and will not be shared or
                 sold in any capacity. All rights reserved.</h5>
