@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import data.Candidate;
 import data.Question;
 
 import java.sql.Connection;
@@ -43,6 +44,33 @@ public class Dao_question {
 			return false;
 		}
 	}
+	
+//	FOR EVANGELOS ##########
+//	public void insertQuestion(Question q)
+//	{
+//		try {
+//			// #1 Alter mysql query.
+//			String sql="INSERT INTO CANDIDATES (SURNAME, FIRSTNAME, PARTY, LOCATION, AGE, REASON_FOR_RUNNING, AIMS_AND_GOALS, PROFESSION) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+//			PreparedStatement pstmt=conn.prepareStatement(sql);
+//			//Setters and getters are from the model (question.java)
+//				pstmt.setInt(1, q.getId()); //1st ?
+//				pstmt.setString(2, q.getFName()); //2nd ?
+//				pstmt.setString(3, q.getParty()); //3rd ?
+//				pstmt.setString(4, q.getLocation());
+//				pstmt.setInt(5, q.getAge()); // QID -> int
+//				pstmt.setString(6, q.getReason()); //String(txt)->string
+//				pstmt.setString(7, q.getGoals());
+//				pstmt.setString(8, q.getProfession());
+//				pstmt.executeUpdate();
+//		}
+//		catch(SQLException e) {
+//			e.printStackTrace();
+//		}
+//		
+//	}
+	
+
+	
 	public ArrayList<Question> readAllQuestion() {
 		System.out.println("readAllQuestion()");
 		ArrayList<Question> list=new ArrayList<>();

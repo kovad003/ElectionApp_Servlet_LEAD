@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.Dao_answer;
 import data.Answer;
-import data.Question;
 
 /**
  * Servlet implementation class ShowAnswers

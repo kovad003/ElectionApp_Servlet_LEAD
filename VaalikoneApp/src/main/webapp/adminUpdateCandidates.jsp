@@ -53,7 +53,8 @@
     there is no difference:-->
     <div class="containerUpdateCandidatesTable">   
         <div>                                                                                             
-            <div class="table-responsive">          
+            <div class="table-responsive">
+            <form action = "/AdminAddCandidate" method="POST" id="addCandidate">          
                 <table class="table">                    
                     <thead class = "tableCustom1">
                         <tr>
@@ -70,20 +71,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class = "tableAddBackground"><a href="#"><u><b class = "tableAdd">ADD</b></u></a></td>                           <td><input type="text" name="CANDIDATE_ID"></td>
-                            <td><input type="text" name="SURNAME"></td>
-                            <td><input type="text" name="FIRSTNAME"></td>
-                            <td><input type="text" name="PARTY"></td>
-                            <td><input type="text" name="LOCATION"></td>
-                            <td><input type="text" name="AGE"></td>
-                            <td><input type="text" name="REASON_FOR_RUNNING"></td>
-                            <td><input type="text" name="AIMS_AND_GOALS"></td>
-                            <td><input type="text" name="PROFESSION"></td>                 
+                    
+                        <tr>                   
+                            <td class = "tableAddBackground"><Button type="submit"><b class = "tableAdd">ADD</b></Button></td>                           
+                            <td><input type="text" name="CANDIDATE_ID" placeholder="Auto incremented" disabled></td>
+                            <td><input type="text" name="SURNAME" placeholder="Cannot be blank."></td>
+                            <td><input type="text" name="FIRSTNAME" placeholder="Cannot be blank."></td>
+                            <td><input type="text" name="PARTY" placeholder="Cannot be blank."></td>
+                            <td><input type="text" name="LOCATION" placeholder="Cannot be blank."></td>
+                            <td><input type="number" name="AGE" placeholder="Cannot be blank."></td>
+                            <td><input type="text" name="REASON_FOR_RUNNING" placeholder="Cannot be blank."></td>
+                            <td><input type="text" name="AIMS_AND_GOALS" placeholder="Cannot be blank."></td>
+                            <td><input type="text" name="PROFESSION" placeholder="Cannot be blank."></td>             
                         </tr>
+                     
                     </tbody>                        
                             
                 </table>
+                </form>
             </div>
         </div>
     </div>
@@ -95,7 +100,8 @@
             there is no difference:-->
     <div class="containerUpdateCandidatesTable">   
         <div>                                                                                             
-            <div class="table-responsive">          
+            <div class="table-responsive">   
+                   
                 <table class="table">                    
                     <thead class = "tableCustom1">
                         <tr>
@@ -113,10 +119,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach begin="0" end="8" var="candidate" items="${requestScope.candidatelist}">
+                        <c:forEach var="candidate" items="${requestScope.candidatelist}">
 	                        <tr>
-	                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom2">UPDATE</b></u></a></td>                    
-	                            <td class = "tableCustom5"><a href="#"><u><b class = "tableCustom3">DELETE</b></u></a></td>
+	                            <td class = "tableCustom5"><Button type="submit"><b class = "tableCustom2">EDIT</b></Button></td>                    
+	                            <td class = "tableCustom5"><Button type="submit"><b class = "tableCustom3">DELETE</b></Button></td>  
 	                            <td><c:out value = "${candidate.id}"/></td>
 	                            <td><c:out value = "${candidate.SName}"/></td>
 	                            <td><c:out value = "${candidate.FName}"/></td>
@@ -130,9 +136,63 @@
                         </c:forEach>
                     </tbody>
                 </table>
-            </div>
+            </div>  
         </div>
     </div>
+    
+    <!-- Make it hidden, edit btn should be triggered with the delete link of the table. It should redirect to a new page where u can edit the data-->
+    <div>
+		<c:forEach var="candidate" items="${requestScope.candidatelist}">
+                   <form action = "/AdminEditCandidate" method="POST" id="updateCandidate"> 
+                       <input  size="" type="number" id="CID" name ="CID" value = "${candidate.id}">
+                       <br>
+                       <input type="text"  name ="SURENAME" value = "${candidate.SName}">
+                       <br>
+                       <input type="text" name ="FIRSTNAME" value = "${candidate.FName}">
+                       <br>
+                       <input type="text" name ="PARTY" value = "${candidate.party}">
+                       <br>
+                       <input type="text" name ="LOCATION" value = "${candidate.location}">
+                       <br>
+                       <input type="number" name ="AGE" value = "${candidate.age}">
+                       <br>
+                       <input type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}">
+                       <br>
+                       <input type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}">
+                       <br>
+                       <input type="text" name ="PROFESSION" value = "${candidate.profession}">
+                       <br>
+                       <Button type="submit" name="button"><b class = "tableCustom2">EDIT</b></Button>                    
+                   </form>
+            </c:forEach>
+       </div>
+           <div>
+           
+        <!-- Make it hidden, submit btn should be triggered with the delete link of the table-->
+		<c:forEach var="candidate" items="${requestScope.candidatelist}">
+                   <form action = "/AdminDeleteCandidate" method="POST" id="updateCandidate"> 
+                       <input  size="" type="number" id="CID" name ="CID" value = "${candidate.id}">
+                       <br>
+                       <input type="text"  name ="SURENAME" value = "${candidate.SName}">
+                       <br>
+                       <input type="text" name ="FIRSTNAME" value = "${candidate.FName}">
+                       <br>
+                       <input type="text" name ="PARTY" value = "${candidate.party}">
+                       <br>
+                       <input type="text" name ="LOCATION" value = "${candidate.location}">
+                       <br>
+                       <input type="number" name ="AGE" value = "${candidate.age}">
+                       <br>
+                       <input type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}">
+                       <br>
+                       <input type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}">
+                       <br>
+                       <input type="text" name ="PROFESSION" value = "${candidate.profession}">
+                       <br>
+                       <Button type="submit"><b class = "tableCustom3">DELETE</b></Button>
+                   </form>
+            </c:forEach>
+       </div>
     
     <!-- AD - includes the footer component into this page 
     (albeit not visible) -->

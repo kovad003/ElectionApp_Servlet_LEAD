@@ -13,8 +13,8 @@ import data.QAnswer;
 /**
  * Servlet implementation class SubmitAnswer
  */
-@WebServlet("/SubmitAnswer")
-public class SubmitAnswer extends HttpServlet {
+@WebServlet("/ReSubmitAnswers")
+public class ReSubmitAnswers extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
@@ -27,7 +27,7 @@ public class SubmitAnswer extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SubmitAnswer() {
+    public ReSubmitAnswers() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,7 +45,7 @@ public class SubmitAnswer extends HttpServlet {
 		
 		for (int i = 1; i <= selectionList.size()+1; i++) {
 			QAnswer qans = new QAnswer();
-			String questionText = request.getParameter("question_text" + i);
+			String questionText = request.getParameter("candidate_id");
 			String selected = request.getParameter("selected" + i); // The client's selections will be saved and stored in QAnswer objects.
 
 //			<<< Debugging Messages >>>
@@ -80,7 +80,7 @@ public class SubmitAnswer extends HttpServlet {
 //		rd.forward(request, response);
 		
 //		IF U ARE LOGGED IN AS ARE A VOTER / REGULAR USER
-		RequestDispatcher rd = request.getRequestDispatcher("/FindMatchingCandidates");
-		rd.forward(request, response);
+//		RequestDispatcher rd = request.getRequestDispatcher("/FindMatchingCandidates");
+//		rd.forward(request, response);
 	}
 }
