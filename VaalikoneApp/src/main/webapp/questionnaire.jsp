@@ -104,11 +104,12 @@
 
                 </div>
 
-                <!-- AD - A container for the questionnaire button-->
+                <!-- AD - A container for the questionnaire button
                 <div class="container3">
                     <button class="button-main button1 questionnaireButton" type="submit"><b>NEXT</b></button>
                 </div>  
-
+				-->
+				
 				<br>
                 <hr> 
 
