@@ -482,3 +482,16 @@ update candidates set PASSWORD=CONVERT(CONCAT(CANDIDATE_ID, (YEAR(CURDATE())-AGE
 /*makes CANDIDATE_ID auto incremented, and alters the initial number to 21 since we have 20 candidates*/
 ALTER TABLE CANDIDATES MODIFY CANDIDATE_ID INT AUTO_INCREMENT;
 ALTER TABLE CANDIDATES auto_increment = 21;
+
+-- create a table new_reviewed_questions
+CREATE TABLE NEW_QUESTIONS (
+   NEW_QUESTION_ID INTEGER NOT NULL AUTO_INCREMENT,
+   NEW_QUESTION VARCHAR (250),
+   PRIMARY KEY (NEW_QUESTION_ID)
+);
+
+select * from NEW_QUESTIONS;
+
+INSERT INTO NEW_QUESTIONS(NEW_QUESTION) VALUES ("The terminally ill must have the right to assisted death.");
+INSERT INTO NEW_QUESTIONS(NEW_QUESTION) VALUES ("Health and social services must be provided primarily as public services.");
+INSERT INTO NEW_QUESTIONS(NEW_QUESTION) VALUES ("Authorities need to address the problems of families with children more sensitively.");
