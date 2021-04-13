@@ -42,6 +42,7 @@
 					<tr><td><b class = "adminPortal4">Access:</b><a href="/siteArchitecture.jsp" target="_blank"> <u><b>Site Architecture </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/AdminCandidates" target="_blank"> <u><b>Candidate Data </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Question Data </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/AdminNewQuestions" target="_blank"> <u><b>New Questions </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Answers Data </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Account Data </b></u></a></td></tr>                  
                     <tr><td></td><td><br>

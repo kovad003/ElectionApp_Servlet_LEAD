@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
 import data.Question;
 import java.sql.Connection;
 
@@ -42,6 +43,22 @@ public class Dao_question {
 		}
 	}
 	
+	public ArrayList<Question> readNewQuestions() {
+		System.out.println("readNewQuestions()");
+		ArrayList<Question> list=new ArrayList<>();
+		try {
+			Statement stmt=conn.createStatement();
+			ResultSet RS=stmt.executeQuery("select * from new_questions ORDER BY NEW_QUESTION_ID DESC;");
+			while (RS.next()){
+				Question q=new Question();
+				q.setId(RS.getInt("NEW_QUESTION_ID"));
+				q.setQuestion(RS.getString("NEW_QUESTION"));
+				list.add(q);
+			}
+			return list;
+		}
+		catch(SQLException e) {
+			return null;
 
 	public void insertQuestion(String q)
 	{
@@ -56,7 +73,31 @@ public class Dao_question {
 		}
 	}
 	
-
+	public void insertNewQuestion(Question question){
+		try {
+			System.out.println("insertNewQuestion");
+			String sql="INSERT INTO new_questions (NEW_QUESTION) VALUES (?);";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, question.getQuestion());
+			pstmt.executeUpdate();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void deleteNewQuestion(String question){
+		try {
+			System.out.println("insertNewQuestion");
+			String sql="Delete FROM new_questions WHERE NEW_QUESTION_ID=?;"; // delete where ID=?
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, question);
+			pstmt.executeUpdate();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	public ArrayList<Question> readAllQuestion() {
 		System.out.println("readAllQuestion()");
