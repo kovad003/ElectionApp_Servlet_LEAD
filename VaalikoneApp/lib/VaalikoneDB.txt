@@ -544,5 +544,9 @@ UPDATE CANDIDATES SET PASSWORD='d714c3041785e26c727290c3c6ae29cd' WHERE CANDIDAT
 UPDATE CANDIDATES SET PASSWORD='4348c06d4728e3f70d1d0614a4da036b' WHERE CANDIDATE_ID=19;
 UPDATE CANDIDATES SET PASSWORD='79dd609358e791693346c7c10cc87bf3' WHERE CANDIDATE_ID=20;
 
-/*make candidate id starting with 1000 where not admin*/
+/*make candidate id starting with 1000 where not admin for candidates tbl*/
 UPDATE candidates SET CANDIDATE_ID=CANDIDATE_ID+1000 WHERE SURNAME <> "admin" LIMIT 50;
+
+/*make candidate id starting with 1000 where not admin for answers tbl*/
+update answers set candidate_id=candidate_id+1000 limit 500;
+

@@ -66,7 +66,7 @@
                         <tr>                   
                             <td class = "tableAddBackground"><Button type="submit"><b class = "tableAdd">ADD</b></Button></td>                           
                             <td><input type="text" name="NEW_QUESTION_ID" placeholder="Auto incremented" disabled></td>
-                            <td><input type="text" name="NEW_QUESTION" placeholder="Cannot be blank."></td>
+                            <td><input size="150" type="text" name="NEW_QUESTION" placeholder="Cannot be blank." required></td>
                         </tr>
                      
                     </tbody>                        
