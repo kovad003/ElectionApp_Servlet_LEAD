@@ -45,7 +45,7 @@ public class Dao_newquestion {
 	}
 	
 	
-	public void insertQuestion(Question q)
+	public void insertNewQuestion(Question q)
 	{
 		try {
 			// #1 Alter mysql query.

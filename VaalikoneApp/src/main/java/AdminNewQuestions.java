@@ -24,11 +24,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/AdminNewQuestions")
 public class AdminNewQuestions extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-private Dao_question dao=null;
+private Dao_question dao_question=null;
 	
 	@Override
 	public void init() {
-		dao=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
+		dao_question=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
 		System.out.println("");
 	}
 	
@@ -47,12 +47,32 @@ private Dao_question dao=null;
   
     		
     		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    		String sql = request.getParameter("NEWQUESTION");
+    		//String sql = request.getParameter("NEWQUESTION");
 
-    		if(dao.getConnection())
+    		ArrayList <Question> newQuestionsList = new ArrayList<Question>();
+    			
+    		if(dao_question.getConnection())
     		{
     		System.out.println("Successfully connected to the database");
-    		dao.insertQuestion(sql);
+    		newQuestionsList = dao_question.readNewQuestions();
+    		System.out.println(" new questions data: " + newQuestionsList);
+    		}
+    		else
+    		{
+    		System.out.println("Unable to fetch data from database!");
+    		}
+    		
+    		request.setAttribute("newQuestionsList", newQuestionsList); // Going to store arraylist as an attribute so we can acces it on the jsp page
+    		
+    		RequestDispatcher rd=request.getRequestDispatcher("/adminNewQuestions.jsp"); // will forwad arraylist to the jsp page
+   		 	rd.forward(request, response);
+    		
+    		
+    	/*
+    		if(dao_question.getConnection())
+    		{
+    		System.out.println("Successfully connected to the database");
+    		dao_question.insertQuestion(sql);
     		System.out.println(sql + " successfully inserted into new_questions");
     		}
     		else
@@ -62,5 +82,7 @@ private Dao_question dao=null;
     		
     		 RequestDispatcher rd=request.getRequestDispatcher("/adminNewQuestions.jsp");
     		 rd.forward(request, response);
+    		
+    	*/	
     		}
-    		}
+   }

@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import data.Candidate;
 import data.Question;
 
 import java.sql.Connection;
@@ -45,18 +44,36 @@ public class Dao_question {
 		}
 	}
 	
+	public ArrayList<Question> readNewQuestions() {
+		System.out.println("readNewQuestions()");
+		ArrayList<Question> list=new ArrayList<>();
+		try {
+			Statement stmt=conn.createStatement();
+			ResultSet RS=stmt.executeQuery("select * from new_questions ORDER BY NEW_QUESTION_ID DESC;");
+			while (RS.next()){
+				Question q=new Question();
+				q.setId(RS.getInt("NEW_QUESTION_ID"));
+				q.setQuestion(RS.getString("NEW_QUESTION"));
+				list.add(q);
+			}
+			return list;
+		}
+		catch(SQLException e) {
+			return null;
+		}
+	}
 	
-	public void insertQuestion(String NEW_QUESTION)
-	{
-	try {
-	String sql="INSERT INTO electionmachine.new_questions (NEW_QUESTION) VALUES (?)";
-	PreparedStatement pstmt=conn.prepareStatement(sql);
-	pstmt.setString(1, NEW_QUESTION);
-	pstmt.executeUpdate();
-	}
-	catch(SQLException e) {
-	e.printStackTrace();
-	}
+	public void insertNewQuestion(Question question){
+		try {
+			System.out.println("insertNewQuestion");
+			String sql="INSERT INTO new_questions (NEW_QUESTION) VALUES (?);";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, question.getQuestion());
+			pstmt.executeUpdate();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public ArrayList<Question> readAllQuestion() {
