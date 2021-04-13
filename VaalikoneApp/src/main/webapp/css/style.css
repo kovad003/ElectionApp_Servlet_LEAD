@@ -183,7 +183,7 @@ contains the candidate table data */
     max-width: 40%;
     padding: 30px;
     border-radius: 10px;         
-    background-color: #E9C46A;
+    background: linear-gradient(0deg,#F4A261, 10%, #E9C46A);
     box-shadow: 0 2px 16px 2px #264653;         
     margin: 70px auto 60px auto;    
     display: flex;
@@ -418,7 +418,7 @@ container on the questionnaireResults page */
 
 /* AD - Navbar customisations */
 .container-nav-links {
-    background-color: #E9C46A;
+    background: linear-gradient(0deg,#F4A261, 10%, #E9C46A);
     border-radius: 10px; 
     padding: 1px;         
     margin: 4px;              
