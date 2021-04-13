@@ -51,8 +51,8 @@
     /* AD - Customizes the NAV-bar for smaller screens */
     .container-nav1 {                           
         width: 97% !important;                                    
-    }    
-   
+    } 
+      
 }  
 
 /* Adjustments for a responsive website*/
@@ -115,7 +115,7 @@
     .textRestyle1 {
     font-size:small !important;
    }
-   
+     
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -123,7 +123,8 @@
 @media (min-width: 768px) {             
     h2{font-size: 1.75rem !important;}
     h3{font-size: 1.25rem !important;}
-    h5{font-size: 1rem !important;}
+    h5{font-size: 1rem !important;}  
+    
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -131,7 +132,8 @@
 @media (min-width: 992px) { 
     h2{font-size: 2rem !important;}
     h3{font-size: 1.5rem !important;} 
-    h5{font-size: 1rem !important;}
+    h5{font-size: 1rem !important;}  
+    
 }
 
 /* AD - Defines font size for the html page */
@@ -784,11 +786,6 @@ div.container-nav-links input[type="submit" i]:hover {
     margin-left: 07px;   
 }
 
-/* AD - Customises the questionnaire start Button
-          such as on the questionnaire.jsp */
-.centredCustom {
-	text-align: center;
-}
 
 
      
