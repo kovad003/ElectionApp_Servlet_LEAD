@@ -76,6 +76,19 @@ public class Dao_question {
 		}
 	}
 	
+	public void deleteNewQuestion(Question question){
+		try {
+			System.out.println("insertNewQuestion");
+			String sql="Delete FROM new_questions WHERE NEW_QUESTION_ID=?;"; // delete where ID=?
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, question.getQuestion());
+			pstmt.executeUpdate();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public ArrayList<Question> readAllQuestion() {
 		System.out.println("readAllQuestion()");
 		ArrayList<Question> list=new ArrayList<>();

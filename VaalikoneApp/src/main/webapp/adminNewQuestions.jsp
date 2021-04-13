@@ -99,8 +99,8 @@
                     <tbody>
                         <c:forEach var="new_question" items="${requestScope.newQuestionsList}">
 	                        <tr>
-	                            <td class = "tableCustom5"><Button type="submit"><b class = "tableCustom2">EDIT</b></Button></td>                    
-	                            <td class = "tableCustom5"><Button type="submit"><b class = "tableCustom3">DELETE</b></Button></td>  
+	                            <td class = "tableCustom5"><Button onclick="window.open('AdminEditNewQuestion')"><b class = "tableCustom2">EDIT</b></Button></td>                    
+	                            <td class = "tableCustom5"><Button onclick="window.open('AdminDeleteNewQuestion')"><b class = "tableCustom3">DELETE</b></Button></td>  
 	                            <td><c:out value = "${new_question.id}"/></td>
 	                            <td><c:out value = "${new_question.question}"/></td>
 	                             

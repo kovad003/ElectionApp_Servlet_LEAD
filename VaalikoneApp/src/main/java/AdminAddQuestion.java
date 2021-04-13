@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.Dao_newquestion;
+import dao.Dao_question;
 import data.Question;
 
 /**
@@ -17,12 +17,12 @@ import data.Question;
 @WebServlet("/AdminAddQuestion")
 public class AdminAddQuestion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Dao_newquestion  Dao_question=null;
+	private Dao_question  Dao_question=null;
 	
 	@Override
 	public void init() {
 
-		Dao_question=new Dao_newquestion("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
+		Dao_question=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
 		System.out.println("");
 	}
        
@@ -56,7 +56,7 @@ public class AdminAddQuestion extends HttpServlet {
 			System.out.println("No connection to database");
 		}
 		
-		response.sendRedirect("/adminNewQuestions.jsp");  
+		response.sendRedirect("/AdminNewQuestions");  
 		
 //		RequestDispatcher rd=request.getRequestDispatcher("/AdminNewQuestions"); // will forwad you back to the previous page to chekc new data.
 //		 	rd.forward(request, response);
