@@ -114,11 +114,11 @@
     
     <!-- Make it hidden, edit btn should be triggered with the delete link of the table. It should redirect to a new page where u can edit the data-->
     <div>
-		<c:forEach var="candidate" items="${requestScope.questionlist}">
+		<c:forEach var="question" items="${requestScope.questionlist}">
                    <form action = "/AdminEditCandidate" method="POST" id="updateQuestion"> 
-                       <input  size="" type="number" id="QID" name ="QID" value = "${question.id}">
+                       <input  size="" type="number" id="QID" name ="QID" value = "${new_question.id}">
                        <br>
-                       <input type="text"  name ="NEWQUESTION" value = "${question.Qnumber}">
+                       <input type="text"  name ="NEWQUESTION" value = "${new_question.question}">
                        <br>
                    </form>
             </c:forEach>
@@ -128,9 +128,9 @@
         <!-- Make it hidden, submit btn should be triggered with the delete link of the table-->
 		<c:forEach var="question" items="${requestScope.questionlist}">
                    <form action = "/AdminDeleteCandidate" method="POST" id="updateQuestion"> 
-                       <input  size="" type="number" id="QID" name ="QID" value = "${question.id}">
+                       <input  size="" type="number" id="QID" name ="QID" value = "${new_question.id}">
                        <br>
-                       <input type="text"  name ="NEWQUESTION" value = "${question.Qnumber}">
+                       <input type="text"  name ="NEWQUESTION" value = "${new_question.question}">
                        <br>
                        
                    </form>
