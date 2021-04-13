@@ -53,7 +53,7 @@
         <!-- AD - Questionnaire guidance for the user -->
         <div class="container7a">             
             <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
-            <a id="clicks"></a>
+        <!--  <a id="clicks"></a>  -->
         <!-- AD Click counter removed. Was only for Debugging purposes 
             <p> Clicks: <a id="clicks">1</a></p>-->
         </div>
@@ -189,7 +189,9 @@
 			q_id_prev = q_id - 1;
 			div_id_prev = string + q_id_prev;
 			
-		    document.getElementById("clicks").innerHTML = div_id; // Displaying counter
+			/* AD - Click counter (displaying) was removed. Was only for debugging purposes
+		    document.getElementById("clicks").innerHTML = div_id;
+			*/
 		    
 		    var div = document.getElementById(div_id); // Event Listener for question div.
 			div.style.display = 'block';
