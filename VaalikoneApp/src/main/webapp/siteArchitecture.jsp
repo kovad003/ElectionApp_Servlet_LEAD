@@ -43,7 +43,7 @@
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/registrationPage.jsp" target="_blank"> <u><b>registrationPage.jsp </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/questionnaireResults.jsp" target="_blank"> <u><b>questionnaireResults.jsp </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/AdminCandidates" target="_blank"> <u><b>Candidate Data </b></u></a></td></tr>                     
-                    <tr><td></td><td><br><input type="submit" value="LOGOUT"></td></tr>
+                    <tr><td></td><td><br><input class = "button-main button1 mainloginButton" type="submit" value="LOGOUT"></td></tr>
                     </table>
                     <hr>        
             </form> 
