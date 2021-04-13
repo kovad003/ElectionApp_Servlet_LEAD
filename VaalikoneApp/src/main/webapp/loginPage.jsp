@@ -44,7 +44,7 @@
                         <td><input type="password" name="pwd" required="required" /></td>
                     </tr>                    
                     <tr>                        
-                        <td><br><input type="submit" value="LOGIN" /></td>
+                        <td><br><input class = "button-main button1 mainloginButton" type="submit" value="LOGIN" /></td>
                     </tr>
                 </table>
                 <hr>        

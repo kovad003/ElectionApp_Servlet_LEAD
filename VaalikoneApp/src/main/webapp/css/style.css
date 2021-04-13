@@ -764,5 +764,23 @@ div.container-nav-links input[type="submit" i]:hover {
     }
 
     
-    
+    /* AD - Customises the 'main login Button' Button
+          such as on the loginPage.jsp */
+.mainloginButton {
+    background: linear-gradient(180deg, #264653 , 45%, #2A9D8F );
+    border: none;
+    color: rgba(255, 255, 255, 0.829);    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;    
+    width: 100px;    
+    font-weight: bold;    
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 07px;   
+}
      
