@@ -130,7 +130,7 @@
 						<button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
 						<button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
 						<button class="button-main button1 questionnaireButton" onclick="toMain()" id="cancel" style="display: none"><b>Cancel</b></button>
-						<button class="button-main button1 questionnaireButton" type="submit" id="submission" style="display: none"><b>Submit</b></button>                
+						<button class="buttonSubmit button1" type="submit" id="submission" style="display: none"><b>Submit</b></button>                
 						</div> 	
 				
 				<br>  

@@ -794,6 +794,28 @@ div.container-nav-links input[type="submit" i]:hover {
     justify-content: center;                              
 }
 
+/* AD - Customises the 'Submit' button on the 
+		questionnaire.jsp.*/
+.buttonSubmit {
+	background: linear-gradient(180deg, #0075ac, 95%, blue);
+    background-color: #0075ac;
+    border: none;
+    color: rgba(255, 255, 255, 0.829); 
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    margin: 20px 10px 0px 10px; 
+    width: 90px;    
+    font-weight: bold;
+    /*
+     background-color: #0075ac;
+    */   
+}
 
 
      
