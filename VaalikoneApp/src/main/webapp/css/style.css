@@ -786,6 +786,10 @@ div.container-nav-links input[type="submit" i]:hover {
     margin-left: 07px;   
 }
 
-
+/* AD - Centers the 'start' button on the 
+		questionnaire page */
+.centredButton {
+	text-align: center !important;	
+}
 
      

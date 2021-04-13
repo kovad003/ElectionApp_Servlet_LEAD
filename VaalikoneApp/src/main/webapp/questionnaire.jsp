@@ -77,8 +77,13 @@
             
 					<span id="spnError" class="error" style="display: none">Please select.</span>
                     <!-- AD - Beginning of the section with 5 selection buttons-->
+                    
+                    <div class="container3">  
+                    <button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
+                    </div>
+                    
                     <div class="input-radio">
-	                    <button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
+	                    
                         <c:forEach var="question" items="${requestScope.questionlist}" >
 							
 						<div style="display: none" id="q${question.id}">
