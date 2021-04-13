@@ -18,7 +18,7 @@
     <%@ include file="../components/headerBootstrap.jsp" %>    
     
 </head>
-<body>
+<body onload="disableAll();">
 
     <!-- AD - includes the navbarBootstrap component, 
     		which is modified version of our regular navbar,
@@ -78,14 +78,14 @@
                         <tr>                   
                             <td class = "tableAddBackground"><Button type="submit"><b class = "tableAdd">ADD</b></Button></td>                           
                             <td><input type="text" name="CANDIDATE_ID" placeholder="Auto incremented" disabled></td>
-                            <td><input type="text" name="SURNAME" placeholder="Cannot be blank."></td>
-                            <td><input type="text" name="FIRSTNAME" placeholder="Cannot be blank."></td>
-                            <td><input type="text" name="PARTY" placeholder="Cannot be blank."></td>
-                            <td><input type="text" name="LOCATION" placeholder="Cannot be blank."></td>
-                            <td><input type="number" name="AGE" placeholder="Cannot be blank."></td>
-                            <td><input type="text" name="REASON_FOR_RUNNING" placeholder="Cannot be blank."></td>
-                            <td><input type="text" name="AIMS_AND_GOALS" placeholder="Cannot be blank."></td>
-                            <td><input type="text" name="PROFESSION" placeholder="Cannot be blank."></td>             
+                            <td><input type="text" name="SURNAME" placeholder="Cannot be blank." disabled></td>
+                            <td><input type="text" name="FIRSTNAME" placeholder="Cannot be blank." disabled></td>
+                            <td><input type="text" name="PARTY" placeholder="Cannot be blank." disabled></td>
+                            <td><input type="text" name="LOCATION" placeholder="Cannot be blank." disabled></td>
+                            <td><input type="number" name="AGE" placeholder="Cannot be blank." disabled></td>
+                            <td><input type="text" name="REASON_FOR_RUNNING" placeholder="Cannot be blank." disabled></td>
+                            <td><input type="text" name="AIMS_AND_GOALS" placeholder="Cannot be blank." disabled></td>
+                            <td><input type="text" name="PROFESSION" placeholder="Cannot be blank." disabled></td>             
                         </tr>
                      
                     </tbody>                        
@@ -121,20 +121,21 @@
                             <th>PROFESSION</th>
                         </tr>
                     </thead>
+                     
                     <tbody>
                         <c:forEach var="candidate" items="${requestScope.candidatelist}">
 	                        <tr>
-	                            <td class = "tableCustom5"><Button type="submit"><b class = "tableCustom2">EDIT</b></Button></td>                    
-	                            <td class = "tableCustom5"><Button type="submit"><b class = "tableCustom3">DELETE</b></Button></td>  
-	                            <td><c:out value = "${candidate.id}"/></td>
-	                            <td><c:out value = "${candidate.SName}"/></td>
-	                            <td><c:out value = "${candidate.FName}"/></td>
-	                            <td><c:out value = "${candidate.party}"/></td>
-	                            <td><c:out value = "${candidate.location}"/></td>
-	                            <td><c:out value = "${candidate.age}"/></td>
-	                            <td><c:out value = "${candidate.reason}"/></td>
-	                            <td><c:out value = "${candidate.goals}"/></td>
-	                            <td><c:out value = "${candidate.profession}"/></td>                 
+	                            <td class = "tableCustom5"><Button onclick="enable()"><b class = "tableCustom2">EDIT</b></Button></td>                    
+	                            <td class = "tableCustom5"><Button onclick="disable()"><b class = "tableCustom3">DELETE</b></Button></td>  
+	                            <td><textarea name ="CANDIDATE_ID" disabled>${candidate.id}</textarea></td>
+	                            <td><textarea class="disabled" id="sname" name ="SURENAME" >${candidate.SName}</textarea></td>
+	                            <td><textarea id="fname" name ="FIRSTNAME" > ${candidate.FName}</textarea></td>
+	                            <td><textarea id="party" name ="PARTY" >${candidate.party}></textarea></td>
+	                            <td><textarea id="location" name ="LOCATION" >${candidate.location}</textarea></td>
+	                            <td><textarea id="age" name ="AGE" >${candidate.age}</textarea></td>
+	                            <td><textarea id="reason" name ="REASON_FOR_RUNNING" >${candidate.reason}</textarea></td>
+	                            <td><textarea id="goal" name ="AIMS_AND_GOALS" >${candidate.goals}</textarea></td>
+	                            <td><textarea id="profession" name ="PROFESSION" >${candidate.profession}</textarea></td>                
 	                        </tr>
                         </c:forEach>
                     </tbody>
@@ -142,7 +143,7 @@
             </div>  
         </div>
     </div>
-    
+   
     <!-- Make it hidden, edit btn should be triggered with the delete link of the table. It should redirect to a new page where u can edit the data-->
     <div>
 		<c:forEach var="candidate" items="${requestScope.candidatelist}">
@@ -169,7 +170,8 @@
                    </form>
             </c:forEach>
        </div>
-           <div>
+       
+       <div>
            
         <!-- Make it hidden, submit btn should be triggered with the delete link of the table-->
 		<c:forEach var="candidate" items="${requestScope.candidatelist}">
@@ -200,6 +202,56 @@
     <!-- AD - includes the footer component into this page 
     (albeit not visible) -->
 	<%@ include file="../components/footer.jsp" %> 
+
+<script type="text/javascript">
+
+	function enable() {
+		//document.getElementById('sname').setAttribute("disabled","disabled");
+		document.getElementById('sname').removeAttribute("disabled");
+		document.getElementById('fname').removeAttribute("disabled");	
+		document.getElementById("party").removeAttribute("disabled");
+		document.getElementById("location").removeAttribute("disabled");
+		document.getElementById("age").removeAttribute("disabled");
+		document.getElementById("reason").removeAttribute("disabled");
+		document.getElementById("goal").removeAttribute("disabled");
+		document.getElementById("profession").removeAttribute("disabled");
+		
+	}
+	
+	
+	/*
+	function disableAll(){
+		document.getElementById('sname').setAttribute("disabled","disabled");
+		document.getElementById('fname').setAttribute("disabled","disabled");
+		document.getElementById("party").setAttribute("disabled","disabled");
+		document.getElementById("location").setAttribute("disabled","disabled");
+		document.getElementById("age").setAttribute("disabled","disabled");
+		document.getElementById("reason").setAttribute("disabled","disabled");
+		document.getElementById("reason").setAttribute("disabled","disabled");
+		document.getElementById("goal").setAttribute("disabled","disabled");
+		document.getElementById("profession").setAttribute("disabled","disabled");	
+	}
+	*/
+	function disableAll(){
+		var x = document.getElementsByClassName('disabled');//.setAttribute("disabled","disabled");
+		
+		//var x = document.getElementsByTagName("P");
+		var i;
+		for (i = 0; i < x.length; i++) {
+		  x[i].setAttribute("disabled","disabled");
+		}
+		
+		/*
+		document.getElementsByName('FIRSTNAME').setAttribute("disabled","disabled");
+		document.getElementsByName("PARTY").setAttribute("disabled","disabled");
+		document.getElementsByName("LOCATION").setAttribute("disabled","disabled");
+		document.getElementsByName("AGE").setAttribute("disabled","disabled");
+		document.getElementsByName("REASON_FOR_RUNNING").setAttribute("disabled","disabled");
+		document.getElementsByName("AIMS_AND_GOALS").setAttribute("disabled","disabled");
+		document.getElementsByName("PROFESSION").setAttribute("disabled","disabled");
+		*/
+	}
+</script>
 
 </body><!-- AD - End of body-->
 </html><!-- AD - End of html-->

@@ -27,7 +27,7 @@
 
     <!-- AD - Beginning of the main yellow container-->
     <div class="container">
-        <i class="material-icons resize1">account_balance</i>
+        <a href="../index.jsp"><i class="material-icons resize1">account_balance</i></a>
         
         <!-- AD - customises the welcome message-->
         <div class="container6"> 
@@ -53,7 +53,9 @@
         <!-- AD - Questionnaire guidance for the user -->
         <div class="container7a">             
             <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
-            <p> Clicks: <a id="clicks">1</a></p>
+        <!--  <a id="clicks"></a>  -->
+        <!-- AD Click counter removed. Was only for Debugging purposes 
+            <p> Clicks: <a id="clicks">1</a></p>-->
         </div>
 		
         <hr>     
@@ -61,20 +63,23 @@
         <!-- AD - Beginning of the selection button section (answers)-->
         <div class="container2">            
 
-            <form id="form" action="/SubmitAnswer" method="POST">
-				<button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
-                <button class="button-main button1 questionnaireButton" type="submit" id="submission" style="display: none"><b>Submit</b></button>
-                <button class="button-main button1 questionnaireButton" onclick="toMain()" id="cancel" style="display: none"><b>Cancel</b></button>
+            <form id="form" action="/SubmitAnswer" method="POST">				
+               
                 <br>                 
-	            <button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
-	            <button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
+	            
+	            
 			            
                 <!-- AD - The main blue questionnaire container 
                     where the questions will be placed dynamically-->
                 <div class="container5a">                  
             
 					<span id="spnError" class="error" style="display: none">Please select.</span>
-                    <!-- AD - Beginning of the section with 5 selection buttons-->
+                     
+                    <!-- AD - This div contains and centers the 'Start' button -->
+                    <div class="container3">  
+                    <button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
+                    </div>
+                    
                     <div class="input-radio">
 	                    
                         <c:forEach var="question" items="${requestScope.questionlist}" >
@@ -108,39 +113,32 @@
                                     <label> <b>(5)</b>
                                     <input type = "radio" name = "selected${question.id}" value = "5" required>
                                     </label>                                                                                         
-						</div>
-							
-	        		    </c:forEach>
-	        		    <!--  
-	        		    <div style="display: none" id="final_div">
-	        		    	<button class="button-main button1 questionnaireButton" type="submit" id="submission"><b>Submit</b></button>
-	        		    </div>    		
-	        			-->
-                    </div>          
+							</div>						
+	        		    
+	        		    </c:forEach> <!-- AD End of forEach loop -->         		        		    
+	        		    
+                    </div> <!-- AD End of container input-radio -->                   	      
 				
-                </div>	
+                </div> <!-- AD End of container 5a -->
+                
+                <!-- AD - This div contains and centers the 'Next' button, which becomes visible after
+						  the 'start' button has been clicked. In addition, this container
+						  centres the 'previous' button, once it becomes visible. Finally,
+						  once the questionnaire has been completed, the 'submit' and 'cancel'
+						  buttons become visible, in the same container. -->
+                    	<div class="container3a">						
+						<button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
+						<button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
+						<button class="button-main button1 questionnaireButton" onclick="toMain()" id="cancel" style="display: none"><b>Cancel</b></button>
+						<button class="buttonSubmit button1" type="submit" id="submission" style="display: none"><b>Submit</b></button>                
+						</div> 	
 				
-				<br>
-                <hr> 
-
-                <!-- AD - Questionnaire guidance for the user -->
-                <div class="container7a">             
-                    <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
-                </div> 
-
+				<br>  
+				
             </form>           
 		    
             <hr>      
-    
-            <!-- AD - button container, containing buttons-->
-            <div class="container3">
-            
-                <button class="button-main button1"><b>PREVIOUS</b></button>
-                
-                <button class="button-main button1"><b>NEXT</b></button>
-
-            </div>
-        
+                    
         <!-- AD - End of the selection button section (answers)-->
         </div>
 
@@ -191,7 +189,9 @@
 			q_id_prev = q_id - 1;
 			div_id_prev = string + q_id_prev;
 			
-		    document.getElementById("clicks").innerHTML = div_id; // Displaying counter
+			/* AD - Click counter (displaying) was removed. Was only for debugging purposes
+		    document.getElementById("clicks").innerHTML = div_id;
+			*/
 		    
 		    var div = document.getElementById(div_id); // Event Listener for question div.
 			div.style.display = 'block';
@@ -241,7 +241,9 @@
 				radio_tag = radio + (q_id - 1);
 				//validator = false;
 				
-			    document.getElementById("clicks").innerHTML = div_id; // Displaying counter.
+				/* AD - Click counter (displaying) was removed. Was only for debugging purposes 
+			    document.getElementById("clicks").innerHTML = div_id;
+				*/
 			    
 				var div = document.getElementById(div_id); // Event Listener for question div.
 				if(q_id != collection_size + 1)
@@ -297,7 +299,9 @@
 			q_id_prev = q_id + 1; // Div block on the "right"
 			div_id_prev = string + q_id_prev; // Div block on the "right" => div id
 			
-		    document.getElementById("clicks").innerHTML = div_id; // Displaying counter
+			/* AD - Click counter (displaying) was removed. Was only for debugging purposes
+		    document.getElementById("clicks").innerHTML = div_id;
+			*/
 		    
 			var div = document.getElementById(div_id); // Event Listener for question div.
 			div.style.display = 'block';

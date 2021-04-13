@@ -16,7 +16,13 @@
 <body>
 
     <!-- AD - includes the navbar component, into this page -->
-    <%@ include file="../components/navbar.jsp" %>     
+    <%@ include file="../components/navbar.jsp" %>  
+    
+    <!-- if not candidate -> index page -->
+    <%
+    if ((id == null) || (id.startsWith("99"))) {
+    	response.sendRedirect("index.jsp");
+	} %>    
 
     <div class = "container1">
         <div class = "container1c">          
@@ -35,10 +41,12 @@
                     <table>                    
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Home Page </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="" target="_blank"> <u><b>Update Your Data </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/questionnaire.jsp" target="_blank"> <u><b>Take Questionnaire </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/ShowQuestions" target="_blank"> <u><b>Take Questionnaire </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/EditQuastionnaire" target="_blank"> <u><b>Update Questions </b></u></a></td></tr> 
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Contact Admin </b></u></a></td></tr>                   
-                    <tr><td></td><td><br><input type="submit" value="LOGOUT"></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Contact Admin </b></u></a></td></tr>                                 
+                    <tr>                        
+                        <td></td><td><br><input class = "button-main button1 mainloginButton" type="submit" value="LOGOUT" /></td>
+                    </tr>                   
                     </table>
                     <hr>        
             </form> 
