@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.Dao_question;
+import dao.Dao_newquestion;
 import data.Question;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,11 +23,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/AdminNewQuestions")
 public class AdminNewQuestions extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-private Dao_question dao=null;
+private Dao_newquestion dao=null;
 	
 	@Override
 	public void init() {
-		dao=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
+		dao=new Dao_newquestion("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
 		System.out.println("");
 	}
 	

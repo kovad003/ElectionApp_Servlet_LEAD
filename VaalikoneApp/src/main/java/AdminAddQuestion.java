@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.Dao_question;
+import dao.Dao_newquestion;
 import data.Question;
 
 /**
@@ -15,12 +15,12 @@ import data.Question;
 @WebServlet("/AdminAddQuestion")
 public class AdminAddQuestion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Dao_question  dao_question=null;
+	private Dao_newquestion  Dao_newquestion=null;
 	
 	@Override
 	public void init() {
 
-		dao_question=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
+		Dao_newquestion=new Dao_newquestion("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
 		System.out.println("");
 	}
        
@@ -46,10 +46,10 @@ public class AdminAddQuestion extends HttpServlet {
 		
 		System.out.println(question.getQuestion() );
 		
-		if(dao_question.getConnection())
+		if(Dao_newquestion.getConnection())
 		{
 			System.out.println("Successfully connected to the database");
-			dao_question.insertQuestion(question);
+			Dao_newquestion.insertQuestion(question);
 			System.out.println("Candidate Profile: " + question);	
 		}
 		else
