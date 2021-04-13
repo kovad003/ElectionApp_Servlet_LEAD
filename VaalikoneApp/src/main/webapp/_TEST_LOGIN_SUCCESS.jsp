@@ -40,7 +40,7 @@ if(id.startsWith("9")==true) {
 }
 else {
 	// if candidate ->
-	response.sendRedirect("testing.jsp");	
+	response.sendRedirect("candidatePortal.jsp");	
 }
 %>
 <br>
