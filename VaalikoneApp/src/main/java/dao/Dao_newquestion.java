@@ -7,19 +7,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import data.Candidate;
 import data.Question;
 
 import java.sql.Connection;
 
 
-public class Dao_question {
+public class Dao_newquestion {
 	private String url;
 	private String user;
 	private String pass;
 	private Connection conn;
 	
-	public Dao_question(String url, String user, String pass) {
+	public Dao_newquestion(String url, String user, String pass) {
 		System.out.println("Dao(String url, String user, String pass) CONSTRUCTOR ******");
 		this.url=url;
 		this.user=user;
@@ -45,30 +44,43 @@ public class Dao_question {
 		}
 	}
 	
-//	FOR EVANGELOS ##########
-//	public void insertQuestion(Question q)
-//	{
-//		try {
-//			// #1 Alter mysql query.
-//			String sql="INSERT INTO CANDIDATES (SURNAME, FIRSTNAME, PARTY, LOCATION, AGE, REASON_FOR_RUNNING, AIMS_AND_GOALS, PROFESSION) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-//			PreparedStatement pstmt=conn.prepareStatement(sql);
-//			//Setters and getters are from the model (question.java)
-//				pstmt.setInt(1, q.getId()); //1st ?
-//				pstmt.setString(2, q.getFName()); //2nd ?
-//				pstmt.setString(3, q.getParty()); //3rd ?
-//				pstmt.setString(4, q.getLocation());
-//				pstmt.setInt(5, q.getAge()); // QID -> int
-//				pstmt.setString(6, q.getReason()); //String(txt)->string
-//				pstmt.setString(7, q.getGoals());
-//				pstmt.setString(8, q.getProfession());
-//				pstmt.executeUpdate();
-//		}
-//		catch(SQLException e) {
-//			e.printStackTrace();
-//		}
-//		
-//	}
 	
+	public void insertQuestion(Question q)
+	{
+		try {
+			// #1 Alter mysql query.
+			String sql="INSERT INTO QUESTIONS (NEW_QUESTION) VALUES (?)";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			//Setters and getters are from the model (question.java)
+				pstmt.setInt(1, q.getId()); 
+				pstmt.setString(2, q.getQuestion()); 
+				pstmt.executeUpdate();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public ArrayList<Question> readNewQuestions() {
+		System.out.println("readAllQuestion()");
+		ArrayList<Question> list=new ArrayList<>();
+		try {
+			Statement stmt=conn.createStatement();
+			ResultSet RS=stmt.executeQuery("select * from new_questions");
+			System.out.println("RS: " + RS);
+			while (RS.next()){
+				Question q=new Question();
+				q.setId(RS.getInt("NEW_QUESTION_ID"));
+				q.setQuestion(RS.getString("NEW_QUESTION"));
+				list.add(q);
+			}
+			return list;
+		}
+		catch(SQLException e) {
+			return null;
+		}
+	}
 
 	
 	public ArrayList<Question> readAllQuestion() {
@@ -76,7 +88,7 @@ public class Dao_question {
 		ArrayList<Question> list=new ArrayList<>();
 		try {
 			Statement stmt=conn.createStatement();
-			ResultSet RS=stmt.executeQuery("select * from questions");
+			ResultSet RS=stmt.executeQuery("select * from new_questions");
 			System.out.println("RS: " + RS);
 			while (RS.next()){
 				Question q=new Question();
@@ -93,7 +105,7 @@ public class Dao_question {
 	public ArrayList<Question> updateQuestion(Question q) {
 		System.out.println("updateQuestion(Question q)");
 		try {
-			String sql="update questions set question=? where id=?";
+			String sql="update questions set new_question=? where question_id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, q.getQuestion());
 			pstmt.setInt(2, q.getId());
@@ -107,7 +119,7 @@ public class Dao_question {
 	public ArrayList<Question> deleteQuestion(String id) {
 		System.out.println("deleteQuestion(String id)");
 		try {
-			String sql="delete from question where id=?";
+			String sql="delete from new_question where question_id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
@@ -121,7 +133,7 @@ public class Dao_question {
 	public Question readQuestion(String id) {
 		Question f=null;
 		try {
-			String sql="select * from questions where id=?";
+			String sql="select * from new_questions where question_id=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			ResultSet RS=pstmt.executeQuery();

@@ -343,7 +343,7 @@
             <div class="container4">  
             
                 <!-- AD - Questionnaire guidance for the user -->
-		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HÄMK's Finest'
+		    <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HAMK's Finest'
                 are to be held liable for any views or comments expressed by the candidates 
                 or users of this site. Your data is confidential and will not be shared or
                 sold in any capacity. All rights reserved.</h5>
@@ -438,7 +438,7 @@
                         } else {
                             dvUserResults.style.display = "none";
                             btnUserResults.value = "ANSWERS";
-                            btnUserResults.style.backgroundColor = "#2ea100";    
+                            btnUserResults.style.backgroundColor = "#0075ac";    
                         }
                     }
 
