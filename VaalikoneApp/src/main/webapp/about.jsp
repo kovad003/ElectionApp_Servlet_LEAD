@@ -61,8 +61,8 @@
                 right candidate for them!
                 <br><br>
                 In order to create this Election Machine, we 'hired' the HAMK's Finest server programming team.
-                This team is comprised of student server programmers from HAMK polytechnic university, and
-                they created this Election Machine using Java server-side programming.         
+                This team is comprised of student server programmers from Hame University of 
+                Applied Sciences, and they created this Election Machine using Java server-side programming.         
                 <br><br>
                 Read on to meet the server programming team!
             </h5>
