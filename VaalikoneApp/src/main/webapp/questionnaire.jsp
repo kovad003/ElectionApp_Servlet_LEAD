@@ -244,8 +244,9 @@
 				var div = document.getElementById(div_id_prev); 
 				div.style.display = 'none';
 				
-				displayPrevBtn() // Event Listener for prev btn => needs to be displayed after Q2.
-				displayNextBtn() // Event Listener for the div "on the left".
+				displayPrevBtn(); // Event Listener for prev btn => needs to be displayed after Q2.
+				displayNextBtn(); // Event Listener for the div "on the left".
+				//displaySbmtBtn();
 			}
 			else
 			{
@@ -291,9 +292,11 @@
 			var div = document.getElementById(div_id_prev); // Event Listener for the div "on the right".
 			div.style.display = 'none';
 					
-			displayPrevBtn() // Event Listener for prev btn => needs to be displayed after Q2.
+			
 			 
-			displayNextBtn() // Event Listener for next btn => needs to be displayed before question.				
+			displayNextBtn(); // Event Listener for next btn => needs to be displayed before question.
+			displayPrevBtn(); // Event Listener for prev btn => needs to be displayed after Q2.
+			//displaySbmtBtn();
 		};
 		
 	// Validation:	
@@ -321,12 +324,27 @@
 	    }
 		
 	// Other|Custom methods	
-		function displayNextBtn()
+		function displaySbmtBtn()
 		{
 			var sbmt = document.getElementById("submission");
+			if(q_id > collection_size)
+			{
+				sbmt.style.display = 'block';
+			}
+			else if(q_id == collection_size)
+			{
+				sbmt.style.display = 'none';
+			}
+			else
+			{
+				sbmt.style.display = 'none';
+			}
+		}
 		
+		function displayNextBtn()
+		{		
 			var div = document.getElementById("next");
-			if(q_id == collection_size+1)
+			if(q_id == collection_size +1)
 				{
 					div.style.display = 'none';
 				}
@@ -334,15 +352,20 @@
 				{
 					div.style.display = 'block';
 				}
-			
+			var sbmt = document.getElementById("submission");
 			if(q_id > collection_size)
-				{
-					sbmt.style.display = 'block';
-				}
+			{
+				sbmt.style.display = 'block';
+			}
+			else if(q_id == collection_size)
+			{
+				sbmt.style.display = 'none';
+			}
 			else
-				{
-					sbmt.style.display = 'none';
-				}
+			{
+				sbmt.style.display = 'none';
+			}
+	
 		}
 		
 		function displayPrevBtn()
@@ -356,6 +379,15 @@
 				{
 					div.style.display = 'none';
 				}
+			var sbmt = document.getElementById("submission");
+
+			if(q_id > 1)
+			{
+				sbmt.style.display = 'none';
+			}
+
+			
+
 		}
 		
 		// SOME USEFUL LINES:
