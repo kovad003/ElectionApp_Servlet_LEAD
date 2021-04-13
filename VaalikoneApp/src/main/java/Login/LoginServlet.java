@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 		ArrayList<Candidate> list=null;
 		//user input from loginPage.jsp
 		String user = request.getParameter("user");
-		String pwd = request.getParameter("pwd");
+		String pwd = Encryption.crypt(request.getParameter("pwd"));
 		String sql = "SELECT * FROM electionmachine.candidates where USERNAME='" + user + 
 				"' and PASSWORD='" + pwd + "';";
 		String id_push = null;
@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 		if(dao.getConnection())
 		{
 			System.out.println("Successfully connected to Candidates to fetch login info");
-			list=dao.loginCandidate(sql);
+			list = dao.loginCandidate(sql);
 			System.out.println("Can_List: " + list);
 			for (int i = 0; i < list.size(); i++) {
 				Candidate c = list.get(i);
