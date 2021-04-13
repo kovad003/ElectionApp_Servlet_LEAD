@@ -62,7 +62,12 @@
         <div class="container2">            
 
             <form id="form" action="/SubmitAnswer" method="POST">
-
+				<button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
+                <button class="button-main button1 questionnaireButton" type="submit" id="submission" style="display: none"><b>Submit</b></button>
+                <br>                 
+	            <button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
+	            <button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
+			            
                 <!-- AD - The main blue questionnaire container 
                     where the questions will be placed dynamically-->
                 <div class="container5a">                  
@@ -70,18 +75,13 @@
 					<span id="spnError" class="error" style="display: none">Please select.</span>
                     <!-- AD - Beginning of the section with 5 selection buttons-->
                     <div class="input-radio">
-	                    <button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
-	                     <button class="button-main button1 questionnaireButton" type="submit" id="submission" style="display: none"><b>Submit</b></button>
-	                    <br>                 
-			            <button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
-			            <button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
-			            
+	                    
                         <c:forEach var="question" items="${requestScope.questionlist}" >
 							
 						<div style="display: none" id="q${question.id}">
 						
 							<div class = "containerDynamicQuestion">
-					        	<h3><c:out value = "${question.id}) ${question.question}"/></h3> <!-- Display question -->
+					        	<h3><c:out value = "${question.id}/${fn:length(requestScope.questionlist)} - ${question.question}"/></h3> <!-- Display question -->
 					   		</div>
 					   		
                                 <!-- ******************************************************************************************************** -->
@@ -109,8 +109,12 @@
                                     </label>                                                                                         
 						</div>
 							
-	        		    </c:forEach>       		
-	        	
+	        		    </c:forEach>
+	        		    <!--  
+	        		    <div style="display: none" id="final_div">
+	        		    	<button class="button-main button1 questionnaireButton" type="submit" id="submission"><b>Submit</b></button>
+	        		    </div>    		
+	        			-->
                     </div>          
 				
                 </div>	
@@ -244,37 +248,50 @@
 				var div = document.getElementById(div_id_prev); 
 				div.style.display = 'none';
 				
-				displayPrevBtn(); // Event Listener for prev btn => needs to be displayed after Q2.
-				displayNextBtn(); // Event Listener for the div "on the left".
-				//displaySbmtBtn();
+				var div = document.getElementById("next");
+				var sbmt = document.getElementById("submission");
+				if(q_id == collection_size + 1)
+					{
+					//alert("q_id = " + q_id + "collection_size = " + collection_size);
+						div.style.display = 'none';
+						sbmt.style.display = 'block';
+					}
+
+				var div = document.getElementById("previous"); 
+				if(q_id > 1)
+					{
+						div.style.display = 'block';
+					}
+				else
+					{
+						div.style.display = 'none';
+					}
+				
+				
+
+				
+				/*
+				var sbmt = document.getElementById("submission");
+
+				if(q_id > 1)
+				{
+					sbmt.style.display = 'none';
+				}
+*/
+				
 			}
 			else
 			{
 				//alert("Please select!");
 			}
 			
-			
-			
-			var rad = document.getElementsByName(radio_tag);
-			var isValid = false;
-			
-			for (var i = 0; i < rad.length; i++) {
-	            if (rad[i].checked) {
-	                isValid = true;
-	                break;
-	            }
-	        }
-			if(isValid == false)
-				{
-					//alert("Please select!");
-				}
-           	//alert(rad[1].checked);
-			// alert('rad.value = ' + rad.value + ' | radio_tag = ' + radio_tag + ' | rad.checked = ' + rad.checked);
 		};
 
 	//NEXT button
 		function onPrev() 
 		{	
+			var prev_limit = q_id;
+			
 			string = "q" //String for the id tag
 			
 		    q_id -= 1; //Current block
@@ -291,105 +308,42 @@
 			
 			var div = document.getElementById(div_id_prev); // Event Listener for the div "on the right".
 			div.style.display = 'none';
-					
 			
-			 
-			displayNextBtn(); // Event Listener for next btn => needs to be displayed before question.
-			displayPrevBtn(); // Event Listener for prev btn => needs to be displayed after Q2.
-			//displaySbmtBtn();
+			//alert("q_id = " + q_id + "collection_size = " + collection_size);
+			var sbmt = document.getElementById("submission");
+			sbmt.style.display = 'none';
+			
+			var nxt = document.getElementById("next");			
+			if(q_id >= collection_size)
+			{
+				nxt.style.display = 'none';
+			}
+			else
+			{
+				nxt.style.display = 'block';
+			}
+			
+			/*
+			if (q_id < 19)
+				{
+					alert("if");
+					nxt.style.display = 'block';
+				}
+			else
+				{
+					//alert("q_id = " + q_id);
+					//alert("else ");
+				}
+			*/
+			var prev = document.getElementById("previous");
+			if(q_id == 1)
+				{
+					prev.style.display = 'none';
+				}
+
+
 		};
-		
-	// Validation:	
-		function Validate() {
-	        //Reference the Table.
-	        var radio = document.getElementById("form");
-	 
-	        //Reference the Group of RadioButtons.
-	        var radio = document.getElementsByName("selected"+q_id);
-	 
-	        //Set the Valid Flag to False initially.
-	        var isValid = false;
-	 
-	        //Loop and verify whether at-least one RadioButton is checked.
-	        for (var i = 0; i < radio.length; i++) {
-	            if (radio[i].checked) {
-	                isValid = true;
-	                break;
-	            }
-	        }
-	 
-	        //Display error message if no RadioButton is checked.
-	        document.getElementById("spnError").style.display = isValid ? "none" : "block";
-	        return isValid;
-	    }
-		
-	// Other|Custom methods	
-		function displaySbmtBtn()
-		{
-			var sbmt = document.getElementById("submission");
-			if(q_id > collection_size)
-			{
-				sbmt.style.display = 'block';
-			}
-			else if(q_id == collection_size)
-			{
-				sbmt.style.display = 'none';
-			}
-			else
-			{
-				sbmt.style.display = 'none';
-			}
-		}
-		
-		function displayNextBtn()
-		{		
-			var div = document.getElementById("next");
-			if(q_id == collection_size +1)
-				{
-					div.style.display = 'none';
-				}
-			else
-				{
-					div.style.display = 'block';
-				}
-			var sbmt = document.getElementById("submission");
-			if(q_id > collection_size)
-			{
-				sbmt.style.display = 'block';
-			}
-			else if(q_id == collection_size)
-			{
-				sbmt.style.display = 'none';
-			}
-			else
-			{
-				sbmt.style.display = 'none';
-			}
-	
-		}
-		
-		function displayPrevBtn()
-		{
-			var div = document.getElementById("previous"); 
-			if(q_id > 1)
-				{
-					div.style.display = 'block';
-				}
-			else
-				{
-					div.style.display = 'none';
-				}
-			var sbmt = document.getElementById("submission");
 
-			if(q_id > 1)
-			{
-				sbmt.style.display = 'none';
-			}
-
-			
-
-		}
-		
 		// SOME USEFUL LINES:
 		//div.style.visibility = 'hidden';
 		//div.style.visibility = 'visible';
