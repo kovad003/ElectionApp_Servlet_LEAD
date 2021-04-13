@@ -151,7 +151,7 @@ on the adminUpdateCandidate page */
     max-width: 50%;
     padding: 20px;
     border-radius: 10px;         
-    background-color: #E9C46A;
+    background: linear-gradient(0deg,#F4A261, 10%, #E9C46A);
     box-shadow: 0 2px 16px 2px #264653;         
     margin: 25px auto 25px auto;                
 }
@@ -335,7 +335,7 @@ contains the candidate table data */
 /* AD - Customises the section with 'Admin: Update Candidates' 
         on the on the adminUpdateCandidates page */
 .container6a {
-    background-color:#F4A261;
+    background: linear-gradient(180deg, #E76F51, 20%, #F4A261);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;  
     margin: 10px auto; 
