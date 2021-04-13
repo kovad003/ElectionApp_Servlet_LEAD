@@ -1,5 +1,4 @@
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-import dao.Dao_newquestion;
 import dao.Dao_question;
 import data.Question;
 
@@ -26,12 +24,6 @@ private Dao_question dao_question=null;
 	@Override
 	public void init() {
 		dao_question=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
-private Dao_question dao=null;
-	
-	@Override
-	public void init() {
-		dao=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
-		System.out.println("");
 	}
 	
        
@@ -87,24 +79,5 @@ private Dao_question dao=null;
     		
     	*/	
     		}
-   }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String sql = request.getParameter("fieldname");
-		
-		if(dao.getConnection())
-		{
-			System.out.println("Successfully connected to the database");
-			dao.insertQuestion(sql);
-			System.out.println(sql + " successfully inserted into new_questions");	
-		}
-		else
-		{
-			System.out.println(sql + " not inserted");
-		}
-//		request.setAttribute("questionlist", list);
-//		
-//		RequestDispatcher rd=request.getRequestDispatcher("/AdminUpdateNewQuestions.jsp");
-//		rd.forward(request, response);
-	}
 }

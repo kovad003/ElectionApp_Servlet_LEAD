@@ -59,7 +59,8 @@ public class Dao_question {
 		}
 		catch(SQLException e) {
 			return null;
-
+		}
+	}
 	public void insertQuestion(String q)
 	{
 		try {
