@@ -34,13 +34,13 @@ if(id == null) response.sendRedirect("login.html");
 <h3>Logged in with id: <%=id %>.</h3>
 
 <%
-if(id.startsWith("9")==true) {
+if(id.startsWith("99")==true) {
 	// if admin ->
 	response.sendRedirect("adminPortal.jsp");
 }
 else {
 	// if candidate ->
-	response.sendRedirect("testing.jsp");	
+	response.sendRedirect("candidatePortal.jsp");	
 }
 %>
 <br>
