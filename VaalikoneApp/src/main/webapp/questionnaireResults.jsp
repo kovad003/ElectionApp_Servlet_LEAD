@@ -438,7 +438,7 @@
                         } else {
                             dvUserResults.style.display = "none";
                             btnUserResults.value = "ANSWERS";
-                            btnUserResults.style.backgroundColor = "#2ea100";    
+                            btnUserResults.style.backgroundColor = "#0075ac";    
                         }
                     }
 

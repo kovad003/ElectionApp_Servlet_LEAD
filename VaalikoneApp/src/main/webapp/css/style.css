@@ -295,7 +295,7 @@ contains the candidate table data */
 /* AD - Customises the Answers hidden div
 	on the questionnaireResults page colourings */
     .containerUserAnswers {        
-        background-color: #589e3cc4;
+        background: linear-gradient(45deg, #264653, 50%, #2A9D8F, #F4A261);
         color: rgba(255, 255, 255, 0.829);
         border-radius: 10px; 
         padding: 0.1px 10px 0.1px 10px;   
@@ -485,7 +485,7 @@ container on the questionnaireResults page */
 
 /* AD - Customises the ShowHide 'ANSWERS' Button stylings */
 .buttonShowHide2 {
-    background-color: #2ea100;
+    background-color: #0075ac;
     border: none;
     color: rgba(255, 255, 255, 0.829); 
     padding: 10px;
@@ -647,8 +647,7 @@ for specific cells (sich as update and delete
 /* AD - Customises the container for the dynamic question
         inside the questionnaire question section. */
 .containerDynamicQuestion {
-    background: linear-gradient(0deg, #0075ac, 90%, #264653);
-    background-color:#0075ac;
+    background: linear-gradient(0deg, #0075ac, 90%, #264653);  
     border-radius: 10px;    
     color: white;    
     margin: 5px 20px 5px 5px;
@@ -758,3 +757,7 @@ div.container-nav-links input[type="submit" i]:hover {
         lot of time to investigate and fix.
         Looks OK as is, on all screen sizes. */
     }
+
+    
+    
+     
