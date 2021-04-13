@@ -64,6 +64,7 @@
             <form id="form" action="/SubmitAnswer" method="POST">
 				<button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
                 <button class="button-main button1 questionnaireButton" type="submit" id="submission" style="display: none"><b>Submit</b></button>
+                <button class="button-main button1 questionnaireButton" onclick="toMain()" id="cancel" style="display: none"><b>Cancel</b></button>
                 <br>                 
 	            <button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
 	            <button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
@@ -152,7 +153,7 @@
 	<script type="text/javascript">
 	
 	// Event Listeners: Suspending button default functions => Validation will not work.
-		document.getElementById("start").addEventListener("click", function(event){
+		document.getElementById("start").addEventListener("click", function(event){ //will prevent submission with these buttons
 		event.preventDefault()});
 	
 		document.getElementById("next").addEventListener("click", function(event){
@@ -160,6 +161,10 @@
 		
 		document.getElementById("previous").addEventListener("click", function(event){
 		event.preventDefault()});
+		
+		document.getElementById("cancel").addEventListener("click", function(event){
+			event.preventDefault()});
+		
 			
 	// Variables:
 		var collection_size = ${fn:length(requestScope.questionlist)};
@@ -248,50 +253,41 @@
 				var div = document.getElementById(div_id_prev); 
 				div.style.display = 'none';
 				
-				var div = document.getElementById("next");
+				var next = document.getElementById("next");
 				var sbmt = document.getElementById("submission");
+				var cancel = document.getElementById("cancel");
 				if(q_id == collection_size + 1)
 					{
 					//alert("q_id = " + q_id + "collection_size = " + collection_size);
-						div.style.display = 'none';
+						next.style.display = 'none';
 						sbmt.style.display = 'block';
+						cancel.style.display = 'block'
 					}
 
-				var div = document.getElementById("previous"); 
-				if(q_id > 1)
-					{
-						div.style.display = 'block';
-					}
-				else
-					{
-						div.style.display = 'none';
-					}
-				
-				
-
-				
-				/*
-				var sbmt = document.getElementById("submission");
-
-				if(q_id > 1)
+				var prev = document.getElementById("previous"); 
+				if(q_id == collection_size + 1)
 				{
-					sbmt.style.display = 'none';
+					prev.style.display = 'none';
 				}
-*/
-				
+				else if(q_id == 1)
+				{
+					prev.style.display = 'none';
+				}
+				else
+				{
+					prev.style.display = 'block';
+				}
 			}
 			else
 			{
-				//alert("Please select!");
+				alert("Please select!");
 			}
 			
 		};
 
 	//NEXT button
 		function onPrev() 
-		{	
-			var prev_limit = q_id;
-			
+		{				
 			string = "q" //String for the id tag
 			
 		    q_id -= 1; //Current block
@@ -312,6 +308,7 @@
 			//alert("q_id = " + q_id + "collection_size = " + collection_size);
 			var sbmt = document.getElementById("submission");
 			sbmt.style.display = 'none';
+
 			
 			var nxt = document.getElementById("next");			
 			if(q_id >= collection_size)
@@ -322,27 +319,19 @@
 			{
 				nxt.style.display = 'block';
 			}
-			
-			/*
-			if (q_id < 19)
-				{
-					alert("if");
-					nxt.style.display = 'block';
-				}
-			else
-				{
-					//alert("q_id = " + q_id);
-					//alert("else ");
-				}
-			*/
+
 			var prev = document.getElementById("previous");
 			if(q_id == 1)
 				{
 					prev.style.display = 'none';
 				}
 
-
 		};
+		
+		function toMain()
+		{
+			window.location = "/index.jsp";
+		}
 
 		// SOME USEFUL LINES:
 		//div.style.visibility = 'hidden';
