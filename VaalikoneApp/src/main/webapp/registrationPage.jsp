@@ -36,7 +36,7 @@
                     <tr><td><b>Password: </b></td><td><input type="password" name="password"></td></tr>
                     <tr><td><b>Email: </b></td><td><input type="text" name="email"></td></tr>
                     <tr><td><b>Phone: </b></td><td><input type="text" name="phone"></td></tr>
-                    <tr><td></td><td><input type="submit" value="REGISTER"></td></tr>
+                    <tr><td></td><td><input class = "button-main button1 mainloginButton" type="submit" value="REGISTER"></td></tr>
                     </table>
                     <hr>        
             </form> 

@@ -41,7 +41,7 @@
         <div class="container4a">  
             
             <!-- AD - Questionnaire guidance for the user -->
-            <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'H�MK's Finest'
+            <h5>DISCLAIMER: Neither the 'Global Herald Newspaper' or 'HAMK's Finest'
             are to be held liable for any views or comments expressed by the candidates 
             or users of this site. Your data is confidential and will not be shared or
             sold in any capacity. All rights reserved.</h5>

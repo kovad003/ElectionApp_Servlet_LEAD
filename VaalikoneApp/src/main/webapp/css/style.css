@@ -44,16 +44,15 @@
 
     .input-radio {
     font-size: small;
-    width: 110% !important;
-    
+    width: 110% !important;    
     padding: 0.1px 10px 0.1px 10px !important;  /*AD Needed on the questionnaire page */ 
     }  
 
     /* AD - Customizes the NAV-bar for smaller screens */
     .container-nav1 {                           
         width: 97% !important;                                    
-    }  
-    
+    }    
+   
 }  
 
 /* Adjustments for a responsive website*/
@@ -152,11 +151,10 @@ on the adminUpdateCandidate page */
     max-width: 50%;
     padding: 20px;
     border-radius: 10px;         
-    background-color: #E9C46A;
+    background: linear-gradient(0deg,#F4A261, 10%, #E9C46A);
     box-shadow: 0 2px 16px 2px #264653;         
     margin: 25px auto 25px auto;                
 }
-
 
 /* AD - Customises the yellow container
 on the adminUpdateCandidate page, which
@@ -167,11 +165,7 @@ contains the candidate table data */
     border-radius: 10px;         
     background-color:rgba(214, 214, 214, 0.822); /* AD -A unique shade for the data in the tables*/
     box-shadow: 0 2px 16px 2px #264653;         
-    margin: 25px auto 25px auto;    
-    
-    /*
-    background-color:rgba(255, 255, 255, 0.336);
-    */
+    margin: 25px auto 25px auto;   
 }
 
 /* AD - Customises the main election machine questionnaire (yellow container) */
@@ -179,7 +173,7 @@ contains the candidate table data */
     max-width: 50%;
     padding: 30px;
     border-radius: 10px;         
-    background-color: #E9C46A;
+    background: linear-gradient(0deg,#F4A261, 10%, #E9C46A);
     box-shadow: 0 2px 16px 2px #264653;         
     margin: 25px auto 60px auto;                
 }
@@ -189,37 +183,36 @@ contains the candidate table data */
     max-width: 40%;
     padding: 30px;
     border-radius: 10px;         
-    background-color: #E9C46A;
+    background: linear-gradient(0deg,#F4A261, 10%, #E9C46A);
     box-shadow: 0 2px 16px 2px #264653;         
-    margin: 70px auto 60px auto;
-    
+    margin: 70px auto 60px auto;    
     display: flex;
     justify-content: center;             
 }
 
-/* AD - Customises the registration page orange box */
+/* AD - Customises the registration page orange box
+        (this might be obsolete, but won't be 
+        deleted until sure) */
 .container1a {
     background-color:#F4A261;
-    border-radius: 10px; 
-    
+    border-radius: 10px;    
     margin: 10px auto;
     padding: 10px;
-
     max-width: 30%;
     text-align: center;
     height: 80%;
     color: rgba(255, 255, 255, 0.829) !important; 
 }
 
-/* AD - Customises the registration page main form section */
+/* AD - Customises the login and (potential) registration page 
+        main form section */
 .container1b{            
     max-width: 60%;
     padding: 30px;
     border-radius: 10px;         
-    background-color:#F4A261;
+    background: linear-gradient(0deg, #E76F51, 70%, #F4A261);
     box-shadow: 0 2px 16px 2px #264653;         
-    margin: 10px;
-    
+    margin: 10px;    
     display: flex;
     justify-content: center;                 
 }
@@ -231,8 +224,7 @@ contains the candidate table data */
     border-radius: 10px;         
     background: linear-gradient(0deg, #E76F51, #F4A261);
     box-shadow: 0 2px 16px 2px #264653;         
-    margin: 10px;
-    
+    margin: 10px;    
     display: flex;
     justify-content: center;                 
 }
@@ -263,9 +255,10 @@ contains the candidate table data */
     border-radius: 2px;
 }
 
-/* AD - Customises the registration page smaller cyan container */
+/* AD - Customises the login page (and potential registration page) 
+    smaller cyan container */
 .container1c{    
-    background: linear-gradient(to right, #264653, #2A9D8F);  
+    background: linear-gradient(270deg, #264653, 30%, #2A9D8F);  
     border-radius: 10px;    
     margin: 10px auto;
     padding: 10px;
@@ -287,8 +280,8 @@ contains the candidate table data */
 }
 
 /* AD - Customises the disclaimer colourings */
-.container4 {
-    background-color:#264653;
+.container4 { 
+    background: linear-gradient(0deg, #264653, 90%, #2A9D8F);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;  
     color: rgba(255, 255, 255, 0.658);                    
@@ -297,7 +290,7 @@ contains the candidate table data */
 /* AD - Customises the disclaimer message
 	on the questionnaire page colourings */
 .container4a {
-    background-color:#2A9D8F;
+    background: linear-gradient(0deg, #2A9D8F, 90%,  #264653);    
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;  
     color: rgba(255, 255, 255, 0.658);                    
@@ -306,7 +299,7 @@ contains the candidate table data */
 /* AD - Customises the Answers hidden div
 	on the questionnaireResults page colourings */
     .containerUserAnswers {        
-        background-color: #589e3cc4;
+        background: linear-gradient(45deg, #264653, 50%, #2A9D8F, #F4A261);
         color: rgba(255, 255, 255, 0.829);
         border-radius: 10px; 
         padding: 0.1px 10px 0.1px 10px;   
@@ -316,7 +309,7 @@ contains the candidate table data */
 /* AD - Customises the introduction colourings on the welcome page
         and in addition, the candidate page introductory message */
 .container5 {
-    background-color:#2A9D8F;
+    background: linear-gradient(180deg, #264653, 20%, #2A9D8F);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;             
     color: rgba(255, 255, 255, 0.658);                 
@@ -326,14 +319,14 @@ contains the candidate table data */
         of the questionnaire page, where the
         questions will be placed dynamically. */
 .container5a {
-    background-color:#264653;
+    background: linear-gradient(45deg, #264653, 50%, #2A9D8F, #F4A261);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;
 }
 
 /* AD - Customises the Welcome message colourings */
 .container6 {
-    background-color:#F4A261;
+    background: linear-gradient(180deg, #E76F51, 20%, #F4A261);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;  
     margin: 10px auto;                                   
@@ -342,7 +335,7 @@ contains the candidate table data */
 /* AD - Customises the section with 'Admin: Update Candidates' 
         on the on the adminUpdateCandidates page */
 .container6a {
-    background-color:#F4A261;
+    background: linear-gradient(180deg, #E76F51, 20%, #F4A261);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;  
     margin: 10px auto; 
@@ -352,7 +345,7 @@ contains the candidate table data */
 /* AD - Customises the 'please register an account' message */
 .container7 {          
     padding: 0.1px 10px 0.1px 10px;              
-    color:#264653;                 
+    color:#264653;                     
 }
 
 /* AD - Questionnaire guidance for the user */
@@ -386,7 +379,7 @@ container on the questionnaireResults page */
 
 /* AD - Customises the Team member overviews */
 .container8 {
-    background-color:#264653;
+    background: linear-gradient(45deg, #264653, 50%, #2A9D8F, #F4A261);
     color: rgba(255, 255, 255, 0.856);
     border-radius: 10px; 
     padding: 0.1px 10px 0.1px 10px;   
@@ -429,7 +422,7 @@ container on the questionnaireResults page */
 
 /* AD - Navbar customisations */
 .container-nav-links {
-    background-color: #E9C46A;
+    background: linear-gradient(0deg,#F4A261, 10%, #E9C46A);
     border-radius: 10px; 
     padding: 1px;         
     margin: 4px;              
@@ -444,7 +437,8 @@ container on the questionnaireResults page */
 }
 
 /* AD - Navbar customisations */
-.container-nav-links-icon {    
+.container-nav-links-icon {   
+    background: linear-gradient(0deg, #264653, 10%, #2A9D8F); 
     border-radius: 10px;         
     margin: 4px;             
     width: 80%;
@@ -461,7 +455,7 @@ container on the questionnaireResults page */
 
 /* AD - Customises the main button stylings */
 .button-main {
-    background-color: #E76F51;
+    background: linear-gradient(180deg, #E76F51, 95%, #F4A261);
     border: none;
     color: rgba(255, 255, 255, 0.829); 
     padding: 10px;
@@ -496,7 +490,7 @@ container on the questionnaireResults page */
 
 /* AD - Customises the ShowHide 'ANSWERS' Button stylings */
 .buttonShowHide2 {
-    background-color: #2ea100;
+    background-color: #0075ac;
     border: none;
     color: rgba(255, 255, 255, 0.829); 
     padding: 10px;
@@ -605,9 +599,6 @@ text-decoration: none;
    
 background-color:#264653;
 color: rgba(255, 255, 255, 0.555);
-/*
-background-color: #E76F51;
-*/
 }
 
 /* AD - Table heading customisation
@@ -661,17 +652,17 @@ for specific cells (sich as update and delete
 /* AD - Customises the container for the dynamic question
         inside the questionnaire question section. */
 .containerDynamicQuestion {
-    background-color:#E76F51;
+    background: linear-gradient(0deg, #0075ac, 90%, #264653);  
     border-radius: 10px;    
     color: white;    
     margin: 5px 20px 5px 5px;
     padding: 0.1px 10px 0.1px 10px;  
 }
 
-/* AD - Customises the container for the dynamic question
+/* AD - Customises the container for the dynamic candidate
         inside the questionnaire question section. */
 .containerDynamicCandidate {
-    background-color:#E76F51;
+    background: linear-gradient(0deg, #0075ac, 90%, #264653);
     border-radius: 10px;    
     color: white;    
     margin: 25px;
@@ -687,7 +678,7 @@ for specific cells (sich as update and delete
 
 /* AD - Customises the 'compareResults' Button stylings */
 .buttonShowHide3 {
-    background-color: purple;
+    background: linear-gradient(0deg, rgb(91, 59, 180), 90%, rgb(168, 168, 241));
     border: none;
     color: rgba(255, 255, 255, 0.829);    
     text-align: center;
@@ -714,7 +705,7 @@ questionnaireResults page */
 /* AD - Customises the Answers hidden div
 	on the questionnaireResults page colourings */
     .containerCompareAnswers {        
-        background-color: purple;
+        background: linear-gradient(0deg, rgb(91, 59, 180), 90%, rgb(168, 168, 241));
         color: rgba(255, 255, 255, 0.829);
         border-radius: 10px; 
         padding: 0.1px 10px 0.1px 10px;   
@@ -722,7 +713,6 @@ questionnaireResults page */
     }
     
 /*Les - Logout button*/
-
 div.container-nav-links input[type="submit" i] {
 	background-color: #E9C46A !important; 
 	color: #264653 !important;
@@ -735,7 +725,62 @@ div.container-nav-links input[type="submit" i] {
 div.container-nav-links input[type="submit" i]:hover {
 	background-color: #E9C46A !important; 
 	color: rgba(255, 255, 255, 0.829) !important;
-
 }
 
+/* AD - Amendments to offset boostrap 
+    font-size conflicts, such as on the
+    admintUpdateCandidates.jsp page. */
+.adminTextCorrection1 {
+    font-weight: bold;
+	font-size: 22px !important;
+    /*AD - I removed the media query as it was not working
+        due to other conflicts that would take a
+        lot of time to investigate and fix.
+        Looks OK as is, on all screen sizes. */
+}
 
+/* AD - Amendments to offset boostrap 
+    font-size conflicts, such as on the
+    admintUpdateCandidates.jsp page. */
+    .adminTextCorrection2 {
+        font-weight: bold;
+        font-size: 16px !important;
+    /*AD - I removed the media query as it was not working
+        due to other conflicts that would take a
+        lot of time to investigate and fix.
+        Looks OK as is, on all screen sizes. */
+    }
+
+    /* AD - Amendments to offset boostrap 
+    font-size conflicts, such as on the
+    admintUpdateCandidates.jsp page. */
+    .adminTextCorrection3 {
+        font-weight: bold;
+        font-size: 16px !important;
+    /*AD - I removed the media query as it was not working
+        due to other conflicts that would take a
+        lot of time to investigate and fix.
+        Looks OK as is, on all screen sizes. */
+    }
+
+    
+    /* AD - Customises the 'main login Button' Button
+          such as on the loginPage.jsp */
+.mainloginButton {
+    background: linear-gradient(180deg, #264653 , 45%, #2A9D8F );
+    border: none;
+    color: rgba(255, 255, 255, 0.829);    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;    
+    width: 100px;    
+    font-weight: bold;    
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 07px;   
+}
+     
