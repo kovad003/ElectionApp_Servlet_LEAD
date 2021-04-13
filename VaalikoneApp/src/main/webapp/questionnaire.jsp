@@ -62,7 +62,7 @@
         <div class="container2">            
 
             <form id="form" action="/SubmitAnswer" method="POST">
-				<button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
+				
                 <button class="button-main button1 questionnaireButton" type="submit" id="submission" style="display: none"><b>Submit</b></button>
                 <button class="button-main button1 questionnaireButton" onclick="toMain()" id="cancel" style="display: none"><b>Cancel</b></button>
                 <br>                 
@@ -76,7 +76,7 @@
 					<span id="spnError" class="error" style="display: none">Please select.</span>
                     <!-- AD - Beginning of the section with 5 selection buttons-->
                     <div class="input-radio">
-	                    
+	                    <button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
                         <c:forEach var="question" items="${requestScope.questionlist}" >
 							
 						<div style="display: none" id="q${question.id}">
@@ -121,12 +121,14 @@
                 </div>	
 				
 				<br>
-                <hr> 
+             
 
-                <!-- AD - Questionnaire guidance for the user -->
+                <!-- AD - Questionnaire guidance for the user 
+                    <hr>
                 <div class="container7a">             
                     <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
                 </div> 
+                -->
 
             </form>           
 		    
@@ -135,9 +137,9 @@
             <!-- AD - button container, containing buttons-->
             <div class="container3">
             
-                <button class="button-main button1"><b>PREVIOUS</b></button>
+                <!--<button class="button-main button1" onclick="onPrev()" id="previous" style="display: none"><b>PREVIOUS</b></button>
                 
-                <button class="button-main button1"><b>NEXT</b></button>
+                <button class="button-main button1" onclick="onNext()" id="next" style="display: none"><b>NEXT</b></button>-->
 
             </div>
         
