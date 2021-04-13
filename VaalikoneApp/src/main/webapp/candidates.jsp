@@ -104,9 +104,9 @@
             <!-- AD - button container, containing buttons-->
             <div class="container3">
              
-                <button class="button-main button1"><b>PREVIOUS</b></button>
+                <button class="button-main button1"><a href="../index.jsp"><b>Home</b></a></button>
                 
-                <button class="button-main button1"><b>NEXT</b></button>
+                <button class="button-main button1" onclick="window.location.href='/ShowQuestions'"><b>Take Quiz</b></button>
 
             </div>
         
