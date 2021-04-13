@@ -20,7 +20,7 @@
     
     <!-- if not logged in as admin -> index page -->
     <%
-    if ((id == null) || (!id.startsWith("9"))) {
+    if ((id == null) || (!id.startsWith("99"))) {
     	response.sendRedirect("index.jsp");
 	} %> 
 

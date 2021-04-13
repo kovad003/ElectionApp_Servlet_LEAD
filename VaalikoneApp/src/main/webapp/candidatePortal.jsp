@@ -20,7 +20,7 @@
     
     <!-- if not candidate -> index page -->
     <%
-    if ((id == null) || (id.startsWith("9"))) {
+    if ((id == null) || (id.startsWith("99"))) {
     	response.sendRedirect("index.jsp");
 	} %>    
 
