@@ -33,10 +33,12 @@
                     <legend class = "adminPortal3"><b>MENU: </b></legend>
                     <hr>  
                     <table> 
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/adminPortal.jsp" target="_blank"> <u><b>adminPortal.jsp </b></u></a></td></tr>                   
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/adminPortal.jsp" target="_blank"> <u><b>adminPortal.jsp </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/candidatePortal.jsp" target="_blank"> <u><b>candidatePortal.jsp </b></u></a></td></tr>                    
 					<tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>index.jsp </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/about.jsp" target="_blank"> <u><b>about.jsp </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/questionnaire.jsp" target="_blank"> <u><b>questionnaire.jsp </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/ShowQuestions" target="_blank"> <u><b>Questionnaire Start</b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/candidates.jsp" target="_blank"> <u><b>candidates.jsp </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/loginPage.jsp" target="_blank"> <u><b>loginPage.jsp </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/adminUpdateCandidates.jsp" target="_blank"> <u><b>adminUpdateCandidates.jsp </b></u></a></td></tr>
