@@ -355,9 +355,9 @@
             <!-- AD - button container, containing buttons-->
             <div class="container3">
 
-                <button class="button-main button1"><b>RESTART</b></button>
+                <button class="button-main button1" onclick="window.location.href='/ShowQuestions'"><b>Restart</b></button>
                 
-                <button class="button-main button1"><b>HOME</b></button>
+                <button class="button-main button1"><a href="../index.jsp"><b>Home</b></a></button>
 
             </div>
         
