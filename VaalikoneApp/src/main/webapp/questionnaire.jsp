@@ -124,27 +124,18 @@
                 </div>
                 
                 <!-- AD - This div contains and centers the 'Next' button, which becomes visible after
-									the 'start' button has been clicked. In addition, this container
-									centres the 'previous' button, once it becomes visible.-->
-                    	<div class="container3"> 
-						<button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
+						  the 'start' button has been clicked. In addition, this container
+						  centres the 'previous' button, once it becomes visible.-->
+                    	<div class="container3a">						
 						<button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
+						<button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
 						</div> 	
 				
-				<br>
-             
-
-                <!-- AD - Questionnaire guidance for the user 
-                    <hr>
-                <div class="container7a">             
-                    <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
-                </div> 
-                -->
-
+				<br>  
+				
             </form>           
 		    
             <hr>      
-    
                     
         <!-- AD - End of the selection button section (answers)-->
         </div>
