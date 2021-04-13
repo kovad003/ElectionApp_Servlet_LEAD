@@ -77,17 +77,16 @@
                 <br><br>
                 <hr>
                 <br>
-                Overview: This project was a very enjoyable project, 
-                yet but it was certainly quite challenging.
-                During this project, I was mainly responsible for...
+                Overview: A complex task, yet very engaging.
                 <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
+                Initially, the team had to work hard to absorb a lot of new information. 
+                Only then, were we able to formulate, implement and execute a complex 
+                programming strategy. Once our research and learning phase was over, 
+                however, the team pulled through to produce a nicely, executed finished 
+                project. My main contributions to the project, revolved around the DAO, 
+                servlet implementation, JavaScript and algorithm creation. 
+                In addition, I ensured that various disparate project components, 
+                were correctly brought together for a smooth overall project execution.
             </h5>
         </div>
 
@@ -96,7 +95,7 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>(HAMK's Finest) Team member 2:
                 <br><br>
-                Les Heidrich (Server Programmer)
+                Lorand Heidrich (Server Programmer)
                 <br><br>
                 <hr>
                 <br>
@@ -126,11 +125,11 @@
                 For most of our team, servlets, DAO, and cookies were completely 
                 new topics to get to grips with. Nevertheless, with a bit of persistence 
                 and determination, the team worked hard, and things fell into place. 
-                During this project, my main contributions were towards the UI, 
-                Scrum planning, as well as some of the application's 
-                JavaScript 'dynamic' functionality. 
-                Our team worked very well together, despite the project challenges, 
-                and it was a real pleasure to be part of the team.
+                During this project, my main contributions were towards programming the UI, 
+                programming Java servlet links, Scrum planning, as well as some of the 
+                application's JavaScript 'dynamic' functionality. Our team worked 
+                very well together, despite the project challenges, and it was a real 
+                pleasure to be part of such an interesting project and motivated team.
             </h5>
         </div>
 
@@ -143,17 +142,16 @@
                 <br><br>
                 <hr>
                 <br>
-                Overview: This project was a very enjoyable project, 
-                yet but it was certainly quite challenging.
-                During this project, I was mainly responsible for...
+                Overview: It was hard work, but we are very pleased with the end result.
                 <br><br>
-                sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                officia deserunt mollit anim id est laborum.
+                This task was certainly a very ambitious project. Especially, in that the 
+                complex task had to be completed within a relatively short period of time. 
+                Nevertheless, despite the monumental task at hand, our team learned a lot 
+                and we had a lot of fun during this server programming marathon. 
+                As a member of the team, my main areas of responsibility revolved around 
+                collaborating with my colleague Lorand to work on the login system, 
+                cookies and session implementation. In addition, I worked on certain 
+                aspects of the admin database functionality.
             </h5>
         </div>
 
