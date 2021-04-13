@@ -77,7 +77,7 @@
                      
                     <!-- AD - This div contains and centers the 'Start' button -->
                     <div class="container3">  
-                    <button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
+                    <button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>START</b></button>
                     </div>
                     
                     <div class="input-radio">
@@ -127,10 +127,10 @@
 						  once the questionnaire has been completed, the 'submit' and 'cancel'
 						  buttons become visible, in the same container. -->
                     	<div class="container3a">						
-						<button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
-						<button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
-						<button class="button-main button1 questionnaireButton" onclick="toMain()" id="cancel" style="display: none"><b>Cancel</b></button>
-						<button class="buttonSubmit button1" type="submit" id="submission" style="display: none"><b>Submit</b></button>                
+						<button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>PREVIOUS</b></button>
+						<button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>NEXT</b></button>
+						<button class="button-main button1 questionnaireButton" onclick="toMain()" id="cancel" style="display: none"><b>CANCEL</b></button>
+						<button class="buttonSubmit button1" type="submit" id="submission" style="display: none"><b>SUBMIT</b></button>                
 						</div> 	
 				
 				<br>  
