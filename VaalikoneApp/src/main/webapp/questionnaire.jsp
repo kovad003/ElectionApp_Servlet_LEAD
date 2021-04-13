@@ -63,10 +63,8 @@
         <!-- AD - Beginning of the selection button section (answers)-->
         <div class="container2">            
 
-            <form id="form" action="/SubmitAnswer" method="POST">
-				
-                <button class="button-main button1 questionnaireButton" type="submit" id="submission" style="display: none"><b>Submit</b></button>
-                <button class="button-main button1 questionnaireButton" onclick="toMain()" id="cancel" style="display: none"><b>Cancel</b></button>
+            <form id="form" action="/SubmitAnswer" method="POST">				
+               
                 <br>                 
 	            
 	            
@@ -115,20 +113,24 @@
                                     <label> <b>(5)</b>
                                     <input type = "radio" name = "selected${question.id}" value = "5" required>
                                     </label>                                                                                         
-						</div>						
+							</div>						
 	        		    
-	        		    </c:forEach>        		        		    
+	        		    </c:forEach> <!-- AD End of forEach loop -->         		        		    
 	        		    
-                    </div>                    	      
+                    </div> <!-- AD End of container input-radio -->                   	      
 				
-                </div>
+                </div> <!-- AD End of container 5a -->
                 
                 <!-- AD - This div contains and centers the 'Next' button, which becomes visible after
 						  the 'start' button has been clicked. In addition, this container
-						  centres the 'previous' button, once it becomes visible.-->
+						  centres the 'previous' button, once it becomes visible. Finally,
+						  once the questionnaire has been completed, the 'submit' and 'cancel'
+						  buttons become visible, in the same container. -->
                     	<div class="container3a">						
 						<button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
 						<button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
+						<button class="button-main button1 questionnaireButton" onclick="toMain()" id="cancel" style="display: none"><b>Cancel</b></button>
+						<button class="button-main button1 questionnaireButton" type="submit" id="submission" style="display: none"><b>Submit</b></button>                
 						</div> 	
 				
 				<br>  
