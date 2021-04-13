@@ -20,7 +20,7 @@
 
     <!-- AD - Beginning the central (yellow container)-->
     <div class="container">
-        <i class="material-icons resize1">account_balance</i>
+        <a href="../index.jsp"><i class="material-icons resize1">account_balance</i></a>
         
         <!-- AD - customises the welcome message-->
         <div class="container6"> 
