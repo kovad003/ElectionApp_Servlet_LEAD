@@ -71,7 +71,7 @@
                     <!-- AD - Beginning of the section with 5 selection buttons-->
                     <div class="input-radio">
 	                    <button class="button-main button1 questionnaireButton" onclick="onStart()" id="start"><b>Start</b></button>
-	                     <button class="button-main button1 questionnaireButton" type="submit" id="Submit"><b>Submit</b></button>
+	                     <button class="button-main button1 questionnaireButton" type="submit" id="submission" style="display: none"><b>Submit</b></button>
 	                    <br>                 
 			            <button class="button-main button1 questionnaireButton" onclick="onPrev()" id="previous" style="display: none"><b>Previous</b></button>
 			            <button class="button-main button1 questionnaireButton" onclick="onNext()" id="next" style="display: none"><b>Next</b></button>
@@ -99,7 +99,7 @@
                                     <input type = "radio" name = "selected${question.id}" value = "2" required>
                                     </label>
                                     <label> <b>(3)</b>
-                                    <input type = "radio" name = "selected${question.id}" value = "3" required>
+                                    <input type = "radio" name = "selected${question.id}" value = "3" required checked ="checked">
                                     </label>
                                     <label> <b>(4)</b>
                                     <input type = "radio" name = "selected${question.id}" value = "4" required>
@@ -202,28 +202,56 @@
 	//NEXT button
 		function onNext() 
 		{	
-			string = "q"; //String for the id tag.
+		
+			var isValid = false;
 			
-		    q_id += 1; // Displayed block.
-			div_id = string + q_id
+			var curr_q_id = q_id;
+			radio = "selected";	
+			radio_tag = radio + (curr_q_id);
 			
+			var rad = document.getElementsByName(radio_tag);
 			
-			q_id_prev = q_id - 1; // Prev block: div "on the left".
-			div_id_prev = string + q_id_prev; // Prev block: div "on the left" => div id
+			for (var i = 0; i < rad.length; i++) {
+	            if (rad[i].checked) {
+	                isValid = true;
+	                break;
+	            }
+	        }
 			
-			radio_tag = radio + (q_id - 1);
-			//validator = false;
+			if(isValid == true)
+			{
+				string = "q"; //String for the id tag.
+				
+			    q_id += 1; // Displayed block.
+				div_id = string + q_id
+				
+				
+				q_id_prev = q_id - 1; // Prev block: div "on the left".
+				div_id_prev = string + q_id_prev; // Prev block: div "on the left" => div id
+				
+				radio_tag = radio + (q_id - 1);
+				//validator = false;
+				
+			    document.getElementById("clicks").innerHTML = div_id; // Displaying counter.
+			    
+				var div = document.getElementById(div_id); // Event Listener for question div.
+				if(q_id != collection_size + 1)
+				{
+					div.style.display = 'block';
+				}
+				
+				
+				var div = document.getElementById(div_id_prev); 
+				div.style.display = 'none';
+				
+				displayPrevBtn() // Event Listener for prev btn => needs to be displayed after Q2.
+				displayNextBtn() // Event Listener for the div "on the left".
+			}
+			else
+			{
+				//alert("Please select!");
+			}
 			
-		    document.getElementById("clicks").innerHTML = div_id; // Displaying counter.
-		    
-			var div = document.getElementById(div_id); // Event Listener for question div.
-			div.style.display = 'block';
-			
-			var div = document.getElementById(div_id_prev); 
-			div.style.display = 'none';
-			
-			displayPrevBtn() // Event Listener for prev btn => needs to be displayed after Q2.
-			displayNextBtn() // Event Listener for the div "on the left".
 			
 			
 			var rad = document.getElementsByName(radio_tag);
@@ -237,7 +265,7 @@
 	        }
 			if(isValid == false)
 				{
-					alert("Please select!");
+					//alert("Please select!");
 				}
            	//alert(rad[1].checked);
 			// alert('rad.value = ' + rad.value + ' | radio_tag = ' + radio_tag + ' | rad.checked = ' + rad.checked);
@@ -295,14 +323,25 @@
 	// Other|Custom methods	
 		function displayNextBtn()
 		{
+			var sbmt = document.getElementById("submission");
+		
 			var div = document.getElementById("next");
-			if(q_id == collection_size)
+			if(q_id == collection_size+1)
 				{
 					div.style.display = 'none';
 				}
 			else
 				{
 					div.style.display = 'block';
+				}
+			
+			if(q_id > collection_size)
+				{
+					sbmt.style.display = 'block';
+				}
+			else
+				{
+					sbmt.style.display = 'none';
 				}
 		}
 		
