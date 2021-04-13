@@ -190,7 +190,9 @@ contains the candidate table data */
     justify-content: center;             
 }
 
-/* AD - Customises the registration page orange box */
+/* AD - Customises the registration page orange box
+        (this might be obsolete, but won't be 
+        deleted until sure) */
 .container1a {
     background-color:#F4A261;
     border-radius: 10px;    
@@ -202,12 +204,13 @@ contains the candidate table data */
     color: rgba(255, 255, 255, 0.829) !important; 
 }
 
-/* AD - Customises the registration page main form section */
+/* AD - Customises the login and (potential) registration page 
+        main form section */
 .container1b{            
     max-width: 60%;
     padding: 30px;
     border-radius: 10px;         
-    background-color:#F4A261;
+    background: linear-gradient(0deg, #E76F51, 70%, #F4A261);
     box-shadow: 0 2px 16px 2px #264653;         
     margin: 10px;    
     display: flex;
@@ -252,9 +255,10 @@ contains the candidate table data */
     border-radius: 2px;
 }
 
-/* AD - Customises the registration page smaller cyan container */
+/* AD - Customises the login page (and potential registration page) 
+    smaller cyan container */
 .container1c{    
-    background: linear-gradient(to right, #264653, #2A9D8F);  
+    background: linear-gradient(270deg, #264653, 30%, #2A9D8F);  
     border-radius: 10px;    
     margin: 10px auto;
     padding: 10px;
@@ -433,7 +437,8 @@ container on the questionnaireResults page */
 }
 
 /* AD - Navbar customisations */
-.container-nav-links-icon {    
+.container-nav-links-icon {   
+    background: linear-gradient(0deg, #264653, 10%, #2A9D8F); 
     border-radius: 10px;         
     margin: 4px;             
     width: 80%;
