@@ -51,8 +51,8 @@
     /* AD - Customizes the NAV-bar for smaller screens */
     .container-nav1 {                           
         width: 97% !important;                                    
-    }    
-   
+    } 
+      
 }  
 
 /* Adjustments for a responsive website*/
@@ -115,7 +115,7 @@
     .textRestyle1 {
     font-size:small !important;
    }
-   
+     
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -123,7 +123,8 @@
 @media (min-width: 768px) {             
     h2{font-size: 1.75rem !important;}
     h3{font-size: 1.25rem !important;}
-    h5{font-size: 1rem !important;}
+    h5{font-size: 1rem !important;}  
+    
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -131,7 +132,8 @@
 @media (min-width: 992px) { 
     h2{font-size: 2rem !important;}
     h3{font-size: 1.5rem !important;} 
-    h5{font-size: 1rem !important;}
+    h5{font-size: 1rem !important;}  
+    
 }
 
 /* AD - Defines font size for the html page */
@@ -783,4 +785,37 @@ div.container-nav-links input[type="submit" i]:hover {
     margin-bottom: 15px;
     margin-left: 07px;   
 }
+
+/* AD - Customises the container for some of the buttons 
+		on the questionnaire.jsp such as the 'next' and 'previous' buttons. */
+.container3a {
+    text-align: center; 
+    display: flex;
+    justify-content: center;                              
+}
+
+/* AD - Customises the 'Submit' button on the 
+		questionnaire.jsp.*/
+.buttonSubmit {
+	background: linear-gradient(180deg, #0075ac, 95%, blue);
+    background-color: #0075ac;
+    border: none;
+    color: rgba(255, 255, 255, 0.829); 
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;                      
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    margin: 20px 10px 0px 10px; 
+    width: 90px;    
+    font-weight: bold;
+    /*
+     background-color: #0075ac;
+    */   
+}
+
+
      

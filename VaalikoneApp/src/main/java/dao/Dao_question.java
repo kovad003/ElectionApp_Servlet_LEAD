@@ -8,7 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import data.Question;
-
 import java.sql.Connection;
 
 
@@ -60,6 +59,17 @@ public class Dao_question {
 		}
 		catch(SQLException e) {
 			return null;
+
+	public void insertQuestion(String q)
+	{
+		try {
+			String sql="INSERT INTO electionmachine.new_questions (NEW_QUESTION) VALUES (?)";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, q); 
+				pstmt.executeUpdate();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
 		}
 	}
 	

@@ -16,7 +16,13 @@
 <body>
 
     <!-- AD - includes the navbar component, into this page -->
-    <%@ include file="../components/navbar.jsp" %>     
+    <%@ include file="../components/navbar.jsp" %>    
+    
+    <!-- if not logged in as admin -> index page -->
+    <%
+    if ((id == null) || (!id.startsWith("99"))) {
+    	response.sendRedirect("index.jsp");
+	} %> 
 
     <div class = "container1">
         <div class = "container1c">          
