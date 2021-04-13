@@ -53,7 +53,9 @@
         <!-- AD - Questionnaire guidance for the user -->
         <div class="container7a">             
             <h5>1 = strongly disagree / 2 = disagree / 3 = neither agree nor disagree / 4 = agree / 5 = strongly agree</h5>
-            <p> Clicks: <a id="clicks">1</a></p>
+            <a id="clicks"></a>
+        <!-- AD Click counter removed. Was only for Debugging purposes 
+            <p> Clicks: <a id="clicks">1</a></p>-->
         </div>
 		
         <hr>     
@@ -243,7 +245,9 @@
 				radio_tag = radio + (q_id - 1);
 				//validator = false;
 				
-			    document.getElementById("clicks").innerHTML = div_id; // Displaying counter.
+				/* AD - Click counter (displaying) was removed. Was only for debugging purposes 
+			    document.getElementById("clicks").innerHTML = div_id;
+				*/
 			    
 				var div = document.getElementById(div_id); // Event Listener for question div.
 				if(q_id != collection_size + 1)
@@ -299,7 +303,9 @@
 			q_id_prev = q_id + 1; // Div block on the "right"
 			div_id_prev = string + q_id_prev; // Div block on the "right" => div id
 			
-		    document.getElementById("clicks").innerHTML = div_id; // Displaying counter
+			/* AD - Click counter (displaying) was removed. Was only for debugging purposes
+		    document.getElementById("clicks").innerHTML = div_id;
+			*/
 		    
 			var div = document.getElementById(div_id); // Event Listener for question div.
 			div.style.display = 'block';
