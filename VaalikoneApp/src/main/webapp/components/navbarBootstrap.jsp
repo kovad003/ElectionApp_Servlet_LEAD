@@ -37,7 +37,7 @@ if (id!=null) {
                     <a href="../about.jsp"><h5 class = "adminTextCorrection3">About</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                    <a href="../ShowQuestions"><h5 class = "adminTextCorrection3">Questionnaire</h5></a>
+                    <a href="../ShowQuestions"><h5 class = "adminTextCorrection3">Quiz</h5></a>
                 </div>
                 <div class = "container-nav-links">
                     <a href="../ShowCandidates"><h5 class = "adminTextCorrection3">Candidates</h5></a>
@@ -79,7 +79,7 @@ else {
                     <a href="../about.jsp"><h5 class = "adminTextCorrection3">About</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                    <a href="../ShowQuestions"><h5 class = "adminTextCorrection3">Questionnaire</h5></a>
+                    <a href="../ShowQuestions"><h5 class = "adminTextCorrection3">Quiz</h5></a>
                 </div>
                 <div class = "container-nav-links">
                     <a href="../ShowCandidates"><h5 class = "adminTextCorrection3">Candidates</h5></a>
