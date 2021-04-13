@@ -34,13 +34,13 @@ if (id!=null) {
                 <a href="../adminPortal.jsp"><i class="material-icons resize3a">account_balance</i></a>              
                 </div>
                 <div class = "container-nav-links">
-                    <a href="../about.jsp"><h5>About</h5></a>
+                    <a href="../about.jsp"><h5 class = "adminTextCorrection3">About</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                    <a href="../ShowQuestions"><h5>Questionnaire</h5></a>
+                    <a href="../ShowQuestions"><h5 class = "adminTextCorrection3">Questionnaire</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                    <a href="../ShowCandidates"><h5>Candidates</h5></a>
+                    <a href="../ShowCandidates"><h5 class = "adminTextCorrection3">Candidates</h5></a>
                 </div>
                 <div class = "container-nav-links">               
 
@@ -76,16 +76,16 @@ else {
                 <a href="../adminPortal.jsp"><i class="material-icons resize3a">account_balance</i></a>              
                 </div>
                 <div class = "container-nav-links">
-                    <a href="../about.jsp"><h5>About</h5></a>
+                    <a href="../about.jsp"><h5 class = "adminTextCorrection3">About</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                    <a href="../ShowQuestions"><h5>Questionnaire</h5></a>
+                    <a href="../ShowQuestions"><h5 class = "adminTextCorrection3">Questionnaire</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                    <a href="../ShowCandidates"><h5>Candidates</h5></a>
+                    <a href="../ShowCandidates"><h5 class = "adminTextCorrection3">Candidates</h5></a>
                 </div>
                 <div class = "container-nav-links">
-                  <a href="../loginPage.jsp"><h5>Login</h5></a>
+                  <a href="../loginPage.jsp"><h5 class = "adminTextCorrection3">Login</h5></a>
                 </div>           
             </div>
         </div>
