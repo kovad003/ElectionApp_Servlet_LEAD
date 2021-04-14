@@ -48,7 +48,7 @@ public class Dao_candidate {
 	public void insertCandidate(Candidate c) {
 //		System.out.println("insertCandidate()");
 		try {
-			String sql="INSERT INTO CANDIDATES (SURNAME, FIRSTNAME, PARTY, LOCATION, AGE, REASON_FOR_RUNNING, AIMS_AND_GOALS, PROFESSION) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql="insert into CANDIDATES (SURNAME, FIRSTNAME, PARTY, LOCATION, AGE, REASON_FOR_RUNNING, AIMS_AND_GOALS, PROFESSION, USERNAME, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?, CONCAT(RTRIM((LTRIM(SURNAME))), CONVERT(CANDIDATE_ID, CHAR)), '1a59ef90d1ea801448e1567d0896a99f');";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 				pstmt.setString(1, c.getSName());
 				pstmt.setString(2, c.getFName());
@@ -85,6 +85,7 @@ public class Dao_candidate {
 			e.printStackTrace();
 		}
 	}
+
 	public void deleteCandidate(String id) {
 		System.out.println("deleteCandidate(String id)");
 		try {
@@ -98,7 +99,7 @@ public class Dao_candidate {
 		}
 	}
 	
-	public ArrayList<Candidate> readAllCandidate() {
+	public ArrayList<Candidate> readAllCandidate() { // Will read all cans in asc order
 //		System.out.println("readAllCandidate()");
 		ArrayList<Candidate> list=new ArrayList<>();
 		try {
@@ -124,7 +125,7 @@ public class Dao_candidate {
 			return null;
 		}
 	}
-	public ArrayList<Candidate> readAllCandidateDesc() {
+	public ArrayList<Candidate> readAllCandidateDesc() { // WIll read all cans in desc order
 //		System.out.println("readAllCandidateDesc()");
 		ArrayList<Candidate> list=new ArrayList<>();
 		try {
@@ -171,8 +172,6 @@ public class Dao_candidate {
 			return null;
 		}
 	}
-	
-
 
 	public Candidate readCandidate(String id) {
 		Candidate f=null;
@@ -195,4 +194,5 @@ public class Dao_candidate {
 			return null;
 		}
 	}
+
 }

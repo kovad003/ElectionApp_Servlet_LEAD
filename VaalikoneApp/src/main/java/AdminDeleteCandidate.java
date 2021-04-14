@@ -52,8 +52,7 @@ public class AdminDeleteCandidate extends HttpServlet {
 			System.out.println("No connection to database");
 		}
 		
-//		RequestDispatcher rd = request.getRequestDispatcher("/");
-//		rd.forward(request, response);
+		response.sendRedirect("/AdminCandidates");
 	}
 
 }

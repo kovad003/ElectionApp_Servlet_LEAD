@@ -44,14 +44,32 @@ public class SaveAnswers extends HttpServlet {
 //		*********** GET CANDIDATE SELECTIONS/ANSWERS ************************************************************************************************
 //		*********************************************************************************************************************************************			
 		
-		@SuppressWarnings("unchecked")
+//		Getting answers:
+		@SuppressWarnings("unchecked") // Because of the type casting. => Havent casused any isseu yet!
 		ArrayList<QAnswer> selectionList = (ArrayList<QAnswer>) request.getAttribute("selectionList");
-	
+		
+//		Saving Data to DB:
 		if(dao_qanswer.getConnection())
 		{
+//			Successful connection!
 			System.out.println("Successfully connected to the database");
-			dao_qanswer.insertAllAnswer(selectionList);
-			System.out.println("Answer_List: " + selectionList);
+			
+//			Check if there is any user answer in the DB:
+			String c_id = Integer.toString(selectionList.get(0).getCId());
+			boolean emptyTable = dao_qanswer.readAnswersForCandidate(c_id).isEmpty();
+			
+			if(emptyTable) { //If there are no questions stored => insert new ones.
+				dao_qanswer.insertAllAnswer(selectionList);
+				System.out.println("Answer_List: " + selectionList);
+			}
+			else if(!emptyTable) {
+				dao_qanswer.deleteAnswers(c_id);
+				dao_qanswer.insertAllAnswer(selectionList);
+			}
+//			
+			response.sendRedirect("/candidatePortal.jsp");
+			
+			
 
 //			<<< Debugging Messages >>>
 //			for (int i = 0; i < answerList.size(); i++) {		
@@ -60,7 +78,7 @@ public class SaveAnswers extends HttpServlet {
 //				System.out.println("Candidate ID: " + a.getCId());
 //				System.out.println("Question ID: " + a.getQId());
 //				System.out.println("Answer : " + a.getAnswer());
-//			}	
+//			}
 		}
 		else
 		{
