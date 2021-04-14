@@ -43,8 +43,8 @@ public class AdminEditCandidate extends HttpServlet {
 		
 		Candidate candidate = new Candidate();
 		
-		int cId = Integer.parseInt(request.getParameter("CANDIDATE_ID"));
-		System.out.println(request.getParameter("CANDIDATE_ID"));
+		int cId = Integer.parseInt(request.getParameter("CID"));
+		System.out.println(request.getParameter("CID"));
 		String sName = request.getParameter("SURENAME");
 		String fName = request.getParameter("FIRSTNAME");
 		String party = request.getParameter("PARTY");

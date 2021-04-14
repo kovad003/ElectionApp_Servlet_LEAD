@@ -63,7 +63,7 @@
                 <table class="table">                    
                     <thead class = "tableCustom1">
                         <tr>
-                            <th>UPDATE</th>                           
+                            <th>ADD</th>                           
                             <th>CANDIDATE_ID</th>
                             <th>SURNAME</th>
                             <th>FIRSTNAME</th>
@@ -129,7 +129,7 @@
 				                    </thead>
 								    <tbody>                   
 				                       <tr>   
-					                       <td><input disabled size="" type="text" id="CANDIDATE_ID" name ="CANDIDATE_ID" value = "${candidate.id}"></td>
+					                       <td><input disabled size="" type="text" name ="CID" value = "${candidate.id}"></td>
 					                       <td><input required type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
 					                       <td><input required type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
 					                       <td><input required type="text" name ="PARTY" value = "${candidate.party}"></td>
@@ -182,7 +182,7 @@
 				                    </thead>
 								    <tbody>                   
 				                       <tr>   
-					                       <td><input disabled size="" type=text id="CANDIDATE_ID" name ="CANDIDATE_ID" value = "${candidate.id}"></td>
+					                       <td><input disabled size="" type=number name ="CID" value = "${candidate.id}"></td>
 					                       <td><input required type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
 					                       <td><input required type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
 					                       <td><input required type="text" name ="PARTY" value = "${candidate.party}"></td>
