@@ -56,7 +56,7 @@
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidates -->
             <div class = "containerDynamicCandidate" >
-                <h3>    
+                <h3 class = "customCandidateHeading1 customCandidateText1">    
             	<c:out value = "${candidate.FName} ${candidate.SName} - ${candidate.party}"/>
             	</h3>            	
                	<hr>

@@ -883,6 +883,24 @@ div.container-nav-links input[type="submit" i]:hover {
 	color: #E9C46A;
 }
 
+/* AD - customises the heading on the 
+	candidates page */
+.customCandidateHeading1 {
+	color: #E9C46A;
+}
+
+/* AD - customises the candidate text on the 
+	candidates page */
+.customCandidateText1 {
+	font-style: italic;
+}
+
+/* AD - customises the candidate text on the 
+	candidates page */
+.customCandidateText2 {
+	font-style: bold;
+}
+
 
 
      
