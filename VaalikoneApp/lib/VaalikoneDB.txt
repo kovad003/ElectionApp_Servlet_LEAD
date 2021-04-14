@@ -550,3 +550,9 @@ UPDATE candidates SET CANDIDATE_ID=CANDIDATE_ID+1000 WHERE SURNAME <> "admin" LI
 /*make candidate id starting with 1000 where not admin for answers tbl*/
 update answers set candidate_id=candidate_id+1000 limit 500;
 
+
+CREATE TABLE NEW_QUESTIONS (
+   NEW_QUESTION_ID INTEGER NOT NULL AUTO_INCREMENT,
+   NEW_QUESTION VARCHAR (250),
+   PRIMARY KEY (NEW_QUESTION_ID)
+);

@@ -36,10 +36,12 @@ if(id == null) response.sendRedirect("login.html");
 <%
 if(id.startsWith("99")==true) {
 	// if admin ->
-	response.sendRedirect("adminPortal.jsp");
+	
+	response.sendRedirect("adminPortal.jsp");	
 }
 else {
 	// if candidate ->
+	
 	response.sendRedirect("candidatePortal.jsp");	
 }
 %>

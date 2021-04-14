@@ -42,9 +42,9 @@ public class AdminEditCandidate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Candidate candidate = new Candidate();
-
-		System.out.println(request.getParameter("CID"));
+		
 		int cId = Integer.parseInt(request.getParameter("CID"));
+		System.out.println(request.getParameter("CID"));
 		String sName = request.getParameter("SURENAME");
 		String fName = request.getParameter("FIRSTNAME");
 		String party = request.getParameter("PARTY");
@@ -85,6 +85,9 @@ public class AdminEditCandidate extends HttpServlet {
 		{
 			System.out.println("No connection to database");
 		}
+	
+		response.sendRedirect("/AdminUpdateCandidate");
+
 	}
 
 }

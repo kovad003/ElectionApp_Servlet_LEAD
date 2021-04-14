@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -38,8 +39,28 @@ public class SubmitAnswer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 //		**********************************************************************************************************************************************
+//		**************** CHECK COOKIES FOR LOGIN DATA ************************************************************************************************
+//		**********************************************************************************************************************************************
+		
+		boolean isCandidate = false;;
+		String id = null;
+		
+		Cookie[] login = request.getCookies();
+		if(login !=null){
+			for(Cookie i : login){
+				if(i.getName().equals("user")) {
+					isCandidate = true;
+					id = i.getValue();
+					System.out.println("login cookie: " + id);
+					System.out.println("Candidate?: " + isCandidate);
+					}
+			}
+		}
+		
+//		**********************************************************************************************************************************************
 //		**************** GET CLIENT SELECTIONS *******************************************************************************************************
 //		**********************************************************************************************************************************************
+		
 		
 		ArrayList<QAnswer> selectionList= new ArrayList<QAnswer>(); // Empty ArrayList for the client's answers.
 		
@@ -53,6 +74,8 @@ public class SubmitAnswer extends HttpServlet {
 //			System.out.println("Q" + i + ", QUESTION TEXT: " + questionText);
 			
 			if (selected != null) {
+				System.out.println("CID: " +id);
+				if(isCandidate) { qans.setCId(id); } // Candidate answers will be saved in DB => C_ID is required.
 				qans.setQId(i);
 				qans.setQTxt(questionText);
 				qans.setAnswer(selected);
@@ -70,17 +93,20 @@ public class SubmitAnswer extends HttpServlet {
 //		**************** SENDING DATA TO EVALUATE QUASTIONNAIRE **************************************************************************************
 //		**********************************************************************************************************************************************
 		
-		request.setAttribute("selectionList", selectionList);
-		
-//		ServletContext sc = request.getServletContext();
-//	    sc.setAttribute("selectionList", selectionList);
+		request.setAttribute("selectionList", selectionList);		
+
+//		Integer.valueOf(id);
 
 //		IF U ARE LOGGED IN AS A CANDIDATE
-//		RequestDispatcher rd = request.getRequestDispatcher("/SaveAnswers");
-//		rd.forward(request, response);
-		
+		if (isCandidate) {
+			RequestDispatcher rd = request.getRequestDispatcher("/SaveAnswers");
+			rd.forward(request, response);
+			
+		}
 //		IF U ARE LOGGED IN AS ARE A VOTER / REGULAR USER
-		RequestDispatcher rd = request.getRequestDispatcher("/FindMatchingCandidates");
-		rd.forward(request, response);
+		else {
+			RequestDispatcher rd = request.getRequestDispatcher("/FindMatchingCandidates");
+			rd.forward(request, response);
+			}
 	}
 }

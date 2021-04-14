@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.Dao_candidate;
 import dao.Dao_question;
 import data.Question;
 
@@ -16,7 +17,8 @@ import data.Question;
 @WebServlet("/AdminDeleteNewQuestion")
 public class AdminDeleteNewQuestion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private Dao_question dao_question=null;
+   
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -35,10 +37,10 @@ String qId = request.getParameter("QID");
 //		<<< Debugging Messages >>>
 		System.out.println("QID for delete: " + qId);
 		
-		if(Dao_question.getConnection())
+		if(dao_question.getConnection())
 		{
 			System.out.println("Successfully connected to the database");
-			Dao_question.deleteNewQuestion(qId);
+			dao_question.deleteNewQuestion(qId);
 		}
 		else
 		{

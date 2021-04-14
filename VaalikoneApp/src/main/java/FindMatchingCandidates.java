@@ -105,6 +105,8 @@ public class FindMatchingCandidates extends HttpServlet {
 //		************ SENDING DATA TO THE JSP PAGE ***************************************************************************************************
 //		*********************************************************************************************************************************************
 		
+		request.setAttribute("selectionList", selectionList);
+		
 		request.setAttribute("result_1st", result_1st);
 		request.setAttribute("result_2nd", result_2nd);
 		request.setAttribute("result_3rd", result_3rd);

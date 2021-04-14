@@ -8,7 +8,8 @@
 	<%@ page import="data.Question" %>   
 	<%@ page import="data.Answer" %>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
-    
+  <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+     
     <title>Questionnaire Results</title>
     
     <!-- AD - includes the header component, into this page -->
@@ -64,32 +65,18 @@
             button is pressed. Conversely, the div disappears once the
             button is pressed again (toggle button).-->
             <div id="dvUserResults" style="display: none">
-
+				
+				<c:forEach var="question" items="${requestScope.selectionList}" >
                 <div class="containerUserAnswers">
           
-                    <h5>Q1: "I think that parliament should do more for the environment..."
+                    <h5><c:out value = "${question.QId}/${fn:length(requestScope.selectionList)} - ${question.QTxt}"/>
                         <br><br>
-                        Your answer (number): 4    
+                        Your answer (number): <c:out value = "${question.answer}"/>  
                     </h5>
-                    
+         
                 </div>
-
-                <div class="containerUserAnswers">
-
-                    <h5>Q2: "I think that parliament should do more for the environment..."
-                        <br><br>
-                        Your answer (number): 3    
-                    </h5>
-                </div>
+				</c:forEach>
                 
-                <div class="containerUserAnswers">
-                   
-                    <h5>Q3: "I think that parliament should do more for the environment..."
-                        <br><br>
-                        Your answer (number): 1   
-                    </h5>
-                </div>              
-
             </div>
             
 

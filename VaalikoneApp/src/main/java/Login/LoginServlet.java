@@ -45,11 +45,16 @@ public class LoginServlet extends HttpServlet {
 		if(dao.getConnection())
 		{
 			System.out.println("Successfully connected to Candidates to fetch login info");
+			/*
+			 * creates candidate arraylist with attributres appended
+			 */
 			list = dao.loginCandidate(sql);
 			System.out.println("Can_List: " + list);
 			for (int i = 0; i < list.size(); i++) {
 				Candidate c = list.get(i);
-
+				/*
+				 * (String) CANDIDATE_ID -> id_push
+				 */
 				id_push = String.valueOf(c.getId());
 				System.out.println("Candidate id/name: " + c.getId() + " " + c.getUSERNAME());//
 			}	
@@ -60,19 +65,25 @@ public class LoginServlet extends HttpServlet {
 		}
 		
 
-		//cookie -> send login ID
+		/*
+		 * If username and password from loginPage.jsp exist on the same row in candidates
+		 * table -> id_push is set to that candidate's CANDIDATE_ID -> therefore login exists
+		 * and can proceed to initialize cookie
+		 * else id_push will be null -> login will not proceed
+		 */
 		if(id_push != null) {
 			Cookie id_cookie = new Cookie("user", id_push);
 			response.addCookie(id_cookie);			
 			/*
 			 * if login ok -> 
 			 */
+			
 			response.sendRedirect("_TEST_LOGIN_SUCCESS.jsp");
 		}else{
 			/*
 			 * if login not ok ->
 			 */
-			response.getWriter().println("<p style=\"color:red\">Sorry username or password error</p>");
+			response.getWriter().println("<div class = \"logoutFail\"><i>Sorry, username or password error. Please try again.</i></div>");
 			RequestDispatcher rd = request.getRequestDispatcher("loginPage.jsp");
 			rd.include(request,response);
 			

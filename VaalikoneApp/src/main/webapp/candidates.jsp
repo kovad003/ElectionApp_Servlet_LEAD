@@ -52,24 +52,30 @@
         <hr>
          
         <!-- AD - Candidate 1 intro colourings and text -->
-        <c:forEach begin="0" end="18" var="candidate" items="${requestScope.candidatelist}">
+        <c:forEach begin="1" var="candidate" items="${requestScope.candidatelist}">
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidates -->
             <div class = "containerDynamicCandidate" >
-                <h3>    
+                <h3 class = "customCandidateHeading1 customCandidateText1">    
             	<c:out value = "${candidate.FName} ${candidate.SName} - ${candidate.party}"/>
             	</h3>            	
                	<hr>
                	
                	<h5>
+               	<i class = "customCandidateText2">
                 Age:
                 <c:out value = "${candidate.age}"/>
+                </i>
                 <br>
+                <i class = "customCandidateText2">
                 Profession:
                 <c:out value = "${candidate.profession}"/>
+                </i>
                 <br>
+                <i class = "customCandidateText2">
                 Location:
                 <c:out value = "${candidate.location}"/>
+                </i>
                 <br><br>
                 Hi, my name is
             	<c:out value = "${candidate.FName}"/>!

@@ -51,12 +51,12 @@ public class AdminCandidates extends HttpServlet {
 				System.out.println("Candidate name: " + c.getFName() + " " + c.getSName());//
 				System.out.println("location: " + c.getLocation() );//
 			}
-			
 		}
 		else
 		{
 			System.out.println("No connection to database");
 		}
+		
 		request.setAttribute("candidatelist", list);
 		
 		RequestDispatcher rd=request.getRequestDispatcher("/adminUpdateCandidates.jsp");

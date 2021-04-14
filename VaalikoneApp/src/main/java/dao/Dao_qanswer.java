@@ -124,31 +124,32 @@ public class Dao_qanswer {
 		}	
 	}
 	
-	public ArrayList<QAnswer> updateAnswer(QAnswer a) {
-		System.out.println("updateAnswer(QAnswer a)");
-		try {
-			String sql="update questions set answer=? where id=?";
-			PreparedStatement pstmt=conn.prepareStatement(sql);
-			pstmt.setInt(1, a.getAnswer());
-			pstmt.setInt(2, a.getQId());
-			pstmt.executeUpdate();
-			return readAllAnswer();
-		}
-		catch(SQLException e) {
-			return null;
-		}
-	}
-	public ArrayList<QAnswer> deleteAnswer(String id) {
+	public void deleteAnswers(String id) {
 		System.out.println("deleteAnswer(String id)");
 		try {
-			String sql="delete from question where id=?";
+			String sql="delete from answers where CANDIDATE_ID=?;";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
-			return readAllAnswer();
 		}
 		catch(SQLException e) {
-			return null;
+			
+		}
+	}
+	
+	public void updateAnswers(QAnswer a) {
+		System.out.println("updateAnswer(QAnswer a)");
+		try {
+			String sql="update answers set QUESTION_ID=?, ANSWER=?, COMMENTS where CANDIDATE_ID=?";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, a.getCId());
+			pstmt.setInt(2, a.getAnswer());
+			pstmt.setInt(3, a.getQId());
+			pstmt.setString(4, "Candidate's answer to the question.");
+			pstmt.executeUpdate();
+		}
+		catch(SQLException e) {
+			
 		}
 	}
 

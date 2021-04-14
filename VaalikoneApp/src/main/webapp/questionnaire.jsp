@@ -96,7 +96,7 @@
                                                           
                                     <!-- Display Radio buttons -->
                                     <label class = "questionnaireSelect">
-                                        <b>SELECT :</b>
+                                        <b class = "customText1">SELECT :</b>
                                     </label>
                                     <label> <b>(1)</b>
                                     <input type = "radio" name = "selected${question.id}"  value="1" required>
@@ -105,7 +105,7 @@
                                     <input type = "radio" name = "selected${question.id}" value = "2" required>
                                     </label>
                                     <label> <b>(3)</b>
-                                    <input type = "radio" name = "selected${question.id}" value = "3" required checked ="checked">
+                                    <input type = "radio" name = "selected${question.id}" value = "3" required> <!-- checked ="checked" - FOR Testing purposes -->
                                     </label>
                                     <label> <b>(4)</b>
                                     <input type = "radio" name = "selected${question.id}" value = "4" required>

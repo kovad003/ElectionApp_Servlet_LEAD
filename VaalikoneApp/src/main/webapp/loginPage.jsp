@@ -25,14 +25,14 @@
 
         <div class = "container1c">          
             <h5>WELCOME</h5>     
-            <i class="material-icons resize3">account_balance</i>  
+            <a href="../index.jsp"><i class="material-icons resize3">account_balance</i></a>             
             <h5>ELECTION MACHINE</h5>            
         </div>
 
         <!-- AD - Login Section-->
         <div class = "container1b">
             <form action="LoginServlet" method="post">      
-                <legend><b>Site Login </b></legend>
+                <legend><b>Site Login</b></legend>
                 <table>
                     <hr> 
                     <tr>

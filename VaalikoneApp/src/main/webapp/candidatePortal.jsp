@@ -27,7 +27,7 @@
     <div class = "container1">
         <div class = "container1c">          
             <h5>WELCOME</h5>     
-            <i class="material-icons resize3">account_balance</i>  
+            <a href="../index.jsp"><i class="material-icons resize3">account_balance</i></a>   
             <h5>ELECTION MACHINE</h5>            
         </div>
 
@@ -44,8 +44,7 @@
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/ShowQuestions" target="_blank"> <u><b>Take Questionnaire </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/EditQuastionnaire" target="_blank"> <u><b>Update Questions </b></u></a></td></tr> 
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Contact Admin </b></u></a></td></tr>                                 
-                    <tr>                        
-                        <td></td><td><br><input class = "button-main button1 mainloginButton" type="submit" value="LOGOUT" /></td>
+                    <tr>                    		                    
                     </tr>                   
                     </table>
                     <hr>        
