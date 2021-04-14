@@ -112,7 +112,7 @@
 				<c:forEach var="candidate" items="${requestScope.candidatelist}">
 					<div style="display: none" id="${candidate.id}">
 					
-						   <form action = "/AdminEditCandidate" method="POST" id="updateCandidate"> 
+						   <form action = "/AdminEditCandidate" method="POST" id="updateCandidate" accept-charset="UTF-8"> 
 							    <table class="table">
 								    <thead class = "tableCustom1">
 				                        <tr> 
@@ -129,7 +129,7 @@
 				                    </thead>
 								    <tbody>                   
 				                       <tr>   
-					                       <td><input disabled size="" type="number" id="CID" name ="CID" value = "${candidate.id}"></td>
+					                       <td><input disabled size="" type="text" id="CANDIDATE_ID" name ="CANDIDATE_ID" value = "${candidate.id}"></td>
 					                       <td><input required type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
 					                       <td><input required type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
 					                       <td><input required type="text" name ="PARTY" value = "${candidate.party}"></td>
@@ -165,7 +165,7 @@
 				<c:forEach var="candidate" items="${requestScope.candidatelist}">
 					<div style="display: none" id="del${candidate.id}">
 					
-						   <form action = "/AdminDeleteCandidate" method="POST" id="updateCandidate"> 
+						   <form action = "/AdminDeleteCandidate" method="POST" id="updateCandidate" accept-charset="UTF-8"> 
 							    <table class="table">
 								    <thead class = "tableCustom1">
 				                        <tr> 
@@ -182,7 +182,7 @@
 				                    </thead>
 								    <tbody>                   
 				                       <tr>   
-					                       <td><input disabled size="" type="number" id="CID" name ="CID" value = "${candidate.id}"></td>
+					                       <td><input disabled size="" type=text id="CANDIDATE_ID" name ="CANDIDATE_ID" value = "${candidate.id}"></td>
 					                       <td><input required type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
 					                       <td><input required type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
 					                       <td><input required type="text" name ="PARTY" value = "${candidate.party}"></td>

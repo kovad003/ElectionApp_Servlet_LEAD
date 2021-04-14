@@ -48,7 +48,7 @@ public class Dao_candidate {
 	public void insertCandidate(Candidate c) {
 //		System.out.println("insertCandidate()");
 		try {
-			String sql="insert into CANDIDATES (SURNAME, FIRSTNAME, PARTY, LOCATION, AGE, REASON_FOR_RUNNING, AIMS_AND_GOALS, PROFESSION, USERNAME, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?, CONCAT(RTRIM((LTRIM(SURNAME))), CONVERT(CANDIDATE_ID, CHAR)), 'fdea6959e78356368a8104aa2e9169df');";
+			String sql="insert into CANDIDATES (SURNAME, FIRSTNAME, PARTY, LOCATION, AGE, REASON_FOR_RUNNING, AIMS_AND_GOALS, PROFESSION, USERNAME, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?, CONCAT(RTRIM((LTRIM(SURNAME))), CONVERT(CANDIDATE_ID, CHAR)), '1a59ef90d1ea801448e1567d0896a99f');";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 				pstmt.setString(1, c.getSName());
 				pstmt.setString(2, c.getFName());

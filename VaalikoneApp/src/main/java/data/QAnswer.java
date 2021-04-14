@@ -28,6 +28,11 @@ public class QAnswer {
 	public void setCId(int cId) {
 		this.cId = cId;	
 	}
+	public void setCId(String cId) {
+		this.cId = Integer.valueOf(cId);
+		
+	}
+	
 	public void setQId(int id) {
 		//System.out.println("setId(int id)");
 		this.qId = id;
@@ -36,6 +41,7 @@ public class QAnswer {
 		//System.out.println("setId(String id)");
 		this.qId = Integer.parseInt(id);
 	}
+	
 	public void setAnswer(int answer) {
 		//System.out.println("setAnswer(String answer)");
 		this.answer = answer;
@@ -44,6 +50,7 @@ public class QAnswer {
 		//System.out.println("setAnswer(String answer)");
 		this.answer = Integer.parseInt(answer);
 	}
+	
 	public void setScore(int score) {
 		//System.out.println("setAnswer(String answer)");
 		this.score = score;
@@ -85,6 +92,7 @@ public class QAnswer {
 	public String getQTxt() {
 		return questionTxt;	
 	}
+
 	
 //	 *************************************************************************************************
 //	 ******************** CUSTOM *********************************************************************
