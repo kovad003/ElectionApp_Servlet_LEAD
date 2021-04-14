@@ -6,6 +6,13 @@ import java.security.NoSuchAlgorithmException;
 public class Encryption {
 	
 	public static String crypt(String str) {
+		/*
+		 * PARAMETER: (String) str=text you wish to encrypt with MD5 hash
+		 * 
+		 * RETURNS: encrypted string
+		 * 
+		 * THROWS: algorithm exception 
+		 */
 	      if (str == null || str.length() == 0) {
 	          throw new IllegalArgumentException("String to encript cannot be null or zero length");
 	      }

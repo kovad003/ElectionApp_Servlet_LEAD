@@ -2,6 +2,26 @@ package data;
 
 public class Candidate {
 	
+	/*
+	 * Instances used as arraylists to house politicians answers from
+	 * electionmachine.answers with columns as attributes of instance.
+	 * 
+	 * -= CONSTRUCTORS =-
+	 * 
+	 * 	  1) param.ized: String
+	 * 			-> all parameters are Strings, attributes also set to String
+	 * 			-> matching columns of electionmachine.caindidates table
+	 * 
+	 * 	  2) param.ized: int + String
+	 * 			-> int field parameters in MySQL table are int, String fields are 
+	 *             String, attributes also set to String
+	 * 			-> matching columns of electionmachine.caindidates table
+	 * 
+	 * 	  3) default:
+	 * 			-> takes no args
+	 * 			-> all attribs set to null
+	 */
+	
 	private int id;
 	private String party;
 	private String location;
@@ -13,6 +33,7 @@ public class Candidate {
 	private String sName;
 	private String USERNAME;
 	private String PASSWORD;
+	
 	
 	public Candidate(String id, String sName, String fName, String party, String location, String age, String reason, 
 			String goals, String profession, String USERNAME, String PASSWORD) {
@@ -28,6 +49,7 @@ public class Candidate {
 		this.USERNAME=USERNAME;
 		this.PASSWORD=PASSWORD;	
 	}
+	
 	public Candidate(int id, String sName, String fName, String party, String location, int age, String reason, 
 			String goals, String profession, String USERNAME, String PASSWORD) {
 		setId(id);
@@ -42,9 +64,11 @@ public class Candidate {
 		this.USERNAME=USERNAME;
 		this.PASSWORD=PASSWORD;	
 	}
+	
 	public Candidate() {
 		System.out.println("Candidate() default constructor");		
 	}
+	
 	
 	// **********************************
 	// *********** SETTERS **************
