@@ -834,7 +834,7 @@ div.container-nav-links input[type="submit" i]:hover {
 
 /* AD - customises the login welcome message
 		which appears if the admin successfully
-		logs in.*/
+		logs in (currently a WIP).*/
 .loginAdmin {
 	display: flex;
     justify-content: center;	 
@@ -849,7 +849,7 @@ div.container-nav-links input[type="submit" i]:hover {
 
 /* AD - customises the login welcome message
 		which appears if the candidate successfully
-		logs in.*/
+		logs in (currently a WIP).*/
 .loginCandidate {
 	display: flex;
     justify-content: center;	 
@@ -862,6 +862,9 @@ div.container-nav-links input[type="submit" i]:hover {
     text-align: center;	
 }
 
+/* AD - customises the logout message
+		which appears if the candidate successfully
+		logs out (currently a WIP).*/
 .logOutMessage {
 	display: flex;
     justify-content: center;	 
@@ -873,6 +876,13 @@ div.container-nav-links input[type="submit" i]:hover {
     max-width: 40%;
     text-align: center;	
 }
+
+/* AD - customises the word 'Select' on the 
+	questionnaire */
+.customText1 {
+	color: #E9C46A;
+}
+
 
 
      

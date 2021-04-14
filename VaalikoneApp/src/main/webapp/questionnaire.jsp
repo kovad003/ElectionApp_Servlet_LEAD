@@ -96,7 +96,7 @@
                                                           
                                     <!-- Display Radio buttons -->
                                     <label class = "questionnaireSelect">
-                                        <b>SELECT :</b>
+                                        <b class = "customText1">SELECT :</b>
                                     </label>
                                     <label> <b>(1)</b>
                                     <input type = "radio" name = "selected${question.id}"  value="1" required>
