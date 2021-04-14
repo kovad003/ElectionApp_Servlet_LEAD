@@ -49,9 +49,9 @@
         <!-- AD - Team intro colourings and text -->
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidate -->
-            <h5>The Global Herald Newspaper:
+            <h5>The Product Owner:
                 <br><br>
-                Greetings! Our motto: "Global News for a Global Era!"
+            	<i class = "customAboutHeading">The Global Herald Newspaper ("Global News for a Global Era")</i>
                 <br><br>
                 <hr>
                 <br>
@@ -73,7 +73,7 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>(HAMK's Finest) Team member 1:
                 <br><br>
-                Daniel Kovacs (Project Manager)
+                <i class = "customAboutHeading">Daniel Kovacs (Project Manager)</i>
                 <br><br>
                 <hr>
                 <br>
@@ -95,7 +95,7 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>(HAMK's Finest) Team member 2:
                 <br><br>
-                Lorand Heidrich (Server Programmer)
+                <i class = "customAboutHeading">Lorand Heidrich (Server Programmer)</i>
                 <br><br>
                 <hr>
                 <br>
@@ -116,7 +116,7 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>(HAMK's Finest) Team member 3:
                 <br><br>
-                Ashley Davis (Server Programmer)
+                <i class = "customAboutHeading">Ashley Davis (Server Programmer)</i>
                 <br><br>
                 <hr>
                 <br>
@@ -138,7 +138,7 @@
             <!-- AD - Intro / overview statement about the candidate -->
             <h5>(HAMK's Finest) Team member 4:
                 <br><br>
-                Evangelos Kaikas (Server Programmer)
+                <i class = "customAboutHeading">Evangelos Kaikas (Server Programmer)</i>
                 <br><br>
                 <hr>
                 <br>

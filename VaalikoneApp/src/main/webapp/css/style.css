@@ -902,6 +902,19 @@ div.container-nav-links input[type="submit" i]:hover {
 	color: #E9C46A; 
 }
 
+/* AD - customises the about page individual
+		headings text on the 
+		about page */
+.customAboutHeading {	 
+	color: #F4A261; 
+}
+
+/* AD - customises the about page individual
+		headings text on the 
+		about page */
+.customSiteLogin {	 
+	color: #2A9D8F ; 
+}
 
 
      
