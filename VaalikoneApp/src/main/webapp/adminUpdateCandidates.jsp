@@ -165,7 +165,7 @@
 				<c:forEach var="candidate" items="${requestScope.candidatelist}">
 					<div style="display: none" id="del${candidate.id}">
 					
-						   <form action = "/AdminDeleteCandidate" method="POST" id="updateCandidate" accept-charset="UTF-8"> 
+						   <form action = "/AdminDeleteCandidate" method="POST" id="deleteCandidate" accept-charset="UTF-8"> 
 							    <table class="table">
 								    <thead class = "tableCustom1">
 				                        <tr> 
