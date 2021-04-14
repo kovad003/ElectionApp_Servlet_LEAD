@@ -62,14 +62,20 @@
                	<hr>
                	
                	<h5>
+               	<i class = "customCandidateText2">
                 Age:
                 <c:out value = "${candidate.age}"/>
+                </i>
                 <br>
+                <i class = "customCandidateText2">
                 Profession:
                 <c:out value = "${candidate.profession}"/>
+                </i>
                 <br>
+                <i class = "customCandidateText2">
                 Location:
                 <c:out value = "${candidate.location}"/>
+                </i>
                 <br><br>
                 Hi, my name is
             	<c:out value = "${candidate.FName}"/>!
