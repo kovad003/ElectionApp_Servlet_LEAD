@@ -32,19 +32,69 @@ public class Candidate {
 	 * 			-> all attribs set to null
 	 */
 	
+	
+	/**
+	 * int value matching CANDIDATE_ID column from electionmachine.candidates table
+	 */
 	private int id;
+	/**
+	 * String value matching PARTY column from electionmachine.candidates table
+	 */
 	private String party;
+	/**
+	 * String value matching LOCATION column from electionmachine.candidates table
+	 */
 	private String location;
+	/**
+	 * String value matching AGE column from electionmachine.candidates table
+	 */
 	private int age;
+	/**
+	 * String value matching REASON_FOR_RUNNING column from electionmachine.candidates table
+	 */
 	private String reason;
+	/**
+	 * String value matching AIMS_AND_GOALS column from electionmachine.candidates table
+	 */
 	private String goals;
+	/**
+	 * String value matching PROFESSION column from electionmachine.candidates table
+	 */
 	private String profession;
+	/**
+	 * String value matching FIRSTNAME column from electionmachine.candidates table
+	 */
 	private String fName;
+	/**
+	 * String value matching SURNAME column from electionmachine.candidates table
+	 */
 	private String sName;
+	/**
+	 * String value matching USERNAME column from electionmachine.candidates table
+	 */
 	private String USERNAME;
+	/**
+	 * String value matching PASSWORD column from electionmachine.candidates table
+	 */
 	private String PASSWORD;
 	
 	
+	/**
+	 * String based parameterized constructor for Candidate class matching 
+	 * columns of electionmachine.caindidates table
+	 * 
+	 * @param id takes String arg of CANDIDATE_ID from/into electionmachine.caindidates
+	 * @param sName takes String arg of SURNAME from/into electionmachine.caindidates
+	 * @param fName takes String arg of FIRSTNAME from/into electionmachine.caindidates
+	 * @param party takes String arg of PARTY from/into electionmachine.caindidates
+	 * @param location takes String arg of LOCATION from/into electionmachine.caindidates
+	 * @param age takes String arg of AGE from/into electionmachine.caindidates
+	 * @param reason takes String arg of REASON_FOR_RUNNING from/into electionmachine.caindidates
+	 * @param goals takes String arg of AIMS_AND_GOALS from/into electionmachine.caindidates
+	 * @param profession takes String arg of PROFESSION from/into electionmachine.caindidates
+	 * @param USERNAME takes String arg of USERNAME from/into electionmachine.caindidates
+	 * @param PASSWORD takes String arg of PASSWORD from/into electionmachine.caindidates
+	 */
 	public Candidate(String id, String sName, String fName, String party, String location, String age, String reason, 
 			String goals, String profession, String USERNAME, String PASSWORD) {
 		setId(id);
@@ -60,6 +110,19 @@ public class Candidate {
 		this.PASSWORD=PASSWORD;	
 	}
 	
+	/**
+	 * @param id
+	 * @param sName
+	 * @param fName
+	 * @param party
+	 * @param location
+	 * @param age
+	 * @param reason
+	 * @param goals
+	 * @param profession
+	 * @param USERNAME
+	 * @param PASSWORD
+	 */
 	public Candidate(int id, String sName, String fName, String party, String location, int age, String reason, 
 			String goals, String profession, String USERNAME, String PASSWORD) {
 		setId(id);
@@ -75,6 +138,9 @@ public class Candidate {
 		this.PASSWORD=PASSWORD;	
 	}
 	
+	/**
+	 * 
+	 */
 	public Candidate() {
 		System.out.println("Candidate() default constructor");		
 	}
