@@ -32,15 +32,15 @@
         <!-- AD - Login Section-->
         <div class = "container1b">
             <form action="LoginServlet" method="post">      
-                <legend><b class = "customSiteLogin">Site Login</b></legend>
+                <legend><b>Site Login</b></legend>
                 <table>
                     <hr> 
                     <tr>
-                        <td><b class = "customSiteLogin">Username: </b></td>
+                        <td><b>Username: </b></td>
                         <td><input type="text" name="user" required="required" /></td>
                     </tr>
                     <tr>
-                        <td><b class = "customSiteLogin">Password: </b></td>
+                        <td><b>Password: </b></td>
                         <td><input type="password" name="pwd" required="required" /></td>
                     </tr>                    
                     <tr>                        
