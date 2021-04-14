@@ -63,6 +63,7 @@ public class AdminAddCandidate extends HttpServlet {
 		
 		if(dao_candidate.getConnection())
 		{
+			System.out.println("AdminAddCandidate");
 			System.out.println("Successfully connected to the database");
 			dao_candidate.insertCandidate(candidate);
 			System.out.println("Candidate Profile: " + candidate);

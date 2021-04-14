@@ -63,10 +63,11 @@ public class SaveAnswers extends HttpServlet {
 				System.out.println("Answer_List: " + selectionList);
 			}
 			else if(!emptyTable) {
-				dao_qanswer.
+				dao_qanswer.deleteAnswers(c_id);
+				dao_qanswer.insertAllAnswer(selectionList);
 			}
 //			
-			
+			response.sendRedirect("/candidatePortal.jsp");
 			
 			
 
