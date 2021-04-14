@@ -44,8 +44,8 @@
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/ShowQuestions" target="_blank"> <u><b>Take Questionnaire </b></u></a></td></tr>
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/EditQuastionnaire" target="_blank"> <u><b>Update Questions </b></u></a></td></tr> 
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Contact Admin </b></u></a></td></tr>                                 
-                    <tr>                        
-                        <td></td><td><br><input class = "button-main button1 mainloginButton" type="submit" value="LOGOUT" /></td>
+                    <tr>   
+                   		<td></td><td><br><button class="button-main button1"><a href="../index.jsp"><b>Home</b></a></button></td>                     
                     </tr>                   
                     </table>
                     <hr>        

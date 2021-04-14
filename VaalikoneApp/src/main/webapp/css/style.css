@@ -829,10 +829,49 @@ div.container-nav-links input[type="submit" i]:hover {
     margin: 5px auto;
     padding: 5px;
     max-width: 40%;
-    text-align: center;
-   
-    
-	
+    text-align: center;	
+}
+
+/* AD - customises the login welcome message
+		which appears if the admin successfully
+		logs in.*/
+.loginAdmin {
+	display: flex;
+    justify-content: center;	 
+	background: linear-gradient(0deg,#ff0000, 10%, #E76F51); 
+    color: #fef2da;
+    border-radius: 10px;    
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 40%;
+    text-align: center;	
+}
+
+/* AD - customises the login welcome message
+		which appears if the candidate successfully
+		logs in.*/
+.loginCandidate {
+	display: flex;
+    justify-content: center;	 
+	background: linear-gradient(0deg,#ff0000, 10%, #E76F51); 
+    color: #fef2da;
+    border-radius: 10px;    
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 40%;
+    text-align: center;	
+}
+
+.logOutMessage {
+	display: flex;
+    justify-content: center;	 
+	background: linear-gradient(0deg,#ff0000, 10%, #E76F51); 
+    color: #fef2da;
+    border-radius: 10px;    
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 40%;
+    text-align: center;	
 }
 
 

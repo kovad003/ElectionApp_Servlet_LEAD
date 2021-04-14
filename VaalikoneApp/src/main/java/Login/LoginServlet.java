@@ -67,6 +67,7 @@ public class LoginServlet extends HttpServlet {
 			/*
 			 * if login ok -> 
 			 */
+			
 			response.sendRedirect("_TEST_LOGIN_SUCCESS.jsp");
 		}else{
 			/*
