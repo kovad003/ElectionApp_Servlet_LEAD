@@ -258,7 +258,7 @@
 
 	function showCandidate() {
 	    d = document.getElementById("select_id").value; // Getting the value of selection
-	    alert(d);
+	    //alert(d);
 	    
 	    document.getElementById(d).style.display = "block"; // block display
 	    
