@@ -65,13 +65,15 @@ public class AdminAddCandidate extends HttpServlet {
 		{
 			System.out.println("Successfully connected to the database");
 			dao_candidate.insertCandidate(candidate);
-			System.out.println("Candidate Profile: " + candidate);	
+			System.out.println("Candidate Profile: " + candidate);
+			System.out.println("Password is: 11935. Dont tell it to anyone!!! :)");
 		}
 		else
 		{
 			System.out.println("No connection to database");
 		}
 		
+		response.sendRedirect("/AdminCandidates");
 	}
 
 }

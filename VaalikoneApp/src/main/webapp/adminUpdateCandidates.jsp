@@ -79,15 +79,15 @@
                     
                         <tr>                   
                             <td class = "tableAddBackground"><Button type="submit"><b class = "tableAdd">ADD</b></Button></td>                           
-                            <td><input type="text" name="CANDIDATE_ID" placeholder="Auto incremented" disabled></td>
-                            <td><input type="text" name="SURNAME" placeholder="Cannot be blank." ></td>
-                            <td><input type="text" name="FIRSTNAME" placeholder="Cannot be blank." ></td>
-                            <td><input type="text" name="PARTY" placeholder="Cannot be blank." ></td>
-                            <td><input type="text" name="LOCATION" placeholder="Cannot be blank." ></td>
-                            <td><input type="number" name="AGE" placeholder="Cannot be blank." ></td>
-                            <td><input type="text" name="REASON_FOR_RUNNING" placeholder="Cannot be blank." ></td>
-                            <td><input type="text" name="AIMS_AND_GOALS" placeholder="Cannot be blank." ></td>
-                            <td><input type="text" name="PROFESSION" placeholder="Cannot be blank." ></td>             
+                            <td><input disabled type="text" name="CANDIDATE_ID" placeholder="Auto incremented" ></td>
+                            <td><input required type="text" name="SURNAME" placeholder="Cannot be blank." ></td>
+                            <td><input required type="text" name="FIRSTNAME" placeholder="Cannot be blank." ></td>
+                            <td><input required type="text" name="PARTY" placeholder="Cannot be blank." ></td>
+                            <td><input required type="text" name="LOCATION" placeholder="Cannot be blank." ></td>
+                            <td><input required type="number" name="AGE" placeholder="Cannot be blank." ></td>
+                            <td><input required type="text" name="REASON_FOR_RUNNING" placeholder="Cannot be blank." ></td>
+                            <td><input required type="text" name="AIMS_AND_GOALS" placeholder="Cannot be blank." ></td>
+                            <td><input required type="text" name="PROFESSION" placeholder="Cannot be blank." ></td>             
                         </tr>
                      
                     </tbody>                        
@@ -129,23 +129,22 @@
 				                    </thead>
 								    <tbody>                   
 				                       <tr>   
-					                       <td><input  size="" type="number" id="CID" name ="CID" value = "${candidate.id}"></td>
-					                       <td><input type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
-					                       <td><input type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
-					                       <td><input type="text" name ="PARTY" value = "${candidate.party}"></td>
-					                       <td><input type="text" name ="LOCATION" value = "${candidate.location}"></td>
-					                       <td><input type="number" name ="AGE" value = "${candidate.age}"></td>
-					                       <td><input type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}"></td>
-					                       <td><input type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}"></td>
-					                       <td><input type="text" name ="PROFESSION" value = "${candidate.profession}"></td>
+					                       <td><input disabled size="" type="number" id="CID" name ="CID" value = "${candidate.id}"></td>
+					                       <td><input required type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
+					                       <td><input required type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
+					                       <td><input required type="text" name ="PARTY" value = "${candidate.party}"></td>
+					                       <td><input required type="text" name ="LOCATION" value = "${candidate.location}"></td>
+					                       <td><input required type="number" name ="AGE" value = "${candidate.age}"></td>
+					                       <td><input required type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}"></td>
+					                       <td><input required type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}"></td>
+					                       <td><input required type="text" name ="PROFESSION" value = "${candidate.profession}"></td>
 				                  		</tr>
 				                   </tbody>
 				                   
 			                  </table>
 			                  		               
 			                   		<Button id="save_can" type="submit"><b class = "tableCustom2">Save</b></Button>
-			                   		<Button id="cancel_edit" type="button" onclick="cancelEditing()">Cancel</Button> 
-			                   		
+			                   		<Button id="cancel_edit" type="button" onclick="cancelEditing()">Cancel</Button> 		
 		                 </form>		                          
 					</div> 
 		    	</c:forEach>
@@ -183,25 +182,21 @@
 				                    </thead>
 								    <tbody>                   
 				                       <tr>   
-					                       <td><input  size="" type="number" id="CID" name ="CID" value = "${candidate.id}"></td>
-					                       <td><input type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
-					                       <td><input type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
-					                       <td><input type="text" name ="PARTY" value = "${candidate.party}"></td>
-					                       <td><input type="text" name ="LOCATION" value = "${candidate.location}"></td>
-					                       <td><input type="number" name ="AGE" value = "${candidate.age}"></td>
-					                       <td><input type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}"></td>
-					                       <td><input type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}"></td>
-					                       <td><input type="text" name ="PROFESSION" value = "${candidate.profession}"></td>
+					                       <td><input disabled size="" type="number" id="CID" name ="CID" value = "${candidate.id}"></td>
+					                       <td><input required type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
+					                       <td><input required type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
+					                       <td><input required type="text" name ="PARTY" value = "${candidate.party}"></td>
+					                       <td><input required type="text" name ="LOCATION" value = "${candidate.location}"></td>
+					                       <td><input required type="number" name ="AGE" value = "${candidate.age}"></td>
+					                       <td><input required type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}"></td>
+					                       <td><input required type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}"></td>
+					                       <td><input required type="text" name ="PROFESSION" value = "${candidate.profession}"></td>
 				                  		</tr>
 				                   </tbody>
 				                   
-			                  </table>
-			                  		               
-			                   		<Button id="save_can" type="submit"><b class = "tableCustom3">Delete</b></Button>
-			                   		<Button id="cancel_edit" type="button" onclick="cancelDeleting()">Cancel</Button> 
-			                   		<!--  
-			                  		<Button id="del_can" onclick="cancelDeleting()"><b class = "tableCustom3">DELETE</b></Button>
-			                  		-->
+			                  </table>			           		               
+		                   		<Button id="save_can" type="submit"><b class = "tableCustom3">Delete</b></Button>
+		                   		<Button id="cancel_edit" type="button" onclick="cancelDeleting()">Cancel</Button> 
 		                 </form>		                          
 					</div> 
 		    	</c:forEach>
@@ -253,76 +248,6 @@
             </div>  
         </div>
     </div>
-   
-
-   
-    <!-- Make it hidden, edit btn should be triggered with the delete link of the table. It should redirect to a new page where u can edit the data-->
-    <div>
-    <table>
-    	
-		<c:forEach var="candidate" items="${requestScope.candidatelist}">
-                   <td><form action = "/AdminEditCandidate" method="POST" id="updateCandidate"> 
-                       <input  size="" type="number" id="CID" name ="CID" value = "${candidate.id}">
-                       <br>
-                       <input type="text"  name ="SURENAME" value = "${candidate.SName}">
-                       <br>
-                       <input type="text" name ="FIRSTNAME" value = "${candidate.FName}">
-                       <br>
-                       <input type="text" name ="PARTY" value = "${candidate.party}">
-                       <br>
-                       <input type="text" name ="LOCATION" value = "${candidate.location}">
-                       <br>
-                       <input type="number" name ="AGE" value = "${candidate.age}">
-                       <br>
-                       <input type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}">
-                       <br>
-                       <input type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}">
-                       <br>
-                       <input type="text" name ="PROFESSION" value = "${candidate.profession}">
-                       <br>
-                       <Button type="submit" name="button"><b class = "tableCustom2">EDIT</b></Button>                    
-                   </form></td>
-            </c:forEach>
-            
-       </table>
-       </div>
-       
-       <div>
-           
-        <!-- Make it hidden, submit btn should be triggered with the delete link of the table-->
-		<c:forEach var="candidate" items="${requestScope.candidatelist}">
-                   <form action = "/AdminDeleteCandidate" method="POST" id="updateCandidate"> 
-                       <input  size="" type="number" id="CID" name ="CID" value = "${candidate.id}">
-                       <br>
-                       <input type="text"  name ="SURENAME" value = "${candidate.SName}">
-                       <br>
-                       <input type="text" name ="FIRSTNAME" value = "${candidate.FName}">
-                       <br>
-                       <input type="text" name ="PARTY" value = "${candidate.party}">
-                       <br>
-                       <input type="text" name ="LOCATION" value = "${candidate.location}">
-                       <br>
-                       <input type="number" name ="AGE" value = "${candidate.age}">
-                       <br>
-                       <input type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}">
-                       <br>
-                       <input type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}">
-                       <br>
-                       <input type="text" name ="PROFESSION" value = "${candidate.profession}">
-                       <br>
-                       <Button type="submit"><b class = "tableCustom3">DELETE</b></Button>
-                   </form>
-            </c:forEach>
-       </div>
-       
-       <Select class="body_text" name="critical" onchange="getText(this)">
-<option value="Select"> Select </option>
-   <option value="LOW"> Low </option>
-   <option value="NORMAL"> Normal </option>
-   <option value="HIGH"> High </option>
-   <option value="CRITICAL"> Critical </option>      
-</select>
-<div id="textDiv" style="color:Green; font-family:Calibri; font-size:small; font-weight:bold"> </div>
     
     <!-- AD - includes the footer component into this page 
     (albeit not visible) -->
@@ -344,22 +269,22 @@
 	function cancelEditing(){		
 		document.getElementById("select_id").style.display = "block";
 		d = document.getElementById("select_id").value;
-	    alert(d);	    
+	    //alert(d);	    
 	    document.getElementById(d).style.display = "none";
 	}
 	
 	function cancelDeleting() {
 		document.getElementById("select_id_del").style.display = "block";
 		g = document.getElementById("select_id_del").value;
-	    alert(g);	    
+	    //alert(g);	    
 	    document.getElementById("del"+g).style.display = "none";
 
 	}
 	
 	function startDeleting(){
 	    g = document.getElementById("select_id_del").value; // Getting the value of selection
-	    alert(g);
-	    
+	    //alert(g);
+	    //confirm("Press a button!");
 	    document.getElementById("del"+g).style.display = "block"; // block display
 	    
 	    document.getElementById("select_id_del").style.display = "none"; // no display
