@@ -72,7 +72,8 @@ public class LoginServlet extends HttpServlet {
 			/*
 			 * if login not ok ->
 			 */
-			response.getWriter().println("<p style=\"color:red\">Sorry username or password error</p>");
+			response.getWriter().println("<div class = \"logoutFail\"><p style=\"color:white\">"
+					+ "Sorry username or password error</p></div>");
 			RequestDispatcher rd = request.getRequestDispatcher("loginPage.jsp");
 			rd.include(request,response);
 			
