@@ -52,7 +52,7 @@
         <hr>
          
         <!-- AD - Candidate 1 intro colourings and text -->
-        <c:forEach begin="0" end="18" var="candidate" items="${requestScope.candidatelist}">
+        <c:forEach begin="1" var="candidate" items="${requestScope.candidatelist}">
         <div class="container8">
             <!-- AD - Intro / overview statement about the candidates -->
             <div class = "containerDynamicCandidate" >

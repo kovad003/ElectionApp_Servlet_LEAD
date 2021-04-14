@@ -3,6 +3,8 @@
 <%@ page import="data.Question" %>   
 <%@ page import="data.Answer" %>  
     
+
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 
 <!DOCTYPE html>
@@ -78,14 +80,14 @@
                         <tr>                   
                             <td class = "tableAddBackground"><Button type="submit"><b class = "tableAdd">ADD</b></Button></td>                           
                             <td><input type="text" name="CANDIDATE_ID" placeholder="Auto incremented" disabled></td>
-                            <td><input type="text" name="SURNAME" placeholder="Cannot be blank." disabled></td>
-                            <td><input type="text" name="FIRSTNAME" placeholder="Cannot be blank." disabled></td>
-                            <td><input type="text" name="PARTY" placeholder="Cannot be blank." disabled></td>
-                            <td><input type="text" name="LOCATION" placeholder="Cannot be blank." disabled></td>
-                            <td><input type="number" name="AGE" placeholder="Cannot be blank." disabled></td>
-                            <td><input type="text" name="REASON_FOR_RUNNING" placeholder="Cannot be blank." disabled></td>
-                            <td><input type="text" name="AIMS_AND_GOALS" placeholder="Cannot be blank." disabled></td>
-                            <td><input type="text" name="PROFESSION" placeholder="Cannot be blank." disabled></td>             
+                            <td><input type="text" name="SURNAME" placeholder="Cannot be blank." ></td>
+                            <td><input type="text" name="FIRSTNAME" placeholder="Cannot be blank." ></td>
+                            <td><input type="text" name="PARTY" placeholder="Cannot be blank." ></td>
+                            <td><input type="text" name="LOCATION" placeholder="Cannot be blank." ></td>
+                            <td><input type="number" name="AGE" placeholder="Cannot be blank." ></td>
+                            <td><input type="text" name="REASON_FOR_RUNNING" placeholder="Cannot be blank." ></td>
+                            <td><input type="text" name="AIMS_AND_GOALS" placeholder="Cannot be blank." ></td>
+                            <td><input type="text" name="PROFESSION" placeholder="Cannot be blank." ></td>             
                         </tr>
                      
                     </tbody>                        
@@ -95,6 +97,118 @@
             </div>
         </div>
     </div>
+    <!-- ASH, CUSTOMISE IT PLEASE -->
+
+     <div class="containerUpdateCandidatesTable">   
+        <div>                                                                                             
+            <div class="table-responsive">
+	            <Select class="body_text" id="select_id" name="critical" onchange="showCandidate()">
+					<option value="Select">Edit Candidate Profile</option>
+					<c:forEach var="candidate" items="${requestScope.candidatelist}">
+					<option value="${candidate.id}">${candidate.id}</option>
+		    		</c:forEach>
+				</select>
+				
+				<c:forEach var="candidate" items="${requestScope.candidatelist}">
+					<div style="display: none" id="${candidate.id}">
+					
+						   <form action = "/AdminEditCandidate" method="POST" id="updateCandidate"> 
+							    <table class="table">
+								    <thead class = "tableCustom1">
+				                        <tr> 
+				                        	<th>CANDIDATE_ID</th>                              
+				                            <th>SURNAME</th>
+				                            <th>FIRSTNAME</th>
+				                            <th>PARTY</th>
+				                            <th>LOCATION</th>
+				                            <th>AGE</th>
+				                            <th>REASON FOR RUNNING</th>
+				                            <th>AIMS AND GOALS</th>
+				                            <th>PROFESSION</th>
+				                        </tr>
+				                    </thead>
+								    <tbody>                   
+				                       <tr>   
+					                       <td><input  size="" type="number" id="CID" name ="CID" value = "${candidate.id}"></td>
+					                       <td><input type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
+					                       <td><input type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
+					                       <td><input type="text" name ="PARTY" value = "${candidate.party}"></td>
+					                       <td><input type="text" name ="LOCATION" value = "${candidate.location}"></td>
+					                       <td><input type="number" name ="AGE" value = "${candidate.age}"></td>
+					                       <td><input type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}"></td>
+					                       <td><input type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}"></td>
+					                       <td><input type="text" name ="PROFESSION" value = "${candidate.profession}"></td>
+				                  		</tr>
+				                   </tbody>
+				                   
+			                  </table>
+			                  		               
+			                   		<Button id="save_can" type="submit"><b class = "tableCustom2">Save</b></Button>
+			                   		<Button id="cancel_edit" type="button" onclick="cancelEditing()">Cancel</Button> 
+			                   		
+		                 </form>		                          
+					</div> 
+		    	</c:forEach>
+            </div>
+        </div>
+    </div>
+
+         <div class="containerUpdateCandidatesTable">   
+        <div>                                                                                             
+            <div class="table-responsive">
+	            <Select class="body_text" id="select_id_del" name="critical" onchange="startDeleting()">
+					<option value="Select">Remove Candidate Profile</option>
+					<c:forEach var="candidate" items="${requestScope.candidatelist}">
+					<option value="${candidate.id}">${candidate.id}</option>
+		    		</c:forEach>
+				</select>
+				
+				<c:forEach var="candidate" items="${requestScope.candidatelist}">
+					<div style="display: none" id="del${candidate.id}">
+					
+						   <form action = "/AdminDeleteCandidate" method="POST" id="updateCandidate"> 
+							    <table class="table">
+								    <thead class = "tableCustom1">
+				                        <tr> 
+				                        	<th>CANDIDATE_ID</th>                              
+				                            <th>SURNAME</th>
+				                            <th>FIRSTNAME</th>
+				                            <th>PARTY</th>
+				                            <th>LOCATION</th>
+				                            <th>AGE</th>
+				                            <th>REASON FOR RUNNING</th>
+				                            <th>AIMS AND GOALS</th>
+				                            <th>PROFESSION</th>
+				                        </tr>
+				                    </thead>
+								    <tbody>                   
+				                       <tr>   
+					                       <td><input  size="" type="number" id="CID" name ="CID" value = "${candidate.id}"></td>
+					                       <td><input type="text"  name ="SURENAME" value = "${candidate.SName}"></td>
+					                       <td><input type="text" name ="FIRSTNAME" value = "${candidate.FName}"></td>
+					                       <td><input type="text" name ="PARTY" value = "${candidate.party}"></td>
+					                       <td><input type="text" name ="LOCATION" value = "${candidate.location}"></td>
+					                       <td><input type="number" name ="AGE" value = "${candidate.age}"></td>
+					                       <td><input type="text" name ="REASON_FOR_RUNNING" value = "${candidate.reason}"></td>
+					                       <td><input type="text" name ="AIMS_AND_GOALS" value = "${candidate.goals}"></td>
+					                       <td><input type="text" name ="PROFESSION" value = "${candidate.profession}"></td>
+				                  		</tr>
+				                   </tbody>
+				                   
+			                  </table>
+			                  		               
+			                   		<Button id="save_can" type="submit"><b class = "tableCustom3">Delete</b></Button>
+			                   		<Button id="cancel_edit" type="button" onclick="cancelDeleting()">Cancel</Button> 
+			                   		<!--  
+			                  		<Button id="del_can" onclick="cancelDeleting()"><b class = "tableCustom3">DELETE</b></Button>
+			                  		-->
+		                 </form>		                          
+					</div> 
+		    	</c:forEach>
+            </div>
+        </div>
+    </div>
+    
 
     <!-- AD This is a container to contain the data from the Candidate Table.
             Created utilising bootstrap, this .table-responsive class creates a responsive table
@@ -108,8 +222,6 @@
                 <table class="table">                    
                     <thead class = "tableCustom1">
                         <tr>
-                            <th>UPDATE</th>
-                            <th>DELETE</th>
                             <th>CANDIDATE_ID</th>
                             <th>SURNAME</th>
                             <th>FIRSTNAME</th>
@@ -124,18 +236,16 @@
                      
                     <tbody>
                         <c:forEach var="candidate" items="${requestScope.candidatelist}">
-	                        <tr>
-	                            <td class = "tableCustom5"><Button onclick="enable()"><b class = "tableCustom2">EDIT</b></Button></td>                    
-	                            <td class = "tableCustom5"><Button onclick="disable()"><b class = "tableCustom3">DELETE</b></Button></td>  
+	                        <tr> 
 	                            <td><textarea name ="CANDIDATE_ID" disabled>${candidate.id}</textarea></td>
-	                            <td><textarea class="disabled" id="sname" name ="SURENAME" >${candidate.SName}</textarea></td>
-	                            <td><textarea id="fname" name ="FIRSTNAME" > ${candidate.FName}</textarea></td>
-	                            <td><textarea id="party" name ="PARTY" >${candidate.party}></textarea></td>
-	                            <td><textarea id="location" name ="LOCATION" >${candidate.location}</textarea></td>
-	                            <td><textarea id="age" name ="AGE" >${candidate.age}</textarea></td>
-	                            <td><textarea id="reason" name ="REASON_FOR_RUNNING" >${candidate.reason}</textarea></td>
-	                            <td><textarea id="goal" name ="AIMS_AND_GOALS" >${candidate.goals}</textarea></td>
-	                            <td><textarea id="profession" name ="PROFESSION" >${candidate.profession}</textarea></td>                
+	                            <td><textarea disabled id="sname${candidate.id}" name ="SURENAME" >${candidate.SName}</textarea></td>
+	                            <td><textarea disabled id="fname${candidate.id}" name ="FIRSTNAME" > ${candidate.FName}</textarea></td>
+	                            <td><textarea disabled id="party${candidate.id}" name ="PARTY" >${candidate.party}></textarea></td>
+	                            <td><textarea disabled id="location${candidate.id}" name ="LOCATION" >${candidate.location}</textarea></td>
+	                            <td><textarea disabled id="age${candidate.id}" name ="AGE" >${candidate.age}</textarea></td>
+	                            <td><textarea disabled id="reason${candidate.id}" name ="REASON_FOR_RUNNING" >${candidate.reason}</textarea></td>
+	                            <td><textarea disabled id="goal${candidate.id}" name ="AIMS_AND_GOALS" >${candidate.goals}</textarea></td>
+	                            <td><textarea disabled id="profession${candidate.id}" name ="PROFESSION" >${candidate.profession}</textarea></td>                
 	                        </tr>
                         </c:forEach>
                     </tbody>
@@ -144,10 +254,14 @@
         </div>
     </div>
    
+
+   
     <!-- Make it hidden, edit btn should be triggered with the delete link of the table. It should redirect to a new page where u can edit the data-->
     <div>
+    <table>
+    	
 		<c:forEach var="candidate" items="${requestScope.candidatelist}">
-                   <form action = "/AdminEditCandidate" method="POST" id="updateCandidate"> 
+                   <td><form action = "/AdminEditCandidate" method="POST" id="updateCandidate"> 
                        <input  size="" type="number" id="CID" name ="CID" value = "${candidate.id}">
                        <br>
                        <input type="text"  name ="SURENAME" value = "${candidate.SName}">
@@ -167,8 +281,10 @@
                        <input type="text" name ="PROFESSION" value = "${candidate.profession}">
                        <br>
                        <Button type="submit" name="button"><b class = "tableCustom2">EDIT</b></Button>                    
-                   </form>
+                   </form></td>
             </c:forEach>
+            
+       </table>
        </div>
        
        <div>
@@ -198,28 +314,125 @@
                    </form>
             </c:forEach>
        </div>
+       
+       <Select class="body_text" name="critical" onchange="getText(this)">
+<option value="Select"> Select </option>
+   <option value="LOW"> Low </option>
+   <option value="NORMAL"> Normal </option>
+   <option value="HIGH"> High </option>
+   <option value="CRITICAL"> Critical </option>      
+</select>
+<div id="textDiv" style="color:Green; font-family:Calibri; font-size:small; font-weight:bold"> </div>
     
     <!-- AD - includes the footer component into this page 
     (albeit not visible) -->
 	<%@ include file="../components/footer.jsp" %> 
 
+
 <script type="text/javascript">
 
-	function enable() {
-		//document.getElementById('sname').setAttribute("disabled","disabled");
-		document.getElementById('sname').removeAttribute("disabled");
+	function showCandidate() {
+	    d = document.getElementById("select_id").value; // Getting the value of selection
+	    alert(d);
+	    
+	    document.getElementById(d).style.display = "block"; // block display
+	    
+	    document.getElementById("select_id").style.display = "none"; // no display
+	    
+	}
+	
+	function cancelEditing(){		
+		document.getElementById("select_id").style.display = "block";
+		d = document.getElementById("select_id").value;
+	    alert(d);	    
+	    document.getElementById(d).style.display = "none";
+	}
+	
+	function cancelDeleting() {
+		document.getElementById("select_id_del").style.display = "block";
+		g = document.getElementById("select_id_del").value;
+	    alert(g);	    
+	    document.getElementById("del"+g).style.display = "none";
+
+	}
+	
+	function startDeleting(){
+	    g = document.getElementById("select_id_del").value; // Getting the value of selection
+	    alert(g);
+	    
+	    document.getElementById("del"+g).style.display = "block"; // block display
+	    
+	    document.getElementById("select_id_del").style.display = "none"; // no display
+	}
+
+	
+/* 		This can be used later pls do not remove it. Thanks!
+		document.getElementById("cancel_edit").addEventListener("click", function(event){
+			event.preventDefault()}); //prevents submission with CANCEL btn!
+			
+		document.getElementById("del_can").addEventListener("click", function(event){
+			event.preventDefault()}); //prevents submission!
+			
+		document.getElementById("save_can").addEventListener("click", function(event){
+			event.preventDefault()}); //prevents submission!
+			
+*/ 
+	   
+/*
+	function enable(){
+		/*
+		document.getElementById('sname'${candidate.SName};).removeAttribute("disabled");
+		document.getElementById('fname'${candidate.SName};).removeAttribute("disabled");	
+		document.getElementById("party").removeAttribute("disabled");
+		document.getElementById("location").removeAttribute("disabled");
+		document.getElementById("age").removeAttribute("disabled");
+		document.getElementById("reason").removeAttribute("disabled");
+		document.getElementById("goal").removeAttribute("disabled");
+		document.getElementById("profession").removeAttribute("disabled");	
+		
+		var x = document.getElementsByClassName('disabled');
+		var i;
+		for (i = 0; i < x.length; i++) {
+		  x[i].setAttribute("disabled","disabled");
+		}
+*/
+/*	
+		
+	}
+	
+	function enableAll() {
+		
+		var collection_size = ${fn:length(requestScope.candidatelist)};		
+		
+		var j;
+		var id;
+		
+		for (j = 1001; j >collection_size; j++){
+			id[j] = document.getElementsByClassName('disabled');
+			
+		}
+		
+		
+		var x = document.getElementById('sname');
+		var i;
+		for (i = 0; i < x.length; i++) {
+		  x[i].setAttribute("disabled","disabled");
+		  
+		  
+		}
+		
+
+		
 		document.getElementById('fname').removeAttribute("disabled");	
 		document.getElementById("party").removeAttribute("disabled");
 		document.getElementById("location").removeAttribute("disabled");
 		document.getElementById("age").removeAttribute("disabled");
 		document.getElementById("reason").removeAttribute("disabled");
 		document.getElementById("goal").removeAttribute("disabled");
-		document.getElementById("profession").removeAttribute("disabled");
-		
+		document.getElementById("profession").removeAttribute("disabled");	
 	}
 	
-	
-	/*
+/*
 	function disableAll(){
 		document.getElementById('sname').setAttribute("disabled","disabled");
 		document.getElementById('fname').setAttribute("disabled","disabled");
@@ -231,7 +444,7 @@
 		document.getElementById("goal").setAttribute("disabled","disabled");
 		document.getElementById("profession").setAttribute("disabled","disabled");	
 	}
-	*/
+	
 	function disableAll(){
 		var x = document.getElementsByClassName('disabled');//.setAttribute("disabled","disabled");
 		
@@ -240,17 +453,9 @@
 		for (i = 0; i < x.length; i++) {
 		  x[i].setAttribute("disabled","disabled");
 		}
-		
-		/*
-		document.getElementsByName('FIRSTNAME').setAttribute("disabled","disabled");
-		document.getElementsByName("PARTY").setAttribute("disabled","disabled");
-		document.getElementsByName("LOCATION").setAttribute("disabled","disabled");
-		document.getElementsByName("AGE").setAttribute("disabled","disabled");
-		document.getElementsByName("REASON_FOR_RUNNING").setAttribute("disabled","disabled");
-		document.getElementsByName("AIMS_AND_GOALS").setAttribute("disabled","disabled");
-		document.getElementsByName("PROFESSION").setAttribute("disabled","disabled");
-		*/
+
 	}
+*/
 </script>
 
 </body><!-- AD - End of body-->
