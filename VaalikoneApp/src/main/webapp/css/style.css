@@ -656,7 +656,7 @@ for specific cells (sich as update and delete
 .containerDynamicQuestion {
     background: linear-gradient(0deg, #0075ac, 90%, #264653);  
     border-radius: 10px;    
-    color: white;    
+    color: #c4ffff;    
     margin: 5px 20px 5px 5px;
     padding: 0.1px 10px 0.1px 10px;  
 }
@@ -666,7 +666,7 @@ for specific cells (sich as update and delete
 .containerDynamicCandidate {
     background: linear-gradient(0deg, #0075ac, 90%, #264653);
     border-radius: 10px;    
-    color: white;    
+    color: #c4ffff;     
     margin: 25px;
     padding: 25px;  
 }
