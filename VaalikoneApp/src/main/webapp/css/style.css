@@ -824,12 +824,13 @@ div.container-nav-links input[type="submit" i]:hover {
 	display: flex;
     justify-content: center;	 
 	background: linear-gradient(0deg,#ff0000, 10%, #E76F51); 
+    color: #fef2da;
     border-radius: 10px;    
-    margin: 5px;
+    margin: 5px auto;
     padding: 5px;
-    max-width: 25%;
+    max-width: 40%;
     text-align: center;
-    height: 5%;
+   
     
 	
 }

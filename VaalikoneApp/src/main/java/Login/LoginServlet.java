@@ -72,7 +72,7 @@ public class LoginServlet extends HttpServlet {
 			/*
 			 * if login not ok ->
 			 */
-			response.getWriter().println("<div class = \"logoutFail\"><i>Sorry username or password error</i></div>");
+			response.getWriter().println("<div class = \"logoutFail\"><i>Sorry, username or password error. Please try again.</i></div>");
 			RequestDispatcher rd = request.getRequestDispatcher("loginPage.jsp");
 			rd.include(request,response);
 			
