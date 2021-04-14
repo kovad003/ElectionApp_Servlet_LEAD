@@ -21,7 +21,7 @@
     <div class = "container1">
         <div class = "container1c">          
             <h5>WELCOME</h5>     
-            <i class="material-icons resize3">account_balance</i>  
+            <a href="../index.jsp"><i class="material-icons resize3">account_balance</i></a>   
             <h5>ELECTION MACHINE</h5>            
         </div>
 

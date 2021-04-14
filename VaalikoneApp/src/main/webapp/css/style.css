@@ -656,7 +656,7 @@ for specific cells (sich as update and delete
 .containerDynamicQuestion {
     background: linear-gradient(0deg, #0075ac, 90%, #264653);  
     border-radius: 10px;    
-    color: white;    
+    color: #c4ffff;    
     margin: 5px 20px 5px 5px;
     padding: 0.1px 10px 0.1px 10px;  
 }
@@ -666,7 +666,7 @@ for specific cells (sich as update and delete
 .containerDynamicCandidate {
     background: linear-gradient(0deg, #0075ac, 90%, #264653);
     border-radius: 10px;    
-    color: white;    
+    color: #c4ffff;     
     margin: 25px;
     padding: 25px;  
 }
@@ -815,6 +815,105 @@ div.container-nav-links input[type="submit" i]:hover {
     /*
      background-color: #0075ac;
     */   
+}
+
+/* AD - customises the logout fail message
+		which appears if the user fails to login
+		correctly.*/
+.logoutFail {
+	display: flex;
+    justify-content: center;	 
+	background: linear-gradient(0deg,#ff0000, 10%, #E76F51); 
+    color: #fef2da;
+    border-radius: 10px;    
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 40%;
+    text-align: center;	
+}
+
+/* AD - customises the login welcome message
+		which appears if the admin successfully
+		logs in (currently a WIP).*/
+.loginAdmin {
+	display: flex;
+    justify-content: center;	 
+	background: linear-gradient(0deg,#ff0000, 10%, #E76F51); 
+    color: #fef2da;
+    border-radius: 10px;    
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 40%;
+    text-align: center;	
+}
+
+/* AD - customises the login welcome message
+		which appears if the candidate successfully
+		logs in (currently a WIP).*/
+.loginCandidate {
+	display: flex;
+    justify-content: center;	 
+	background: linear-gradient(0deg,#ff0000, 10%, #E76F51); 
+    color: #fef2da;
+    border-radius: 10px;    
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 40%;
+    text-align: center;	
+}
+
+/* AD - customises the logout message
+		which appears if the candidate successfully
+		logs out (currently a WIP).*/
+.logOutMessage {
+	display: flex;
+    justify-content: center;	 
+	background: linear-gradient(0deg,#ff0000, 10%, #E76F51); 
+    color: #fef2da;
+    border-radius: 10px;    
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 40%;
+    text-align: center;	
+}
+
+/* AD - customises the word 'Select' on the 
+	questionnaire */
+.customText1 {
+	color: #E9C46A;
+}
+
+/* AD - customises the heading on the 
+	candidates page */
+.customCandidateHeading1 {
+	color: #F4A261; 
+} 
+
+/* AD - customises the candidate text on the 
+	candidates page */
+.customCandidateText1 {
+	font-style: italic;
+}
+
+/* AD - customises the candidate text on the 
+	candidates page */
+.customCandidateText2 {
+	 
+	color: #E9C46A; 
+}
+
+/* AD - customises the about page individual
+		headings text on the 
+		about page */
+.customAboutHeading {	 
+	color: #F4A261; 
+}
+
+/* AD - customises the about page individual
+		headings text on the 
+		about page */
+.customSiteLogin {	 
+	color: #264653; 
 }
 
 

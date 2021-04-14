@@ -20,8 +20,11 @@
 </head>
 <body>
 
-    <!-- AD - includes the navbar component, into this page -->
-    <%@ include file="../components/navbar.jsp" %> 
+    <!-- AD - includes the navbarBootstrap component, 
+    		which is modified version of our regular navbar,
+    		in order to offset some negative effects
+    		caused by bootsrap, onto our code. -->
+    <%@ include file="../components/navbarBootstrap.jsp" %> 
 
     <!-- AD - Beginning the central (yellow container)-->
     <div class="containerMainUpdateCandidates">
@@ -29,13 +32,13 @@
         
         <!-- AD - customises the 'ADMIN: Updates Candidates' message-->
         <div class="container6a"> 
-        <h3>ADMIN PORTAL: Update Questions</h3>
+        <h3 class = "adminTextCorrection1">ADMIN PORTAL: Update Questions</h3>
         </div>
        
         <!-- AD - A small container to amend the admin note background section-->
         <div class="container4">             
             <!-- AD - Introductory statement about the ADMIN: Update Candidates page -->
-            <h5>ADMIN NOTE: Once logged in, this page allows for a 'Global Herald Newspaper' 
+            <h5 class = "adminTextCorrection2">ADMIN NOTE: Once logged in, this page allows for a 'Global Herald Newspaper' 
                 IT Admin to enter new questions.
             </h5>        
         </div>        
