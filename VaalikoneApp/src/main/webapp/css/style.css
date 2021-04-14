@@ -822,16 +822,14 @@ div.container-nav-links input[type="submit" i]:hover {
 		correctly.*/
 .logoutFail {
 	display: flex;
-    justify-content: center; 
-	 
-	
-	background-color:#E76F51;
+    justify-content: center;	 
+	background: linear-gradient(0deg,#ff0000, 10%, #E76F51); 
     border-radius: 10px;    
-    margin: 10px auto;
-    padding: 10px;
-    max-width: 30%;
+    margin: 5px;
+    padding: 5px;
+    max-width: 25%;
     text-align: center;
-    height: 10%;
+    height: 5%;
     
 	
 }
