@@ -45,7 +45,7 @@
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/EditQuastionnaire" target="_blank"> <u><b>Update Questions </b></u></a></td></tr> 
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Contact Admin </b></u></a></td></tr>                                 
                     <tr>   
-                   		<td></td><td><br><button class="button-main button1"><a href="../index.jsp"><b>Home</b></a></button></td>                     
+                   		<td></td><td><br><button class="button-main button1 mainloginButton"><a href="../index.jsp"><b>Home</b></a></button></td>                     
                     </tr>                   
                     </table>
                     <hr>        
