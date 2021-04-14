@@ -7,6 +7,22 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * 
+ * THIS CODE IS NOT IN USE ANY MORE
+ * 
+ * This is the pre-dao crud, which was not completed. As such it does not
+ * require any documentation.
+ * 
+ * Section should not be documented in Java Docs.
+ * 
+ */
+
+
+
+
+
+
 
 
 /* TODO: 

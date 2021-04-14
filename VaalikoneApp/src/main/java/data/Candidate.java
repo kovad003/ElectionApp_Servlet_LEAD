@@ -1,5 +1,15 @@
 package data;
 
+/**
+ * The Candidate class houses attributes matching all columns of the
+ * electionmachine.candidates table. Instances of the class function
+ * in conjunction with the matching Dao class and it's CRUD methods.
+ * 
+ * @version 3.0
+ * @author HAMK's Finest
+ * Date: April 14, 2021
+ */
+
 public class Candidate {
 	
 	/*
