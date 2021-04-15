@@ -1,25 +1,34 @@
 package data;
 
 /**
- * @author dblin
- *
+ * The Question class houses attributes matching all columns of the
+ * electionmachine.questions table. Instances of the class function
+ * in conjunction with the matching Dao class and it's CRUD methods.
+ * Class only contains setters/getters.
+ * 
+ * @version 3.0
+ * @author HAMK's Finest
+ * Date: April 14, 2021
  */
 
 public class Question {
 	
 	/**
-	 * 
+	 * int value of id matches QUESTION_ID column from electionmachine.questions table.
 	 */
 	private int id;
 	/**
-	 * 
+	 * String value question matches QUESTION column from electionmachine.questions table.
 	 */
 	private String question;
 	
 	
 	/**
-	 * @param id
-	 * @param question
+	 * String based parameterized constructor for Question class matching 
+	 * columns of electionmachine.questions table.
+	 * 
+	 * @param id takes String arg of id for QUESTION_ID from/into electionmachine.questions.
+	 * @param question takes String arg of question for QUESTION from/into electionmachine.questions.
 	 */
 	public Question(String id, String question) {
 		setId(id);
@@ -28,14 +37,19 @@ public class Question {
 	
 	
 	/**
-	 * 
+	 * Default constructor for Question class. All attributes null.
 	 */
 	public Question() {
 		System.out.println("Question() constructor");
-		
-		
 	}
+	
+	
+	/***************************************************
+	 ***************   GETTERS / SETTERS   *************
+	 ***************************************************/	
+	
 	/**
+	 * id attribute getter.
 	 * @return
 	 */
 	public int getId() {
