@@ -1,5 +1,9 @@
 package data;
 
+/**
+ * @author HAMK's Fin
+ *
+ */
 public class Answer {
 	
 	/*
@@ -16,11 +20,19 @@ public class Answer {
 	 * 			   from electionmachine.answers table
 	 */
 	
+	/**
+	 * 
+	 */
 	private int CANDIDATE_ID;
 	private int QUESTION_ID;
 	private int ANSWER;
 	
 	
+	/**
+	 * @param CANDIDATE_ID explain candidateid 
+	 * @param QUESTION_ID
+	 * @param ANSWER
+	 */
 	public Answer(String CANDIDATE_ID, String QUESTION_ID, String ANSWER) {
 		setCANDIDATE_ID(CANDIDATE_ID);
 		setQUESTION_ID(QUESTION_ID);
