@@ -50,7 +50,7 @@ public class Question {
 	
 	/**
 	 * id attribute getter.
-	 * @return
+	 * @return int id for CANDIDATE_ID in questions table.
 	 */
 	public int getId() {
 		return id;
@@ -58,7 +58,8 @@ public class Question {
 	
 	
 	/**
-	 * @param id
+	 * id attribute setter.
+	 * @param id takes int id for CANDIDATE_ID in questions table.
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -66,7 +67,9 @@ public class Question {
 	
 	
 	/**
-	 * @param id
+	 * id attribute setter.
+	 * @param id takes String arg for CANDIDATE_ID in questions table.
+	 * @throws NumberFormatException | NullPointerException
 	 */
 	public void setId(String id) {
 		try {
@@ -78,7 +81,8 @@ public class Question {
 	
 	
 	/**
-	 * @return
+	 * question attribute getter.
+	 * @return question String for QUESTION in questions table.
 	 */
 	public String getQuestion() {
 		return question;
@@ -86,7 +90,8 @@ public class Question {
 	
 	
 	/**
-	 * @param question
+	 * question attribute setter.
+	 * @param question takes String arg for QUESTION in questions table.
 	 */
 	public void setQuestion(String question) {
 		this.question = question;

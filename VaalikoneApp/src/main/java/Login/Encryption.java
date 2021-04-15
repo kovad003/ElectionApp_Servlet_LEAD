@@ -3,16 +3,29 @@ package Login;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * The Encryption class houses the static crypt method used to encrypt
+ * passwords input by users and stored in the DB.
+ * 
+ * @version 1.0
+ * @author HAMK's Finest
+ * Date: April 14, 2021
+ */
+
 public class Encryption {
 	
+	/**
+	 * A static method that hashes the provided password. Encryption is one-way, all
+	 * data is intended to remain stored in encrypted format. Method is housed in 
+	 * Encryption class. 
+	 * 
+	 * @param str takes String arg of value to be hashed.
+	 * @return String of hashed value.
+	 * @throws NoSuchAlgorithmException
+	 */
+	
 	public static String crypt(String str) {
-		/*
-		 * PARAMETER: (String) str=text you wish to encrypt with MD5 hash
-		 * 
-		 * RETURNS: encrypted string
-		 * 
-		 * THROWS: algorithm exception 
-		 */
+
 	      if (str == null || str.length() == 0) {
 	          throw new IllegalArgumentException("String to encript cannot be null or zero length");
 	      }

@@ -6,19 +6,48 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 import data.Candidate;
-
 import java.sql.Connection;
 
 
+/**
+ * This Data Access Object class contains methods that work in conjunction
+ * with the Candidate class. It establishes a connection with the 
+ * electionmachine DB and its methods allow for the performing of CRUD operations
+ * on said data through the utilization of attributes from the aforementioned class.
+ * 
+ * @version 3.0
+ * @author HAMK's Finest
+ * Date: April 14, 2021
+ */
+
 public class Dao_candidate {
 	
+	/**
+	 * String value matching the DB url to connect to.
+	 */
 	private String url;
+	/**
+	 * String value matching the username for account used to access DB.
+	 */
 	private String user;
+	/**
+	 * String value matching the password for account used to access DB.
+	 */
 	private String pass;
+	/**
+	 * Connection object representing the connection to the DB.
+	 */
 	private Connection conn;
 	
+	
+	/**
+	 * String based parameterized constructor for Dao_question class.
+	 * 
+	 * @param url takes String arg of url for to connecto to.
+	 * @param user takes String arg of username for user to access DB. 
+	 * @param pass takes String arg of password for user to access DB.
+	 */
 	public Dao_candidate(String url, String user, String pass) {
 		System.out.println("Dao(String url, String user, String pass) CONSTRUCTOR ******");
 		this.url=url;
@@ -26,8 +55,15 @@ public class Dao_candidate {
 		this.pass=pass;
 	}
 	
+	
+	/**
+	 * Method attempts to establish a DB connection based on supplied attributes if one does
+	 * not exist already. Method requires JDBC driver. 
+	 * 
+	 * @return boolean value representing connection success or failure.
+	 * @throws SQLException error
+	 */
 	public boolean getConnection() {
-//		System.out.println("getConnection()");
 		try {
 	        if (conn == null || conn.isClosed()) {
 	            try {
@@ -45,8 +81,17 @@ public class Dao_candidate {
 		}
 	}
 	
+	
+	/**
+	 * CRUD method operates utilizing Candidate class instance and connection established
+	 * as conn to perform insert SQL statement on candidates table. Candidate instance is
+	 * loaded with attributes to populate into DB.
+	 * 
+	 * @param c takes instance of Candidate object with attributes loaded matching columns
+	 * of candidates table.
+	 * @throws SQLException exception.
+	 */
 	public void insertCandidate(Candidate c) {
-//		System.out.println("insertCandidate()");
 		try {
 			String sql="insert into CANDIDATES (SURNAME, FIRSTNAME, PARTY, LOCATION, AGE, REASON_FOR_RUNNING, AIMS_AND_GOALS, PROFESSION, USERNAME, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?, CONCAT(RTRIM((LTRIM(SURNAME))), CONVERT(CANDIDATE_ID, CHAR)), '1a59ef90d1ea801448e1567d0896a99f');";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
@@ -65,6 +110,16 @@ public class Dao_candidate {
 		}
 	}
 
+	
+	/**
+	 * CRUD method operates utilizing Candidate class instance and connection established
+	 * as conn to perform SQL update statement based on CANDIDATE_ID and Candidate instance
+	 * with loaded attributes for DB update.
+	 * 
+	 * @param c takes instance of Candidate object with attributes loaded matching columns
+	 * of candidates table.
+	 * @throws SQLException exception.
+	 */
 	public void updateCandidate(Candidate c) {
 		System.out.println("updateCandidate(Candidate q)");
 		try {
@@ -86,6 +141,15 @@ public class Dao_candidate {
 		}
 	}
 
+	
+	/**
+	 * CRUD method operates utilizing Candidate class instance and connection established
+	 * as conn to perform SQL delete statement based on CANDIDATE_ID from candidates table.
+	 * 
+	 * @param id takes String arg for CANDIDATE_ID in candidates table where rows are to
+	 * be deleted.
+	 * @throws SQLException exception.
+	 */
 	public void deleteCandidate(String id) {
 		System.out.println("deleteCandidate(String id)");
 		try {
@@ -99,8 +163,17 @@ public class Dao_candidate {
 		}
 	}
 	
-	public ArrayList<Candidate> readAllCandidate() { // Will read all cans in asc order
-//		System.out.println("readAllCandidate()");
+	
+	/**
+	 * CRUD method operates utilizing Candidate class instance and connection established
+	 * as conn to perform SQL select statement reading all candidates from the candidates 
+	 * table. ResultSet is iterated over in order to populate Candidate instance attributes
+	 * with values from table.
+	 * 
+	 * @return Candidate instance with attributes populated from DB.
+	 * @throws SQLException exception.
+	 */
+	public ArrayList<Candidate> readAllCandidate() { 
 		ArrayList<Candidate> list=new ArrayList<>();
 		try {
 			Statement stmt=conn.createStatement();
@@ -125,8 +198,18 @@ public class Dao_candidate {
 			return null;
 		}
 	}
-	public ArrayList<Candidate> readAllCandidateDesc() { // WIll read all cans in desc order
-//		System.out.println("readAllCandidateDesc()");
+	
+	
+	/**
+	 * CRUD method operates utilizing Candidate class instance and connection established
+	 * as conn to perform SQL select statement reading all candidates in descending order
+	 * from the candidates table. ResultSet is iterated over in order to populate Candidate 
+	 * instance attributes with values from table.
+	 * 
+	 * @return Candidate instance with attributes populated in reverse order from DB.
+	 * @throws SQLException exception.
+	 */
+	public ArrayList<Candidate> readAllCandidateDesc() { 
 		ArrayList<Candidate> list=new ArrayList<>();
 		try {
 			Statement stmt=conn.createStatement();
@@ -151,6 +234,21 @@ public class Dao_candidate {
 			return null;
 		}
 	}
+	
+	
+	/**
+	 * CRUD method operates utilizing Candidate class instance and connection established
+	 * as conn to iterate over candidates table checking for a USERNAME and PASSWORD from
+	 * the respective columns that matches those provided in the arguments. Candidate instance
+	 * attributes are utilized for the operation.
+	 * NOTE: LoginServlet utilizing the method has built in SQL statement that reads login
+	 * info from browser input.
+	 * 
+	 * @param login_sql takes String arg of full SQL command to check USERNAME and PASSWORD.
+	 * @return Candidate instance with USERNAME, PASSWORD and CANDIDATE_ID of candidate matching
+	 * input arg containing username and password.
+	 * @throws SQLException exception.
+	 */
 	public ArrayList<Candidate> loginCandidate(String login_sql) {
 		System.out.println("loginCandidate() is connected..");
 		ArrayList<Candidate> list = new ArrayList<>();
@@ -173,6 +271,17 @@ public class Dao_candidate {
 		}
 	}
 
+	
+	/**
+	 * CRUD method operates utilizing Candidate class instance and connection established
+	 * as conn to run SQL command in candidates table reading all candidates from the
+	 * table that match the provided CANDIDATE_ID. Attributes of instance are set through 
+	 * iteration of ResultSet.
+	 * 
+	 * @param id takes String arg matching CANDIDATE_ID of rows to be returned.
+	 * @return instance of Candidate class with parameters populated for specified CANDIDATE_ID.
+	 * @throws SQLException exception.
+	 */
 	public Candidate readCandidate(String id) {
 		Candidate f=null;
 		try {
@@ -185,7 +294,6 @@ public class Dao_candidate {
 				f.setId(RS.getInt("CANDIDATE_ID"));
 				f.setParty(RS.getString("PARTY"));
 //				f.setCandidateLocation(RS.getString("LOCATION"));
-
 			}
 			return f;
 		}

@@ -2,7 +2,6 @@ package Login;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,23 +12,50 @@ import javax.servlet.http.HttpServletResponse;
 import dao.Dao_candidate;
 import data.Candidate;
 
-
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class: LoginServlet
+ * Logs in admins and candidates utilizing Dao and Post methods.
+ * Method descriptions can be found in the method's respective notes.
  */
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	
+	/**
+	 * Identifier that ensures same version used for serialization and
+	 * deserialization by JVM.
+	 */
 	private static final long serialVersionUID = 1L;
-	private Dao_candidate dao=null;
+	/**
+	 * Data Access Object initialization for candidates table.
+	 * Utilizes Candidate and Dao_candidate classes.
+	 */
+	private Dao_candidate dao = null;
 	
+	
+	/**
+	 * Object initialization method for Dao_candidate.
+	 * User/pass: pena/kukkuu
+	 */
 	@Override
 	public void init() {
-		dao=new Dao_candidate("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
+		dao = new Dao_candidate("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
 		System.out.println("");
 	}
 
 
+	/**
+	 * HTTP Post method.
+	 * Requests "user" and "pwd" on "loginPage.jsp" that has been submitted by a user.
+	 * Password is hashed upon request. Upon establishing a successful conneciton through
+	 * Dao_candidate the method utilizes the loginCandidate method to populate the list
+	 * instance of Candidate class in order to populate the CANDIDATE_ID of the requesting 
+	 * user into id_push, which is initialized to null. If the information does not match
+	 * that of the DB, id_push will remain null. If the CANDIDATE_ID is successfully populated
+	 * cookies will be initiated with it and redirected to "_TEST_LOGIN_SUCCESS.jsp" starting
+	 * the user's session.
+	 * 
+	 * @throws ServletException | IOException
+	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		

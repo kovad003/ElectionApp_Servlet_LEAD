@@ -11,7 +11,7 @@ import java.sql.Connection;
 
 
 /**
- * The Data Access Object class contains methods that work in conjunction
+ * This Data Access Object class contains methods that work in conjunction
  * with the Question class. It establishes a connection with the 
  * electionmachine DB and its methods allow for the performing of CRUD operations
  * on said data through the utilization of attributes from the aforementioned class.
@@ -59,6 +59,7 @@ public class Dao_question {
 	/**
 	 * Method attempts to establish a DB connection based on supplied attributes if one does
 	 * not exist already. Method requires JDBC driver. 
+	 * 
 	 * @return boolean value representing connection success or failure.
 	 * @throws SQLException error
 	 */
@@ -243,6 +244,7 @@ public class Dao_question {
 	 * CRUD method utilizes Question class instance as list and constructor 
 	 * established connection as conn to delete question(s) from question table
 	 * based on provided QUESTION_ID as id.
+	 * 
 	 * @param id takes String id of question id where question is to be deleted.
 	 * @return list object (instance of Question class) with attributes loaded
 	 * from matching columns of entire updated questions table.

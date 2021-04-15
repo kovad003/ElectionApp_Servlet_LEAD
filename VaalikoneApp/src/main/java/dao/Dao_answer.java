@@ -9,36 +9,35 @@ import java.util.ArrayList;
 import data.Answer;
 import java.sql.Connection;
 
+
+/**
+ * This Data Access Object class contains methods that work in conjunction
+ * with the Answer class. It establishes a connection with the 
+ * electionmachine DB and its methods allow for the performing of CRUD operations
+ * on said data through the utilization of attributes from the aforementioned class.
+ * 
+ * @version 3.0
+ * @author HAMK's Finest
+ * Date: April 14, 2021
+ */
+
 public class Dao_answer {
 	
-	/*
-	 * Data Access Object class for Answers class
-	 * 
-	 * -= CONSTRUCTOR =-
-	 * Initializes instance of Dao with String parameters forDB connection: url, user, pass.
-	 * Doesn't connect, just inits attribs.
-	 * 
-	 * -= METHODS =-
-	 * getConnection():
-	 * 		-> returns true if successful connection
-	 * 		-> returns false if unsuccessful connection
-	 * readAllAnswer():
-	 * 		-> returns Answer arraylist with attrib: CANDIDATE_ID, QUESTION_ID, ANSWER
-	 * updateAnswer(Answer a):
-	 * 		-> returns updated Answer arraylist
-	 * deleteAnswer(String CANDIDATE_ID, String QUESTION_ID):
-	 * 		-> returns updated Answer arraylist
-	 * readAnswer(String CANDIDATE_ID):
-	 * 		-> returns politician object with attrib for 1 politician's answers
-	 * 		-> question ID + answer
-	 * 
-	 * 
-	 * author: with much love from HAMK's Finest:)
+	/**
+	 * String value matching the DB url to connect to.
 	 */
-	
 	private String url;
+	/**
+	 * String value matching the username for account used to access DB.
+	 */
 	private String user;
+	/**
+	 * String value matching the password for account used to access DB.
+	 */
 	private String pass;
+	/**
+	 * Connection object representing the connection to the DB.
+	 */
 	private Connection conn;
 	
 	
@@ -46,36 +45,85 @@ public class Dao_answer {
 	 ***************   GETTERS / SETTERS   *************
 	 ***************************************************/
 	
+	/**
+	 * url attribute getter.
+	 * @return String of url for DB connection.
+	 */
 	public String getUrl() {
 		return url;
 	}
 
+	
+	/**
+	 * url attribute setter.
+	 * @param url takes String arg for DB connection.
+	 */
 	public void setUrl(String url) {
 		this.url = url;
 	}
 
+	
+	/**
+	 * user attribute getter.
+	 * @return user String of username used to access DB.
+	 */
 	public String getUser() {
 		return user;
 	}
 
+	
+	/**
+	 * user attribute setter.
+	 * @param user takes String arg for username used to access DB.
+	 */
 	public void setUser(String user) {
 		this.user = user;
 	}
 
+	
+	/**
+	 * pass attribute getter.
+	 * @return String pass for password used to access DB.
+	 */
 	public String getPass() {
 		return pass;
 	}
 
+	
+	/**
+	 * pass attribute setter.
+	 * @param pass takes String arg for password used to access DB.
+	 */
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
 
+	
+	/**
+	 * conn attribute getter.
+	 * @return returns connection object representing connection to DB.
+	 */
 	public Connection getConn() {
 		return conn;
 	}
 
+	
+	/**
+	 * conn attribute setter.
+	 * @param conn takes connection object as arg to establish connection to DB.
+	 */
 	public void setConn(Connection conn) {
 		this.conn = conn;
+	}
+	
+	
+	/**
+	 * String ResultSet getter.
+	 * @param string takes String arg for string to identify return value from RS.
+	 * @return null
+	 */
+	private ResultSet getString(String string) {
+		return null;
 	}
 
 	
@@ -83,6 +131,11 @@ public class Dao_answer {
 	 ********************   METHODS   ******************
 	 ***************************************************/
 
+	/**
+	 * @param url takes String 
+	 * @param user
+	 * @param pass
+	 */
 	public Dao_answer(String url, String user, String pass) {
 		/*
 		 * PARAMETERS:
@@ -101,6 +154,9 @@ public class Dao_answer {
 	}
 	
 	
+	/**
+	 * @return
+	 */
 	public boolean getConnection() {
 		/*
 		 * PARAMETERS: method takes no args
@@ -134,6 +190,9 @@ public class Dao_answer {
 	}
 	
 	
+	/**
+	 * @return
+	 */
 	public ArrayList<Answer> readAllAnswer() {
 		/*
 		 * PARAMS: method takes no args
@@ -169,11 +228,12 @@ public class Dao_answer {
 	}
 	
 	
-	private ResultSet getString(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
+
+	/**
+	 * @param a
+	 * @return
+	 */
 	public ArrayList<Answer> updateAnswer(Answer a) {
 		/*
 		 * PARAMETERS: answer object you wish to ammend with attrib answer, candidate_id, question_id
@@ -204,6 +264,11 @@ public class Dao_answer {
 	}
 	
 	
+	/**
+	 * @param CANDIDATE_ID
+	 * @param QUESTION_ID
+	 * @return
+	 */
 	public ArrayList<Answer> deleteAnswer(String CANDIDATE_ID, String QUESTION_ID) {
 		/*
 		 * PARAMETERS: CANDIDATE_ID and QUESTION_ID to mark row for deletion in answers table
@@ -232,6 +297,10 @@ public class Dao_answer {
 	}
 
 	
+	/**
+	 * @param CANDIDATE_ID
+	 * @return
+	 */
 	public Answer readAnswer(String CANDIDATE_ID) {
 		/*
 		 * PARAMETERS: (String) candidate id to return answers for 
