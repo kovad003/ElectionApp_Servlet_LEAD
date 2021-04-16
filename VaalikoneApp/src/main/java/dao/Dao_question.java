@@ -56,6 +56,10 @@ public class Dao_question {
 	}
 	
 	
+	/* #################################################
+	 * ##################   METHODS   ##################
+	 * #################################################*/
+	
 	/**
 	 * Method attempts to establish a DB connection based on supplied attributes if one does
 	 * not exist already. Method requires JDBC driver. 

@@ -41,9 +41,25 @@ public class Dao_answer {
 	private Connection conn;
 	
 	
-	/***************************************************
-	 ***************   GETTERS / SETTERS   *************
-	 ***************************************************/
+	/**
+	 * String based parameterized constructor for Dao_answer class.
+	 * 
+	 * @param url takes String arg of url for to connecto to.
+	 * @param user takes String arg of username for user to access DB. 
+	 * @param pass takes String arg of password for user to access DB.
+	 */
+	public Dao_answer(String url, String user, String pass) {
+		System.out.println("Dao_answer constructor running with..\nurl: " + url + 
+				"\nuser/pass: " + user + " / " + pass);
+		this.url=url;
+		this.user=user;
+		this.pass=pass;
+	}
+	
+	
+	/* #################################################
+	 * #############   GETTERS / SETTERS   #############
+	 * #################################################*/
 	
 	/**
 	 * url attribute getter.
@@ -127,48 +143,18 @@ public class Dao_answer {
 	}
 
 	
-	/***************************************************
-	 ********************   METHODS   ******************
-	 ***************************************************/
+	/* #################################################
+	 * ##################   METHODS   ##################
+	 * #################################################*/
 
 	/**
-	 * @param url takes String 
-	 * @param user
-	 * @param pass
-	 */
-	public Dao_answer(String url, String user, String pass) {
-		/*
-		 * PARAMETERS:
-		 * url  -> (String) DB url
-		 * user -> (String) Username for DB access
-		 * pass -> (String) Password for DB access
-		 * 
-		 * THROWS:
-		 * console -> connection information upon successful initialization
-		 */
-		System.out.println("Dao_answer constructor running with..\nurl: " + url + 
-				"\nuser/pass: " + user + " / " + pass);
-		this.url=url;
-		this.user=user;
-		this.pass=pass;
-	}
-	
-	
-	/**
-	 * @return
+	 * Method attempts to establish a DB connection based on supplied attributes if one does
+	 * not exist already. Method requires JDBC driver. 
+	 * 
+	 * @return boolean value representing connection success or failure.
+	 * @throws SQLException error
 	 */
 	public boolean getConnection() {
-		/*
-		 * PARAMETERS: method takes no args
-		 * 
-		 * RETURNS:
-		 * true  -> successful connection
-		 * false -> unsuccessful connection
-		 * 
-		 * THROWS:
-		 * exception error -> SQL
-		 * console 		   -> connection info upon successful/unsuccessful connect
-		 */
 		System.out.println("getConnection() running");
 		try {
 	        if (conn == null || conn.isClosed()) {
@@ -191,21 +177,14 @@ public class Dao_answer {
 	
 	
 	/**
-	 * @return
+	 * CRUD method operates in conjunction with Answer class and established connection
+	 * conn to read the answers table into ResultSet, then iterate over it in order to
+	 * assign values from the table into attributes of Answer instance. Instance is returned.
+	 * 
+	 * @return instance of Answer class with attributes loaded from answers table.
+	 * @throws SQLException error
 	 */
 	public ArrayList<Answer> readAllAnswer() {
-		/*
-		 * PARAMS: method takes no args
-		 * 
-		 * RETURNS: arraylist Answer with attrib:
-		 * 			- Candidate ID
-		 * 			- Answer ID	
-		 * 			- Answer
-		 * 
-		 * THROWS:
-		 * exception error -> SQL
-		 * console		   -> connection info upon success/fail to init
-		 */
 		System.out.println("readAllAnswer() running");
 		ArrayList<Answer> list=new ArrayList<>();
 		try {
@@ -228,25 +207,17 @@ public class Dao_answer {
 	}
 	
 	
-
-
 	/**
-	 * @param a
-	 * @return
+	 * CRUD method operates in conjunction with Answer class and established connection
+	 * conn to run update statement in answers table utilizing loaded attributes of Answer
+	 * class instance as arg. The updated table is read into another instance of Answer
+	 * class and returned.
+	 * 
+	 * @param a takes Answer instance arg with loaded attributes of values to update in table.
+	 * @return instance of Answer class with attributes loaded from updated table.
+	 * @throws SQLException error
 	 */
 	public ArrayList<Answer> updateAnswer(Answer a) {
-		/*
-		 * PARAMETERS: answer object you wish to ammend with attrib answer, candidate_id, question_id
-		 * 
-		 * RETURNS: answer arraylist with updated attributes:
-		 * 			- candidate ID
-		 * 			- question ID
-		 * 			- answer
-		 * 
-		 * THROWS:
-		 * exception error -> SQL
-		 * console		   -> connection info upon success/fail to init
-		 */
 		System.out.println("updateAnswer running");
 		try {
 			String sql="UPDATE answers SET answer=? WHERE CANDIDATE_ID=? AND QUESTION_ID=?;";
@@ -265,20 +236,17 @@ public class Dao_answer {
 	
 	
 	/**
-	 * @param CANDIDATE_ID
-	 * @param QUESTION_ID
-	 * @return
+	 * CRUD method deletes answer from answers table based on provided CANDIDATE_ID and 
+	 * QUESTION_ID args. Uses conn connection established through constructor. Returns
+	 * updated table utilizing Answer class instance with attributes loaded with values 
+	 * from table.
+	 * 
+	 * @param CANDIDATE_ID takes String arg for CANDIDATE_ID in answers table.
+	 * @param QUESTION_ID takes String arg for QUESTION_ID in answers table.
+	 * @return instance of Answer class with attributes loaded from updated table.
+	 * @throws SQLException error
 	 */
 	public ArrayList<Answer> deleteAnswer(String CANDIDATE_ID, String QUESTION_ID) {
-		/*
-		 * PARAMETERS: CANDIDATE_ID and QUESTION_ID to mark row for deletion in answers table
-		 * 
-		 * RETURNS: Answer object with marked row deleted
-		 * 
-		 * THROWS:
-		 * exception error -> SQL
-		 * console		   -> connection info upon success/fail to init, deletion message
-		 */
 		System.out.println("deleteAnswer() running");
 		try {
 			String sql="DELETE FROM answers WHERE CANDIDATE_ID=? AND QUESTION_ID=?;";
@@ -298,21 +266,19 @@ public class Dao_answer {
 
 	
 	/**
-	 * @param CANDIDATE_ID
-	 * @return
+	 * CRUD method works in conjunction with instance of Answer class and established conn
+	 * connection to run SQL command in answers table reading all rows matching the 
+	 * provided CANDIDATE_ID arg, ordered by QUESTION_ID. Rows are iterated over from 
+	 * ResultSet and assigned to instance attributes, returning ANSWER instance containing
+	 * requested rows.
+	 * 
+	 * @param CANDIDATE_ID takes String arg matching CANDIDATE_ID marking rows to select
+	 * from answers table.
+	 * @return instance of ANSWER class with attributes loaded from selected rows of answers
+	 * table.
+	 * @throws SQLException error
 	 */
 	public Answer readAnswer(String CANDIDATE_ID) {
-		/*
-		 * PARAMETERS: (String) candidate id to return answers for 
-		 * 
-		 * RETURNS: ..warning! politician object! make sure to not trust what you read!:)
-		 * 			returns Answer object with atribbutes:
-		 * 				- question id
-		 * 				- answer
-		 * 
-		 * exception error -> SQL
-		 * console		   -> connection info upon success/fail to init
-		 */
 		Answer politician=null;
 		try {
 			String sql="SELECT * FROM answers WHERE CANDIDATE_ID=? ORDER BY QUESTION_ID;";
@@ -332,6 +298,5 @@ public class Dao_answer {
 			return null;
 		}
 	}
-	
 	
 }

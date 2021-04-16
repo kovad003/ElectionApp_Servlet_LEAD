@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.Dao_candidate;
 import data.Candidate;
 
+
 /**
  * Servlet implementation class: LoginServlet
  * Logs in admins and candidates utilizing Dao and Post methods.

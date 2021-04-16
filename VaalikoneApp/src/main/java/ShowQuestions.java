@@ -1,27 +1,38 @@
 
-
 import java.io.IOException;
 import java.util.ArrayList;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import dao.Dao_question;
-import data.Candidate;
 import data.Question;
+
 
 /**
  * Servlet implementation class ShowQuestions
  */
 @WebServlet("/ShowQuestions")
 public class ShowQuestions extends HttpServlet {
+	
+	/**
+	 * Identifier that ensures same version used for serialization and
+	 * deserialization by JVM.
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Data Access Object initialization for candidates table.
+	 * Utilizes Candidate and Dao_candidate classes.
+	 */
 	private Dao_question dao=null;
 	
+	
+	/**
+	 * Object initialization method for Dao_candidate.
+	 * User/pass: pena/kukkuu
+	 */
 	@Override
 	public void init() {
 		dao=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
@@ -30,6 +41,7 @@ public class ShowQuestions extends HttpServlet {
 	
        
     /**
+     * Constructor initializing ShowQuestions
      * @see HttpServlet#HttpServlet()
      */
     public ShowQuestions() { // CONSTRUCTOR, leave it here
@@ -37,6 +49,7 @@ public class ShowQuestions extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */

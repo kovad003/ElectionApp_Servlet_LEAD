@@ -1,5 +1,6 @@
 package data;
 
+
 /**
  * The Question class houses attributes matching all columns of the
  * electionmachine.questions table. Instances of the class function
@@ -44,9 +45,9 @@ public class Question {
 	}
 	
 	
-	/***************************************************
-	 ***************   GETTERS / SETTERS   *************
-	 ***************************************************/	
+	/* #################################################
+	 * #############   GETTERS / SETTERS   #############
+	 * #################################################*/	
 	
 	/**
 	 * id attribute getter.

@@ -1,44 +1,38 @@
 
-
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.EventListener;
-import java.util.Map;
-import java.util.Set;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterRegistration;
 import javax.servlet.RequestDispatcher;
-import javax.servlet.Servlet;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
-import javax.servlet.SessionCookieConfig;
-import javax.servlet.SessionTrackingMode;
-import javax.servlet.FilterRegistration.Dynamic;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.descriptor.JspConfigDescriptor;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import dao.Dao_candidate;
 import data.Candidate;
+
 
 /**
  * Servlet implementation class ShowCandidates
  */
 @WebServlet("/ShowCandidates")
 public class ShowCandidates extends HttpServlet {
+	
+	/**
+	 * Identifier that ensures same version used for serialization and
+	 * deserialization by JVM.
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Data Access Object initialization for candidates table.
+	 * Utilizes Candidate and Dao_candidate classes.
+	 */
 	private Dao_candidate dao=null;
 	
+	
+	/**
+	 * Object initialization method for Dao_candidate.
+	 * User/pass: pena/kukkuu
+	 */
 	@Override
 	public void init() {
 		dao=new Dao_candidate("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
@@ -47,6 +41,7 @@ public class ShowCandidates extends HttpServlet {
 	
        
     /**
+     * Constructor initializing ShowCandidates
      * @see HttpServlet#HttpServlet()
      */
     public ShowCandidates() { // CONSTRUCTOR, leave it here
@@ -54,32 +49,33 @@ public class ShowCandidates extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		ArrayList<Candidate> list=null;
+		
 		if(dao.getConnection())
 		{
 			System.out.println("Successfully connected to the database");
 			list=dao.readAllCandidate();
 			System.out.println("Can_List: " + list);
-			
 			for (int i = 0; i < list.size(); i++) {
 				Candidate c = list.get(i);//		
 				System.out.println("Candidate name: " + c.getFName() + " " + c.getSName());//
 				System.out.println("location: " + c.getLocation() );//
 			}
-			
 		}
-		else
-		{
+		else{
 			System.out.println("No connection to database");
 		}
-		request.setAttribute("candidatelist", list);
 		
+		request.setAttribute("candidatelist", list);
 		RequestDispatcher rd=request.getRequestDispatcher("/candidates.jsp");
 		rd.forward(request, response);
+		
 /*		
 		// get URLs
 		URL currentUrl = new URL(request.getRequestURL().toString());
@@ -114,5 +110,5 @@ public class ShowCandidates extends HttpServlet {
 		
 */
 	}
+	
 }
-
