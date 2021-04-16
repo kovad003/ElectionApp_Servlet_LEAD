@@ -14,6 +14,7 @@ import data.Answer;
 /**
  * Servlet implementation class ShowAnswers
  */
+
 @WebServlet("/ShowAnswers")
 public class ShowAnswers extends HttpServlet {
 	
@@ -51,25 +52,31 @@ public class ShowAnswers extends HttpServlet {
 
     
 	/**
+	 * HTTP Get method utilizing instance of Answer class: alist, and Dao_answer initialized DB connection: conn.
+	 * If connection is successfully established, values are read out of answers table and populated in attributes 
+	 * of alist, and passed on to "survey.jsp" as "answerlist" to be matched with user's answers in order to find
+	 * best candidate match.
+	 * 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @throws ServletException | IOException
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		ArrayList<Answer> alist = null;
+		
 		if(dao.getConnection())
 		{
 			System.out.println("Servlet doGet connected to the database");
 			alist=dao.readAllAnswer();
 			System.out.println("List: " + alist);
-		}
-		else
+		}else
 		{
 			System.out.println("doGet has no connection to database");
 		}
-		request.setAttribute("answerlist", alist);
 		
+		request.setAttribute("answerlist", alist);
 		RequestDispatcher rd = request.getRequestDispatcher("/survey.jsp");
 		rd.forward(request, response);
 	}
-
 
 }

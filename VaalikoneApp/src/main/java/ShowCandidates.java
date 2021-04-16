@@ -51,7 +51,11 @@ public class ShowCandidates extends HttpServlet {
 
     
 	/**
+	 * HTTP Get method utilizes instance of Candidate class and connection conn established with Dao_candidate.
+	 * If connection is established, all candidates are iterated into ArrayList Candidate instance imaginatively
+	 * created as list, which is passed on to "candidates.jsp" for further use.
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @throws ServletException | IOException
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

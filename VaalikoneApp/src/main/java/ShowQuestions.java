@@ -14,6 +14,7 @@ import data.Question;
 /**
  * Servlet implementation class ShowQuestions
  */
+
 @WebServlet("/ShowQuestions")
 public class ShowQuestions extends HttpServlet {
 	
@@ -51,10 +52,17 @@ public class ShowQuestions extends HttpServlet {
 
     
 	/**
+	 * HTTP Get method utilizing Question class instance: list, and Dao_Question class to read all questions
+	 * from questions table and pack them into attributes of list, which is passed on to "questionnaire.jsp"
+	 * as "questionlist" to be used in the survery.
+	 * 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @throws ServletException | IOException
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		ArrayList<Question> list=null;
+		
 		if(dao.getConnection())
 		{
 			System.out.println("Successfully connected to the database");
@@ -64,13 +72,13 @@ public class ShowQuestions extends HttpServlet {
 			
 			System.out.println("Question id: " + q.getId());//
 		}
-		else
-		{
+		else{
 			System.out.println("No connection to database");
 		}
-		request.setAttribute("questionlist", list);
 		
+		request.setAttribute("questionlist", list);
 		RequestDispatcher rd=request.getRequestDispatcher("/questionnaire.jsp");
 		rd.forward(request, response);
 	}
+	
 }
