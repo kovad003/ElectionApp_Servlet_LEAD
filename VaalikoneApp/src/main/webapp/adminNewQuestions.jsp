@@ -58,7 +58,6 @@
                 <table class="table">                    
                     <thead class = "tableCustom1">
                         <tr>
-<!--                             <th>UPDATE</th>                            -->
                             <th>NEW_QUESTION_ID</th>
                             <th>NEW_QUESTION</th>
                             
@@ -81,94 +80,7 @@
     </div>
     
     
-<!--       <div class="containerUpdateCandidatesTable">    -->
-<!-- 	        <div>                                                                                              -->
-<!-- 	            <div class="table-responsive"> -->
-<!-- 		            <Select class="body_text" id="select_id" name="critical" onchange="showQuestion()"> -->
-<!-- 						<option value="Select">Edit Questions</option> -->
-<%-- 						<c:forEach var="question" items="${requestScope.questionlist}"> --%>
-<%-- 						<option value="${question.id}">${question.id}</option> --%>
-<%-- 			    		</c:forEach> --%>
-<!-- 					</select> -->
-					
-<%-- 					<c:forEach var="question" items="${requestScope.questionlist}"> --%>
-<%-- 						<div style="display: none" id="${question.id}"> --%>
-						
-<!-- 							   <form action = "/AdminEditQuestion" method="POST" id="updateQuestion">  -->
-<!-- 								    <table class="table"> -->
-<!-- 									    <thead class = "tableCustom1"> -->
-<!-- 					                        <tr>  -->
-<!-- 					                        	<th>NEW_QUESTION_ID</th>                               -->
-<!-- 					                            <th>NEW_QUESTION</th> -->
-					                       
-<!-- 					                        </tr> -->
-<!-- 					                    </thead> -->
-<!-- 									    <tbody>                    -->
-<!-- 					                       <tr>    -->
-<%-- 						                       <td><input disabled size="" type="number" id="QID" name ="QID" value = "${question.id}"></td> --%>
-<%-- 						                       <td><input required type="text"  name ="NEW_QUESTION" value = "${question.question}"></td> --%>
-						                       
-<!-- 					                  		</tr> -->
-<!-- 					                   </tbody> -->
-					                   
-<!-- 				                  </table> -->
-				                  		               
-<!-- 				                   		<Button id="save_can" type="submit"><b class = "tableCustom2">Save</b></Button> -->
-<!-- 				                   		<Button id="cancel_edit" type="button" onclick="cancelEditing()">Cancel</Button> 		 -->
-<!-- 			                 </form>		                           -->
-<!-- 						</div>  -->
-<%-- 			    	</c:forEach> --%>
-<!-- 	            </div> -->
-<!-- 	        </div> -->
-<!-- 	    </div> -->
-	
 
-<!-- 	         <div class="containerUpdateCandidatesTable">    -->
-<!-- 	        <div>                                                                                              -->
-<!-- 	            <div class="table-responsive"> -->
-<!-- 		            <Select class="body_text" id="select_id_del" name="critical" onchange="startDeleting()"> -->
-<!-- 						<option value="Select">Remove Question</option> -->
-<%-- 						<c:forEach var="question" items="${requestScope.questionlist}"> --%>
-<%-- 						<option value="${question.id}">${question.id}</option> --%>
-<%-- 			    		</c:forEach> --%>
-<!-- 					</select> -->
-					
-<%-- 					<c:forEach var="question" items="${requestScope.questionlist}"> --%>
-<%-- 						<div style="display: none" id="del${question.id}"> --%>
-						
-<!-- 							   <form action = "/AdminDeleteNewQuestion" method="POST" id="updateQuestion">  -->
-<!-- 								    <table class="table"> -->
-<!-- 									    <thead class = "tableCustom1"> -->
-<!-- 					                        <tr>  -->
-<!-- 					                        	<th>NEW_QUESTION_ID</th>                               -->
-<!-- 					                            <th>NEW_QUESTION</th> -->
-					                            
-<!-- 					                        </tr> -->
-<!-- 					                    </thead> -->
-<!-- 									    <tbody>                    -->
-<!-- 					                       <tr>    -->
-<%-- 						                       <td><input disabled size="" type="number" id="QID" name ="QID" value = "${question.id}"></td> --%>
-<%-- 						                       <td><input required type="text"  name ="NEW_QUESTION" value = "${question.question}"></td> --%>
-						                       
-<!-- 					                  		</tr> -->
-<!-- 					                   </tbody> -->
-					                   
-<!-- 				                  </table>			           		                -->
-<!-- 			                   		<Button id="save_can" type="submit"><b class = "tableCustom3">Delete</b></Button> -->
-<!-- 			                   		<Button id="cancel_edit" type="button" onclick="cancelDeleting()">Cancel</Button>  -->
-<!-- 			                 </form>		                           -->
-<!-- 						</div>  -->
-<%-- 			    	</c:forEach> --%>
-<!-- 	            </div> -->
-<!-- 	        </div> -->
-<!-- 	    </div> -->
-    
-
-    <!-- AD This is a container to contain the data from the Candidate Table.
-            Created utilising bootstrap, this .table-responsive class creates a responsive table
-            which will scroll horizontally on small devices (under 768px). 
-            When viewing on anything larger than 768px wide, 
-            there is no difference:-->
     <div class="containerUpdateCandidatesTable">   
         <div>                                                                                             
             <div class="table-responsive">   

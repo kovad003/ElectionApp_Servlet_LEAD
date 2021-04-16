@@ -14,37 +14,55 @@ import data.Question;
 
 
 /**
+ * @version 3.0
+ * @author HAMK's Finest
+ * Date: April 16, 2021
  * Servlet implementation class AdminNewQuestions
  */
 @WebServlet("/AdminNewQuestions")
 public class AdminNewQuestions extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-private Dao_question dao_question=null;
-	
+	/**
+	 * Dao_question: This Data Access Object class contains methods that work in conjunction with the Question class.
+	 */
+	private Dao_question dao_question=null;
+
+	/**
+     * init method
+     * String based parameterized constructor for Dao_question class.
+     */
 	@Override
 	public void init() {
 		dao_question=new Dao_question("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
 	}
-	
-       
+	    
     /**
      * @see HttpServlet#HttpServlet()
+     * AdminNewQuestions: CONSTRUCTOR
      */
-    public AdminNewQuestions() { // CONSTRUCTOR, leave it here
+    public AdminNewQuestions() { // CONSTRUCTOR
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
+	 * doGet method: Called by the server (via the service method) to allow a servlet to handle a GET request. 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
   
-    		
+  
+    		/**
+    		 * Question: Class
+    		 */
     		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     		//String sql = request.getParameter("NEWQUESTION");
-
+       	
+    	/**
+    	* newQuestionsList: Array list that the new questions are going to be stored
+		*/
     		ArrayList <Question> newQuestionsList = new ArrayList<Question>();
-    			
+    	/**	
+   		 * getConnection: Method attempts to establish a DB connection based on supplied attributes if one doesnot exist already. Method requires JDBC driver
+		 */
     		if(dao_question.getConnection())
     		{
     		System.out.println("Successfully connected to the database");
@@ -58,26 +76,14 @@ private Dao_question dao_question=null;
     		
     		request.setAttribute("newQuestionsList", newQuestionsList); // Going to store arraylist as an attribute so we can acces it on the jsp page
     		
+    		/**
+    		 * RequestDispatcher: Defines an object that receives requests from the clientand sends them to any resource 
+    		 * request: an HttpServletRequest object thatcontains the request the client has madeof the servlet
+    		 * response: an HttpServletResponse object thatcontains the response the servlet sendsto the client
+    		 */
     		RequestDispatcher rd=request.getRequestDispatcher("/adminNewQuestions.jsp"); // will forwad arraylist to the jsp page
    		 	rd.forward(request, response);
-    		
-    		
-    	/*
-    		if(dao_question.getConnection())
-    		{
-    		System.out.println("Successfully connected to the database");
-    		dao_question.insertQuestion(sql);
-    		System.out.println(sql + " successfully inserted into new_questions");
-    		}
-    		else
-    		{
-    		System.out.println(sql + " not inserted");
-    		}
-    		
-    		 RequestDispatcher rd=request.getRequestDispatcher("/adminNewQuestions.jsp");
-    		 rd.forward(request, response);
-    		
-    	*/	
+	
     		}
 
 }
