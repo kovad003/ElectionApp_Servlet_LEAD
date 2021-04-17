@@ -61,7 +61,7 @@ public class QAnswer {
 	 * Will take the most frequently used arg so the object can be amended instantly.
 	 * @param can_id will amend the object with the CANDIDATE_ID property.
 	 * @param quest_id will amend the object with the QUESTION_ID property.
-	 * @param will amend the object with the QUESTION (text) property.
+	 * @param answer will amend the object with the QUESTION (text) property.
 	 */
 	public QAnswer(int can_id, int quest_id, int answer) {
 		setCId(can_id);

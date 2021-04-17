@@ -65,7 +65,6 @@ public class Dao_question {
 	 * not exist already. Method requires JDBC driver. 
 	 * 
 	 * @return boolean value representing connection success or failure.
-	 * @throws SQLException error
 	 */
 	public boolean getConnection() {
 		System.out.println("getConnection()");
@@ -96,7 +95,6 @@ public class Dao_question {
 	 * 
 	 * @return ArrayList of Question instance with attributes packed with values
 	 * from database.
-	 * @throws SQLException error
 	 */
 	public ArrayList<Question> readNewQuestions() {
 		System.out.println("readNewQuestions()");
@@ -124,7 +122,6 @@ public class Dao_question {
 	 * DB. 
 	 * 
 	 * @param q takes String q of question to insert into DB.
-	 * @throws SQLException error
 	 */
 	public void insertQuestion(String q)
 	{
@@ -147,7 +144,6 @@ public class Dao_question {
 	 * 
 	 * @param question takes String question set to Question object's question 
 	 * attribute.
-	 * @throws SQLException error
 	 */
 	public void insertNewQuestion(Question question){
 		try {
@@ -169,7 +165,6 @@ public class Dao_question {
 	 * established through constructor.
 	 * 
 	 * @param question takes String of question marking NEW_QUESTION_ID number.
-	 * @throws SQLException error
 	 */
 	public void deleteNewQuestion(String question){
 		try {
@@ -194,7 +189,6 @@ public class Dao_question {
 	 * 
 	 * @return list object (instance of Question class) with attributes loaded
 	 * from matching columns of questions table.
-	 * @throws SQLException exception.
 	 */
 	public ArrayList<Question> readAllQuestion() {
 		System.out.println("readAllQuestion()");
@@ -226,7 +220,6 @@ public class Dao_question {
 	 * question should be changed.
 	 * @return list object (instance of Question class) with attributes loaded
 	 * from matching columns of entire updated questions table.
-	 * @throws SQLException exception.
 	 */
 	public ArrayList<Question> updateQuestion(Question q) {
 		System.out.println("updateQuestion(Question q)");
@@ -252,7 +245,6 @@ public class Dao_question {
 	 * @param id takes String id of question id where question is to be deleted.
 	 * @return list object (instance of Question class) with attributes loaded
 	 * from matching columns of entire updated questions table.
-	 * @throws SQLException exception.
 	 */
 	public ArrayList<Question> deleteQuestion(String id) {
 		System.out.println("deleteQuestion(String id)");
@@ -279,7 +271,6 @@ public class Dao_question {
 	 * return
 	 * @return Question class instance whose attributes have been loaded with
 	 * required questions and ids based on provided QUESTION_ID args.
-	 * @throws SQLException exception.
 	 */
 	public Question readQuestion(String id) {
 		Question f=null;

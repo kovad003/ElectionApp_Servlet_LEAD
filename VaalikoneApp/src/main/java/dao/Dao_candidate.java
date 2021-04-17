@@ -65,7 +65,6 @@ public class Dao_candidate {
 	 * not exist already. Method requires JDBC driver. 
 	 * 
 	 * @return boolean value representing connection success or failure.
-	 * @throws SQLException error
 	 */
 	public boolean getConnection() {
 		try {
@@ -93,7 +92,6 @@ public class Dao_candidate {
 	 * 
 	 * @param c takes instance of Candidate object with attributes loaded matching columns
 	 * of candidates table.
-	 * @throws SQLException exception.
 	 */
 	public void insertCandidate(Candidate c) {
 		try {
@@ -122,7 +120,6 @@ public class Dao_candidate {
 	 * 
 	 * @param c takes instance of Candidate object with attributes loaded matching columns
 	 * of candidates table.
-	 * @throws SQLException exception.
 	 */
 	public void updateCandidate(Candidate c) {
 		System.out.println("updateCandidate(Candidate q)");
@@ -152,7 +149,6 @@ public class Dao_candidate {
 	 * 
 	 * @param id takes String arg for CANDIDATE_ID in candidates table where rows are to
 	 * be deleted.
-	 * @throws SQLException exception.
 	 */
 	public void deleteCandidate(String id) {
 		System.out.println("deleteCandidate(String id)");
@@ -175,7 +171,6 @@ public class Dao_candidate {
 	 * with values from table.
 	 * 
 	 * @return Candidate instance with attributes populated from DB.
-	 * @throws SQLException exception.
 	 */
 	public ArrayList<Candidate> readAllCandidate() { 
 		ArrayList<Candidate> list=new ArrayList<>();
@@ -211,7 +206,6 @@ public class Dao_candidate {
 	 * instance attributes with values from table.
 	 * 
 	 * @return Candidate instance with attributes populated in reverse order from DB.
-	 * @throws SQLException exception.
 	 */
 	public ArrayList<Candidate> readAllCandidateDesc() { 
 		ArrayList<Candidate> list=new ArrayList<>();
@@ -251,7 +245,6 @@ public class Dao_candidate {
 	 * @param login_sql takes String arg of full SQL command to check USERNAME and PASSWORD.
 	 * @return Candidate instance with USERNAME, PASSWORD and CANDIDATE_ID of candidate matching
 	 * input arg containing username and password.
-	 * @throws SQLException exception.
 	 */
 	public ArrayList<Candidate> loginCandidate(String login_sql) {
 		System.out.println("loginCandidate() is connected..");
@@ -284,7 +277,6 @@ public class Dao_candidate {
 	 * 
 	 * @param id takes String arg matching CANDIDATE_ID of rows to be returned.
 	 * @return instance of Candidate class with parameters populated for specified CANDIDATE_ID.
-	 * @throws SQLException exception.
 	 */
 	public Candidate readCandidate(String id) {
 		Candidate f=null;

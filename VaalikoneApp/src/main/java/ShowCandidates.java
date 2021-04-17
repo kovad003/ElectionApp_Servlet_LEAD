@@ -16,7 +16,7 @@ import data.Candidate;
  * Will collect candidate profile data from the DB so it can be displayed on the view.
  * 
  * @author HAMK's Finest
- * @see webapp.candidates.jsp
+ * webapp.candidates.jsp
  * 
  * @author HAMK's Finest
  */

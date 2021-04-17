@@ -12,18 +12,26 @@ import data.Candidate;
 /**
  * Servlet implementation class AdminAddCandidate.
  * Will process the request for adding candidates from page adminUpdateCandidates.jsp
- * @see webapp.adminUpdateCandidates.jsp
  * 
  * @author HAMK's Finest
  */
 @WebServlet("/AdminAddCandidate")
 public class AdminAddCandidate extends HttpServlet {
+	
+	/**
+	 * Identifier that ensures same version used for serialization and
+	 * deserialization by JVM.
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * initialization of Dao_candidate instance to null for later use in method.
+	 */
 	private Dao_candidate dao_candidate=null;
 		
 	/**
 	 * Object initialization method for Dao_candidate class
-	 * @see dao.Dao_candidate.java
+	 * 
+	 * dao.Dao_candidate.java
 	 * User/pass: pena/kukkuu
 	 */
 	@Override

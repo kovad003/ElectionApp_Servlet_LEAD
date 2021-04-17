@@ -15,18 +15,27 @@ import data.Candidate;
 /**
  * Servlet implementation class AdminEnableUpdate
  * Will collect and forward the current candidate profile data from the DB to the adminUpdateCandidates.jsp page.
- * @see webapp.adminUpdateCandidates.jsp
+ * see webapp.adminUpdateCandidates.jsp
  * 
  * @author HAMK's Finest 
  */
 @WebServlet("/AdminEditCandidate")
 public class AdminEditCandidate extends HttpServlet {
+	
+	
+	/**
+	 * Identifier that ensures same version used for serialization and
+	 * deserialization by JVM.
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Dao_candidate object instance initialization.
+	 */
 	private Dao_candidate dao_candidate=null;
 	
 	/**
 	 * Object initialization method for Dao_candidate class
-	 * @see dao.Dao_candidate.java
+	 * see dao.Dao_candidate.java
 	 * User/pass: pena/kukkuu
 	 */
 	@Override

@@ -21,7 +21,6 @@ public class Encryption {
 	 * 
 	 * @param str takes String arg of value to be hashed.
 	 * @return String of hashed value.
-	 * @throws NoSuchAlgorithmException
 	 */
 	
 	public static String crypt(String str) {

@@ -15,12 +15,17 @@ import data.QAnswer;
  * Servlet implementation class SubmitAnswer.
  * Will collect questionnaire answers from both voters and candidates.
  * Data is collected from the (ShowQuestions => )questionnaire.jsp page
- * @see webapp.questionnaire.jsp
+ * see webapp.questionnaire.jsp
  * 
  * @author HAMK's Finest
  */
 @WebServlet("/SubmitAnswer")
 public class SubmitAnswer extends HttpServlet {
+	
+	/**
+	 * Identifier that ensures same version used for serialization and
+	 * deserialization by JVM.
+	 */
 	private static final long serialVersionUID = 1L;
 
 

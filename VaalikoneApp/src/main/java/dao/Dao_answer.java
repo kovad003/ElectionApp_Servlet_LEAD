@@ -152,7 +152,6 @@ public class Dao_answer {
 	 * not exist already. Method requires JDBC driver. 
 	 * 
 	 * @return boolean value representing connection success or failure.
-	 * @throws SQLException error
 	 */
 	public boolean getConnection() {
 		System.out.println("getConnection() running");
@@ -182,7 +181,6 @@ public class Dao_answer {
 	 * assign values from the table into attributes of Answer instance. Instance is returned.
 	 * 
 	 * @return instance of Answer class with attributes loaded from answers table.
-	 * @throws SQLException error
 	 */
 	public ArrayList<Answer> readAllAnswer() {
 		System.out.println("readAllAnswer() running");
@@ -215,7 +213,6 @@ public class Dao_answer {
 	 * 
 	 * @param a takes Answer instance arg with loaded attributes of values to update in table.
 	 * @return instance of Answer class with attributes loaded from updated table.
-	 * @throws SQLException error
 	 */
 	public ArrayList<Answer> updateAnswer(Answer a) {
 		System.out.println("updateAnswer running");
@@ -244,7 +241,6 @@ public class Dao_answer {
 	 * @param CANDIDATE_ID takes String arg for CANDIDATE_ID in answers table.
 	 * @param QUESTION_ID takes String arg for QUESTION_ID in answers table.
 	 * @return instance of Answer class with attributes loaded from updated table.
-	 * @throws SQLException error
 	 */
 	public ArrayList<Answer> deleteAnswer(String CANDIDATE_ID, String QUESTION_ID) {
 		System.out.println("deleteAnswer() running");
@@ -276,7 +272,6 @@ public class Dao_answer {
 	 * from answers table.
 	 * @return instance of ANSWER class with attributes loaded from selected rows of answers
 	 * table.
-	 * @throws SQLException error
 	 */
 	public Answer readAnswer(String CANDIDATE_ID) {
 		Answer politician=null;

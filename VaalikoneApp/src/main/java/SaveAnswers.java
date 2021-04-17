@@ -16,17 +16,23 @@ import data.QAnswer;
  * Servlet implementation class SaveAnswers
  * This Servlet is for candidate answers.
  * We are redirected here from the SubmitAnswer.java servlet
- * @see default.SubmitAnswer.java
  * @author HAMK's Finest
  */
 @WebServlet("/SaveAnswers")
 public class SaveAnswers extends HttpServlet {
+	
+	/**
+	 * Identifier that ensures same version used for serialization and
+	 * deserialization by JVM.
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Dao_qanswer object instance initialization.
+	 */
 	private Dao_qanswer dao_qanswer=null;
     
 	/**
 	 * Object initialization method for Dao_qanswer class
-	 * @see dao.Dao_qanswer.java
 	 * User/pass: pena/kukkuu
 	 */
 	@Override

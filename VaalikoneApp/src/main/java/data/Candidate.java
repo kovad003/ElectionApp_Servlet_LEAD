@@ -178,7 +178,7 @@ public class Candidate {
 	
 	/**
 	 * party attribute setter.
-	 * @param candidate takes String party for candidate's political party.
+	 * @param party takes String party for candidate's political party.
 	 */
 	public void setParty(String party) {
 		this.party = party;	
