@@ -14,13 +14,22 @@ import dao.Dao_qanswer;
 import data.QAnswer;
 
 /**
+ * @author HAMK's Finest
  * Servlet implementation class EditQuastionnaire
+ * Will collect and forward the current candidate profile data from the DB to the adminUpdateCandidates.jsp page.
+ * @see webapp.adminUpdateCandidates.jsp
  */
 @WebServlet("/EditQuestionnaire")
 public class EditQuestionnaire extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao_qanswer dao_qanswer=null;
 	
+	
+	/**
+	 * Object initialization method for Dao_qanswer class
+	 * @see dao.Dao_qanswer.java
+	 * User/pass: pena/kukkuu
+	 */
 	@Override
 	public void init() {
 
@@ -29,6 +38,7 @@ public class EditQuestionnaire extends HttpServlet {
 	}
        
     /**
+     * Constructor
      * @see HttpServlet#HttpServlet()
      */
     public EditQuestionnaire() {
@@ -38,6 +48,9 @@ public class EditQuestionnaire extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * Will return an arraylist with the candidate's answers and forward them as an attribute to the view page (updateQuestionnaire.jsp).
+	 * This servlet is used when the registered candidate wants to RETAKE the quiz so his / her previous ansers will be auto selected.
+	 * Will redirect to the updateQuestionnaire.jsp page.
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

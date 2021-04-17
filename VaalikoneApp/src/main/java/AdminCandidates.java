@@ -13,13 +13,21 @@ import dao.Dao_candidate;
 import data.Candidate;
 
 /**
- * Servlet implementation class ShowCandidates
+ * @author HAMK's Finest
+ * Servlet implementation class AdminCandidate.
+ * Will collect and forward the current candidate profile data from the DB to the adminUpdateCandidates.jsp page.
+ * @see webapp.adminUpdateCandidates.jsp
  */
 @WebServlet("/AdminCandidates")
 public class AdminCandidates extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao_candidate dao=null;
 	
+	/**
+	 * Object initialization method for Dao_candidate class
+	 * @see dao.Dao_candidate.java
+	 * User/pass: pena/kukkuu
+	 */
 	@Override
 	public void init() {
 		dao=new Dao_candidate("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
@@ -28,6 +36,7 @@ public class AdminCandidates extends HttpServlet {
 	
        
     /**
+     * Constructor
      * @see HttpServlet#HttpServlet()
      */
     public AdminCandidates() { // CONSTRUCTOR, leave it here
@@ -37,6 +46,7 @@ public class AdminCandidates extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * Creates candidate arraylist set as an attribute so it will be forwarded to the view page adminUpdateCandidate.jsp
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<Candidate> list=null;

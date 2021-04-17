@@ -19,14 +19,24 @@ import data.Candidate;
 import data.QAnswer;
 
 /**
- * Servlet implementation class FindMatchingCandidates
+ * @author HAMK's Finest
+ * Servlet implementation class FindMatchingCandidates.
+ * This servlet is for assesing the voter's answer so at the end the suitable candidates can be listed.
+ * Will redirect to the questionnaireResults.jsp view page.
+ * @see questionnaireResults.jsp
  */
+
 @WebServlet("/FindMatchingCandidates")
 public class FindMatchingCandidates extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao_candidate dao_candidate=null;
 	private Dao_qanswer dao_qanswer=null;
-      
+    
+	/**
+	 * Object initialization method for Dao_qanswer class
+	 * @see dao.Dao_qanswer.java
+	 * User/pass: pena/kukkuu
+	 */
 	@Override
 	public void init() {
 		dao_qanswer=new Dao_qanswer("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
@@ -36,6 +46,7 @@ public class FindMatchingCandidates extends HttpServlet {
 	}
 	
     /**
+     * Constructor
      * @see HttpServlet#HttpServlet()
      */
     public FindMatchingCandidates() {
@@ -45,6 +56,9 @@ public class FindMatchingCandidates extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * The user answers will be assessed so the right candidates can be listed on the view page.
+	 * Will redirect to questionnaireResults.jsp
+	 * @see questionnaireResults.jsp
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -126,6 +140,11 @@ public class FindMatchingCandidates extends HttpServlet {
 //	************************************************************************************************************************************************************
 //	************************************************************************************************************************************************************
 	
+	
+	/**
+	 * This method will return a stacked arraylist from the databse which conatins all the existing ansers selected by the candidates.
+	 * @return ArrayList of QAnswer type, containing all candidate answer stored in the databse.
+	 */
 	public ArrayList<QAnswer> returnCndAnswersStacked()
 	{
 		ArrayList<QAnswer> answerList=null;
@@ -151,6 +170,11 @@ public class FindMatchingCandidates extends HttpServlet {
 		return answerList;
 	}
 	
+	
+	/**
+	 * This method will all existing candidate profile from the databse.
+	 * @return ArrayList of Candidate type
+	 */
 	public ArrayList<Candidate> returnCndProfileStacked()
 	{
 		ArrayList<Candidate> candidateProfileStacked=null;
@@ -174,6 +198,13 @@ public class FindMatchingCandidates extends HttpServlet {
 		return candidateProfileStacked;
 	}
 	
+	/**
+	 * This method will compare the candidate answers (all candidates) with the voter's answers and will score them.
+	 * The last QAnswer object for each candidate will be amnended with a total score as well. This will be used for making a score board to select the best candidates.
+	 * @param answerList
+	 * @param selectionList
+	 * @return ARrayList of QAnswer type.
+	 */
 	public ArrayList<QAnswer> scoreStackedData(ArrayList<QAnswer> answerList, ArrayList<QAnswer> selectionList)
 	{
 		ArrayList<QAnswer> answerListScored= new ArrayList<QAnswer>(); // Will be returned at the end.
@@ -226,6 +257,13 @@ public class FindMatchingCandidates extends HttpServlet {
 		return answerListScored;		
 	}
 	
+	/**
+	 * This method will sort the scored candidates based on the last QAnswer object's totalScore property.
+	 * The returned arraylist will contain the last QAnswer object for each candidate sorted by the totalScore value.
+	 * Later the candidate ID can be collected from this score board.
+	 * @param scoredStackedData
+	 * @return ARrayList of QAnswer type
+	 */
 	public ArrayList<QAnswer> findBestCnds(ArrayList<QAnswer> scoredStackedData)
 	{	
 		ArrayList<QAnswer> cndScoreBoard = new ArrayList<QAnswer>();// Will be returned at the end.
@@ -260,6 +298,13 @@ public class FindMatchingCandidates extends HttpServlet {
 	}
 	
 	
+	/**
+	 * This method will return the candidate id based on the rank you add as a parameter.
+	 * For example, if you choose 1, íou will get the 1st candidate's ID. 2 => 2nd...etc
+	 * @param rankAchieved
+	 * @param scoreBoard
+	 * @return candidate_id as an int for the selected rank.
+	 */
 	public int getCndIdFromScoreBoard(int rankAchieved, ArrayList<QAnswer> scoreBoard)
 	{
 		ArrayList<QAnswer> scBoard = scoreBoard;
@@ -273,6 +318,13 @@ public class FindMatchingCandidates extends HttpServlet {
 	}
 	
 	
+	/**
+	 * This method will return all the answers for the given candidate from the stacked ArrayList.
+	 * It will be used to display candidate selections after the voter has taken the quastionnaire.
+	 * @param candidateId
+	 * @param scoredStackedData
+	 * @return ArrayList of QAnswer type, only for the selected candidate.
+	 */
 	public ArrayList<QAnswer> sliceFromStacked(int candidateId, ArrayList<QAnswer> scoredStackedData)
 	{
 		int cndId = candidateId;
@@ -299,6 +351,12 @@ public class FindMatchingCandidates extends HttpServlet {
 	}
 	
 	
+	/**
+	 * This method will slice and return the selected candidates profile from the stacked data.
+	 * @param candidateId
+	 * @param candidateProfileStacked
+	 * @return ArrayList of Candidate type, conatining the selected candidate profile data.
+	 */
 	public Candidate returnCndProfile(int candidateId, ArrayList<Candidate> candidateProfileStacked)
 	{
 		int cndId = candidateId;

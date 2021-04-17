@@ -14,6 +14,7 @@ import data.Candidate;
 
 
 /**
+ * @author HAMK's Finest
  * Servlet implementation class: LoginServlet
  * Logs in admins and candidates utilizing Dao and Post methods.
  * Method descriptions can be found in the method's respective notes.

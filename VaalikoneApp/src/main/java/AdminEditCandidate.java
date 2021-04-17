@@ -13,13 +13,21 @@ import dao.Dao_candidate;
 import data.Candidate;
 
 /**
+ * @author HAMK's Finest 
  * Servlet implementation class AdminEnableUpdate
+ * Will collect and forward the current candidate profile data from the DB to the adminUpdateCandidates.jsp page.
+ * @see webapp.adminUpdateCandidates.jsp
  */
 @WebServlet("/AdminEditCandidate")
 public class AdminEditCandidate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao_candidate dao_candidate=null;
 	
+	/**
+	 * Object initialization method for Dao_candidate class
+	 * @see dao.Dao_candidate.java
+	 * User/pass: pena/kukkuu
+	 */
 	@Override
 	public void init() {
 
@@ -28,6 +36,7 @@ public class AdminEditCandidate extends HttpServlet {
 	}
        
     /**
+     * Constructor
      * @see HttpServlet#HttpServlet()
      */
     public AdminEditCandidate() {
@@ -38,6 +47,8 @@ public class AdminEditCandidate extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * Creates candidate arraylist which will update the chosen candidates data in the database.
+	 * Will redirect back to the view page (adminUpdateCandidate.jsp)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

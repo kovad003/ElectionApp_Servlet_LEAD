@@ -12,20 +12,27 @@ import javax.servlet.http.HttpServletResponse;
 import data.QAnswer;
 
 /**
- * Servlet implementation class SubmitAnswer
+ * @author HAMK's Finest
+ * Servlet implementation class SubmitAnswer.
+ * Will collect questionnaire answers from both voters and candidates.
+ * Data is collected from the (ShowQuestions => )questionnaire.jsp page
+ * @see webapp.questionnaire.jsp
  */
 @WebServlet("/SubmitAnswer")
 public class SubmitAnswer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
-	
+	/**
+	 * No Dao object required here, since this servlet only makes a decision on how to "deal" with the qui answers.
+	 */
 	@Override
 	public void init() {
 		
 	}
        
     /**
+     * Construcor
      * @see HttpServlet#HttpServlet()
      */
     public SubmitAnswer() {
@@ -35,6 +42,11 @@ public class SubmitAnswer extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * Will check if youa are logged in as a candidate or you are a regular user (potential voter).
+	 * Candidate answers will be sent to the SaveAnswers servlet so the date can be stored in the databse.
+	 * @see SaveAnswers.java
+	 * Voter answers will be sent to the FindMatchingCandidates servlet, it will not be stored.
+	 * @see FindMatchingCandidates.java
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

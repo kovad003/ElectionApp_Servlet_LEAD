@@ -10,13 +10,21 @@ import javax.servlet.http.HttpServletResponse;
 import dao.Dao_candidate;
 
 /**
+ * @author HAMK's Finest
  * Servlet implementation class AdminDeleteCandidate
+ * Will collect and forward the current candidate profile data from the DB to the adminUpdateCandidates.jsp page.
+ * @see webapp.adminUpdateCandidates.jsp
  */
 @WebServlet("/AdminDeleteCandidate")
 public class AdminDeleteCandidate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao_candidate dao_candidate=null;
 	
+	/**
+	 * Object initialization method for Dao_candidate class
+	 * @see dao.Dao_candidate.java
+	 * User/pass: pena/kukkuu
+	 */
 	@Override
 	public void init() {
 
@@ -25,6 +33,7 @@ public class AdminDeleteCandidate extends HttpServlet {
 	} 
 	
     /**
+     * Constructor
      * @see HttpServlet#HttpServlet()
      */
     public AdminDeleteCandidate() {
@@ -34,13 +43,15 @@ public class AdminDeleteCandidate extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * Will locate the selected candidate from the view page in the database so it can be deleted.
+	 * Will redirect back to the view page(adminUpdateCandidate.jsp) so amended candidate table can be checked.
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String cId = request.getParameter("CID");
 		
 //		<<< Debugging Messages >>>
-		System.out.println("CID for delete: " + cId);
+//		System.out.println("CID for delete: " + cId);
 		
 		if(dao_candidate.getConnection())
 		{

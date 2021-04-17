@@ -12,7 +12,10 @@ import data.Candidate;
 
 
 /**
+ * @author HAMK's Finest
  * Servlet implementation class ShowCandidates
+ * Will collect candidate profile data from the databse so it can be dsiplayed on the view.
+ * @see webapp.candidates.jsp
  */
 @WebServlet("/ShowCandidates")
 public class ShowCandidates extends HttpServlet {
@@ -79,40 +82,7 @@ public class ShowCandidates extends HttpServlet {
 		request.setAttribute("candidatelist", list);
 		RequestDispatcher rd=request.getRequestDispatcher("/candidates.jsp");
 		rd.forward(request, response);
-		
-/*		
-		// get URLs
-		URL currentUrl = new URL(request.getRequestURL().toString());
-		URL prevUrl = new URL(request.getHeader("referer"));
-		
-		// convert the absolute path to URI
-	    URI path1 = null;
-		try {
-			path1 = currentUrl.toURI();
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    URI path2 = null;
-		try {
-			path2 = prevUrl.toURI();
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
-	    // create a relative path from the two paths
-	    URI relativePath = path2.relativize(path1);
-	    
-
-	    // convert the URI to string
-	    String path = relativePath.getPath();
-		
-		System.out.println("Current URL path:" + currentUrl);
-		System.out.println("Request is comming from : " + prevUrl);
-		System.out.println("Relative path : " + relativePath);
-		
-*/
 	}
 	
 }

@@ -13,13 +13,22 @@ import dao.Dao_qanswer;
 import data.QAnswer;
 
 /**
+ * @author HAMK's Finest
  * Servlet implementation class SaveAnswers
+ * This Servlet is for candidate answers.
+ * We are redirected here from the SubmitAnswer.java servlet
+ * @see SubmitAnswer.java
  */
 @WebServlet("/SaveAnswers")
 public class SaveAnswers extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Dao_qanswer dao_qanswer=null;
     
+	/**
+	 * Object initialization method for Dao_qanswer class
+	 * @see dao.Dao_qanswer.java
+	 * User/pass: pena/kukkuu
+	 */
 	@Override
 	public void init() {
 		dao_qanswer=new Dao_qanswer("jdbc:mysql://localhost:3306/electionmachine", "pena", "kukkuu");
@@ -28,6 +37,7 @@ public class SaveAnswers extends HttpServlet {
 	
        
     /**
+     * Constructor
      * @see HttpServlet#HttpServlet()
      */
     public SaveAnswers() {
@@ -37,6 +47,10 @@ public class SaveAnswers extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * Servlet will check if there is any candidate answer in the database. If there is none, then data will be inserted.
+	 * If answer data from the candidate (CANDIDATE_ID) exist, then it will be amended since the candidate has retaken the quiz.
+	 * Will rederict back to the candidatePortal.jsp view page
+	 * @see webapp.candidatePortal.jsp
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -69,8 +83,6 @@ public class SaveAnswers extends HttpServlet {
 //			
 			response.sendRedirect("/candidatePortal.jsp");
 			
-			
-
 //			<<< Debugging Messages >>>
 //			for (int i = 0; i < answerList.size(); i++) {		
 //				QAnswer a = answerList.get(i);
