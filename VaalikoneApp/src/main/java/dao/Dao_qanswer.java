@@ -23,10 +23,24 @@ import java.sql.Connection;
  */
 
 public class Dao_qanswer {
+	
+	/**
+	 * String value matching the DB url to connect to.
+	 */
 	private String url;
+	/**
+	 * String value matching the username for account used to access DB.
+	 */
 	private String user;
+	/**
+	 * String value matching the password for account used to access DB.
+	 */
 	private String pass;
+	/**
+	 * Connection object representing the connection to the DB.
+	 */
 	private Connection conn;
+	
 	
 	public Dao_qanswer(String url, String user, String pass) {
 //		System.out.println("Dao(String url, String user, String pass) CONSTRUCTOR ******");
