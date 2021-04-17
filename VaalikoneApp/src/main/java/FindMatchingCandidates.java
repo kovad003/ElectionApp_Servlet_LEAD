@@ -172,7 +172,7 @@ public class FindMatchingCandidates extends HttpServlet {
 	
 	
 	/**
-	 * This method will all existing candidate profile from the databse.
+	 * This method will fetch all existing candidate profile from the database using  DAO object.
 	 * @return ArrayList of Candidate type
 	 */
 	public ArrayList<Candidate> returnCndProfileStacked()
@@ -300,7 +300,7 @@ public class FindMatchingCandidates extends HttpServlet {
 	
 	/**
 	 * This method will return the candidate id based on the rank you add as a parameter.
-	 * For example, if you choose 1, íou will get the 1st candidate's ID. 2 => 2nd...etc
+	 * For example, if you choose 1, you will get the 1st candidate's ID. 2 => 2nd...etc
 	 * @param rankAchieved
 	 * @param scoreBoard
 	 * @return candidate_id as an int for the selected rank.
