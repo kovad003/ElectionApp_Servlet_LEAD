@@ -16,8 +16,7 @@ import data.QAnswer;
  * Servlet implementation class SaveAnswers
  * This Servlet is for candidate answers.
  * We are redirected here from the SubmitAnswer.java servlet
- * @see SubmitAnswer.java
- * 
+ * @see default.SubmitAnswer.java
  * @author HAMK's Finest
  */
 @WebServlet("/SaveAnswers")
