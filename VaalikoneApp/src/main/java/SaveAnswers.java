@@ -13,11 +13,12 @@ import dao.Dao_qanswer;
 import data.QAnswer;
 
 /**
- * @author HAMK's Finest
  * Servlet implementation class SaveAnswers
  * This Servlet is for candidate answers.
  * We are redirected here from the SubmitAnswer.java servlet
  * @see SubmitAnswer.java
+ * 
+ * @author HAMK's Finest
  */
 @WebServlet("/SaveAnswers")
 public class SaveAnswers extends HttpServlet {

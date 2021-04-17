@@ -10,10 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import dao.Dao_candidate;
 
 /**
- * @author HAMK's Finest
  * Servlet implementation class AdminDeleteCandidate
  * Will collect and forward the current candidate profile data from the DB to the adminUpdateCandidates.jsp page.
  * @see webapp.adminUpdateCandidates.jsp
+ * 
+ * @author HAMK's Finest
  */
 @WebServlet("/AdminDeleteCandidate")
 public class AdminDeleteCandidate extends HttpServlet {

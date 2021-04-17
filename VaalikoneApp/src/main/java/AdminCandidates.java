@@ -13,10 +13,11 @@ import dao.Dao_candidate;
 import data.Candidate;
 
 /**
- * @author HAMK's Finest
  * Servlet implementation class AdminCandidate.
  * Will collect and forward the current candidate profile data from the DB to the adminUpdateCandidates.jsp page.
  * @see webapp.adminUpdateCandidates.jsp
+ * 
+ * @author HAMK's Finest
  */
 @WebServlet("/AdminCandidates")
 public class AdminCandidates extends HttpServlet {

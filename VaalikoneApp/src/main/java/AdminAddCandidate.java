@@ -10,10 +10,11 @@ import dao.Dao_candidate;
 import data.Candidate;
 
 /**
- * @author HAMK's Finest
  * Servlet implementation class AdminAddCandidate.
  * Will process the request for adding candidates from page adminUpdateCandidates.jsp
  * @see webapp.adminUpdateCandidates.jsp
+ * 
+ * @author HAMK's Finest
  */
 @WebServlet("/AdminAddCandidate")
 public class AdminAddCandidate extends HttpServlet {

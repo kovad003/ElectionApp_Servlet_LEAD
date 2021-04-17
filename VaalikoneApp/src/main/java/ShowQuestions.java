@@ -12,10 +12,11 @@ import data.Question;
 
 
 /**
- * @author HAMK's Finest
  * Servlet implementation class ShowQuestions
  * Will collect the questions from the database so they can be dispalyed on the view page when someone takes the quiz..
  * @see questionnaire.jsp
+ * 
+ * @author HAMK's Finest
  */
 
 @WebServlet("/ShowQuestions")

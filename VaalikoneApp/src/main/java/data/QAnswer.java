@@ -1,14 +1,14 @@
 package data;
 
 /**
- * @version 3.0
- * @author HAMK's Finest
- * Date: April 14, 2021
- * 
  * The QAnswer class houses attributes matching all columns of the
  * electionmachine.answers table. Instances of the class function
  * in conjunction with the matching Dao class and it's CRUD methods.
  * Class only contains setters/getters.
+ * 
+ * @version 3.0
+ * @author HAMK's Finest
+ * Date: April 14, 2021
  * 
  */
 
