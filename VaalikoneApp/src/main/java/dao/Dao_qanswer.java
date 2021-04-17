@@ -42,8 +42,14 @@ public class Dao_qanswer {
 	private Connection conn;
 	
 	
+	/**	 
+	 * String based parameterized constructor for Dao_qanswer class.
+	 * 
+	 * @param url takes String arg of url for to connecto to.
+	 * @param user takes String arg of username for user to access DB. 
+	 * @param pass takes String arg of password for user to access DB.
+	 */
 	public Dao_qanswer(String url, String user, String pass) {
-//		System.out.println("Dao(String url, String user, String pass) CONSTRUCTOR ******");
 		this.url=url;
 		this.user=user;
 		this.pass=pass;
@@ -59,6 +65,7 @@ public class Dao_qanswer {
 	 * @param url takes String arg of url for to connecto to.
 	 * @param user takes String arg of username for user to access DB. 
 	 * @param pass takes String arg of password for user to access DB.
+	 * @throws SQLException
 	 */
 	public boolean getConnection() {
 //		System.out.println("getConnection()");
@@ -85,6 +92,7 @@ public class Dao_qanswer {
 	 * returned with attributes to the servlet and carried over to the view page.
 	 * 
 	 * @return ArrayList of QAnswer type containing all the candidate answers stored in answers table.
+	 * @throws SQLException
 	 */
 	public ArrayList<QAnswer> readAllAnswer() {
 //		System.out.println("readAllAnswer()");
@@ -114,6 +122,7 @@ public class Dao_qanswer {
 	 * 
 	 * @return ArrayList of QAnswer type containing the answers of the selected candidate.
 	 * @param id takes a string arg identified as the CANDIDATE_ID in the ansers table.
+	 * @throws SQLException
 	 */
 	public ArrayList<QAnswer> readAnswersForCandidate(String id) {
 //		System.out.println("readAnswersForCandidate()");
@@ -143,6 +152,7 @@ public class Dao_qanswer {
 	 * CRUD method operates utilizing QAnswer class instance and connection established
 	 * as conn to perform insert SQL statement on answers table. 
 	 * @param a takes a QAnswer type of object amended with the QUESTION_ID and ANSWER attributes.
+	 * @throws SQLException
 	 */
 	public void insertAnswer(QAnswer a) {
 //		System.out.println("insertAnswer()");
@@ -162,6 +172,7 @@ public class Dao_qanswer {
 	 * CRUD method operates utilizing QAnswer class instance and connection established
 	 * as conn to perform insert SQL statement on answers table. 
 	 * @param anserList takes an ArrayList of QAnswer type of object amended with the CANDIDATE_ID QUESTION_ID and ANSWER attributes.
+	 * @throws SQLException
 	 */
 	public void insertAllAnswer(ArrayList<QAnswer> answerList) {
 //		System.out.println("insertAllAnswer()");
@@ -187,6 +198,7 @@ public class Dao_qanswer {
 	 * CRUD method operates utilizing QAnswer class instance and connection established
 	 * as conn to perform delete SQL statement on answers table. 
 	 * @param id takes a string representing the CANDIDATE_ID appointing the data which will be removed from the answer
+	 * @throws SQLException
 	 */
 	public void deleteAnswers(String id) {
 //		System.out.println("deleteAnswer(String id)");
@@ -205,6 +217,7 @@ public class Dao_qanswer {
 	 * CRUD method operates utilizing QAnswer class instance and connection established
 	 * as conn to perform delete SQL statement on answers table. 
 	 * @param a takes a QAnswer type of object amended with the QUESTION_ID and ANSWER attributes.
+	 * @throws SQLException
 	 */
 	public void updateAnswers(QAnswer a) {
 		System.out.println("updateAnswer(QAnswer a)");
