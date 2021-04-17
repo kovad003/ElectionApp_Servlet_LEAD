@@ -15,7 +15,7 @@ import data.Question;
 
 /**
  * Date: April 16, 2021
- * Servlet implementation class AdminNewQuestions. New questions can be added to the application.
+ * Servlet implementation class AdminNewQuestions.New questions can be added to the application.
  * @version 3.0
  * @author HAMK's Finest
  */
