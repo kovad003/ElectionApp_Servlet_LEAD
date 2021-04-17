@@ -17,6 +17,8 @@ import data.Candidate;
  * 
  * @author HAMK's Finest
  * @see webapp.candidates.jsp
+ * 
+ * @author HAMK's Finest
  */
 @WebServlet("/ShowCandidates")
 public class ShowCandidates extends HttpServlet {

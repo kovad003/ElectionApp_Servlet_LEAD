@@ -11,11 +11,11 @@ import dao.Dao_question;
 import data.Question;
 
 /**
- * @version 3.0
- * @author HAMK's Finest
  * Date: April 16, 2021
  * Servlet implementation class AdminAddQuestion used for adding new questions
  * 
+ * @version 3.0
+ * @author HAMK's Finest
  */
 
 @WebServlet("/AdminAddQuestion")

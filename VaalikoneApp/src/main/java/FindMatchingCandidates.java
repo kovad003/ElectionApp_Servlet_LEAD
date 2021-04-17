@@ -19,11 +19,12 @@ import data.Candidate;
 import data.QAnswer;
 
 /**
- * @author HAMK's Finest
  * Servlet implementation class FindMatchingCandidates.
  * This servlet is for assesing the voter's answer so at the end the suitable candidates can be listed.
  * Will redirect to the questionnaireResults.jsp view page.
  * @see questionnaireResults.jsp
+ * 
+ * @author HAMK's Finest
  */
 
 @WebServlet("/FindMatchingCandidates")
