@@ -39,8 +39,7 @@
                     <legend class = "adminPortal3"><b>MENU: </b></legend>
                     <hr>  
                     <table>                    
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Home Page </b></u></a></td></tr>
-                    <tr><td><b class = "adminPortal4">Access:</b><a href="" target="_blank"> <u><b>Update Your Data </b></u></a></td></tr>
+                    <tr><td><b class = "adminPortal4">Access:</b><a href="/index.jsp" target="_blank"> <u><b>Home Page </b></u></a></td></tr>         
                     <tr><td><b class = "adminPortal4">Access:</b><a href="/ShowQuestions" target="_blank"> <u><b>Take Questionnaire </b></u></a></td></tr>                                                
                     <tr>                    		                    
                     </tr>                   
