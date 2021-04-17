@@ -12,10 +12,11 @@ import data.Candidate;
 
 
 /**
- * @author HAMK's Finest
  * Servlet implementation class ShowCandidates
  * Will collect candidate profile data from the databse so it can be dsiplayed on the view.
  * @see webapp.candidates.jsp
+ * 
+ * @author HAMK's Finest
  */
 @WebServlet("/ShowCandidates")
 public class ShowCandidates extends HttpServlet {

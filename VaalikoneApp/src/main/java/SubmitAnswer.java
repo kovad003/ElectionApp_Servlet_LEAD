@@ -12,11 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import data.QAnswer;
 
 /**
- * @author HAMK's Finest
  * Servlet implementation class SubmitAnswer.
  * Will collect questionnaire answers from both voters and candidates.
  * Data is collected from the (ShowQuestions => )questionnaire.jsp page
  * @see webapp.questionnaire.jsp
+ * 
+ * @author HAMK's Finest
  */
 @WebServlet("/SubmitAnswer")
 public class SubmitAnswer extends HttpServlet {

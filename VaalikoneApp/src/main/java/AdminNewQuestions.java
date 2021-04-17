@@ -14,10 +14,11 @@ import data.Question;
 
 
 /**
- * @version 3.0
- * @author HAMK's Finest
  * Date: April 16, 2021
  * Servlet implementation class AdminNewQuestions
+ * 
+ * @version 3.0
+ * @author HAMK's Finest
  */
 @WebServlet("/AdminNewQuestions")
 public class AdminNewQuestions extends HttpServlet {
